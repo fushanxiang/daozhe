@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'weekend1',
+  name: 'weekendTour',
   data () {
     return {
     	pageName:'weekend page!'
@@ -15,5 +15,5 @@ export default {
 </script>
 
 <style scoped>
-
+	
 </style>

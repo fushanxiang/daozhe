@@ -7,7 +7,7 @@ export default {
   name: 'weekend',
   data () {
     return {
-    	pageName:'weekend page'
+    	pageName:'weekend page!'
     }
      
   }

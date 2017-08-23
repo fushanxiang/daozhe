@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'weekend',
+  name: 'weekend1',
   data () {
     return {
     	pageName:'weekend page!'

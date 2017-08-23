@@ -6,8 +6,16 @@
 
 <script>
 export default {
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/master
 }
 </script>
 
 <style>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 </style>

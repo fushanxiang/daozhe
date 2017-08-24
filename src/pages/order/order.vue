@@ -7,7 +7,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      name: 'city page'
+      name: 'order page'
     }
   }
 }

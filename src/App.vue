@@ -6,16 +6,9 @@
 
 <script>
 export default {
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/master
 }
 </script>
 
 <style>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
+	@import './assets/css/base/reset.css'
 </style>

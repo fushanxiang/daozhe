@@ -21,15 +21,15 @@
 
 <style scoped>
   	.city-header {
-      line-height: 12rem;
+      line-height: 6rem;
       background: skyblue;
       text-align: center;
     }
     .city-area {
       border: 1px solid white;
       display: inline-block;
-      line-height: 4rem;
-      width: 16rem;
+      line-height: 2rem;
+      width: 8rem;
       color: white;
     }
     .city-in-china {

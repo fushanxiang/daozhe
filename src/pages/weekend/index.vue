@@ -1,5 +1,5 @@
 <template>
-	<div>weekend index
+	<div>
 		<index-herder></index-herder>
 		<index-category></index-category>
 		<hotplace></hotplace>

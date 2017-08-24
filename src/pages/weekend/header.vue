@@ -25,7 +25,7 @@ export default {
 	.header{
 		width: 100%;
 		height: 0.88rem;
-		background:#25a4bb;
+		background:#00bcd4;
 	}
 	.header-left {
 		float: left;
@@ -61,8 +61,8 @@ export default {
 		border:.1rem;
 		border-style: solid;
 		border-color:transparent;
-		border-top-color:white;
-		background:#25a4bb;
+		border-top: .15rem solid #fff;
+		
 	}
 
 </style>

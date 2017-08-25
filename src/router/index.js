@@ -2,9 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
-
 import ParkDetail from '@/pages/parkdetail/index'
-
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 

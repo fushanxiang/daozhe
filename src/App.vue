@@ -5,9 +5,11 @@
 </template>
 
 <script>
-
+export default {
+  
+}
 </script>
 
 <style>
-
+	@import './assets/css/base/reset.css';
 </style>

@@ -2,6 +2,7 @@
 	<div>
   <index-header></index-header>
   <p>{{name}}</p>
+  <h1>wwwww</h1>
   </div>
 </template>
 

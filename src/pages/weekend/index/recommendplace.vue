@@ -1,12 +1,12 @@
 <template>
-  <div>weekend-hostplace</div>
+  <div>recomment</div>
 </template>
 
 <script>
 export default {
   data () {
     return {
-
+    	
     }
      
   }

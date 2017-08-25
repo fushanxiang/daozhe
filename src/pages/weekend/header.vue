@@ -56,6 +56,7 @@ export default {
 	.header-city-option {
 		position: absolute;
 		top: .4rem;
+		left: 2.6rem;
 		width:0; 
 		height:0; 
 		border:.1rem;

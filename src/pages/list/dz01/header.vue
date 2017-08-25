@@ -55,30 +55,30 @@ export default {
       border-radius: .06rem;
   }
   .single-line {
-        display: inline-block;
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 3.6rem;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        color: #666;
+      display: inline-block;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3.6rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #666;
   }
   .header-right{
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    height: .88rem;
-    line-height: .88rem;
-    padding: 0 .1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      height: .88rem;
+      line-height: .88rem;
+      padding: 0 .1rem;
   }
   .header-submit {
-    display: inline-block;
-    width: .74rem;
-    margin-right: .04rem;
-    color: #fff;
-    font-size: .28rem;
+      display: inline-block;
+      width: .74rem;
+      margin-right: .04rem;
+      color: #fff;
+      font-size: .28rem;
   }
 </style>

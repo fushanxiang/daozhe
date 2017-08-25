@@ -7,21 +7,21 @@ import Weekend from '@/pages/Weekend/index'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: Index
-    },
-    {
-      path: '/city',
-      name: 'city',
-      component: City
-    },
-    {
-      path: '/weekend',
-      name: 'weekend',
-      component: Weekend
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'index',
+            component: Index
+        },
+        {
+            path: '/city',
+            name: 'city',
+            component: City
+        },
+        {
+            path: '/weekend',
+            name: 'weekend',
+            component: Weekend
+        }
+    ]
 })

@@ -1,21 +1,30 @@
 <template>
-	<div>{{name}}</div>
+	<div>
+    <recommend></recommend>
+    <recommend-sites></recommend-sites>
+  </div>
+
 </template>
 
 <script>
+
+   import Recommend from './recommend.vue'
+   import RecommendSites from './recommendsites.vue'
+
 export default {
   name: 'hello',
   data () {
     return {
-      name: 'parkdetail page'
-    }
+     }
+  },
+  components: {
+    "recommend": Recommend,
+    "recommend-sites": RecommendSites
   }
 }
 </script>
 
 
 <style scoped>
-	div {
-		background: red;
-	}
+	
 </style>

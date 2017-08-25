@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
-import Weekend from '@/pages/Weekend/index'
+import Weekend from '@/pages/weekend/index/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 
@@ -33,7 +33,7 @@ export default new Router({
         ]
     },
     {
-        path: '/weekend',
+        path: '/weekend/index',
         name: 'weekend',
         component: Weekend
     }

@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-	@import "../../assets/font/iconfont.css";
+	@import "../../../assets/font/iconfont.css";
 	.header{
 		width: 100%;
 		height: 0.88rem;

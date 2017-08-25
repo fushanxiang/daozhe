@@ -57,15 +57,15 @@ export default {
 	    border-radius: .06rem;
 	}
 	.single-line {
-		    display: inline-block;
-		    overflow: hidden;
-		    position: absolute;
-		    left: .3rem;
-		    top: 0;
-		    width: 3.6rem;
-		    white-space: nowrap;
-		    text-overflow: ellipsis;
-		    color: #e4e7ea;
+	    display: inline-block;
+	    overflow: hidden;
+	    position: absolute;
+	    left: .3rem;
+	    top: 0;
+	    width: 3.6rem;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #e4e7ea;
 	}
 	.icon-search {
 		    position: absolute;

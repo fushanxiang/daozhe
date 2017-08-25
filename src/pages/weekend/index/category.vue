@@ -3,25 +3,25 @@
 		<div class="category-container">
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../assets/images/top1.png" class="category-img">
+					<img src="../../../assets/images/top1.png" class="category-img">
 					<p class="category-item-title">周边度假</p>
 				</a>
 			</div>
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../assets/images/top2.png" class="category-img">
+					<img src="../../../assets/images/top2.png" class="category-img">
 					<p class="category-item-title">城市好玩</p>
 				</a>
 			</div>
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../assets/images/top3.png" class="category-img">
+					<img src="../../../assets/images/top3.png" class="category-img">
 					<p class="category-item-title">踏青赏花</p>
 				</a>
 			</div>
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../assets/images/top4.png" class="category-img">
+					<img src="../../../assets/images/top4.png" class="category-img">
 					<p class="category-item-title">周末活动</p>
 				</a>
 			</div>

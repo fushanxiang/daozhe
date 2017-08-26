@@ -1,12 +1,8 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
-  <div>index</div>
 	<div>
 		<index-header></index-header>
 		<img-swiper></img-swiper>
-    <icon-swiper></icon-swiper>
+        <icon-swiper></icon-swiper>
 	</div>
 </template>
 
@@ -17,22 +13,16 @@ import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
 
 export default {
-  name: 'index',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'index',
+    data () {
+        return {  
+        }
+    },
+    components:{
+        "index-header": IndexHeader,
+        "img-swiper": ImgSwiper,
+        "icon-swiper": IconSwiper
     }
-  }
-}
-</script>
-      }
-    }
-  },
-  components:{
-  	"index-header": IndexHeader,
-  	"img-swiper": ImgSwiper,
-    "icon-swiper": IconSwiper
-  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

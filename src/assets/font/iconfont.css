@@ -1,18 +1,10 @@
 
 @font-face {font-family: "iconfont";
-<<<<<<< HEAD
   src: url('iconfont.eot?t=1503748035281'); /* IE9*/
   src: url('iconfont.eot?t=1503748035281#iefix') format('embedded-opentype'), /* IE6-IE8 */
   url('iconfont.woff?t=1503748035281') format('woff'), /* chrome, firefox */
   url('iconfont.ttf?t=1503748035281') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
   url('iconfont.svg?t=1503748035281#iconfont') format('svg'); /* iOS 4.1- */
-=======
-  src: url('iconfont.eot?t=1503716581700'); /* IE9*/
-  src: url('iconfont.eot?t=1503716581700#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1503716581700') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1503716581700') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1503716581700#iconfont') format('svg'); /* iOS 4.1- */
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 }
 
 .iconfont {
@@ -23,16 +15,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-<<<<<<< HEAD
 .icon-favorfill:before { content: "\e64b"; }
 
-=======
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 .icon-back:before { content: "\e697"; }
 
 .icon-help:before { content: "\e6a3"; }
-
-<<<<<<< HEAD
 .icon-picfill:before { content: "\e72c"; }
 
 .icon-shangxiajiantou:before { content: "\e60e"; }
@@ -61,19 +48,16 @@
 
 .icon-tupian:before { content: "\e646"; }
 
-=======
 .icon-shangxiajiantou:before { content: "\e60e"; }
 
 .icon-Pagoda:before { content: "\e601"; }
 
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 .icon-arrowleft:before { content: "\e693"; }
 
 .icon-search:before { content: "\e6a4"; }
 
 .icon-sousuo:before { content: "\e60a"; }
 
-<<<<<<< HEAD
 .icon-guanbi1:before { content: "\e620"; }
 
 .icon-jingdian:before { content: "\e6ad"; }
@@ -90,17 +74,14 @@
 
 .icon-MAPPIN:before { content: "\e6f1"; }
 
-=======
 .icon-weibiaoti-:before { content: "\e6ed"; }
 
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 .icon-toLeft-copy:before { content: "\e600"; }
 
 .icon-shaixuanxuanzhong:before { content: "\e605"; }
 
 .icon-shaixuan-gaoduan:before { content: "\e6ca"; }
 
-<<<<<<< HEAD
 .icon-more:before { content: "\e6b8"; }
 
 .icon-huanyipi:before { content: "\e61f"; }
@@ -109,8 +90,6 @@
 
 .icon-jianzhuwu:before { content: "\e607"; }
 
-=======
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 .icon-fanhui:before { content: "\e624"; }
 
 .icon-guanbi:before { content: "\e625"; }

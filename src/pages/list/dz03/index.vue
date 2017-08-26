@@ -1,7 +1,7 @@
 <template>
     <div class="products-main">
         <ul class="view-list">
-            <li class="sight-group border-topbottom" v-for="item in this.pages[index]">
+            <li class="sight-group border-topbottom" v-for="item in this.pages[index]" :key="item.id">
                 <div class="item-content">
                     <div class="sight-info">
                         <div class="sight-imgcon">
@@ -14,7 +14,7 @@
                                 <span class="sight-price">¥<em>{{item.price}}</em><span class="lowprice-text">&nbsp;起</span></span>
                             </p>
                             <div class="sight-comments">
-                                <span class="starlevel"><span class="mpg-iconfont starlevel-total">BBBBB</span></span>
+                                <span class="starlevel"><span class="iconfont starlevel-total">&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;</span></span>
                                 <span class="comments-totalnum">{{item.comment}}</span>
                             </div>
                             <div class="sight-location"><span class="sight-address">{{item.location}}</span></div>
@@ -254,7 +254,7 @@
 
 <style scoped>
 @import "../../../assets/font/iconfont.css";
- @import '../../../assets/css/common/border.css';
+@import '../../../assets/css/common/border.css';
 .pagination .page-num {
     color: #212121;
     line-height: .6rem;
@@ -424,7 +424,7 @@
     width: 1.6rem;
     height: 1.6rem;
 }
-.sight-ticket-item:before{
+.sight-ticket-item::before{
     border:1px dashed #ccc;
 }
 .border-top::before, .border-topbottom::before, .border-topleft::before, .border-topright::before {

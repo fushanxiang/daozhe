@@ -1,115 +1,107 @@
 <template>
 
-<div>
-
-	<div class="title">
-		<div class="detail-title">
-			<h3>相关推荐</h3>
+<div class="related-place-box">
+	<div class="related-place">
+		<div class="title">
+			<div class="detail-title">
+				<h3>相关推荐</h3>
+			</div>
 		</div>
+
+		<div class="detail-box">
+			<div class="detail-group">
+				<div class="detail-name">
+					<h2 class="detail-related-name">小汤山温泉度假区</h2>
+					<span class="level">(4A)</span>
+				</div>
+				<div class="detail-price">
+					<span class="Icon">&yen;</span>
+					<span id="price">58</span>
+					<span class="priceunit">起/张</span>
+				</div>
+				<div class="detail-enter">
+					<a href="javascript:;" class="sight">
+						<div class="item">
+							<span class="next-icon iconfont">&#xe614;</span>
+							<span class="detail-related-text">北京市昌平区小汤山现代农业科技示范园内</span>
+							<span class="next-icon iconfont d-right">&#58918;</span>
+						</div>
+					</a>
+				</div>
+			</div>
+	    </div>
+		
+
+
+		<div class="detail-box">
+			<div class="detail-group">
+				<div class="detail-name">
+					<h2 class="detail-related-name">温都水城养生馆</h2>
+					<span class="level">(4A)</span>
+				</div>
+				<div class="detail-price">
+					<span class="Icon">&yen;</span>
+					<span id="price">77</span>
+					<span class="priceunit">起/张</span>
+				</div>
+				<div class="detail-enter">
+					<a href="javascript:;" class="sight">
+						<div class="item">
+							<span class="next-icon iconfont">&#xe614;</span>
+							<span class="detail-related-text">北京市昌平区北七家镇郑各庄村王府街51号</span>
+							<span class="next-icon iconfont d-right">&#58918;</span>
+						</div>
+					</a>
+				</div>
+			</div>
+	    </div>
+
+		<div class="detail-box">
+			<div class="detail-group">
+				<div class="detail-name">
+					<h2 class="detail-related-name">温都水城</h2>
+					<span class="level">(4A)</span>
+				</div>
+				<div class="detail-price">
+					<span class="Icon">&yen;</span>
+					<span id="price">25</span>
+					<span class="priceunit">起/张</span>
+				</div>
+				<div class="detail-enter">
+					<a href="javascript:;" class="sight">
+						<div class="item">
+							<span class="next-icon iconfont">&#xe614;</span>
+							<span class="detail-related-text">北京市昌平区北七家镇郑各庄村王府街55号</span>
+							<span class="next-icon iconfont d-right">&#58918;</span>
+						</div>
+					</a>
+				</div>
+			</div>
+	    </div>
+		
+		<div class="detail-box">
+			<div class="detail-group">
+				<div class="detail-name">
+					<h2 class="detail-related-name">温都水城HI水空间</h2>
+					<span class="level">(4A)</span>
+				</div>
+				<div class="detail-price">
+					<span class="Icon">&yen;</span>
+					<span id="price">77</span>
+					<span class="priceunit">起/张</span>
+				</div>
+				<div class="detail-enter">
+					<a href="javascript:;" class="sight">
+						<div class="item">
+							<span class="next-icon iconfont">&#xe614;</span>
+							<span class="detail-related-text">北京市昌平区北七家镇平西府街51号宏福创业园8号</span>
+							<span class="next-icon iconfont d-right">&#58918;</span>
+						</div>
+					</a>
+				</div>
+			</div>
+	    </div>
 	</div>
-
-
-
-	<div class="detail-box">
-		<div class="detail-group">
-			<div class="detail-name">
-				<h2 class="detail-related-name">小汤山温泉度假区</h2>
-				<span class="level">(4A)</span>
-			</div>
-			<div class="detail-price">
-				<span class="Icon">&yen;</span>
-				<span id="price">58</span>
-				<span class="priceunit">起/张</span>
-			</div>
-			<div class="detail-enter">
-				<a href="javascript:;" class="sight">
-					<div class="item">
-						<span class="next-icon iconfont">&#xe614;</span>
-						<span class="detail-related-text">北京市昌平区小汤山现代农业科技示范园内</span>
-						<span class="next-icon iconfont d-right">&#58918;</span>
-					</div>
-				</a>
-			</div>
-		</div>
-    </div>
-	
-
-
-	<div class="detail-box">
-		<div class="detail-group">
-			<div class="detail-name">
-				<h2 class="detail-related-name">温都水城养生馆</h2>
-				<span class="level">(4A)</span>
-			</div>
-			<div class="detail-price">
-				<span class="Icon">&yen;</span>
-				<span id="price">77</span>
-				<span class="priceunit">起/张</span>
-			</div>
-			<div class="detail-enter">
-				<a href="javascript:;" class="sight">
-					<div class="item">
-						<span class="next-icon iconfont">&#xe614;</span>
-						<span class="detail-related-text">北京市昌平区北七家镇郑各庄村王府街51号</span>
-						<span class="next-icon iconfont d-right">&#58918;</span>
-					</div>
-				</a>
-			</div>
-		</div>
-    </div>
-
-	<div class="detail-box">
-		<div class="detail-group">
-			<div class="detail-name">
-				<h2 class="detail-related-name">温都水城</h2>
-				<span class="level">(4A)</span>
-			</div>
-			<div class="detail-price">
-				<span class="Icon">&yen;</span>
-				<span id="price">25</span>
-				<span class="priceunit">起/张</span>
-			</div>
-			<div class="detail-enter">
-				<a href="javascript:;" class="sight">
-					<div class="item">
-						<span class="next-icon iconfont">&#xe614;</span>
-						<span class="detail-related-text">北京市昌平区北七家镇郑各庄村王府街55号</span>
-						<span class="next-icon iconfont d-right">&#58918;</span>
-					</div>
-				</a>
-			</div>
-		</div>
-    </div>
-	
-	<div class="detail-box">
-		<div class="detail-group">
-			<div class="detail-name">
-				<h2 class="detail-related-name">温都水城HI水空间</h2>
-				<span class="level">(4A)</span>
-			</div>
-			<div class="detail-price">
-				<span class="Icon">&yen;</span>
-				<span id="price">77</span>
-				<span class="priceunit">起/张</span>
-			</div>
-			<div class="detail-enter">
-				<a href="javascript:;" class="sight">
-					<div class="item">
-						<span class="next-icon iconfont">&#xe614;</span>
-						<span class="detail-related-text">北京市昌平区北七家镇平西府街51号宏福创业园8号</span>
-						<span class="next-icon iconfont d-right">&#58918;</span>
-					</div>
-				</a>
-			</div>
-		</div>
-    </div>
-	
-
-
-
-
-
-
 </div>
 
 </template>
@@ -125,10 +117,24 @@ export default {
 </script>
 
 <style scoped>
-
-.detail-box,.title{
-	margin-top: .1rem;
+.related-place-box{
+	background: #f1f1f1;
+	padding-top: .2rem;
+}
+.related-place:before,.related-place:after{
+	content:"";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: .02rem;
+	background: #c9cccd;
+}
+.title{
 	padding: 0 .2rem;
+	background-color: #fff;
+}
+.detail-box{
+	padding: .2rem .2rem 0;
 	background-color: #fff;
 }
 
@@ -144,7 +150,7 @@ export default {
 .detail-group{
 	position: relative;
 }
-.detail-group::after{
+.detail-group:after{
 	content: " ";
 	background: #c8cccd;
     position: absolute;
@@ -184,7 +190,7 @@ export default {
     font-size: .32rem;
 }
 .detail-price{
-	margin: 0 0 .1rem 0;
+	 margin: 0 0 .1rem 0;
 }
 .Icon{
 	color: #ff8300;

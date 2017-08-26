@@ -23,7 +23,6 @@ import HeaderFixed from './header_fixed.vue'
 export default {
   	data () {
     	return {
-    	
    		}
      
 	},

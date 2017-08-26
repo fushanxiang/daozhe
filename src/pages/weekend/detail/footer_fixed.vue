@@ -1,6 +1,5 @@
 <template>
 	<div>
-		footer-fixed
 	</div>
 </template>
 

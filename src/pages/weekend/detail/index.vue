@@ -1,10 +1,12 @@
 <template>
 	<div>
+		<header-fixed></header-fixed>
 		<index-header></index-header>
 		<light-sport></light-sport>
 		<combo-detail></combo-detail>
 		<related-place></related-place>
 		<index-footer></index-footer>
+		<footer-fixed></footer-fixed>
 	</div>
 </template>
 
@@ -12,9 +14,11 @@
 
 import IndexHeader from './header.vue'
 import IndexCategory from './light_sport.vue'
-import Combodetail from './combo_detail.vue'
-import Relatedplace from './related_place.vue'
-import Indexfooter from './footer.vue'
+import ComboDetail from './combo_detail.vue'
+import RelatedPlace from './related_place.vue'
+import IndexFooter from './footer.vue'
+import FooterFixed from './footer_fixed.vue'
+import HeaderFixed from './header_fixed.vue'
 
 export default {
   	data () {
@@ -26,13 +30,17 @@ export default {
 	components: {
 		'index-header' : IndexHeader,
 		'light-sport' : IndexCategory,
-		'combo-detail' : Combodetail,
-		'related-place' : Relatedplace,
-		'index-footer' : Indexfooter
+		'combo-detail' : ComboDetail,
+		'related-place' : RelatedPlace,
+		'index-footer' : IndexFooter,
+		'footer-fixed' : FooterFixed,
+		'header-fixed' : HeaderFixed
 	}
 }
 </script>
 
 <style scoped>
-	
+	body,html {
+		background: #f1f1f1 !important;
+	}
 </style>

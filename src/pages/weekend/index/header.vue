@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-  		<a class="header-left iconfont">&#xe624;</a>
+  		<a class="header-left iconfont">&#59001;</a>
   		<h1 class="header-title"><a class="header-city" href="###">北京</a>
   		<span class="header-city-option"></span>
   		

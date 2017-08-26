@@ -19,8 +19,24 @@ export default {
 </script>
 
 <style scoped>
-	.chosen{
+	.chosen {
 		margin-top: .2rem;
+	}
+	.chosen:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: .02rem;
+		background: #c9cccd;
+	}
+	.chosen:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: .02rem;
+		background: #c9cccd;
 	}
 	.hot-top{
 		overflow: hidden;
@@ -30,11 +46,6 @@ export default {
 		font-size: .28rem;
 		line-height: .88rem;
 		text-indent: .15rem
-	}
-	.hot-top:before{
-		width: 100%;
-		height: .02rem;
-		background: #c9cccd;
 	}
 	.hot-title:before{
 		content: " ";
@@ -55,14 +66,12 @@ export default {
 	.hot-item{
 		background: #eee;
 		overflow: hidden;
-		width: 300px;
-		padding-bottom: 33.3%;
-		height: 0;
+		width: 100%;
 		margin-bottom: .2rem;
 	}
 	.hot-img{
-		width: 300px;
-		height: 100px;
+		width: 100%;
+		min-height: 2rem;
 	}
 
 </style>

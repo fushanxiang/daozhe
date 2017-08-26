@@ -54,8 +54,18 @@ export default {
 </script>
 
 <style scoped>
-	.chosen{
+	html {
+		background: #f1f1f1;
+	}
+	.chosenplace{
 		margin-top: .2rem;
+	}
+	.chosenplace:before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: .02rem;
+		background: #c9cccd;
 	}
 	.hot-top{
 		overflow: hidden;
@@ -65,11 +75,6 @@ export default {
 		font-size: .28rem;
 		line-height: .88rem;
 		text-indent: .15rem
-	}
-	.hot-top:before{
-		width: 100%;
-		height: .02rem;
-		background: #c9cccd;
 	}
 	.hot-title:before{
 		content: " ";

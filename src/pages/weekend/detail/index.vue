@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<header-fixed></header-fixed>
 		<index-header></index-header>
 		<light-sport></light-sport>
 		<combo-detail></combo-detail>
@@ -17,6 +18,7 @@ import ComboDetail from './combo_detail.vue'
 import RelatedPlace from './related_place.vue'
 import IndexFooter from './footer.vue'
 import FooterFixed from './footer_fixed.vue'
+import HeaderFixed from './header_fixed.vue'
 
 export default {
   	data () {
@@ -31,7 +33,8 @@ export default {
 		'combo-detail' : ComboDetail,
 		'related-place' : RelatedPlace,
 		'index-footer' : IndexFooter,
-		'footer-fixed' : FooterFixed
+		'footer-fixed' : FooterFixed,
+		'header-fixed' : HeaderFixed
 	}
 }
 </script>

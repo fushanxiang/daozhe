@@ -1,5 +1,6 @@
 <template>	
     <div class="china-city">
+        <hot-city></hot-city>
         <div v-for="city in cityClass" class="city-item">
             <p class="city-class">{{city[0]}}</p>
             <ul>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+    import HotCity from './hotcity.vue';
     var appData = require('./china.json');
     export default {
         name: 'hello',
@@ -19,6 +21,9 @@
             return {
                 cityClass: []
             }
+        },
+        components: {
+          "hot-city": HotCity
         },
         created() {
             var cityData = appData.data;

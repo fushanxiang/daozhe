@@ -28,20 +28,19 @@
 
 <style scoped>
     .city-aside {
-        position:fixed;
-        right:0;
-        top:3.2rem;
+        position: fixed;
+        right: 0;
+        top: 2.16rem;
     }
     .city-aside-set {
-        padding:.12rem;
-        height:auto;
-        overflow:hidden;
+        height: auto;
+        overflow: hidden;
     }
     .city-aside-set-character {
-        line-height:.32rem;
-        font-size:.24rem;
-        color:skyblue;
-        padding:.02rem;
+        line-height: .32rem;
+        font-size: .24rem;
+        color: #00afc7;
+        padding: .02rem;
     }
 
 </style>

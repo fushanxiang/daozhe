@@ -64,6 +64,7 @@ export default {
 		width: 3rem;
 		height: .3rem;
 		left: 50%;
+		top: .02rem;
 		margin-left: -1.7rem;
 		background:#f3f3f3;
 		padding: 0.2rem;

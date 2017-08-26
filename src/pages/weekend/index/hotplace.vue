@@ -19,24 +19,28 @@ export default {
 </script>
 
 <style scoped>
+	/*@import "../../../assets/css/common/border.css";
+	.chosen::before {
+		border-color: #c9cccd;
+	}*/
 	.chosen {
 		margin-top: .2rem;
 	}
 	.chosen:before{
-		content: "";
+		content:"";
 		position: absolute;
 		left: 0;
 		width: 100%;
 		height: .02rem;
 		background: #c9cccd;
-	}
+	} 
 	.chosen:after{
 		content: "";
-		position: absolute;
-		left: 0;
 		width: 100%;
 		height: .02rem;
-		background: #c9cccd;
+		background: #c9cccd; 
+		position: absolute;
+		left: 0;
 	}
 	.hot-top{
 		overflow: hidden;

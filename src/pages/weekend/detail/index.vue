@@ -40,6 +40,7 @@ export default {
 
 <style scoped>
 	body,html {
+		overflow: hidden;
 		background: #f1f1f1 !important;
 	}
 </style>

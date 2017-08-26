@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index/index'
+import WeekendIndex from '@/pages/weekend/index/index'
+import WeekendDetail from '@/pages/weekend/detail/index'
 import City from '@/pages/city/index'
-import Weekend from '@/pages/weekend/index/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 
@@ -21,20 +22,22 @@ export default new Router({
         component: City,
         children: [
             {
-                path: '/',
-                name: 'index',
-                component: Index
+                path: 'bigCity',
+                name: 'BigCity'
             },
             {
-                path: '/city',
-                name: 'city',
-                component: City
+                path: 'smallCity',
+                name: 'SmallCity'
             }
         ]
     },{
         path: '/weekend/index',
         name: 'weekend',
-        component: Weekend
+        component: WeekendIndex
+    },{
+        path: '/weekend/detail/:id',
+        name: 'weekend',
+        component: WeekendDetail
     }
   ]
 })

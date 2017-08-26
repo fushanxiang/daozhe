@@ -29,7 +29,7 @@ export default {
 		position: relative;
 	    overflow: hidden;
 	    width: 100%;
-	    height: .88rem;
+	    height: 0.88rem;
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
@@ -38,20 +38,29 @@ export default {
 		float: left;
 	    display: block;
 	    width: .4rem;
-	    line-height: .88rem;
+	    line-height: 0.88rem;
 	    padding: 0 .2rem;
 	    margin: .02rem 0 0 -0.08rem;
 	    margin-top: 0.02rem;
 	    color: #fff;
+<<<<<<< HEAD
 	    font-size: .40rem;
+=======
+	    font-size: .16rem;
+>>>>>>> a336b0bc3564dda48bb8c25c0df9a34bc71d1b15
 	    text-align: left;
 	}
 	.header-title {
 	    position: relative;
+<<<<<<< HEAD
 	    height: .6rem;
 	    margin: .14rem 1.32rem .14rem .8rem;
+=======
+	    height: 0.6rem;
+	    margin: .14rem 1.6rem .14rem .6rem;
+>>>>>>> a336b0bc3564dda48bb8c25c0df9a34bc71d1b15
 	    background: #fff;
-	    line-height: .6rem;
+	    line-height: 1.6rem;
 	    border-radius: .06rem;
 	}
 	.single-line {
@@ -74,6 +83,7 @@ export default {
 		position: absolute;
 		top: 0;
 		right: 0;
+<<<<<<< HEAD
 		margin-right: .04rem;
 		line-height: .88rem;
 		width: 1.28rem;
@@ -93,4 +103,29 @@ export default {
 	    border-right: 0.12rem solid transparent;
 	    border-top: 0.12rem solid #FFFFFF;
 	}
+=======
+		line-height: 0.88rem;
+		width: 1.5rem;
+		text-align: left;
+	}
+	.header-right .downarrow{
+		position:absolute;
+		top: .4rem;
+		left: .65rem;
+		display: block;
+		width: 0rem;
+		border-width: .1rem .1rem .1rem .1rem;
+		border-style: solid;
+		border-color: #fff transparent transparent transparent;
+	}
+	.single-line {
+		color: #ccc;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    line-height: 0.4rem;
+	    top: 0.1rem;
+	    left: 0.3rem;
+		}
+>>>>>>> a336b0bc3564dda48bb8c25c0df9a34bc71d1b15
 </style>

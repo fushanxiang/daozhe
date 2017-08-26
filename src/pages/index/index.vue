@@ -5,6 +5,7 @@
         <icon-swiper></icon-swiper>
         <position-sale></position-sale>
         <hot-recommend></hot-recommend>
+        <holiday></holiday>
 	</div>
 </template>
 
@@ -15,6 +16,7 @@ import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
 import PositionSale from './positionsale.vue'
 import HotRecommend from './hotrecommend'
+import Holiday from './holiday'
 export default {
     name: 'index',
     data () {
@@ -26,7 +28,8 @@ export default {
   	"img-swiper": ImgSwiper,
     "icon-swiper": IconSwiper,
     "position-sale": PositionSale,
-    "hot-recommend":HotRecommend
+    "hot-recommend":HotRecommend,
+    "holiday":Holiday
   }
 }
 </script>

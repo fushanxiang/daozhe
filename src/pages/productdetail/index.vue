@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <header class="header">
         <a class="header-left iconfont">&#xe600;</a>      
     </header>
@@ -10,10 +11,37 @@ export default {
     return {
 
       }
+=======
+	<div>
+  <index-header></index-header>
+  <index-tab></index-tab>
+  111
+
+  </div>
+</template>
+
+<script>
+
+import Header from './header.vue'
+import Tab from './tab.vue'
+
+
+export default {
+  name: 'hello',
+  data () {
+    return {
+      name: 'list page'
+    }
+  },
+  components:{
+    "index-header": Header,
+    "index-tab": Tab
+>>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
   }
 }
 </script>
 
+<<<<<<< HEAD
 <style scoped>
   @import "../../assets/font/iconfont.css";
   .header {
@@ -84,4 +112,11 @@ export default {
       border-right: 0.12rem solid transparent;
       border-top: 0.12rem solid #FFFFFF;
   }
+=======
+
+<style scoped>
+	div {
+		background: red;
+	}
+>>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 </style>

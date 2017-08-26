@@ -21,5 +21,5 @@ import HotCity from './hotcity.vue'
 
 
 <style scoped>
-  	
+  
 </style>

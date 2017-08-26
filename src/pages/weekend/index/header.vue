@@ -55,10 +55,10 @@ export default {
 	}
 	.header-city-option {
 		position: absolute;
-		top: .4rem;
-		left: 2.6rem;
+		top: .38rem;
 		width:0; 
 		height:0; 
+
 		border:.1rem;
 		border-style: solid;
 		border-color:transparent;

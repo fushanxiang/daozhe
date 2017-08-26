@@ -34,6 +34,8 @@ export default {
 	@import '../../assets/css/common/border.css';
 	.miditem {
 		height: 1.2rem;
+		background: #fff;
+		margin-top: .2rem;
 	}
 	.miditem-item {
 		position: relative;

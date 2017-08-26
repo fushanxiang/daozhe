@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="hotroutes">
 		<div class="hotroutes-title border-bottom">
 			<h3 class="title-title iconfont">&#xe621; 北京热门景点门票 &#xe621;</h3>
 		</div>
@@ -103,6 +103,10 @@ export default {
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
+	.hotroutes {
+		background: #fff;
+		margin-top: .2rem;
+	}
 	.hotroutes-title {
 		text-align: center;
 		font-size: .36rem;

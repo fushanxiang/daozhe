@@ -1,25 +1,30 @@
 <template>
-	<div  class="city-list">
 
-		<div class="1-h selCityTap">
-			<div class="position">您的位置</div>
-			<div  class="site-text site-text-hot">
-				<span class="sites sites-hot">港澳台...</span>
+	<div class="content-city">
+
+		<div class="cityarea-group">
+			<div class="cityarea-title">您的位置</div>
+			<div class="cityarea-content city-now">
+				<div class="cityitem-light">
+					<a href="###" class="cityitem-name cityitem-seleted ellipsis">澳门</a>
+				</div>
 			</div>
 		</div>
-		<div class="l-h">
-		<div class="position">热门城市</div>
-			<div class="site-text">
-				<span v-for="item in datas" class="sites histCitySite">{{item.city}}</span>
+		<div class="cityarea-group">
+			<div class="cityarea-title">热门城市</div>
+			<div class="cityarea-content city-now">
+				<div class="cityitem-light" v-for="item in datas">
+					<a href="###" class="cityitem-name ellipsis">{{item.city}}</a>
+				</div>
 			</div>
 		</div>
-		
 	</div>
+
 </template>
 
 <script>
- var hotcity = require ('../../hotcity_abroad.json');
- var datas = hotcity.data.inlandhotcity;
+	var hotcity = require ('../../hotcity_abroad.json');
+	var datas = hotcity.data.inlandhotcity;
 
 export default { 
 	data () {
@@ -34,53 +39,52 @@ export default {
 </script>
 
 <style scoped>
-	.city-list {
-		width:100%;
-		min-height: 3.2rem;
+	.content-city{
 		background: #F5F5F5;
 	}
-	.l-h {
-	    font-size: 0;
+	.cityarea-content {
 	    overflow: hidden;
-    }
-   .position {
-   		width:100%;
-   		margin-left: 0.16rem;
-   		line-height: .64rem;
-	    text-align: left;
-	    font-size: .24rem;
-   }
-	.site-text {
-		box-sizing: border-box;
-		padding: .2rem 0rem 0rem .2rem; 
-		width:100%;
-		height: auto;
-		background: #fff;
-		border: .01rem solid #ccc;
-		border-left: 0;
-		border-right: 0;
-	}
-	.site-text-hot {
-		padding: 0;
-		box-sizing: border-box;
-		padding: .1rem 0rem .1rem .2rem; 
-	}
-	.sites {
-	    width: 1.6rem;
-	    height: .6rem;
-	    border-radius: .1rem;
-	    font-size: .28rem;
 	    background: #fff;
+	}
+	.city-now {
+	    padding-top: .04rem;
+	    padding-bottom: .26rem;
+	    padding-right: .5rem;
+	    padding-left: .2rem;
+	    border:0.01rem solid #C9CCCD;
+	    border-left: 0;
+	    border-right: 0;
+	}
+	.cityarea-title {
+	    line-height: .54rem;
+	    padding-left: .3rem;
+	    color: #616161;
+	    font-size: .26rem;
+	}
+	.cityitem-light {
+		box-sizing: border-box;
+	    float: left;
+	    width: 33.33%;
+	    padding: .2rem .14rem 0 .1rem;
+	}
+	.cityitem-name {
+	    display: block;
+	    line-height: 28px;
 	    text-align: center;
-	    line-height: .6rem;
-	    display: inline-block;
-	    margin: 0 .24rem .18rem 0;
+	    color: #212121;
+	    border: .02rem solid #c9cccd;
+	    -webkit-border-radius: .06rem;
+	    -moz-border-radius: .06rem;
+	    border-radius: .06rem;
+	}
+	.ellipsis {
 	    overflow: hidden;
+	    width: 100%;
+	    white-space: nowrap;
 	    text-overflow: ellipsis;
-	    border: .02rem solid #ccc;
-    }
-    .sites-hot{
-    	margin: 0;
-    }
-	
+	}
+	.cityitem-seleted {
+	    border-color: #00afc7;
+	    color: #00afc7;
+	}
 </style>

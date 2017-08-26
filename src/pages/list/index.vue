@@ -8,6 +8,7 @@
 
 <script>
 import IndexHeader from './dz01/header.vue'
+
 export default {
   name: 'hello',
   data () {

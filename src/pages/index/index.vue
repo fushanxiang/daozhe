@@ -3,7 +3,8 @@
 		<index-header></index-header>
 		<img-swiper></img-swiper>
         <icon-swiper></icon-swiper>
-    <position-sale></position-sale>
+        <position-sale></position-sale>
+        <hot-recommend></hot-recommend>
 	</div>
 </template>
 
@@ -13,7 +14,7 @@ import IndexHeader from './header.vue'
 import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
 import PositionSale from './positionsale.vue'
-
+import HotRecommend from './hotrecommend'
 export default {
     name: 'index',
     data () {
@@ -24,7 +25,8 @@ export default {
   	"index-header": IndexHeader,
   	"img-swiper": ImgSwiper,
     "icon-swiper": IconSwiper,
-    "position-sale": PositionSale
+    "position-sale": PositionSale,
+    "hot-recommend":HotRecommend
   }
 }
 </script>

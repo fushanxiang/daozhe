@@ -19,7 +19,9 @@ export default new Router({
       path: '/onedaytour',
       name: 'onedaytour',
       component: Onedaytour
-    },{
+    },
+    {
+
       path: '/city/:id',
       name: 'city',
       component: City,

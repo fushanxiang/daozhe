@@ -6,33 +6,29 @@ import Onedaytour from '@/pages/onedaytour/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 
-
 Vue.use(Router)  
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'index',
-      component: Index
+        path: '/',
+        name: 'index',
+        component: Index
     },{
-      path: '/onedaytour',
-      name: 'onedaytour',
-      component: Onedaytour
-    },
-    {
-
-      path: '/city/:id',
-      name: 'city',
-      component: City,
-      children: [
+        path: '/onedaytour',
+        name: 'onedaytour',
+        component: Onedaytour
+    },{
+        path: '/city/:id',
+        name: 'city',
+        component: City,
+        children: [
         {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
-          path: 'smallCity',
-          component: SmallCity
+            path: 'bigCity',
+            component: BigCity
+        },{
+            path: 'smallCity',
+            component: SmallCity
         }
       ]
     }

@@ -7,7 +7,7 @@
         <div class="content">
             <div class="content-list" v-for='item in listInfo' :key='item.id'>
                 <div class="content-img">
-                    <img :src="item.img" class="content-list-img">
+                    <img :src="item.img" class="content-list-img" v-bind:click="item.showModal = false">
                 </div>
                 <p class="content-list-title">
                     <span class="name">{{item.title}}</span>
@@ -23,6 +23,7 @@
                 <p class="content-info">
                     {{item.content}}
                 </p>
+                <div class="modal" v-if='item.showModal' @touchmove.prevent ></div>
             </div> 
         </div>
     </div>
@@ -30,7 +31,7 @@
 
 <script>
 export default {
-  name: 'hello',
+    
   data () {
     return {
         listInfo:[{
@@ -40,7 +41,8 @@ export default {
             "price":"112",
             "link":'/detail',
             "content":"亚洲最大以飞机文物为主的航空珍品荟萃地",
-            'show':true
+            'show':true,
+            "showModal":false
 
         },{
             "id":"2",
@@ -49,7 +51,8 @@ export default {
             "price":"",
             "link":'/detail',
             "content":"小昆虫大视界",
-            "show":false
+            "show":false,
+            "showModal":false
 
         },{
             "id":"3",
@@ -58,7 +61,8 @@ export default {
             "price":"198",
             "link":'/detail',
             "content":"科学性、知识性、趣味性、互动性相结合的展",
-            "show":true
+            "show":true,
+            "showModal":false
 
         },{
             "id":"4",
@@ -67,7 +71,8 @@ export default {
             "price":"",
             "link":'/detail',
             "content":"打开通往自然的大门，去探索大自然的奥秘",
-            "show":false
+            "show":false,
+            "showModal":false
 
         },{
             "id":"5",
@@ -76,7 +81,8 @@ export default {
             "price":"112",
             "link":'/detail',
             "content":"亚洲最大的古生物博物馆",
-            "show":true
+            "show":true,
+            "showModal":false
 
         },{
             "id":"6",
@@ -85,7 +91,8 @@ export default {
             "price":"1",
             "link":'/detail',
             "content":"古老与现代并存，文明与科技兼顾",
-            "show":true
+            "show":true,
+            "showModal":false
 
         },{
             "id":"7",
@@ -94,7 +101,8 @@ export default {
             "price":"",
             "link":'/detail',
             "content":"历史与艺术并重，凝聚中国历史文化之精华",
-            "show":false
+            "show":false,
+            "showModal":false
 
         },{
             "id":"8",
@@ -103,7 +111,8 @@ export default {
             "price":"137",
             "link":'/detail',
             "content":"陪你去看流星雨落在这地球上",
-            "show":true
+            "show":true,
+            "showModal":false
 
         },{
             "id":"9",
@@ -112,7 +121,8 @@ export default {
             "price":"21",
             "link":'/detail',
             "content":"感受汽车的无穷魅力，享受汽车的无限乐趣",
-            "show":true
+            "show":true,
+            "showModal":false
 
         },{
             "id":"10",
@@ -121,7 +131,8 @@ export default {
             "price":"112",
             "link":'/detail',
             "content":"首都公安的巨大贡献和取得的辉煌成就",
-            "show":true
+            "show":true,
+            "showModal":false 
         }]
     }
   }
@@ -205,4 +216,15 @@ export default {
     .money{
         color: #ff8300;
     }
+    .modal{
+        position: absolute;
+        z-index: 100;
+        overflow: hidden;
+        top:0;
+        left: 0;
+        background: rgba(0,0,0,0.3);
+        width:100%;
+        height:100%;
+    }
+    
 </style>

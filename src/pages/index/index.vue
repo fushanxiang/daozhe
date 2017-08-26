@@ -2,7 +2,7 @@
 	<div>
 		<index-header></index-header>
 		<img-swiper></img-swiper>
-    <icon-swiper></icon-swiper>
+        <icon-swiper></icon-swiper>
 	</div>
 </template>
 

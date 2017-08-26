@@ -29,7 +29,7 @@ export default {
 		position: relative;
 	    overflow: hidden;
 	    width: 100%;
-	    height: .88rem;
+	    height: 0.88rem;
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
@@ -38,29 +38,45 @@ export default {
 		float: left;
 	    display: block;
 	    width: .4rem;
-	    line-height: .88rem;
+	    line-height: 0.88rem;
 	    padding: 0 .2rem;
 	    color: #fff;
-	    font-size: .36rem;
+	    font-size: .16rem;
 	    text-align: left;
 	}
 	.header-title {
 	    position: relative;
-	    height: .6rem;
+	    height: 0.6rem;
 	    margin: .14rem 1.6rem .14rem .6rem;
 	    background: #fff;
-	    line-height: .6rem;
+	    line-height: 1.6rem;
 	    border-radius: .06rem;
 	}
 	.header-right{
 		position: absolute;
 		top: 0;
 		right: 0;
-		line-height: .88rem;
+		line-height: 0.88rem;
 		width: 1.5rem;
-		text-align: center;
+		text-align: left;
+	}
+	.header-right .downarrow{
+		position:absolute;
+		top: .4rem;
+		left: .65rem;
+		display: block;
+		width: 0rem;
+		border-width: .1rem .1rem .1rem .1rem;
+		border-style: solid;
+		border-color: #fff transparent transparent transparent;
 	}
 	.single-line {
 		color: #ccc;
-	}
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    line-height: 0.4rem;
+	    top: 0.1rem;
+	    left: 0.3rem;
+		}
 </style>

@@ -1,39 +1,25 @@
 <template>
-  	<div class="city-header">
-        <div class="city-header-area">
-            <span class="city-in-china city-area">国内</span>
-            <span class="city-area">海外</span>
-        </div>
-    </div>
+    <hot-city></hot-city>
 </template>
 
 <script>
+
+import HotCity from './hotcity.vue'
+
     export default {
-        name: 'hello',
+        name: 'city-index',
         data () {
             return {
-                name: 'city page'
+              name: 'city-index'
             }
+        },
+        components: {
+          "hot-city": HotCity
         }
     }
 </script>
 
 
 <style scoped>
-  	.city-header {
-      line-height: 6rem;
-      background: skyblue;
-      text-align: center;
-    }
-    .city-area {
-      border: 1px solid white;
-      display: inline-block;
-      line-height: 2rem;
-      width: 8rem;
-      color: white;
-    }
-    .city-in-china {
-      background: white;
-      color: skyblue;
-    }
+  	
 </style>

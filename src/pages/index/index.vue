@@ -1,13 +1,9 @@
 <template>
-<<<<<<< HEAD
-  <div>{{name}}</div>
-=======
 	<div>
 		<index-header></index-header>
 		<img-swiper></img-swiper>
     <icon-swiper></icon-swiper>
 	</div>
->>>>>>> origin/master
 </template>
 
 <script>

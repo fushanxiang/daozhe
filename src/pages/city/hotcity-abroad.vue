@@ -18,7 +18,7 @@
 </template>
 
 <script>
- var hotcity = require ('../../hotcity.json');
+ var hotcity = require ('../../hotcity_abroad.json');
  var datas = hotcity.data.inlandhotcity;
 
 export default { 

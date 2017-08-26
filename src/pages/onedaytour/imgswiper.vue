@@ -1,5 +1,5 @@
 <template>
-	<swiper :options="swiperOption" >
+	<swiper :options="swiperOption" class="carousel">
 		<slot></slot>
 
 	    <swiper-slide v-for="item in imgsInfo" :key="item.id">
@@ -8,7 +8,7 @@
 	    	</div>
 	    </swiper-slide>
 	    
-	    <div class="swiper-pagination"  slot="pagination"></div>
+	    <div class="swiper-pagination swiper-btn"  slot="pagination"></div>
 	
 	</swiper>
 </template>
@@ -23,6 +23,8 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
+				autoplay: 3000,
+				loop: true,
 				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
@@ -63,11 +65,14 @@ export default {
 
 <style scoped>
 	@import '~swiper/dist/css/swiper.css';
+	.carousel {
+	background: #fff;
+	}
 	.img-container {
 		background: #eee;
 		overflow: hidden;
 		width: 100%;
-		padding-bottom: 31.25%;
+		padding-bottom: 26.56%;
 		height: 0;
 	}
 	.swiper-img {

@@ -1,26 +1,19 @@
 <template>
-<div>
-	<swiper :options="swiperOption" >
-	    
-	    <swiper-slide v-for="page in pages">
-	    	<ul class="icon-list">
-	    		<li class="icon-item" v-for="item in page">
-	    			<img class="icon-img" :src="item.imgUrl" />
-	    		</li>
-	    	</ul>
-	    </swiper-slide>
-
-	   
-	    
-	    <div class="swiper-pagination"  slot="pagination"></div>
-	
-	</swiper>
-	 <div @click="handleButton">button</div>
-	 </div>
+	<div class="icon">
+		<swiper :options="swiperOption" >	    
+		    <swiper-slide v-for="page in pages">
+		    	<ul class="icon-list">
+		    		<li class="icon-item" v-for="item in page">
+		    			<img class="icon-img" :src="item.imgUrl" />
+		    			<span class="icon-title">{{item.title}}</span>
+		    		</li>
+		    	</ul>
+		    </swiper-slide>
+		</swiper>
+	</div>
 </template>
 
 <script>
-
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
@@ -29,7 +22,6 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
-				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
 			},
@@ -37,65 +29,35 @@ export default {
 				"id": "1",
 				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"周边游"
 			},{
 				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1604/aa/b08918c566c859f7.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"海滨海岛"
 			},{
 				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1606/46/613a55bf025859a.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"文化古迹"
 			},{
 				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1706/2a/57d3853e9aa66202.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"草原"
 			},{
 				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1511/ec/df937460fd8e72f7.png",
 				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "8",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
+				"title":"亲子游"
 			}]
     	}
-	},
-	methods: {
-		handleButton: function(){
-			this.iconsInfo.push({
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			})
-		}
 	},
 	computed: {
 		pages: function() {
 			const pages = [];
 			for (var i = 0; i < this.iconsInfo.length; i++) {
-				let page = Math.floor(i/8);
+				let page = Math.floor(i/5);
 				if (!pages[page]) {
 					pages[page] = [];
 				}
@@ -113,21 +75,35 @@ export default {
 
 <style scoped>
 	@import '~swiper/dist/css/swiper.css';
+	.icon {
+		height: 1.76rem;
+		background: #fff;
+	}
 	.icon-list {
 		overflow: hidden;
-		padding-bottom: .6rem;
+		height: 1.76rem;
 	}
 	.icon-item {
 		display: block;
-		width: 25%;
+		width: 20%;
 		float: left;
-		padding: .2rem 0;
+		padding: .24rem 0;
 	}
 	.icon-img {
 		display: block;
-		width: .66rem;
-		height: .66rem;
+		width: .744rem;
+		height: .744rem;
 		margin: 0 auto;
+	}
+	.icon-title {
+		display: block;
+		overflow: hidden;
+		height: .54rem;
+		margin: 0 .04rem;
+		font-size: .24rem;
+		line-height: .54rem;
+		text-align: center;
+		color: #212121;
 	}
 	
 </style>

@@ -1,7 +1,6 @@
 <template>
 <div>
 	<swiper :options="swiperOption" >
-	    
 	    <swiper-slide v-for="page in pages">
 	    	<ul class="icon-list">
 	    		<li class="icon-item" v-for="item in page">
@@ -9,11 +8,11 @@
 	    		</li>
 	    	</ul>
 	    </swiper-slide>
-
-	   
-	    
+		<slot></slot>
+	   <swiper-slide v-for='page in pages' :key='page.index'>
+		   	
+	   </swiper-slide>
 	    <div class="swiper-pagination"  slot="pagination"></div>
-	
 	</swiper>
 	 <div @click="handleButton">button</div>
 	 </div>
@@ -102,6 +101,65 @@ export default {
 				pages[page].push(this.iconsInfo[i])
 			}
 			return pages;
+			optionInfo:[{
+				"id":"1",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"2",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"3",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"4",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"5",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"6",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"7",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"8",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			},{
+				"id":"8",
+				"link":'/detail',
+				"imgsUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				"title":'景点门票'
+			}]
+    	}
+	},
+	computed:{
+			pages(){
+				var pages = [];
+				for(var i = 0;i<this.optionInfo.length;i++){
+				var page = Math.floor(i/8)
+				if(!pages[page]){
+					pages[page] = []
+				}
+				pages[page].push(this.optionInfo[i])
+			}
+			return pages
 		}
 	},
 	components:{
@@ -129,5 +187,4 @@ export default {
 		height: .66rem;
 		margin: 0 auto;
 	}
-	
 </style>

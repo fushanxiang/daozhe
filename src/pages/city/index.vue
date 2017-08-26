@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 
     <div>
         <div class="city-header">
@@ -9,11 +10,18 @@
          </div>
         <hot-city></hot-city>
         <hot-city-abroad></hot-city-abroad>
+=======
+    <div>
+        <city-header></city-header>
+        
+        <city-letter></city-letter> 
+        <router-view></router-view>
+>>>>>>> 1bfab2843daddb2654baf04bbc1f1e4f5b1912ce
     </div>
-    
 </template> 
 
 <script>
+<<<<<<< HEAD
 
     import HotCity from './hotcity.vue'
     import HotCityAbroad from './hotcity-abroad.vue'
@@ -33,6 +41,20 @@
             handleAbroad() {
                 location.href='http://localhost:8080/#/city/abroadCity';
             }
+=======
+
+import cityHeader from './city_header.vue';
+import CityLetter from './cityletter.vue';
+
+
+    export default {
+        data () {
+            return {}
+        },
+        components: {
+          "city-header": cityHeader,
+          "city-letter": CityLetter
+>>>>>>> 1bfab2843daddb2654baf04bbc1f1e4f5b1912ce
         }
     }
 
@@ -41,6 +63,7 @@
 
 <style scoped>
 
+<<<<<<< HEAD
   	.city-header {
         line-height: 1.5rem;
         background: skyblue;
@@ -57,4 +80,6 @@
         background: white;
         color: skyblue;
     }
+=======
+>>>>>>> 1bfab2843daddb2654baf04bbc1f1e4f5b1912ce
 </style>

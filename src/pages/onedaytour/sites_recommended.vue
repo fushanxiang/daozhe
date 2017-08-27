@@ -34,16 +34,16 @@ export default {
 				"num": "63"
 			},{
 				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/201306/13/bdf22f69fab0ee4ec8d65eac.jpg_195x140_fed88c5f.jpg",
-				"link": "/detail",
-				"title":"八达岭长城缆车",
-				"num": "5"
-			},{
-				"id": "3",
 				"imgUrl": "http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_195x140_6f1cbf29.jpg",
 				"link": "/detail",
 				"title":"水立方",
 				"num": "20"
+			},{
+				"id": "3",
+				"imgUrl": "http://img1.qunarzz.com/sight/p0/201306/13/bdf22f69fab0ee4ec8d65eac.jpg_195x140_fed88c5f.jpg",
+				"link": "/detail",
+				"title":"八达岭长城缆车",
+				"num": "5"
 			},{
 				"id": "4",
 				"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_195x140_267be79a.jpg",
@@ -123,6 +123,8 @@ export default {
 		text-align: center;
 		color: #212121;
 		padding-top: .16rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	.sitea-route {
 		overflow: hidden;

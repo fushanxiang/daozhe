@@ -72,6 +72,9 @@ export default {
 	    left: .2rem;
 	    color: #e4e7ea;
 	}
+	.icon-search::before{
+		content: '';
+	}
 	.header-right{
 		position: absolute;
 		top: 0;

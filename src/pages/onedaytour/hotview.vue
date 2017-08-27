@@ -147,8 +147,8 @@ export default {
 	    right: -.18rem;
 	    width: 0;
 	    height: 0;
-	    border-top: .18rem solid #00bcd4;
-	    border-bottom: .18rem solid #00bcd4;
+	    border-top: .18rem solid #ff9800;
+	    border-bottom: .18rem solid #ff9800;
 	    border-right: .18rem solid transparent;
 	}
 	.tomorrow {

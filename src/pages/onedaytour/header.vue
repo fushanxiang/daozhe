@@ -73,7 +73,7 @@ export default {
 	    left: .1rem;
 	    color: #d5d5d5;
 	}
-	.icon-search:before{
+	.icon-search::before{
 		content: '';
 	}
 	.header-right{

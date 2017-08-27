@@ -75,25 +75,24 @@ export default {
 		font-size: .35rem;
 		padding: 0 .1rem 0 .24rem;
 	}
-	.city {
-
-	}
 	.city-list{
 		overflow: hidden;
+		margin: .04rem .08rem;
 	}
 	.city-item {
 		width: 25%;
-		height: .6rem;
 		float: left;
 		margin-bottom: .2rem;
 	}
 	.city-name {
-		width: 1.31rem;
-		height: .6rem;
-		text-align: center;
-		line-height: .6rem;
-		background-color: #f0fbfd;
 		margin: 0 .1rem;
+		height: .6rem;
+		line-height: .6rem;
+		text-align: center;
+		font-size: .28rem;
+		border-radius: .04rem;
+		background: #f0fbfd;
+		
 	}
 	
 </style>

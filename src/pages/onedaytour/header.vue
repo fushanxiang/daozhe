@@ -2,7 +2,7 @@
 	<header class="header">
 		<a class="header-left iconfont">&#xe600;</a>
 		<div class="header-title">
-			<span class="iconfont icon-search">&#xe60a;</span >
+			<span class="iconfont icon-search">&#xe60a;</span>
 			<span class="single-line">景点/目的地/主题</span>
 		</div>
 		<div class="header-right">
@@ -72,6 +72,9 @@ export default {
 	    position: absolute;
 	    left: .1rem;
 	    color: #d5d5d5;
+	}
+	.icon-search:before{
+		content: '';
 	}
 	.header-right{
 		position: absolute;

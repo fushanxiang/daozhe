@@ -8,7 +8,8 @@
 </template> 
 
 <script>
-    var appData=require('./china.json');
+    var appData = require('./china.json');
+    var abroadData = require('./abroad.json');
     export default {
         data () {
             return {
@@ -16,6 +17,7 @@
             } 
 
         },
+        props: ['letterChange'],
         created() {
             var cityData=appData.data;
             for(var i=0; i<cityData.length;i++) {
@@ -27,6 +29,22 @@
             handleLetterClick(event) {
                 var el = event.currentTarget;
                 console.log(el);
+            }
+        },
+        watch: {
+            letterChange: function(value) {
+                var cityData = [];
+                if(value==='china') {
+                    this.character = [];
+                    cityData = appData.data;
+                }
+                if(value==='abroad') {
+                    this.character = [];
+                    cityData = abroadData.data;
+                }
+                for (var i = 0; i < cityData.length; i++) {
+                    this.character.push(cityData[i]);
+                }
             }
         }
     }

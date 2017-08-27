@@ -1,20 +1,28 @@
 <template>
-    <div class="city-header-area">
-        <span class="iconfont city-header-goback">&#xe624;</span>
-        <span class="city-china city-area city-clicked" v-on:click="handleChina">国内</span>
-        <span class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
-        <div class="header-keyword">
-            <input type="text" value="输入城市名或拼音" class="city-keyword" 
-            @focus="handleFocus" @blur="handleBlur" >
+    <div>
+        <div class="city-header-area">
+            <span class="iconfont city-header-goback">&#xe624;</span>
+            <span class="city-china city-area" v-on:click="handleChina">国内</span>
+            <span class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
+            <div class="header-keyword">
+                <input type="text" value="输入城市名或拼音" class="city-keyword" 
+                @focus="handleFocus" @blur="handleBlur" >
+            </div>
         </div>
+        <city-area :change="cityChange"></city-area>
     </div>
-
 </template>
 
 <script>
+    import cityArea from './china_city.vue';
     export default {
         data () {
-            return {}
+            return {
+                cityChange: ''
+            }
+        },
+        components: {
+            "city-area": cityArea
         },
         methods: {
             handleBlur(e) {
@@ -24,13 +32,12 @@
             },
             handleFocus(e) {
                 e.target.value = "";
-
             },
             handleChina() {
-                location.href='http://localhost:8080/#/city';
+                this.cityChange = 'china';
             },
             handleAbroad() {
-                location.href='http://localhost:8080/#/city/abroadCity';
+                this.cityChange = 'abroad';
             }
         }
     }
@@ -65,6 +72,8 @@
         float: left;
         margin-left: 10%;
         margin-top: .14rem;
+        background: #fff;
+        color: #00afc7;
     }
     .city-abroad {
         border-radius: 0 3px 3px 0;

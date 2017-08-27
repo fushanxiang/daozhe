@@ -1,7 +1,7 @@
 <template>
     <div class="city-header-area">
         <span class="iconfont city-header-goback">&#xe624;</span>
-        <span class="city-china city-area" v-on:click="handleChina">国内</span>
+        <span class="city-china city-area city-clicked" v-on:click="handleChina">国内</span>
         <span class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
     </div>
 </template>
@@ -10,7 +10,12 @@
 
     export default {
         data () {
-            return {}
+            return {
+                headerBtn: []
+            }
+        },
+        mounted() {
+            this.headerBtn = document.getElementsByClassName('city-area');
         },
         methods: {
             handleChina() {
@@ -48,16 +53,18 @@
         color: white;
     }
     .city-china {
-        background: white;
-        color: #00afc7;
         border-radius: 3px 0 0 3px;
         float: left;
-        margin-left: .44rem;
+        margin-left: 10%;
         margin-top: .14rem;
     }
     .city-abroad {
         border-radius: 0 3px 3px 0;
         float: left;
         margin-top: .14rem;
+    }
+    .city-clicked {
+        background: white;
+        color: #00afc7;
     }
 </style>

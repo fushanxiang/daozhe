@@ -29,7 +29,7 @@
             var cityData = appData.data;
             for (var i = 0; i < cityData.length; i++) {
                 this.cityClass.push(cityData[i]);
-            }
+            };
         }
     }
 </script>

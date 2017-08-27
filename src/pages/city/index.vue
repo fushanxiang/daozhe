@@ -10,7 +10,7 @@
 
     import cityHeader from './city_header.vue';
     import CityLetter from './cityletter.vue';
-
+   
     export default {
         data () {
             return {}

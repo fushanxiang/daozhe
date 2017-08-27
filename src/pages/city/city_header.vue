@@ -3,21 +3,29 @@
         <span class="iconfont city-header-goback">&#xe624;</span>
         <span class="city-china city-area city-clicked" v-on:click="handleChina">国内</span>
         <span class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
+        <div class="header-keyword">
+            <input type="text" value="输入城市名或拼音" class="city-keyword" 
+            @focus="handleFocus" @blur="handleBlur" >
+        </div>
     </div>
+
 </template>
 
 <script>
-
     export default {
         data () {
-            return {
-                headerBtn: []
-            }
-        },
-        mounted() {
-            this.headerBtn = document.getElementsByClassName('city-area');
+            return {}
         },
         methods: {
+            handleBlur(e) {
+                if(e.target.value == "") {
+                    e.target.value = "输入城市名或拼音";
+                } 
+            },
+            handleFocus(e) {
+                e.target.value = "";
+
+            },
             handleChina() {
                 location.href='http://localhost:8080/#/city';
             },
@@ -63,8 +71,19 @@
         float: left;
         margin-top: .14rem;
     }
-    .city-clicked {
-        background: white;
-        color: #00afc7;
+    .header-keyword {
+        margin-top: .18rem;
+        padding: 0 .4rem .1rem .2rem;
+        font-size: .26rem;
+        color: #9e9e9e;
+    }
+    .city-keyword {
+        display: block;
+        width: 100%;
+        height: .3rem;
+        line-height: .3rem;
+        padding: .16rem 0 .16rem .1rem;
+        border-radius: .1rem;
+        text-align: center;
     }
 </style>

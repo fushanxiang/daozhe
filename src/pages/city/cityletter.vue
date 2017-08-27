@@ -9,6 +9,7 @@
 
 <script>
     var appData=require('./china.json');
+    
     export default {
         data () {
             return {
@@ -21,8 +22,43 @@
             for(var i=0; i<cityData.length;i++) {
               this.character.push(cityData[i]);
             }
+        },
+        methods: {
+            handleCharacterClick(ev) {
+                // var characters=document.getElementsByClassName('city-aside-set');
+                // var word=characters[0].children;
+                // for(var i=0; i<word.length;i++) {
+                //     var this_=this;
+
+                //     word.onclick=function(e) {
+                //         console.log(e.target.value);
+                //     }
+                // }
+                var e = ev || window.event;
+                var word=e.path[0].innerHTML;
+                this.word;
+                if (window.localStorage) {
+                    localStorage[word]=word;
+                    // localStorage.
+                } else {
+                    Cookie.write("word",word);  
+                }
+                // var parent=e.target.parentElement;
+                // var a=parent;
+                // console.log(this)
+
+                // for(var i=0;i<a.length;i++) {
+                //     if(e=a[i]) {
+                //         // console.log(i);
+                //     }
+                // }
+                
+            }
         }
+        
     }
+
+   
 </script>
 
 

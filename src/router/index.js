@@ -5,7 +5,9 @@ import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import ChinaCity from '@/pages/city/china_city'
 import AbroadCity from '@/pages/city/abroad_city'
+import Vuex from 'vuex'
 
+Vue.use(Vuex)
 Vue.use(Router)
 
 export default new Router({

@@ -14,10 +14,11 @@
 <script>
     var appData = require('./china.json');
     export default {
-        name: 'hello',
+        // name: 'hello',
         data () {
             return {
                 cityClass: []
+                // strStoreDate:[]
             }
         },
         created() {
@@ -26,6 +27,12 @@
                 this.cityClass.push(cityData[i]);
             }
         }
+        // watch: {
+        //     handleWord: function (newQuestion) {
+        //         // this.strStoreDate = window.localStorage ? localStorage.getItem("word"): Cookie.read("word");
+        //     }
+            
+        // }
     }
 </script>
 

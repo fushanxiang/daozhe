@@ -17,9 +17,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="map-modmore">
-			<span>查看所有产品</span>
-		</div>
+			<p class="all-product">查看所有产品</p>
 	</div>
 </template>
 
@@ -131,11 +129,12 @@ export default {
 		color:#9e9e9e;
 		font-size:0.24rem;
 	}
-	.map-modmore {
-		height:0.88rem;
+	.all-product{
+		background: #fff;
 		color:#00afc7;
-		line-height:0.88rem;
-		text-align:center;
+		border-top: 1px solid #f5f5f5;
+		line-height: .88rem;
+		text-align: center;
 	}
 
 

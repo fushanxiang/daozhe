@@ -33,18 +33,19 @@
     }
     .position-directon{
     	float: left;
-    	width: 3.74rem;
+    	width: 50%;
     	font-size:.28rem;
     	color:#212121;
     	line-height: .98rem;
     	text-align: center;
+        box-sizing: border-box;
     	background-color: #fff; 
     }
     .position-directon:nth-child(1){
     	border-right: 1px solid #e0e0e0;
     }
     .position-left{
-    	font-size: .5rem;
+    	font-size: .32rem;
     	margin-right: .05rem;
     	color:#616161;
     }

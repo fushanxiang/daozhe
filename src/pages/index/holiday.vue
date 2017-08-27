@@ -3,9 +3,9 @@
 		<h2 class="ht-modtitle">周末去哪儿</h2>
 		
 			<div class="ht-product-item">
-				<a href="###" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
+				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
 					<div class="product-item-img" >
-						<img :src="item.imgUrl" title="" alt="">
+						<img :src="item.imgUrl">
 					</div>
 					<div class="product-item-text" >
 						<p class="product-name">{{item.title}}</p>
@@ -79,6 +79,7 @@
 	}
 	.ht-product-item {
 		position: relative;
+		background: #fff;
 		margin-bottom: .1rem;
 		background: #fff;
 	}

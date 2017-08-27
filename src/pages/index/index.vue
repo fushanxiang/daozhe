@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="main-content">
 		<index-header></index-header>
 		<img-swiper></img-swiper>
         <icon-swiper></icon-swiper>
@@ -35,6 +35,9 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.main-content{
+    background: #f5f5f5;
+}
 h1, h2 {
   font-weight: normal;
 }

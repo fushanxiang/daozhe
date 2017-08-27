@@ -137,6 +137,7 @@ export default {
 	.icon-list {
 		overflow: hidden;
 		height: 3.7rem;
+		background: #fff;
 		padding-top:.1rem;
 	}
 	.icon-item {

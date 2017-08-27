@@ -1,21 +1,33 @@
 <template>
-  <div class="footer">
+  <div class="footer" id="footer">
   		<div class="footer-provider">
   			<p class="footer-provider-line"></p>
   			<p class="footer-provider-message">本产品由爱陌客自营提供</p>
   		</div>
-  		<ul class="footer-main-nav">
+  		<ul id = "tag" v-bind:class="[show1 ? 'nav1' : 'nav2' ]">
   			<li class="plane-ticket"><span class="iconfont">&#xe630;</span>机票</li>
   			<li class="hotel"><span class="iconfont">&#xe61e;</span>酒店</li>
   			<li class="apartment"><span class="iconfont">&#xe6a8;</span>公寓</li>
-  			<li class="more"><span class="iconfont">&#xe6b8;</span>更多</li>
-  			
+  			<li class="tag" v-on:click="handleClick">
+  				<span class="iconfont" v-if="!show1">&#xe6b8;更多</span>
+  				<span class="iconfont" v-if="show1">&#xe63c;收起</span>
+  			</li>
+  			<li><span class="iconfont">&#xe772;</span>火车票</li>
+  			<li><span class="iconfont">&#xe655;</span>景点</li>
+  			<li><span class="iconfont">&#xe6b4;</span>接送机</li>
+  			<li><span class="iconfont">&#xe6c9;</span>度假</li>
+  			<li><span class="iconfont">&#xe631;</span>攻略</li>
+  			<li><span class="iconfont">&#xe678;</span>车车</li>
+  			<li><span class="iconfont">&#xe606;</span>当地人</li>
+  			<li><span class="iconfont">&#xe6d4;</span>团购</li>
+  			<li><span class="iconfont">&#xe629;</span>旅途</li>
   		</ul>
   		<ul class="footer-menu">
   			<li>登录</li>
   			<li>我的订单</li>
   			<li>最近浏览</li>
   			<li>关于我们</li>
+  			
   		</ul>
   		<ul class="mobile-pc">
   			<li class="mobile">触屏版</li>
@@ -26,17 +38,56 @@
 </template>
 
 <script>
+ 
 export default {
-  data () {
-    return {
-
+	
+  	 data () {
+  	 	
+        return {
+            show1 : false,
+            
+        }
+    },
+    methods: {
+        handleClick() {
+            this.show1 = !this.show1;
+           
+        }
     }
      
-  }
 }
+	
 </script>
 
+
 <style scoped>
+	.nav1 {
+			position: relative;
+			width: 6.4rem;
+			height: 2.5rem;
+			padding: .2rem .2rem 0 .2rem;
+			margin: 0 auto;
+			overflow: hidden;
+			
+		}
+		.nav2 {
+			position: relative;
+			width: 6.4rem;
+			height: .7rem;
+			padding: .2rem .2rem 0 .2rem;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		#tag li {
+			float: left;
+			width: 1.5rem;
+			height: .6rem;
+			text-align: center;
+			line-height: .6rem;
+			color: #9e9e9e;
+		    font-size: 12px;
+		   
+		}	
 	.footer {
 		width: 100%;
 		height: auto;
@@ -73,34 +124,21 @@ export default {
 	    text-align: center;
 	    z-index: 2;
 		}
-		.footer-main-nav {
-			width: 100%;
-			height: .7rem;
-			
-
-		}
-		.footer-main-nav li {
-			float: left;
-			width: 1.5rem;
-			height: .42rem;
-			text-align: center;
-			line-height: .42rem;
-			color: #9e9e9e;
-		    font-size: 12px;
-		   
-		}	
+		
+		
 		.footer .iconfont {
 			margin:3px 3px  0 5px;
+			font-size: 12px;
 		}
 		.footer-menu {
 			width: 100%;
 			height: .8rem;
 			border-bottom: .01rem solid #cacaca;
+
 		}
 		.footer-menu li {
 			float: left;
 			padding-left: .4rem;
-			height: 100%;
 			text-align: center;
 			line-height: .8rem;
 			color: #25a4bb;
@@ -125,6 +163,14 @@ export default {
 		    text-align: center;
 		    font-size: 14px;
 		    padding: 10px;
+		}
+		.tag {
+			position: absolute;
+			bottom: 0.1rem;
+			right: .6rem;
+			background: #f3f3f3;
+
+			
 		}
 
 </style>

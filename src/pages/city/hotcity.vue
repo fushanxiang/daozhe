@@ -24,16 +24,36 @@
 
 <script>
 	var hotcity = require ('../../hotcity.json');
-	var datas = hotcity.data.inlandhotcity;
+	var hotcityAbroad = require ('../../hotcity_abroad.json');
 
 export default { 
 	data () {
 		return {
-			datas : datas
+			datas : []
     	}
 	},
-	mountd() {
-
+	props: ['countryChange'],
+	created() {
+        var cityData = hotcity.data.inlandhotcity;
+        for (var i = 0; i < cityData.length; i++) {
+            this.datas.push(cityData[i]);
+        }
+    },
+	watch: {
+		countryChange: function(value) {
+			var cityData = [];
+            if(value==='china') {
+                this.datas = [];
+                cityData = hotcity.data.inlandhotcity;
+            }
+            if(value==='abroad') {
+                this.datas = [];
+                cityData = hotcityAbroad.data.inlandhotcity;
+            }
+            for (var i = 0; i < cityData.length; i++) {
+                this.datas.push(cityData[i]);
+            }
+		}
 	}
 }
 </script>

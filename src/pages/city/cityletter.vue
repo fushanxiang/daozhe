@@ -4,7 +4,6 @@
             <div class="city-aside-set-character" v-for="(item, index) of character" v-on:click="handleLetterClick($event)">{{item[0]}}</div>
         </div>
     </div>
-  	
 </template> 
 
 <script>

@@ -3,18 +3,20 @@
 	<div class="content-city">
 		<div class="cityarea-group">
 			<div class="cityarea-title">您的位置</div>
-			<div v-show="false" class="cityarea-content city-now">
+			<div class="cityarea-content city-now" >
 				<div class="cityitem-light">
-					<a href="###" class="cityitem-name cityitem-seleted ellipsis">澳门</a>
+					<p class="cityitem-name cityitem-seleted ellipsis">{{$store.state.city}}</p>
 				</div>
 			</div>
 		</div>
 		<div class="cityarea-group">
 			<div class="cityarea-title">热门城市</div>
 			<div class="cityarea-content city-now">
-				<div class="cityitem-light" v-for="item in datas">
-					<a href="###" class="cityitem-name ellipsis">{{item.city}}</a>
+			 
+				<div class="cityitem-light" v-for="item in cityclass">
+						<p  v-bind:id="item.id" @click="handleSelectedClick($event)"  class="cityitem-name ellipsis">{{item.city}}</p>
 				</div>
+			
 			</div>
 		</div>
 	</div>
@@ -22,35 +24,42 @@
 </template>
 
 <script>
-	var hotcity = require ('../../hotcity.json');
-	var hotcityAbroad = require ('../../hotcity_abroad.json');
 
 export default { 
-	props: ['countryChange'],
+	
 	data () {
 		return {
-			datas : []
+			foreign: false,
+			dataId:[],
+			show:false,
+
     	}
 	},
-	created() {
-        var cityData = hotcity.data.inlandhotcity;
-        for (var i = 0; i < cityData.length; i++) {
-            this.datas.push(cityData[i]);
+	props: ['countryChange', 'datas'],
+	methods: {
+		handleSelectedClick(event) {
+			var  event = event || window.event;
+			const SelectId = event.target.id;
+			this.$store.commit ("changeCity", {city: event.target.innerText});
+			location.href = 'http://localhost:8080/#/';
+			this.dataId.push(SelectId);
+			var showctrol = this.$store.getters.perfectCity;
+			
+			this.show = showctrol ? true: false;
+		}
+	},
+	computed: {
+        cityclass: function() {
+            return this.foreign? this.datas.hotAbroadCity: this.datas.hotChinaCity;
         }
     },
 	watch: {
 		countryChange: function(value) {
-			var cityData = [];
             if(value==='china') {
-                this.datas = [];
-                cityData = hotcity.data.inlandhotcity;
+                this.foreign = false;
             }
             if(value==='abroad') {
-                this.datas = [];
-                cityData = hotcityAbroad.data.inlandhotcity;
-            }
-            for (var i = 0; i < cityData.length; i++) {
-                this.datas.push(cityData[i]);
+                this.foreign = true;
             }
 		}
 	}

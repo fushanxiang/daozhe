@@ -31,6 +31,7 @@ export default {
 		this.$http.get('/static/weekend.json').then(response => {
 		var data = response.body.data;
 		this.goodsInfo = data.goods;
+		//console.log(this.goodsInfo[0].title);
 		}, response => {
 		console.log("ajax error");
   		});

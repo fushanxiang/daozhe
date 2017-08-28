@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="bg">
 		<index-herder></index-herder>
 		<index-category></index-category>
 		<hotplace></hotplace>
@@ -32,5 +32,8 @@ export default {
 </script>
 
 <style scoped>
-	
+
+	.bg{
+		background: #f1f5f6;
+	}
 </style>

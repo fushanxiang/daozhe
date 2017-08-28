@@ -9,7 +9,7 @@ export default new Vuex.Store({
 	},
 	getters: {
 		"perfectCity": function(state) {
-			return state.city + "^<>^"
+			return state.city
 		}
 	},
 	mutations: {

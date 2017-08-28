@@ -1,10 +1,9 @@
 <template>
 
 	<div class="content-city">
-
 		<div class="cityarea-group">
 			<div class="cityarea-title">您的位置</div>
-			<div class="cityarea-content city-now">
+			<div v-show="false" class="cityarea-content city-now">
 				<div class="cityitem-light">
 					<a href="###" class="cityitem-name cityitem-seleted ellipsis">澳门</a>
 				</div>
@@ -27,12 +26,12 @@
 	var hotcityAbroad = require ('../../hotcity_abroad.json');
 
 export default { 
+	props: ['countryChange'],
 	data () {
 		return {
 			datas : []
     	}
 	},
-	props: ['countryChange'],
 	created() {
         var cityData = hotcity.data.inlandhotcity;
         for (var i = 0; i < cityData.length; i++) {
@@ -62,11 +61,8 @@ export default {
 	.content-city{
 		background: #F5F5F5;
 	}
-	.cityarea-content {
-	    overflow: hidden;
-	    background: #fff;
-	}
 	.city-now {
+		overflow: hidden;
 	    padding-top: .04rem;
 	    padding-bottom: .26rem;
 	    padding-right: .5rem;
@@ -74,6 +70,7 @@ export default {
 	    border:0.01rem solid #C9CCCD;
 	    border-left: 0;
 	    border-right: 0;
+	    background: #fff;
 	}
 	.cityarea-title {
 	    line-height: .54rem;

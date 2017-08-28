@@ -5,11 +5,12 @@
 </template> 
 
 <script>
+   import cityHeader from './city_header.vue';
 
-    import cityHeader from './city_header.vue';
     export default {
+
         data () {
-            return {}
+            return {} 
         },
         components: {
           "city-header": cityHeader

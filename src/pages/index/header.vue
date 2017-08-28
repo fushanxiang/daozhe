@@ -1,3 +1,4 @@
+张明月 12:08:22
 <template>
 	<header class="header">
 		<a class="header-left iconfont">&#xe600;</a>
@@ -6,7 +7,8 @@
 			<span class="single-line">输入城市/景点/游玩主题</span>
 		</div>
 		<div class="header-right">
-			<span class="nav-city">北京<span class="downarrow"></span>
+			<span class="nav-city">北京
+				<span class="downarrow"></span>
 			</span>
 		</div>
 	</header>
@@ -29,7 +31,7 @@ export default {
 		position: relative;
 	    overflow: hidden;
 	    width: 100%;
-	    height: 0.88rem;
+	    height: .88rem;
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
@@ -38,7 +40,7 @@ export default {
 		float: left;
 	    display: block;
 	    width: .4rem;
-	    line-height: 0.88rem;
+	    line-height: .88rem;
 	    padding: 0 .2rem;
 	    margin: .02rem 0 0 -0.08rem;
 	    margin-top: 0.02rem;
@@ -51,24 +53,24 @@ export default {
 	    height: .6rem;
 	    margin: .14rem 1.32rem .14rem .8rem;
 	    background: #fff;
-	    line-height: 1.6rem;
+	    line-height: .6rem;
 	    border-radius: .06rem;
 	}
 	.single-line {
-		    display: inline-block;
-		    overflow: hidden;
-		    position: absolute;
-		    left: .3rem;
-		    top: 0;
-		    width: 3.6rem;
-		    white-space: nowrap;
-		    text-overflow: ellipsis;
-		    color: #e4e7ea;
+	    display: inline-block;
+	    overflow: hidden;
+	    position: absolute;
+	    left: .3rem;
+	    top: 0;
+	    width: 3.6rem;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #e4e7ea;
 	}
 	.icon-search {
-		    position: absolute;
-		    left: .2rem;
-		    color: #e4e7ea;
+	    position: absolute;
+	    left: .2rem;
+	    color: #e4e7ea;
 	}
 	.header-right{
 		position: absolute;

@@ -2,8 +2,8 @@
 	<div>
 		<header-fixed :goodsInfo="goodsInfo"></header-fixed>
 		<index-header :goodsInfo="goodsInfo"></index-header>
-		<light-spot></light-spot>
-		<combo-detail></combo-detail>
+		<light-spot :goodsInfo="goodsInfo"></light-spot>
+		<combo-detail :goodsInfo="goodsInfo"></combo-detail>
 		<related-place></related-place>
 		<index-footer></index-footer>
 		<footer-fixed></footer-fixed>

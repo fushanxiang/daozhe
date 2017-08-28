@@ -3,9 +3,9 @@
         <div class="china-city">
             <hot-city :countryChange="change" :datas="datas"></hot-city>
             <div v-for="city in cityclass" class="city-item">
-                <p class="city-class">{{city[0]}}</p>
+                <p class="city-class" ref="spell">{{city[0]}}</p>
                 <ul >
-                    <li v-for="cityName in city[1]" class="city-list" v-bind:spell="cityName.itemName" v-bind:key="cityName.id">
+                    <li v-for="cityName in city[1]" class="city-list" v-bind:spell="cityName.itemName" v-bind:key="cityName.id" v-on:click="handleHref">
                         {{cityName.cityarea}}
                     </li>
                 </ul>
@@ -47,10 +47,25 @@
         },
         methods: {
             changePlace:function(word) {
-                console.log(word);//传入点击各个单独单词的字母对应的单词
+                // console.log(word);//传入点击各个单独单词的字母对应的单词
+                var spells = this.$refs.spell;
+                for(var i = 0; i < spells.length; i++) {
+                    if(spells[i].innerText === word) {
+                        document.body.scrollTop = spells[i].offsetTop-44;
+                    }
+                }
             },
             handleTouchWord:function(num) {
-                console.log(num);//获取手指在字母上移动时，该字母距离屏幕顶部的高度
+                // console.log(num);//获取手指在字母上移动时，该字母距离屏幕顶部的高度
+                var spells = this.$refs.spell;
+                if(num < spells.length && num >= 0) {
+                    document.body.scrollTop = spells[num].offsetTop-44;
+                }
+            },
+            handleHref:function(ev) {
+                var e = ev || window.event;
+                this.$store.commit("changeCity", {city: e.target.innerText});
+                location.href = 'http://localhost:8080/#/';
             }
         }
     }

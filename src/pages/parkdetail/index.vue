@@ -1,7 +1,7 @@
 <template>
 	<div @mousewheel="test">   
-    <header-fixed></header-fixed> 
 	<park-location></park-location>
+    <header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>  
     <discuss></discuss>
     <recommend></recommend>
     <recommend-sites></recommend-sites>
@@ -22,31 +22,53 @@
   
 
 export default {
-  	name: 'hello',
-  	data () {
-    	return {
-     	 	deltaY :true
-     	}
-  	},
-  	components: {
-  		"park-location":ParkLocation,
-	    "recommend": Recommend,
-	    "recommend-sites": RecommendSites,
-	    "ua-pop":Uapop,
-	    "order":Order,
-	    "header-fixed":HeaderFixed,
-	    "discuss":Discuss
-  	},
-   	methods:{
-	    test(e) {
-	      if(e.deltaY < 0) {
-	        this.deltaY=false;
-	         
-	      }else{
-	        this.deltaY=true;
-	      }
-	    }
-  	}
+  name: 'hello',
+  data () {
+    return {
+      deltaY :true,
+      scrollTop: 0,
+      headerShow: false
+     }
+  },
+  components: {
+    "recommend": Recommend,
+    "recommend-sites": RecommendSites,
+    "ua-pop":Uapop,
+    "order":Order,
+    "header-fixed":HeaderFixed,
+    "discuss":Discuss,
+    "park-location":ParkLocation
+  },
+  mounted() {
+    var this_ = this;
+    window.addEventListener('scroll', function () {
+                this_.scrollTop = document.body.scrollTop;
+            }, false);
+  },
+  beforeDestroy: function () {
+            window.removeEventListener("scroll", function () {
+                this_.scrollTop = document.body.scrollTop;
+            }, false);
+    },
+   methods:{
+    test(e) {
+      if(e.deltaY < 0) {
+        this.deltaY=false;
+         
+      }else{
+        this.deltaY=true;
+      }
+    }
+  },
+  computed: {
+    style: function() {
+     if(this.headerShow) {
+         return "opacity:1"
+                } else {
+                    return "opacity:" + this.scrollTop / 200
+     }
+    }
+  }
 }
 </script>
 

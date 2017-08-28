@@ -1,27 +1,53 @@
 <template>
-	<div>
-		<park-location></park-location>
-	    <recommend></recommend>
-	    <recommend-sites></recommend-sites>
-  	</div>
+	<div @mousewheel="test">   
+    <header-fixed></header-fixed> 
+	<park-location></park-location>
+    <discuss></discuss>
+    <recommend></recommend>
+    <recommend-sites></recommend-sites>
+    <ua-pop :deltaY="deltaY"></ua-pop>
+    <order></order>
+ </div>
+
 </template>
 
 <script>
 	import ParkLocation from './parkLocation.vue'
-    import Recommend from './recommend.vue'
-    import RecommendSites from './recommendsites.vue'
-	export default {
-	  	data () {
-	    	return {
-	    	
-	    	}
-	  	},
-	  	components: {
-		  	"park-location":ParkLocation,
-		    "recommend": Recommend,
-		    "recommend-sites": RecommendSites
-	  	}
-	}
+  	import Recommend from './recommend.vue'
+  	import RecommendSites from './recommendsites.vue'
+ 	import Uapop from './uapop.vue'
+  	import Order from './order.vue'
+  	import HeaderFixed from './headerfixed.vue'
+  	import Discuss from './discuss.vue'
+  
+
+export default {
+  	name: 'hello',
+  	data () {
+    	return {
+     	 	deltaY :true
+     	}
+  	},
+  	components: {
+  		"park-location":ParkLocation,
+	    "recommend": Recommend,
+	    "recommend-sites": RecommendSites,
+	    "ua-pop":Uapop,
+	    "order":Order,
+	    "header-fixed":HeaderFixed,
+	    "discuss":Discuss
+  	},
+   	methods:{
+	    test(e) {
+	      if(e.deltaY < 0) {
+	        this.deltaY=false;
+	         
+	      }else{
+	        this.deltaY=true;
+	      }
+	    }
+  	}
+}
 </script>
 
 <style scoped>

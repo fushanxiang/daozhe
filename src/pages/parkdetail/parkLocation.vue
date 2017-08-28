@@ -16,17 +16,19 @@
 				</p>
 			</a>
 		</div>
-	
-		<div class="commentsinfo-con">
-			<span class="comment-icon"></span>
-			<span class="mpf-starlevel">
-				<i class="iconfont mpf-starlevel-gain" style="width:98.00000000000001%">&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;</i>
-			</span>
-			<span class="comments-tagscore">4.9分</span>
-			<span class="comments-totalnum">14976评论&nbsp;
-				<span class="iconfont comments-rightarrow">&#xe626;</span>
-			</span>
-		</div>
+		
+		<router-link to="/discussall">
+			<div class="commentsinfo-con">
+				<span class="comment-icon"></span>
+				<span class="mpf-starlevel">
+					<i class="iconfont mpf-starlevel-gain" style="width:98.00000000000001%">&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;</i>
+				</span>
+				<span class="comments-tagscore">4.9分</span>
+				<span class="comments-totalnum">14976评论&nbsp;
+					<span class="iconfont comments-rightarrow">&#xe626;</span>
+				</span>
+			</div>
+		</router-link>
 		
 		<div class="announce-con" id="announce-con">
 			<div class="announce-inner">

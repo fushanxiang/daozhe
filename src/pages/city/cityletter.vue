@@ -31,16 +31,20 @@
             }
         },
         methods: {
-            handleLetterClick(event) {
-                var el = event.currentTarget;
+            handleLetterClick(e) {
+                var el = e.currentTarget;
                 var getWord=el.innerHTML;
                 // alert(getWord);
                 this.$emit("getWord",getWord);
+
             },
             touchmoveword(ev) {
                 var e=ev||window.event;
-                var touchword=e.targetTouches[0].clientY;
-                this.$emit("handleMoveWord",touchword);
+                e.preventDefault();
+                var touchword=Math.floor((e.targetTouches[0].clientY-110)/18);
+                var a=string.fromCharCode(touchword);
+                console.log(touchword)
+                this.$emit("handleMoveWord",touchword); 
             }
         }
     }

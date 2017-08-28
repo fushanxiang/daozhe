@@ -29,11 +29,10 @@ export default {
 	},
 	created() {
 		this.$http.get('/static/weekend.json').then(response => {
-		var data = response.body.data;
-		this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
-		//console.log(this.goodsInfo[0].title);
+			var data = response.body.data;
+			this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
 		}, response => {
-		console.log("ajax error");
+			console.log("ajax error");
   		});
 	},
 	components: {

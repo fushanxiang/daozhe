@@ -25,8 +25,10 @@
 					</span>
 					
 					<span class="comment-score">{{goodsInfo.starLevel}}分</span>
-					<span class="comment-totalnum">{{goodsInfo.comments ? goodsInfo.comments.length : 0}}评论</span>
-					<span class="next-icon iconfont">&#58918;</span>
+					<router-link :to="'/weekend/comment/id='+goodsInfo.id">
+						<span class="comment-totalnum">{{goodsInfo.comments ? goodsInfo.comments.length : 0}}评论</span>
+						<span class="next-icon iconfont">&#58918;</span>
+					</router-link>
 				</div>
 			</div>
 		</div>

@@ -17,11 +17,11 @@
 			<li class="chosen-item">
 				<div><img src="../../../assets/images/item4.jpg" class="chosen-img"></div>
 				<div class="chosen-info">
-					<h5 class="chosen-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h5>
-					<div class="chosen-des"><span>昌平区·温都水城</span></div>
+					<h5 class="chosen-title">聪明海豚与萌神熊猫 一次冬日的约会【动物园+海洋馆门票】</h5>
+					<div class="chosen-des"><span>西城区·北京动物园</span></div>
 					<div class="chosen-price1">
 						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;127</span>/份<span class="chosen-oldprice">&yen;178</span>
+							<span class="chosen-newprice">&yen;160</span>/份<span class="chosen-oldprice">&yen;165</span>
 						</div>
 					</div>
 				</div>
@@ -29,11 +29,11 @@
 			<li class="chosen-item">
 				<div><img src="../../../assets/images/item5.jpg" class="chosen-img"></div>
 				<div class="chosen-info">
-					<h5 class="chosen-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h5>
-					<div class="chosen-des"><span>昌平区·温都水城</span></div>
+					<h5 class="chosen-title">探寻京城的地下明珠【石花洞门票】</h5>
+					<div class="chosen-des"><span>房山区·石花洞国家地质公园</span></div>
 					<div class="chosen-price1">
 						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;127</span>/份<span class="chosen-oldprice">&yen;178</span>
+							<span class="chosen-newprice">&yen;65</span>/份<span class="chosen-oldprice">&yen;70</span>
 						</div>
 					</div>
 				</div>

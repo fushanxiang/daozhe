@@ -15,6 +15,7 @@ import IconSwiper from './iconswiper.vue'
 export default {
   name: 'index',
   data () {
+    
     return {
     	name: 'index'
     }

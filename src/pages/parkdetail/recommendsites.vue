@@ -14,8 +14,8 @@
 
 					<div class="mp-recommend-comment">
 						<span class="mpf-starlevel">
-							<i class="mp-iconfont mpf-starlevel-gain" data-score="4.44" style="width:98.00000000000001%">{{item.iconfont}}</i>
-							<i class="mp-iconfont mpf-starlevel-total">{{item.iconfont}}</i>
+							<i class="mpf-starlevel-gain iconfont" data-score="4.44" style="width:98%" v-html="item.iconfont"></i>
+							
 						</span>
 						<span class="mp-recommend-commentnum">{{item.commendNum}}</span>
 					</div>
@@ -40,7 +40,7 @@
 					"name":"长隆野生动物世界",
 					"level":"(5A)",
 					"money":"4.5",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"30114条评论",
 					"subposition":"广州·广州长隆旅游度假区"
 			},{
@@ -50,7 +50,7 @@
 					"name":"长隆欢乐世界",
 					"level":"(5A)",
 					"money":"218.01",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"16523条评论",
 					"subposition":"广州·广州长隆旅游度假区"
 			},{
@@ -60,7 +60,7 @@
 					"name":"广州长隆旅游度假区",
 					"level":"(5A)",
 					"money":"4.5",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"33578条评论",
 					"subposition":"广州·番禺"
 			},{
@@ -70,7 +70,7 @@
 					"name":"长隆国际大马戏剧院",
 					"level":"(5A)",
 					"money":"346",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"30114条评论",
 					"subposition":"广州·广州长隆旅游度假区"
 			},{
@@ -80,7 +80,7 @@
 					"name":"广州长隆酒店白虎餐厅",
 					"level":"(5A)",
 					"money":"198",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"304条评论",
 					"subposition":"广州·广州长隆旅游度假区"
 			},{
@@ -90,7 +90,7 @@
 					"name":"广州塔",
 					"level":"(4A)",
 					"money":"68",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"78564条评论",
 					"subposition":"广州·海珠区"
 			},{
@@ -100,7 +100,7 @@
 					"name":"长隆野生动物世界",
 					"level":"(5A)",
 					"money":"56",
-					"iconfont":"BBBB",
+					"iconfont":"&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;",
 					"commendNum":"30114条评论",
 					"subposition":"广州·广州长隆旅游度假区"
 			}]
@@ -112,6 +112,7 @@
 </script>
 
 <style scoped>
+@import "../../assets/font/iconfont.css";
 	.mp-recommend-list {
 	    overflow: hidden;
 	    background: #fff;

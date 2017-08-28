@@ -2,7 +2,7 @@
 	<div>
 		<header-fixed></header-fixed>
 		<index-header></index-header>
-		<light-sport></light-sport>
+		<light-spot></light-spot>
 		<combo-detail></combo-detail>
 		<related-place></related-place>
 		<index-footer></index-footer>
@@ -13,7 +13,7 @@
 <script>
 
 import IndexHeader from './header.vue'
-import IndexCategory from './light_sport.vue'
+import IndexCategory from './light_spot.vue'
 import ComboDetail from './combo_detail.vue'
 import RelatedPlace from './related_place.vue'
 import IndexFooter from './footer.vue'
@@ -28,7 +28,7 @@ export default {
 	},
 	components: {
 		'index-header' : IndexHeader,
-		'light-sport' : IndexCategory,
+		'light-spot' : IndexCategory,
 		'combo-detail' : ComboDetail,
 		'related-place' : RelatedPlace,
 		'index-footer' : IndexFooter,

@@ -15,7 +15,7 @@ export default {
 	},
 	methods: {
 		onScroll() {
-			this.activeOpacity = window.scrollY / 100;
+			this.activeOpacity = window.scrollY / 100 > 1 ? 1 :  window.scrollY / 100;
 		}
 	},
 	mounted() {

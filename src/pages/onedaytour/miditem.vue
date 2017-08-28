@@ -1,7 +1,7 @@
 <template>
 	<div class="miditem">
 		<ul class="miditem-list">
-			<li class="miditem-item border-right" v-for="item in itemsInfo" :key="item.id">
+			<li class="miditem-item border-right" v-for="item in twoItemsInfo" :key="item.id">
 				<p class="miditem-title">{{item.title}}</p>
 				<p class="miditem-content">{{item.content}}</p>
 				<img class="item-img" :src="item.imgUrl"/>
@@ -13,20 +13,9 @@
 <script>
 export default {
 	data () {
-		return {
-			itemsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1705/19/2242e99c881ae902.png_80x80_ef0daf45.png",
-				"title": "清凉夏日游",
-				"content": "夏日避暑路线精选"
-			},{
-				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1707/a9/31ab3b84c7dc7802.png_80x80_9b35d411.png",
-				"title": "9元起",
-				"content": "12周年庆门票秒杀"
-			}]
-    	}
-	}
+		return {}
+	},
+	props:["twoItemsInfo"]
 }
 </script>
 

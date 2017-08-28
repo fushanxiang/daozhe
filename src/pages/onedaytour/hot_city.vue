@@ -14,42 +14,9 @@
 <script>
 export default {
 	data () {
-		return {
-			addressInfo: [{
-				"id": "1",
-				"link": "/detail",
-				"name":"天津"
-			},{
-				"id": "2",
-				"link": "/detail",
-				"name":"葫芦岛"
-			},{
-				"id": "3",
-				"link": "/detail",
-				"name":"秦皇岛"
-			},{
-				"id": "4",
-				"link": "/detail",
-				"name":"济南"
-			},{
-				"id": "5",
-				"link": "/detail",
-				"name":"成都"
-			},{
-				"id": "6",
-				"link": "/detail",
-				"name":"三亚"
-			},{
-				"id": "7",
-				"link": "/detail",
-				"name":"丽江"
-			},{
-				"id": "8",
-				"link": "/detail",
-				"name":"西安"
-			}]
-    	}
-	}	
+		return {}
+	},
+	props:["addressInfo"]	
 }
 </script>
 

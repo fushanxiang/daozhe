@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<index-header></index-header>
-		<img-swiper></img-swiper>
-    	<icon-swiper></icon-swiper>
-    	<sites-recommended></sites-recommended>
-    	<hot-city></hot-city>
-    	<mid-item></mid-item>
-    	<hot-routes></hot-routes>
-    	<hot-view></hot-view>
+		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
+    	<icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
+    	<sites-recommended :sitesImgsInfo="sitesImgsInfo"></sites-recommended>
+    	<hot-city :addressInfo="addressInfo"></hot-city>
+    	<mid-item :twoItemsInfo="twoItemsInfo"></mid-item>
+    	<hot-routes :hotRouterInfo="hotRouterInfo"></hot-routes>
+    	<hot-view :hotViewInfo="hotViewInfo"></hot-view>
 	</div>
 </template>
 
@@ -25,7 +25,29 @@ export default {
 	name: 'index',
 	data () {
 		return {
-		}
+			imgsInfo:[],
+			iconsInfo:[],
+			sitesImgsInfo:[],
+			addressInfo:[],
+			hotRouterInfo:[],
+			twoItemsInfo:[],
+			hotViewInfo:[]
+		} 
+	},
+	created() {
+		this.$http.get('/static/onedaytour.json').then(response => {
+			// console.log(response)
+			var data = response.body.data;
+			this.iconsInfo = data.iconsInfo;
+			this.imgsInfo = data.imgsInfo;
+			this.sitesImgsInfo = data.sitesImgsInfo;
+			this.addressInfo = data.addressInfo;
+			this.hotRouterInfo = data.hotRouterInfo;
+			this.twoItemsInfo = data.twoItemsInfo;
+			this.hotViewInfo = data.hotViewInfo;
+		}, response => {
+			console.log("error")
+		});
 	},
 	components:{
 		"index-header": IndexHeader,

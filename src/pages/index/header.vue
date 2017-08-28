@@ -7,7 +7,7 @@
 		</div>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
-				<span class="nav-city">北京<span class="downarrow"></span>
+				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
 			</span>
 			</router-link>
 		</div>
@@ -21,6 +21,16 @@ export default {
 		return {
 
     	}
+	},
+	methods: {
+		changeCity: function() {
+			// this.$store.commit("changeCity", {
+			// 	city: "西安"
+			// });
+			this.$store.dispatch("fiveSecondsChangeCity",{
+				city:"云南"
+			});
+		}
 	}
 }
 </script>

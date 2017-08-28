@@ -24,35 +24,10 @@ export default {
 				autoHeight: true,
 				paginationClickable :true,
 				observeParents:true
-			},
-			iconsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png",
-				"link": "/detail",
-				"title":"周边游"
-			},{
-				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1604/aa/b08918c566c859f7.png",
-				"link": "/detail",
-				"title":"海滨海岛"
-			},{
-				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1606/46/613a55bf025859a.png",
-				"link": "/detail",
-				"title":"文化古迹"
-			},{
-				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1706/2a/57d3853e9aa66202.png",
-				"link": "/detail",
-				"title":"草原"
-			},{
-				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1511/ec/df937460fd8e72f7.png",
-				"link": "/detail",
-				"title":"亲子游"
-			}]
+			}
     	}
 	},
+	props:["iconsInfo"],
 	computed: {
 		pages: function() {
 			const pages = [];
@@ -104,6 +79,5 @@ export default {
 		margin: 0 .04rem;
 		font-size: .24rem;
 		color: #212121;
-	}
-	
+	}	
 </style>

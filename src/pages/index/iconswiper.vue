@@ -8,12 +8,8 @@
 	    			<img class="icon-img" :src="item.imgUrl" />
 	    		</li>
 	    	</ul>
-	    </swiper-slide>
-
-	   
-	    
-	    <div class="swiper-pagination"  slot="pagination"></div>
-	
+	    </swiper-slide>	    
+	    <div class="swiper-pagination"  slot="pagination"></div>	
 	</swiper>
 	 <div @click="handleButton">button</div>
 	 </div>
@@ -32,55 +28,10 @@ export default {
 				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
-			},
-			iconsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "8",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			}]
+			}
     	}
 	},
+	props:["iconsInfo"],
 	methods: {
 		handleButton: function(){
 			this.iconsInfo.push({

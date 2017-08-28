@@ -3,13 +3,19 @@
 		<h2 class="hot-top"><span class="hot-title">精选玩法</span></h2>
 		<ul class="chosen-list">
 			<li class="icon-item" v-for="item in goods" :key="item.id">
-    			<div class="chosen-imgwrapper"><router-link :to="'/weekend/detail/id='+item.id" class="back-btn iconfont"><img :src="item.src" class="chosen-img"></router-link></div>
+    			<div class="chosen-imgwrapper">
+	    			<router-link :to="'/weekend/detail/id='+item.id" class="back-btn iconfont">
+	    				<img :src="item.src" class="chosen-img">
+	    			</router-link>
+    			</div>
 				<div class="chosen-info">
 					<h5 class="chosen-title">{{item.title}}</h5>
 					<div class="chosen-des"><span>{{item.address}}</span></div>
 					<div class="chosen-price1">
 						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;{{item.sellPrice}}</span>/份<span class="chosen-oldprice">&yen;{{item.marketPrice}}</span>
+							<span class="chosen-newprice">&yen;{{item.sellPrice}}</span>
+							<span class="fen">/份</span>
+							<span class="chosen-oldprice">&yen;{{item.marketPrice}}</span>
 						</div>
 					</div>
 				</div>
@@ -142,13 +148,18 @@ export default {
 	    border-right: .14rem solid transparent;
 	}
 	.chosen-newprice{
-		font-size: .2rem;
-		color: #fff;
     	line-height: .45rem;
+		font-size: .255rem;
+		font-weight: bold;
+		color: #fff;
 	}
 	.chosen-oldprice{
 		color: #fff;
 	    font-size: .18rem;
 	    text-decoration: line-through;
+	}
+	.fen{
+		font-size: .2rem;
+		margin-left: -3px;
 	}
 </style>

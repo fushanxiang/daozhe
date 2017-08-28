@@ -60,8 +60,6 @@
 		<router-link to="/discussall">
 		<div class="mp-more-refresh mp-border-top" @click="goDiscuss">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
 		</router-link>
-		<!--<router-view></router-view>-->
-		<!--<Rate :length="5" :value="2" id="rate-start"></Rate>-->
 
 	</div>
 	
@@ -69,7 +67,7 @@
 
 <script>
 	
-import Rate from 'vue-rate';
+
 	
 export default {
   
@@ -85,9 +83,6 @@ export default {
  		goDiscuss() {
  			this.$router.push('/parkdetail/goDiscuss')
  		}
-	},	
-    components: {
-	    Rate
 	}	
 }
 </script>

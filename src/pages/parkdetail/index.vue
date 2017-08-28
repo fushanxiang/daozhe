@@ -1,10 +1,10 @@
 <template>
 	<div @mousewheel="test">   
-    <discuss></discuss>
-    <recommend></recommend>
-    <recommend-sites></recommend-sites>
-    <ua-pop :deltaY="deltaY"></ua-pop>
-  </div>
+	    <discuss></discuss>
+	    <recommend></recommend>
+	    <recommend-sites></recommend-sites>
+	    <ua-pop :deltaY="deltaY"></ua-pop>
+  	</div>
 
 </template>
 

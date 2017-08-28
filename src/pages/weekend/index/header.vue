@@ -2,7 +2,7 @@
   <div class="header">
   		<a class="header-left iconfont">&#59031;</a>
   		<h1 class="header-title">
-  			<a class="header-city" href="###">北京</a>
+  			<a class="header-city" href="###">{{$store.state.city}}</a>
   			<span class="header-city-option"></span>
   		</h1>
   </div>

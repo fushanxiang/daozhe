@@ -2,27 +2,30 @@
 	<div class="header-container">
 		<div class="img-container">
 			<router-link to="/weekend/index" class="back-btn iconfont">&#59031;</router-link>
-			<img src="../../../assets/images/item3.jpg" class="header-img" />
+			<img :src="goodsInfo.src" class="header-img" />
 			<div class="show-images">
-				<span class="pic-icon iconfont">&#59180;</span>
+				<span class="pic-iconh iconfont">&#59180;</span>
 				<span>1</span>
 				<span>/</span>
-				<span>11</span>
+				<span>{{goodsInfo.imgsSrc ? goodsInfo.imgsSrc.length : 0}}</span>
 			</div>
 		</div>
 		<div class="header-content">
-			<h3 class="place-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h3>
+			<h3 class="place-title">{{goodsInfo.title}}</h3>
 			<div class="place-price-content">
 				<span class="place-price-header">&yen;</span>
-				<span class="place-price-selling">127</span>
+				<span class="place-price-selling">{{goodsInfo.sellPrice}}</span>
 				<span class="place-price-footer">起/张</span>
-				<span class="place-price-market">&yen;178/张</span>
+				<span class="place-price-market">&yen;{{goodsInfo.marketPrice}}/张</span>
 			</div>
 			<div class="comment">
 				<div class="starlevel">
-					<span class="star-icon iconfont">&#58955;&#58955;&#58955;&#58955;&#58955;</span>
-					<span class="comment-score">5.0分</span>
-					<span class="comment-totalnum">32评论</span>
+					<span class="star-icon iconfont" v-for="item in goodsInfo.starLevel">
+						<span>&#58955;</span>
+					</span>
+					
+					<span class="comment-score">{{goodsInfo.starLevel}}分</span>
+					<span class="comment-totalnum">{{goodsInfo.comments ? goodsInfo.comments.length : 0}}评论</span>
 					<span class="next-icon iconfont">&#58918;</span>
 				</div>
 			</div>
@@ -34,9 +37,10 @@
 export default {
 	data () {
 		return {
-
+			
 		}
-	}
+	},
+	props:["goodsInfo"]
 }
 </script>
 

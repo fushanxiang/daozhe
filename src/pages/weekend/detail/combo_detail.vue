@@ -4,7 +4,7 @@
 			<div class="packages-content">
 				<h3 class="title packages-title"><span class="word">套餐包括</span></h3>
 				<div class="packages-des">
-			        <p class="packages-des-content">温都水城两馆通票含：温泉养生馆+HI水空间<br>门票使用说明：<br>①、HI-水空间套票包含项目：包括大型水上娱乐、滑板冲浪、漂流（不含设备）、儿童互动城堡、太空盆、飞天梭、人工造浪、室内游泳池、50米*25米沙滩式的养生会馆；<br>②、养生馆包含项目：28个温泉池、部分药浴池、水中健身池、多功能理疗池、室外温泉区、桑拿、玛瑙湿蒸房、异型泳池、地热理疗池、VIP休息厅（23:00以前）；</p>
+			        <p class="packages-des-content" v-html="goodsInfo.combo"></p>
 			    </div>
 			</div>
 			
@@ -16,12 +16,12 @@
 
 <script>
 export default {
-  data () {
-    return {
+	data () {
+	    return {
 
-    }
-     
-  }
+	    }   
+	},
+	props : ["goodsInfo"]
 }
 </script>
 

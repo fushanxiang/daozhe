@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<header-fixed :goodsInfo="goodsInfo"></header-fixed>
-		<index-header></index-header>
-		<light-spot></light-spot>
-		<combo-detail></combo-detail>
+		<index-header :goodsInfo="goodsInfo"></index-header>
+		<light-spot :goodsInfo="goodsInfo"></light-spot>
+		<combo-detail :goodsInfo="goodsInfo"></combo-detail>
 		<related-place></related-place>
 		<index-footer></index-footer>
 		<footer-fixed></footer-fixed>
@@ -30,7 +30,7 @@ export default {
 	created() {
 		this.$http.get('/static/weekend.json').then(response => {
 		var data = response.body.data;
-		this.goodsInfo = data.goods;
+		this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
 		//console.log(this.goodsInfo[0].title);
 		}, response => {
 		console.log("ajax error");

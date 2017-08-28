@@ -4,8 +4,8 @@
 			<div class="highlight-content">
 				<h3 class="title highlight-title"><span class="word">亮点先知道</span></h3>
 				<div class="highlight-des">
-					<h4 class="highlight-des-title">温都亲水行</h4>
-					<p class="highlight-des-content"><br>· 亲山近水、景自天成，蜿蜒七公里水系，四通八达环绕万亩生态区。<br>· 人杰地灵，这里是康熙皇帝的行宫所在地。</p>
+					<h4 class="highlight-des-title">{{goodsInfo.lightSpot ? goodsInfo.lightSpot[0] : []}}</h4>
+					<p class="highlight-des-content"><br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[1] : []}}<br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[2] : []}}</p>
 				</div>
 			</div>
 			<h3 class="title highlight-detail"><span class="word">详情介绍</span><span class="next-icon iconfont">&#58918;</span></h3>
@@ -20,7 +20,8 @@ export default {
 
     }
      
-  }
+  },
+  props : ["goodsInfo"]
 }
 </script>
 

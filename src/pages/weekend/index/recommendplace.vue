@@ -2,54 +2,31 @@
   <div class="chosenplace">
 		<h2 class="hot-top"><span class="hot-title">精选玩法</span></h2>
 		<ul class="chosen-list">
-			<li class="chosen-item">
-				<div><img src="../../../assets/images/item3.jpg" class="chosen-img"></div>
+			<li class="icon-item" v-for="item in goods" :key="item.id">
+    			<div class="chosen-imgwrapper"><router-link :to="'/weekend/detail/id='+item.id" class="back-btn iconfont"><img :src="item.src" class="chosen-img"></router-link></div>
 				<div class="chosen-info">
-					<h5 class="chosen-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h5>
-					<div class="chosen-des"><span>昌平区·温都水城</span></div>
+					<h5 class="chosen-title">{{item.title}}</h5>
+					<div class="chosen-des"><span>{{item.address}}</span></div>
 					<div class="chosen-price1">
 						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;127</span>/份<span class="chosen-oldprice">&yen;178</span>
+							<span class="chosen-newprice">&yen;{{item.sellPrice}}</span>/份<span class="chosen-oldprice">&yen;{{item.marketPrice}}</span>
 						</div>
 					</div>
 				</div>
-			</li>
-			<li class="chosen-item">
-				<div><img src="../../../assets/images/item4.jpg" class="chosen-img"></div>
-				<div class="chosen-info">
-					<h5 class="chosen-title">聪明海豚与萌神熊猫 一次冬日的约会【动物园+海洋馆门票】</h5>
-					<div class="chosen-des"><span>西城区·北京动物园</span></div>
-					<div class="chosen-price1">
-						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;160</span>/份<span class="chosen-oldprice">&yen;165</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="chosen-item">
-				<div><img src="../../../assets/images/item5.jpg" class="chosen-img"></div>
-				<div class="chosen-info">
-					<h5 class="chosen-title">探寻京城的地下明珠【石花洞门票】</h5>
-					<div class="chosen-des"><span>房山区·石花洞国家地质公园</span></div>
-					<div class="chosen-price1">
-						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;65</span>/份<span class="chosen-oldprice">&yen;70</span>
-						</div>
-					</div>
-				</div>
-			</li>
+    		</li>
 		</ul>
 	</div>
 </template>
 
 <script>
+
 export default {
-  data () {
-    return {
-    	
-    }
-     
-  }
+	data () {
+	    return {
+	    	
+	    }
+	},
+  	props:["goods"]
 }
 </script>
 
@@ -104,6 +81,13 @@ export default {
 	.hot-img{
 		width: 300px;
 		height: 100px;
+	}
+	.chosen-imgwrapper {
+		overflow: hidden;
+		width: 100%;
+		height: 0;
+		padding-bottom: 43.75%; /*高和宽的比*/
+		background: url("../../../assets/images/loading_camel.gif") center center no-repeat;
 	}
 	.chosen-img{
 		width: 100%	;

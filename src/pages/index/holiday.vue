@@ -13,7 +13,11 @@
 					</div>
 				</a>
 			</div>
-		
+		<div class="price-info">
+			<span class="type-icon iconfont">&#xe6ed;</span>
+			<span class="type">票面价</span>
+			<span class="type-info">是指通过景区指定窗口售卖的纸质门票上标注的价格</span>
+		</div>
 	</div>
 	
 </template>
@@ -61,6 +65,7 @@
 </script>
 
 <style scoped>
+	@import "../../assets/font/iconfont.css";
 	body {
 	    font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
 	    color: #333;
@@ -119,5 +124,19 @@
 	    line-height: .42rem;
 	    white-space: nowrap;
 	    text-overflow: ellipsis;
+	}
+	.type-icon{
+		font-size: .14rem;
+	}
+	.type{
+		font-weight: bold;
+		line-height: .32rem;
+	}
+	.price-info{
+		background: #fff;
+		color: #616161;
+		height:.32rem;
+		padding:.14rem .1rem; 
+		font-size: .24rem;
 	}
 </style>

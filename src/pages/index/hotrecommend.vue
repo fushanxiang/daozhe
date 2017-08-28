@@ -12,7 +12,7 @@
 					<div class="texthot">
 							<h3 class="texthot-title">{{item.title}}</h3>
 							<span class="text">{{item.text}}</span>
-							<div class="hotprice">￥<em class="price-hot">{{item.pricehot}}</em><span class="text-price">起</span></div>
+							<div class="hotprice">&yen;<em class="price-hot">{{item.pricehot}}</em><span class="text-price">起</span></div>
 					</div>
 				</li>
 			</ul>
@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 	.recommend {
-		width:7.5rem;
+		width:100%;
 	}
 	.hot {
 		height:0.8rem;
@@ -123,7 +123,6 @@ export default {
 	.price-hot {
 		font-size:0.36rem;
 		padding:0.04rem;
-		font-size:0.28rem;
 	}
 	.text-price {
 		color:#9e9e9e;

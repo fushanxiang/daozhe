@@ -4,7 +4,8 @@ import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import Productdetail from '@/pages/productdetail/index'
 import List from '@/pages/list/index'
-
+import BigCity from '@/pages/city/big_city'
+import SmallCity from '@/pages/city/small_city'
 
 Vue.use(Router)
 
@@ -16,9 +17,19 @@ export default new Router({
       component: Index
     },
     {
-      path: '/city',
+      path: '/city/:id',
       name: 'city',
-      component: City
+      component: City,
+       children: [
+        {
+          path: 'bigCity',
+          component: BigCity
+        },
+        {
+          path: 'smallCity',
+          component: SmallCity
+        }
+      ]
 
     },
     {
@@ -31,6 +42,5 @@ export default new Router({
       name: 'list',
       component: List
 
-    }
-  ]
+    }]
 })

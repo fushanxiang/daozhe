@@ -6,8 +6,10 @@
 			<span class="single-line">输入城市/景点/游玩主题</span>
 		</div>
 		<div class="header-right">
-			<span class="nav-city">北京<span class="downarrow"></span>
+			<router-link :to="{name:'city',params: {id:123}}">
+				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
 			</span>
+			</router-link>
 		</div>
 	</header>
 	
@@ -19,6 +21,16 @@ export default {
 		return {
 
     	}
+	},
+	methods: {
+		changeCity: function() {
+			// this.$store.commit("changeCity", {
+			// 	city: "西安"
+			// });
+			this.$store.dispatch("fiveSecondsChangeCity",{
+				city:"云南"
+			});
+		}
 	}
 }
 </script>

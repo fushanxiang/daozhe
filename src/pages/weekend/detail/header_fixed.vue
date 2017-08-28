@@ -21,6 +21,10 @@ export default {
 	},
 	created() {
 		window.addEventListener('scroll', this.onScroll);
+		window.scrollTo(0,0);
+	},
+	beforeDestroy() {
+		window.scrollTo(0,0);
 	}
 
 }

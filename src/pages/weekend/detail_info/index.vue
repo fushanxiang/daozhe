@@ -8,7 +8,7 @@
 <script>
 
 import HeaderFixed from './header_fixed.vue'
-import DetailInfo from './detail-info.vue'
+import DetailInfo from './detail_info.vue'
 
 export default {
   	data () {

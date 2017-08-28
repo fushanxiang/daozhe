@@ -8,7 +8,7 @@
 <script>
 
 import HeaderFixed from './header_fixed.vue'
-// import Comment from './comment.vue'
+import Comment from './comment.vue'
 
 export default {
   	data () {

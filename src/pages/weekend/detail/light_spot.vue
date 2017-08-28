@@ -8,7 +8,11 @@
 					<p class="highlight-des-content"><br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[1] : []}}<br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[2] : []}}</p>
 				</div>
 			</div>
-			<h3 class="title highlight-detail"><span class="word">详情介绍</span><span class="next-icon iconfont">&#58918;</span></h3>
+			<router-link :to="'/weekend/detail_info/id=' + goodsInfo.id">
+				<h3 class="title highlight-detail"><span class="word">详情介绍</span>
+				<span class="next-icon iconfont">&#58918;</span></h3>
+			</router-link>
+			
 		</div>
 	</div>
 </template>
@@ -62,6 +66,9 @@ export default {
 		-webkit-border-radius: .04rem;
 		-moz-border-radius: .04rem;
 		border-radius: .04rem;
+	}
+	.word {
+		color: #333;
 	}
 	.highlight-detail{
 		border-top: .02rem dashed #efefef;

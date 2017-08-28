@@ -1,6 +1,6 @@
 <template>
-	<div class="top-container" v-bind:style='{opacity: this.activeOpacity}'>
-		<router-link to="/weekend/index" class="back-icon iconfont">&#59031;</router-link>
+	<div class="top-container">
+		<router-link :to="'/weekend/detail/id='+goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
 		<h1 class="top-title">{{goodsInfo.title}}</h1>
 	</div>
 </template>
@@ -8,20 +8,10 @@
 <script>
 export default {
 	data () {
-    	return {
-    		activeOpacity : 0
-   		}
+    	return {}
      
 	},
-	props : ["goodsInfo"],
-	methods: {
-		onScroll() {
-			this.activeOpacity = window.scrollY / 100 > 1 ? 1 :  window.scrollY / 100;
-		}
-	},
-	created() {
-		window.addEventListener('scroll', this.onScroll);
-	}
+	props:["goodsInfo"]
 
 }
 </script>

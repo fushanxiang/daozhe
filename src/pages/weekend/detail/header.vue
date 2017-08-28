@@ -7,11 +7,11 @@
 				<span class="pic-icon iconfont">&#59180;</span>
 				<span>1</span>
 				<span>/</span>
-				<span>11</span>
+				<span>{{goodsInfo.imgsSrc ? goodsInfo.imgsSrc.length : 0}}</span>
 			</div>
 		</div>
 		<div class="header-content">
-			<h3 class="place-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h3>
+			<h3 class="place-title">{{goodsInfo.title}}</h3>
 			<div class="place-price-content">
 				<span class="place-price-header">&yen;</span>
 				<span class="place-price-selling">127</span>
@@ -34,9 +34,10 @@
 export default {
 	data () {
 		return {
-
+			
 		}
-	}
+	},
+	props:["goodsInfo"]
 }
 </script>
 

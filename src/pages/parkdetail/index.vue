@@ -1,21 +1,25 @@
 <template>
-	<div>{{name}}</div>
+	<discuss></discuss>
 </template>
 
 <script>
+
+import Discuss from './discuss.vue'
+
 export default {
-  name: 'hello',
-  data () {
-    return {
-      name: 'parkdetail page'
-    }
-  }
+  	name: 'index',
+  		data () {
+    		return {
+    	
+    	}
+     
+ 	},
+  	components:{
+  		"discuss": Discuss
+  	}
 }
 </script>
 
-
 <style scoped>
-	div {
-		background: red;
-	}
+	
 </style>

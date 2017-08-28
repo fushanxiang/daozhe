@@ -21,6 +21,7 @@
 </script>
 
 <style scoped>
+    @import "../../assets/font/iconfont.css";
     .position-sale{
     	overflow: hidden;
     	background-color: #f5f5f5;
@@ -30,10 +31,12 @@
     	border-top:1px solid #e0e0e0;
     	overflow: hidden;
     	margin-bottom: .24rem;
+
     }
-    .position-directon{
+    .position-directon{  
     	float: left;
-    	width: 3.74rem;
+    	width: 50%;
+        box-sizing: border-box;
     	font-size:.28rem;
     	color:#212121;
     	line-height: .98rem;
@@ -44,7 +47,7 @@
     	border-right: 1px solid #e0e0e0;
     }
     .position-left{
-    	font-size: .5rem;
+    	font-size: .32rem;
     	margin-right: .05rem;
     	color:#616161;
     }

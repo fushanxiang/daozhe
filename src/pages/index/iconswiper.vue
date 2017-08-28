@@ -1,7 +1,6 @@
 <template>
 <div>
-	<swiper :options="swiperOption" >
-	    
+	<swiper :options="swiperOption" > 
 	    <swiper-slide v-for="page in pages">
 	    	<ul class="icon-list">
 	    		<li class="icon-item" v-for="item in page">
@@ -115,16 +114,16 @@ export default {
 			}]
     	}
 	},
-	methods: {
-		handleButton: function(){
-			this.iconsInfo.push({
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			})
-		}
-	},
+	// methods: {
+	// 	handleButton: function(){
+	// 		this.iconsInfo.push({
+	// 			"id": "9",
+	// 			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+	// 			"link": "/detail",
+	// 			"title":"全部"
+	// 		})
+	// 	}
+	// },
 	computed: {
 		pages: function() {
 			const pages = [];

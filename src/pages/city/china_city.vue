@@ -22,12 +22,7 @@
     export default {
         data () {
             return {
-<<<<<<< HEAD
-                cityClass: [],
-                changeData:'',
-=======
                 foreign: false
->>>>>>> f9fde26f090f44356d6424f0436859cb329842f2
             }
         },
         props: ['change', 'datas'],
@@ -72,17 +67,7 @@
                 this.$store.commit("changeCity", {city: e.target.innerText});
                 location.href = 'http://localhost:8080/#/';
             }
-<<<<<<< HEAD
-        },
-        // watch: {
-        //     handleWord: function (newQuestion) {
-        //         // this.strStoreDate = window.localStorage ? localStorage.getItem("word"): Cookie.read("word");
-        //     }
-            
-        // }
-=======
         }
->>>>>>> f9fde26f090f44356d6424f0436859cb329842f2
     }
 </script>
 

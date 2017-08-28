@@ -1,13 +1,7 @@
 <template>
     <div class="city-aside">
         <div class="city-aside-set"> 
-<<<<<<< HEAD
-            <div class="city-aside-set-character" v-for="(item, index) of character" v-on:click="handleLetterClick($event)" >
-                {{item[0]}}
-            </div>
-=======
             <div class="city-aside-set-character" @touchmove="touchmoveword" v-for="(item, index) of cityclass" v-on:click="handleLetterClick">{{item[0]}}</div>
->>>>>>> f9fde26f090f44356d6424f0436859cb329842f2
         </div>
     </div>
 </template> 
@@ -19,18 +13,6 @@
                 character: [],
                 foreign: false
             } 
-<<<<<<< HEAD
-
-        },
-        props: ['letterChange'],
-        created() {
-            var cityData=appData.data;
-            for(var i=0; i<cityData.length;i++) {
-              this.character.push(cityData[i]);
-            };
-            
-=======
->>>>>>> f9fde26f090f44356d6424f0436859cb329842f2
         },
         props: ['letterChange', 'datas'],
         computed: {

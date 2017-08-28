@@ -31,18 +31,19 @@ export default {
 </script>
 
 <style scoped>
-	html {
-		background: #f1f1f1;
-	}
+	
 	.chosenplace{
+		background: #fff;
 		margin-top: .2rem;
 	}
 	.chosenplace:before{
 		content: "";
 		position: absolute;
-		width: 100%;
-		height: .02rem;
+	    left: 0;
+	    width: 100%;
+	    height: .02rem;
 		background: #c9cccd;
+		    transform: scaleY(.51);
 	}
 	.hot-top{
 		overflow: hidden;

@@ -116,11 +116,17 @@ export default {
 		line-height: .9rem;
 	}
 	.comment:before {
-		content: "";
-		position: absolute;
-		left:0;
-		width: 100%;
-		border: .02rem dashed #ccc;
+	    content: ' ';
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 0;
+	    border-top: .02rem dashed #ccc;
+	    -webkit-transform: scaleY(.5);
+	    transform: scaleY(.5);
 	}
 	.star-icon {
 		color: #00bcd4;

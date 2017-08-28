@@ -2,8 +2,8 @@
 	<div>
 		<index-herder></index-herder>
 		<index-category></index-category>
-		<hotplace></hotplace>
-		<recommendplace></recommendplace>
+		<hotplace :goods="goods"></hotplace>
+		<recommendplace :goods="goods"></recommendplace>
 	</div>
 </template>
 
@@ -18,9 +18,17 @@ export default {
 	name: 'weekend-index',
   	data () {
     	return {
-    	
+    		goods: []
    		}
      
+	},
+	created() {
+	    this.$http.get('/static/weekend.json').then(response => {
+	      var data = response.body.data;
+	      this.goods = data.goods
+	    }, response => {
+	      console.log("ajax error");
+	    });
 	},
 	components: {
 		'index-herder' : IndexHeader,

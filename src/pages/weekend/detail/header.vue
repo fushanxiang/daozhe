@@ -2,7 +2,7 @@
 	<div class="header-container">
 		<div class="img-container">
 			<router-link to="/weekend/index" class="back-btn iconfont">&#59031;</router-link>
-			<img src="../../../assets/images/item3.jpg" class="header-img" />
+			<img :src="goodsInfo.src" class="header-img" />
 			<div class="show-images">
 				<span class="pic-iconh iconfont">&#59180;</span>
 				<span>1</span>

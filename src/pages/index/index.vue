@@ -4,7 +4,7 @@
 		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
         <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
         <hot-sale></hot-sale>
-        <index-product></index-product>
+        <index-product :product="product"></index-product>
 	</div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
   data () {
     return {
       iconsInfo:[],
-      imgsInfo:[]
+      imgsInfo:[],
+      product:[]
     } 
   },
   created() {
@@ -30,6 +31,7 @@ export default {
       var data = response.body.data;
       this.iconsInfo = data.iconsInfo;
       this.imgsInfo = data.imgsInfo;
+      this.product = data.product;
     }, response => {
       console.log("ajax error");
     });

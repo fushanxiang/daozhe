@@ -42,6 +42,11 @@ export default new Router({
           component: SmallCity
         }
       ]
+    },
+    {
+      path: '/summervacation',
+      name: 'vacation',
+      component: SummerVacation
     }
   ]
 })

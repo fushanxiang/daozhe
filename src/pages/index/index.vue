@@ -6,6 +6,7 @@
         <position-sale></position-sale>
         <hot-sale></hot-sale>
         <holiday></holiday>
+        <foot></foot>
 	  </div>
 </template>
 
@@ -17,6 +18,7 @@ import IconSwiper from './iconswiper.vue'
 import PositionSale from './positionsale.vue'
 import HotSale from './hotsale.vue'
 import Holiday from './holiday'
+import Foot from './foot.vue'
 
 export default {
   name: 'index',
@@ -42,7 +44,7 @@ export default {
     "position-sale": PositionSale,
     "hot-sale": HotSale,
     "holiday":Holiday
-    
+    "foot": Foot
   }
 }
 </script>

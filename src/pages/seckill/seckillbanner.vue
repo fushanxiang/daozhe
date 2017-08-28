@@ -13,8 +13,10 @@
 			</ul>
 		</div>
 		<img src="//s.qunarzz.com/piao_topic/image/touch/custom/2017/2343grab08/caption_0.jpg" class="ad-img">
-		<div class="outer">
-			
+		<div class="inner">
+			<ul class="seckill-list">
+				li
+			</ul>
 		</div>
 	</div>
 </template>
@@ -71,7 +73,7 @@
 		color: #ffe400;
     	text-shadow: 0 0 0.1rem #ff0003, 0 0.08rem 0 rgba(103,0,133,.9);
 	}
-	.outer{
+	.inner{
 		width:100%;
 		height:3.96rem;
 		overflow: hidden;

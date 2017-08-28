@@ -135,7 +135,6 @@ export default {
 			width: 100%;
 			height: .8rem;
 			border-bottom: .01rem solid #cacaca;
-
 		}
 		.footer-menu li {
 			float: left;
@@ -170,8 +169,6 @@ export default {
 			bottom: 0.1rem;
 			right: .6rem;
 			background: #f3f3f3;
-
-			
 		}
 
 </style>

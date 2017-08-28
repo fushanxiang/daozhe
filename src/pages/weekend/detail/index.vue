@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<header-fixed></header-fixed>
+		<header-fixed :goodsInfo="goodsInfo"></header-fixed>
 		<index-header></index-header>
 		<light-spot></light-spot>
 		<combo-detail></combo-detail>
@@ -23,8 +23,17 @@ import HeaderFixed from './header_fixed.vue'
 export default {
   	data () {
     	return {
+    		goodsInfo : []
    		}
      
+	},
+	created() {
+		this.$http.get('/static/weekend.json').then(response => {
+		var data = response.body.data;
+		this.goodsInfo = data.goods;
+		}, response => {
+		console.log("ajax error");
+  		});
 	},
 	components: {
 		'index-header' : IndexHeader,

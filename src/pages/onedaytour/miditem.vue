@@ -38,10 +38,10 @@ export default {
 		margin-top: .2rem;
 	}
 	.miditem-item {
-		position: relative;
-		float: left;
 		height: 1.2rem;
 		width: 50%;
+		position: relative;
+		float: left;
 		border-color: #ccc;
 	}
 	.miditem-item:nth-child(odd){

@@ -99,10 +99,10 @@ export default {
 		display: block;
 		overflow: hidden;
 		height: .54rem;
-		margin: 0 .04rem;
-		font-size: .24rem;
 		line-height: .54rem;
 		text-align: center;
+		margin: 0 .04rem;
+		font-size: .24rem;
 		color: #212121;
 	}
 	

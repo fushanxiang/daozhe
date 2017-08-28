@@ -1,20 +1,16 @@
 <template>
 	<swiper :options="swiperOption" class="carousel">
 		<slot></slot>
-
 	    <swiper-slide v-for="item in imgsInfo" :key="item.id">
 	    	<div class="img-container">
 	    		<img class="swiper-img" :src="item.imgUrl" />
 	    	</div>
-	    </swiper-slide>
-	    
-	    <div class="swiper-pagination swiper-btn"  slot="pagination"></div>
-	
+	    </swiper-slide>	    
+	    <div class="swiper-pagination swiper-btn"  slot="pagination"></div>	
 	</swiper>
 </template>
 
 <script>
-
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
@@ -69,11 +65,11 @@ export default {
 	background: #fff;
 	}
 	.img-container {
-		background: #eee;
 		overflow: hidden;
 		width: 100%;
-		padding-bottom: 26.56%;
 		height: 0;
+		padding-bottom: 26.56%;
+		background: #eee;
 	}
 	.swiper-img {
 		width:100%;

@@ -71,9 +71,9 @@ export default {
 		margin-right: .3rem;
 	}
 	.city-iconfont{
-		color: #1cc3d9;
-		font-size: .35rem;
 		padding: 0 .1rem 0 .24rem;
+		color: #1cc3d9;
+		font-size: .35rem;	
 	}
 	.city-list{
 		overflow: hidden;
@@ -84,15 +84,13 @@ export default {
 		float: left;
 		margin-bottom: .2rem;
 	}
-	.city-name {
-		margin: 0 .1rem;
+	.city-name {	
 		height: .6rem;
 		line-height: .6rem;
 		text-align: center;
+		margin: 0 .1rem;
 		font-size: .28rem;
 		border-radius: .04rem;
 		background: #f0fbfd;
-		
-	}
-	
+	}	
 </style>

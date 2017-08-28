@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-	@import '../../assets/font/iconfont.css';
+	@import "../../assets/font/iconfont.css";
 	.header {
 		position: relative;
 	    overflow: hidden;

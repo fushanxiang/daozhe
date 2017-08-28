@@ -3,19 +3,15 @@
 		<index-header></index-header>
 		<img-swiper></img-swiper>
     	<icon-swiper></icon-swiper>
-
     	<sites-recommended></sites-recommended>
     	<hot-city></hot-city>
-
     	<mid-item></mid-item>
     	<hot-routes></hot-routes>
     	<hot-view></hot-view>
-
 	</div>
 </template>
 
 <script>
-
 import IndexHeader from './header.vue'
 import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
@@ -24,7 +20,6 @@ import HotCity from './hot_city.vue'
 import MidItem from './miditem.vue'
 import HotRoutes from './hotroutes.vue'
 import HotView from './hotview.vue'
-
 
 export default {
 	name: 'index',

@@ -71,8 +71,8 @@ export default {
 <style scoped>
 	.sites {
 		margin: .2rem 0;
-		background: #fff;
 		padding-bottom: .2rem;
+		background: #fff;	
 	}
 	.sites-title {
 		width: 100%;
@@ -88,9 +88,9 @@ export default {
 		font-size: .35rem;
 		padding: 0 .1rem 0 .24rem;
 	}
-	.sites-content {
-		padding: 0 .2rem;
+	.sites-content {	
 		overflow: hidden;
+		padding: 0 .2rem;
 	}
 	.sites-list{
 		overflow: hidden;
@@ -103,12 +103,12 @@ export default {
 	.sites-inner {
 		margin-left: .1rem;
 	}
-	.img-content {
-		background: #ccc;
-		overflow: hidden;
+	.img-content {	
 		width: 100%;
 		height: 0;
+		overflow: hidden;
 		padding-bottom: 71.78%;
+		background: #ccc;
 	}
 	.sites-img {
 		width: 100%;
@@ -117,24 +117,24 @@ export default {
 		display: block;
 		overflow: hidden;
 		height: .36rem;
-		margin: 0 .04rem;
-		font-size: .24rem;
 		line-height: .36rem;
 		text-align: center;
+		margin: 0 .04rem;
 		color: #212121;
+		font-size: .24rem;
 		padding-top: .16rem;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
 	.sitea-route {
 		overflow: hidden;
-		height: .36rem;
-		margin: 0 .04rem;
-		font-size: .24rem;
+		height: .36rem;		
 		line-height: .36rem;
 		text-align: center;
-		color: #9e9e9e;
+		margin: 0 .04rem;
 		padding-bottom: .16rem;
+		font-size: .24rem;
+		color: #9e9e9e;	
 	}
 	.sites-path {
 		color: #00afd1;

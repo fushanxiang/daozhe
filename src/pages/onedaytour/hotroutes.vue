@@ -143,9 +143,9 @@ export default {
 	.title-item {
 		position: relative;
 		display: inline-block;
+		line-height: .34rem;
 		margin-bottom: .2rem;
 		padding: .06rem .2rem;
-		line-height: .34rem;
 		border: 1px solid #e0e0e0;
 		border-radius: .2rem;
 		font-size: .24rem;
@@ -153,28 +153,28 @@ export default {
 	}
 	.logo{
 		position: absolute;
-		background: #fff;
 		left: -.1rem;
 		bottom: -.1rem;
 		color: #9e9e9e;
 		font-size: .24rem;
+		background: #fff;
 	}
 	.title-item2 {
 		margin: 0 .28rem;
 	}
 	.hotroutes-item {
+		height: 2rem;
 		padding: .14rem 0;
 		margin-left: .14rem;
-		height: 2rem;
 	}
 	.hotroutes-item::before {
 		border-color: #e0e0e0;
 	}
 	.item-img {
-		margin-right: .2rem;
-		float: left;
 		height: 2rem;
 		width: 2rem;
+		float: left;
+		margin-right: .2rem;
 	}
 	.item-tomorrow {
 	    position: absolute;
@@ -188,11 +188,11 @@ export default {
 	}
 	.item-tomorrow::after {
 	    content: "";
-	    position: absolute;
-	    top: 0;
-	    right: -.18rem;
 	    width: 0;
 	    height: 0;
+	    position: absolute;
+	    top: 0;
+	    right: -.18rem; 
 	    border-top: .18rem solid #00bcd4;
 	    border-bottom: .18rem solid #00bcd4;
 	    border-right: .18rem solid transparent;

@@ -109,26 +109,26 @@ export default {
 	}
 	.hotroutes-title {
 		text-align: center;
-		font-size: .36rem;
-		color: #212121;
 		border-color: #f9f9f9;
+		font-size: .36rem;
+		color: #212121;	
 	}
 	.title-title {
 		padding: .24rem 0;
 	}
 	.hotroutes-item {
-		padding: .14rem 0;
-		margin-left: .14rem;
 		height: 2rem;
+		padding: .14rem 0;
+		margin-left: .14rem;	
 	}
 	.hotroutes-item::before {
 		border-color: #e0e0e0;
 	}
 	.item-img {
-		margin-right: .2rem;
-		float: left;
 		height: 2rem;
 		width: 2rem;
+		float: left;
+		margin-right: .2rem;
 	}
 	.item-tomorrow {
 	    position: absolute;

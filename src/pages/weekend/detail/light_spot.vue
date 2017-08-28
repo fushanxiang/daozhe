@@ -15,13 +15,12 @@
 
 <script>
 export default {
-  data () {
-    return {
+	data () {
+	    return {
 
-    }
-     
-  },
-  props : ["goodsInfo"]
+	    } 
+	},
+	props : ["goodsInfo"]
 }
 </script>
 

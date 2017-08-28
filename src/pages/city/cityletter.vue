@@ -29,6 +29,12 @@
             handleLetterClick(event) {
                 var el = event.currentTarget;
                 console.log(el);
+            },
+            broadcast() {//发布订阅模式（dispatcher让store说一声）//$(this).trigger(与jq相似)
+                this.emit("change");
+            },
+            addChangeFn(fn) {
+                this.on("change", fn);//当改变数据的时候，在store.js中改变存的数据内容
             }
         },
         watch: {

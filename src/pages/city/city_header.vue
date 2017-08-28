@@ -83,10 +83,12 @@
   	.city-header-area {
         width: 100%;
         line-height: .88rem;
-        
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
         background: #00afc7;
         text-align: center;
-        
     }
     .city-header-goback {
         font-size: .36rem;
@@ -116,7 +118,7 @@
         margin-top: .14rem;
     }
     .header-keyword {
-        padding-top: .18rem;
+        margin-top: .88rem;
         padding: 0 .4rem .1rem .2rem;
         font-size: .26rem;
         color: #9e9e9e;

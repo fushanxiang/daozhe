@@ -9,7 +9,7 @@
                 @focus="handleFocus" @blur="handleBlur" >
             </div>
         </div>
-        <city-area :change="cityChange"></city-area>
+        <city-area :change="cityChange" :datas="datas"></city-area>
     </div>
 </template>
 
@@ -21,6 +21,7 @@
                 cityChange: ''
             }
         },
+        props: ['datas'],
         components: {
             "city-area": cityArea
         },
@@ -43,7 +44,6 @@
     }
 
 </script>
-
 
 <style scoped>
     @import "../../assets/font/iconfont.css";

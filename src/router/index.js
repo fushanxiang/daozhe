@@ -18,7 +18,7 @@ export default new Router({
       component: Index
     },
     {
-      path: '/city/:id',
+      path: '/city',
       name: 'city',
       component: City
       // children: [{

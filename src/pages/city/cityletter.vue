@@ -1,7 +1,9 @@
 <template>
     <div class="city-aside">
         <div class="city-aside-set"> 
-            <div class="city-aside-set-character" v-for="(item, index) of character" v-on:click="handleLetterClick($event)">{{item[0]}}</div>
+            <div class="city-aside-set-character" v-for="(item, index) of character" v-on:click="handleLetterClick($event)" >
+                {{item[0]}}
+            </div>
         </div>
     </div>
 </template> 
@@ -22,7 +24,7 @@
             for(var i=0; i<cityData.length;i++) {
               this.character.push(cityData[i]);
             };
-
+            
         },
         methods: {
             handleLetterClick(event) {

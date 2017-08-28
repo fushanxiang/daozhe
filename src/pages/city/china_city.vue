@@ -25,7 +25,7 @@
         data () {
             return {
                 cityClass: [],
-                changeData:''
+                changeData:'',
             }
         },
         props: ['change'],
@@ -54,7 +54,7 @@
                     this.cityClass.push(cityData[i]);
                 }
             }
-        }
+        },
         // watch: {
         //     handleWord: function (newQuestion) {
         //         // this.strStoreDate = window.localStorage ? localStorage.getItem("word"): Cookie.read("word");

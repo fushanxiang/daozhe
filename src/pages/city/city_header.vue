@@ -81,7 +81,11 @@
 <style scoped>
     @import "../../assets/font/iconfont.css";
   	.city-header-area {
+        position: fixed;
+        left: 0;
+        top: 0;
         line-height: .88rem;
+        width: 100%;
         background: #00afc7;
         text-align: center;
         overflow: hidden;

@@ -2,11 +2,11 @@
     <div>
         <div class="city-header-area">
             <span class="iconfont city-header-goback">&#xe624;</span>
-            <span class="city-china city-area" v-on:click="handleChina">国内</span>
-            <span class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
+            <span :style="colorChina" class="city-china city-area" v-on:click="handleChina" >国内</span>
+            <span :style="colorAbroad" class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
             <div class="header-keyword">
                 <input type="text" value="输入城市名或拼音" class="city-keyword" 
-                @focus="handleFocus" @blur="handleBlur" >
+                @focus="handleFocus" @blur="handleBlur" :style="styleObj">
             </div>
         </div>
         <city-area :change="cityChange" :datas="datas"></city-area>
@@ -18,7 +18,18 @@
     export default {
         data () {
             return {
-                cityChange: ''
+                cityChange: '',
+                styleObj:{
+                    "text-align": "center"
+                },
+                colorChina: {
+                    "color": "#00afc7",
+                    "background": "#fff"
+                },
+                colorAbroad: {
+                    "color": "#fff",
+                    "background": "#00afc7"
+                }
             }
         },
         props: ['datas'],
@@ -29,16 +40,38 @@
             handleBlur(e) {
                 if(e.target.value == "") {
                     e.target.value = "输入城市名或拼音";
-                } 
+                }
+                this.styleObj = {
+                    textAlign: "center"
+                }
             },
             handleFocus(e) {
                 e.target.value = "";
+                this.styleObj = {
+                    textAlign: "left"
+                }
             },
             handleChina() {
                 this.cityChange = 'china';
+                this.colorChina = {
+                    "color": "#00afc7",
+                    "background": "#fff"
+                }
+                this.colorAbroad = {
+                    "color": "#fff",
+                    "background": "#00afc7"
+                }
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
+                this.colorAbroad = {
+                    "color": "#00afc7",
+                    "background": "#fff"
+                }
+                this.colorChina = {
+                    "color": "#fff",
+                    "background": "#00afc7"
+                }
             }
         }
     }
@@ -72,8 +105,8 @@
         float: left;
         margin-left: 10%;
         margin-top: .14rem;
-        background: #fff;
         color: #00afc7;
+        background: #fff;
     }
     .city-abroad {
         border-radius: 0 3px 3px 0;
@@ -93,6 +126,5 @@
         line-height: .3rem;
         padding: .16rem 0 .16rem .1rem;
         border-radius: .1rem;
-        text-align: center;
     }
 </style>

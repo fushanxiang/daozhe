@@ -1,29 +1,36 @@
 <template>
-	<div>
-  <index-header></index-header>
-  <p>{{name}}</p>
-  <h1>wwwww</h1>
-  </div>
+    <div>
+        <index-header></index-header>
+        <div class="wo-ding"></div>
+        <item-products></item-products>
+    </div>
 </template>
 
 <script>
 import IndexHeader from './dz01/header.vue'
+<<<<<<< HEAD
+import ItemProducts from './dz03/index.vue'
+=======
+
+>>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 export default {
-  name: 'hello',
   data () {
     return {
       name: 'list page'
     }
   },
   components:{
-    "index-header": IndexHeader
+    "index-header": IndexHeader,
+    "item-products": ItemProducts
   }
 }
 </script>
 
 
 <style scoped>
-	div {
-		background: green;
+	.wo-ding{
+	   width:100%;
+       height:1rem;
+       background: #ccc;
 	}
 </style>

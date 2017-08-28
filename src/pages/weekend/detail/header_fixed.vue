@@ -1,7 +1,7 @@
 <template>
 	<div class="top-container" v-bind:style='{opacity: this.activeOpacity}'>
 		<router-link to="/weekend/index" class="back-icon iconfont">&#59031;</router-link>
-		<h1 class="top-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h1>
+		<h1 class="top-title">{{goodsInfo.title}}</h1>
 	</div>
 </template>
 
@@ -13,14 +13,16 @@ export default {
    		}
      
 	},
+	props : ["goodsInfo"],
 	methods: {
 		onScroll() {
-			this.activeOpacity = window.scrollY / 100;
+			this.activeOpacity = window.scrollY / 100 > 1 ? 1 :  window.scrollY / 100;
 		}
 	},
-	mounted() {
+	created() {
 		window.addEventListener('scroll', this.onScroll);
-	},
+	}
+
 }
 </script>
 

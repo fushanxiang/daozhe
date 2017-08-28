@@ -22,13 +22,14 @@
   			<li><span class="iconfont">&#xe6d4;</span>团购</li>
   			<li><span class="iconfont">&#xe629;</span>旅途</li>
   		</ul>
-  		<ul class="footer-menu">
-  			<li>登录</li>
-  			<li>我的订单</li>
-  			<li>最近浏览</li>
-  			<li>关于我们</li>
-  			
-  		</ul>
+  		<div class="footer-menu-center">
+	  		<ul class="footer-menu">
+	  			<li>登录</li>
+	  			<li>我的订单</li>
+	  			<li>最近浏览</li>
+	  			<li>关于我们</li>
+	  		</ul>
+  		</div>
   		<ul class="mobile-pc">
   			<li class="mobile">触屏版</li>
   			<li class="PC">PC版</li>
@@ -132,16 +133,20 @@ export default {
 			font-size: 12px;
 		}
 		.footer-menu {
-			width: 100%;
+			display: block;
 			height: .8rem;
 			border-bottom: .01rem solid #cacaca;
-
+		}
+		.footer-menu-center{
+			display: flex;
+			justify-content: center;
 		}
 		.footer-menu li {
+			box-sizing: border-bottom;
 			float: left;
-			padding-left: .4rem;
+			padding: .2rem;
 			text-align: center;
-			line-height: .8rem;
+			line-height: .5rem;
 			color: #25a4bb;
 			font-size: .14rem;
 		}
@@ -163,15 +168,13 @@ export default {
 			color: #9e9e9e;
 		    text-align: center;
 		    font-size: 14px;
-		    padding: 10px;
+		    padding: 0px 10px 1.2rem 10px;
 		}
 		.tag {
 			position: absolute;
 			bottom: 0.1rem;
 			right: .6rem;
 			background: #f3f3f3;
-
-			
 		}
 
 </style>

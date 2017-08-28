@@ -2,70 +2,48 @@
   <div class="chosenplace">
 		<h2 class="hot-top"><span class="hot-title">精选玩法</span></h2>
 		<ul class="chosen-list">
-			<li class="chosen-item">
-				<div><img src="../../../assets/images/item3.jpg" class="chosen-img"></div>
+			<li class="icon-item" v-for="item in goods" :key="item.id">
+    			<div class="chosen-imgwrapper"><router-link :to="'/weekend/detail/id='+item.id" class="back-btn iconfont"><img :src="item.src" class="chosen-img"></router-link></div>
 				<div class="chosen-info">
-					<h5 class="chosen-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h5>
-					<div class="chosen-des"><span>昌平区·温都水城</span></div>
+					<h5 class="chosen-title">{{item.title}}</h5>
+					<div class="chosen-des"><span>{{item.address}}</span></div>
 					<div class="chosen-price1">
 						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;127</span>/份<span class="chosen-oldprice">&yen;178</span>
+							<span class="chosen-newprice">&yen;{{item.sellPrice}}</span>/份<span class="chosen-oldprice">&yen;{{item.marketPrice}}</span>
 						</div>
 					</div>
 				</div>
-			</li>
-			<li class="chosen-item">
-				<div><img src="../../../assets/images/item4.jpg" class="chosen-img"></div>
-				<div class="chosen-info">
-					<h5 class="chosen-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h5>
-					<div class="chosen-des"><span>昌平区·温都水城</span></div>
-					<div class="chosen-price1">
-						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;127</span>/份<span class="chosen-oldprice">&yen;178</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="chosen-item">
-				<div><img src="../../../assets/images/item5.jpg" class="chosen-img"></div>
-				<div class="chosen-info">
-					<h5 class="chosen-title">超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】</h5>
-					<div class="chosen-des"><span>昌平区·温都水城</span></div>
-					<div class="chosen-price1">
-						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;127</span>/份<span class="chosen-oldprice">&yen;178</span>
-						</div>
-					</div>
-				</div>
-			</li>
+    		</li>
 		</ul>
 	</div>
 </template>
 
 <script>
+
 export default {
-  data () {
-    return {
-    	
-    }
-     
-  }
+	data () {
+	    return {
+	    	
+	    }
+	},
+  	props:["goods"]
 }
 </script>
 
 <style scoped>
-	html {
-		background: #f1f1f1;
-	}
+	
 	.chosenplace{
+		background: #fff;
 		margin-top: .2rem;
 	}
 	.chosenplace:before{
 		content: "";
 		position: absolute;
-		width: 100%;
-		height: .02rem;
+	    left: 0;
+	    width: 100%;
+	    height: .02rem;
 		background: #c9cccd;
+		    transform: scaleY(.51);
 	}
 	.hot-top{
 		overflow: hidden;
@@ -103,6 +81,13 @@ export default {
 	.hot-img{
 		width: 300px;
 		height: 100px;
+	}
+	.chosen-imgwrapper {
+		overflow: hidden;
+		width: 100%;
+		height: 0;
+		padding-bottom: 43.75%; /*高和宽的比*/
+		background: url("../../../assets/images/loading_camel.gif") center center no-repeat;
 	}
 	.chosen-img{
 		width: 100%	;

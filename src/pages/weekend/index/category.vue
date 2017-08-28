@@ -52,6 +52,7 @@ export default {
 	.category-container {
 		width: 100%;
 		overflow: hidden;
+		background: #fff;
 	}
 	.category-item {
 		width: 25%;
@@ -69,6 +70,7 @@ export default {
 		font-size: .26rem;
 	}
 	.nearplace-container {
+		background: #fff;
 		position: relative;
 		overflow: hidden;
 		border-left: 1px solid #ddd;

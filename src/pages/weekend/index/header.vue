@@ -1,10 +1,9 @@
 <template>
   <div class="header">
   		<a class="header-left iconfont">&#59031;</a>
-  		<h1 class="header-title"><a class="header-city" href="###">北京</a>
-  		<span class="header-city-option"></span>
-  		
-			
+  		<h1 class="header-title">
+  			<a class="header-city" href="###">{{$store.state.city}}</a>
+  			<span class="header-city-option"></span>
   		</h1>
   </div>
 </template>
@@ -28,13 +27,14 @@ export default {
 		background:#00bcd4;
 	}
 	.header-left {
+		font-weight: 600;
 		float: left;
 	    display: block;
 	    width: .4rem;
 	    line-height: .88rem;
-	    padding: 0 .2rem;
+	    padding-left: .14rem;
 	    color: #fff;
-	    font-size: .36rem;
+	    font-size: .5rem;
 	    text-align: left;
 	}
 	.header-title{
@@ -58,7 +58,7 @@ export default {
 		top: .38rem;
 		width:0; 
 		height:0; 
-
+		margin-left: .1rem;
 		border:.1rem;
 		border-style: solid;
 		border-color:transparent;

@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<header-fixed></header-fixed>
-		<index-header></index-header>
-		<light-sport></light-sport>
-		<combo-detail></combo-detail>
+		<header-fixed :goodsInfo="goodsInfo"></header-fixed>
+		<index-header :goodsInfo="goodsInfo"></index-header>
+		<light-spot :goodsInfo="goodsInfo"></light-spot>
+		<combo-detail :goodsInfo="goodsInfo"></combo-detail>
 		<related-place></related-place>
 		<index-footer></index-footer>
 		<footer-fixed></footer-fixed>
@@ -13,7 +13,7 @@
 <script>
 
 import IndexHeader from './header.vue'
-import IndexCategory from './light_sport.vue'
+import IndexCategory from './light_spot.vue'
 import ComboDetail from './combo_detail.vue'
 import RelatedPlace from './related_place.vue'
 import IndexFooter from './footer.vue'
@@ -23,12 +23,22 @@ import HeaderFixed from './header_fixed.vue'
 export default {
   	data () {
     	return {
+    		goodsInfo : []
    		}
      
 	},
+	created() {
+		this.$http.get('/static/weekend.json').then(response => {
+		var data = response.body.data;
+		this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
+		//console.log(this.goodsInfo[0].title);
+		}, response => {
+		console.log("ajax error");
+  		});
+	},
 	components: {
 		'index-header' : IndexHeader,
-		'light-sport' : IndexCategory,
+		'light-spot' : IndexCategory,
 		'combo-detail' : ComboDetail,
 		'related-place' : RelatedPlace,
 		'index-footer' : IndexFooter,

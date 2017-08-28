@@ -19,11 +19,14 @@ export default {
 </script>
 
 <style scoped>
+
+
 	/*@import "../../../assets/css/common/border.css";
 	.chosen::before {
 		border-color: #c9cccd;
 	}*/
 	.chosen {
+		background: #fff;
 		margin-top: .2rem;
 	}
 	.chosen:before{
@@ -52,17 +55,15 @@ export default {
 		text-indent: .15rem
 	}
 	.hot-title:before{
-		content: " ";
-		overflow: hidden;
-		position: absolute;
-		top: .32rem;
-		left: 0;
-		height: .25rem;
-		width: .06rem;
-		background: #1ba9ba;
-		-webkit-border-radius: .04rem;
-		-moz-border-radius: .04rem;
-		border-radius: .04rem;
+	    content: " ";
+	    overflow: hidden;
+	    position: absolute;
+	    top: .32rem;
+	    left: 0;
+	    height: .25rem;
+	    width: .06rem;
+	    background: #1ba9ba;
+	    border-radius: .04rem;
 	}
 	.hot-list{
 		padding: 0 .2rem .11rem;

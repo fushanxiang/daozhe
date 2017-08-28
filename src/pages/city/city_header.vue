@@ -4,12 +4,12 @@
             <span class="iconfont city-header-goback">&#xe624;</span>
             <span :style="colorChina" class="city-china city-area" v-on:click="handleChina" >国内</span>
             <span :style="colorAbroad" class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
-            <div class="header-keyword">
-                <input type="text" value="输入城市名或拼音" class="city-keyword" 
-                @focus="handleFocus" @blur="handleBlur" :style="styleObj">
-            </div>
         </div>
-        <city-area :change="cityChange"></city-area>
+        <div class="header-keyword">
+            <input type="text" value="输入城市名或拼音" class="city-keyword" 
+            @focus="handleFocus" @blur="handleBlur" :style="styleObj">
+        </div>
+        <city-area :change="cityChange" :datas="datas"></city-area>
     </div>
 </template>
 
@@ -32,6 +32,7 @@
                 }
             }
         },
+        props: ['datas'],
         components: {
             "city-area": cityArea
         },
@@ -77,18 +78,25 @@
 
 </script>
 
-
 <style scoped>
     @import "../../assets/font/iconfont.css";
   	.city-header-area {
+<<<<<<< HEAD
         position: fixed;
         left: 0;
         top: 0;
         line-height: .88rem;
         width: 100%;
+=======
+        width: 100%;
+        line-height: .88rem;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+>>>>>>> f9fde26f090f44356d6424f0436859cb329842f2
         background: #00afc7;
         text-align: center;
-        overflow: hidden;
     }
     .city-header-goback {
         font-size: .36rem;
@@ -118,10 +126,11 @@
         margin-top: .14rem;
     }
     .header-keyword {
-        margin-top: .18rem;
+        margin-top: .88rem;
         padding: 0 .4rem .1rem .2rem;
         font-size: .26rem;
         color: #9e9e9e;
+        background: #00afc7;
     }
     .city-keyword {
         display: block;

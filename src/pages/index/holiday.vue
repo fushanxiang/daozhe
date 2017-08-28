@@ -5,7 +5,7 @@
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
 					<div class="product-item-img" >
-						<img :src="item.imgUrl">
+						<img v-lazy="item.imgUrl">
 					</div>
 					<div class="product-item-text" >
 						<p class="product-name">{{item.title}}</p>

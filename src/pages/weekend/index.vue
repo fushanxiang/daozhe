@@ -5,9 +5,9 @@
             <div class="header-title">学生最爱的博物馆</div>
         </div>
         <div class="content">
-            <div class="content-list" v-for='item in listInfo' :key='item.id'>
+            <div class="content-list" v-for='item in listInfo' :key='item.id' @click="handleClick($event)">
                 <div class="content-img">
-                    <img :src="item.img" class="content-list-img" @click="handleClick($event)">
+                    <img :src="item.img" class="content-list-img">
                 </div>
                 <p class="content-list-title">
                     <span class="name">{{item.title}}</span>
@@ -24,7 +24,8 @@
                     {{item.content}}
                 </p>
             </div> 
-            <modal-img @clickit="viewImg" v-if='showModal' :imgSrc="imgSrc"       @touchmove.prevent >
+            <modal-img @clickit="viewImg" v-if='showModal' 
+            :imgSrc="imgSrc" @scroll.prevent @touchmove.prevent :imgTitle='imgTitle'>
             </modal-img>
         </div>
     </div>
@@ -39,7 +40,8 @@ export default {
             },
             handleClick(e){
                 this.showModal = true;
-                this.imgSrc = e.currentTarget.src
+                this.imgSrc = e.currentTarget.firstChild.firstChild.src;
+                this.imgTitle = e.currentTarget.lastChild.innerHTML;
             }
         },
   components:{
@@ -48,6 +50,7 @@ export default {
   data () {
     return {
         imgSrc:'',
+        imgTitle:'',
         showModal:false, 
         listInfo:[{
             "id":"1",

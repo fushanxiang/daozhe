@@ -1,27 +1,34 @@
 <template>
     <div class="city-aside">
         <div class="city-aside-set"> 
-            <div class="city-aside-set-character" @touchmove="touchmoveword" v-for="(item, index) of character" v-on:click="handleLetterClick">{{item[0]}}</div>
+            <div class="city-aside-set-character" @touchmove="touchmoveword" v-for="(item, index) of cityclass" v-on:click="handleLetterClick">{{item[0]}}</div>
         </div>
     </div>
 </template> 
 
 <script>
-    var appData = require('./china.json');
-    var abroadData = require('./abroad.json');
     export default {
         data () {
             return {
-                character: []
+                character: [],
+                foreign: false
             } 
-
         },
-        props: ['letterChange'],
-        created() {
-            var cityData=appData.data;
-            for(var i=0; i<cityData.length;i++) {
-              this.character.push(cityData[i]);
-            };
+        props: ['letterChange', 'datas'],
+        computed: {
+            cityclass: function() {
+                return this.foreign? this.datas.abroadCity :this.datas.chinaCity;
+            }
+        },
+        watch: {
+            letterChange: function(value) {
+                if(value==='china') {
+                    this.foreign = false;
+                }
+                if(value==='abroad') {
+                    this.foreign = true;
+                }
+            }
         },
         methods: {
             handleLetterClick(event) {
@@ -35,29 +42,9 @@
                 var touchword=e.targetTouches[0].clientY;
                 this.$emit("handleMoveWord",touchword);
             }
-
-        },
-        watch: {
-            letterChange: function(value) {
-                var cityData = [];
-                if(value==='china') {
-                    this.character = [];
-                    cityData = appData.data;
-                }
-                if(value==='abroad') {
-                    this.character = [];
-                    cityData = abroadData.data;
-                }
-                for (var i = 0; i < cityData.length; i++) {
-                    this.character.push(cityData[i]);
-                }
-            }
-        }  
+        }
     }
-
-   
 </script>
-
 
 <style scoped>
     .city-aside {

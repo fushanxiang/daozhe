@@ -6,7 +6,6 @@ import ParkDetail from '@/pages/parkdetail/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 
-
 Vue.use(Router)
 
 export default new Router({

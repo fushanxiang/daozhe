@@ -16,6 +16,7 @@
 
 <style scoped>
 	.recommend{
+		position: relative;
 		background: red;
 	}
 	.mp-recommend-title {

@@ -1,6 +1,7 @@
 <template>
 	<div @mousewheel="test">
-    <header-fixed></header-fixed>
+    <header-fixed></header-fixed>  
+    <discuss></discuss>
     <recommend></recommend>
     <recommend-sites></recommend-sites>
     <ua-pop :deltaY="deltaY"></ua-pop>
@@ -16,6 +17,9 @@
   import Uapop from './uapop.vue'
   import Order from './order.vue'
   import HeaderFixed from './headerfixed.vue'
+  import Discuss from './discuss.vue'
+  
+
 export default {
   name: 'hello',
   data () {
@@ -28,7 +32,8 @@ export default {
     "recommend-sites": RecommendSites,
     "ua-pop":Uapop,
     "order":Order,
-    "header-fixed":HeaderFixed
+    "header-fixed":HeaderFixed,
+    "discuss":Discuss
   },
    methods:{
     test(e) {

@@ -42,8 +42,8 @@
                 var e=ev||window.event;
                 e.preventDefault();
                 var touchword=Math.floor((e.targetTouches[0].clientY-110)/18);
-                var a=string.fromCharCode(touchword);
-                console.log(touchword)
+                // var a=String.fromCharCode(touchword+65);
+                // console.log(a)
                 this.$emit("handleMoveWord",touchword); 
             }
         }

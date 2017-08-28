@@ -61,6 +61,7 @@
 		<div class="mp-more-refresh mp-border-top" @click="goDiscuss">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
 		</router-link>
 
+
 	</div>
 	
 </template>
@@ -68,7 +69,6 @@
 <script>
 	
 
-	
 export default {
   
   	data () {
@@ -83,7 +83,9 @@ export default {
  		goDiscuss() {
  			this.$router.push('/parkdetail/goDiscuss')
  		}
+
 	}	
+
 }
 </script>
 

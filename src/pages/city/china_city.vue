@@ -4,14 +4,14 @@
             <hot-city :countryChange="change"></hot-city>
             <div v-for="city in cityClass" class="city-item">
                 <p class="city-class">{{city[0]}}</p>
-                <ul>
+                <ul >
                     <li v-for="cityName in city[1]" class="city-list" v-bind:spell="cityName.itemName" v-bind:key="cityName.id">
                         {{cityName.cityarea}}
                     </li>
                 </ul>
             </div>
         </div>
-        <city-letter :letterChange="change"></city-letter>
+        <city-letter :letterChange="change" v-on:getWord="changePlace" v-on:handleMoveWord="handleTouchWord"></city-letter>
     </div>
 </template>
 
@@ -25,7 +25,8 @@
         data () {
             return {
                 cityClass: [],
-                changeData:''
+                changeData:'',
+                getWord:''
             }
         },
         props: ['change'],
@@ -54,13 +55,17 @@
                     this.cityClass.push(cityData[i]);
                 }
             }
-        }
-        // watch: {
-        //     handleWord: function (newQuestion) {
-        //         // this.strStoreDate = window.localStorage ? localStorage.getItem("word"): Cookie.read("word");
-        //     }
             
-        // }
+
+        },
+        methods: {
+            changePlace:function(word) {
+                console.log(word);//传入点击各个单独单词的字母对应的单词
+            },
+            handleTouchWord:function(num) {
+                console.log(num);//获取手指在字母上移动时，该字母距离屏幕顶部的高度
+            }
+        }
     }
 </script>
 

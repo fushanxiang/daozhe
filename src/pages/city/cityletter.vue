@@ -1,10 +1,9 @@
 <template>
     <div class="city-aside">
         <div class="city-aside-set"> 
-            <div class="city-aside-set-character" v-for="(item, index) of character" v-on:click="handleLetterClick($event)">{{item[0]}}</div>
+            <div class="city-aside-set-character" @touchmove="touchmoveword" v-for="(item, index) of character" v-on:click="handleLetterClick">{{item[0]}}</div>
         </div>
     </div>
-  	
 </template> 
 
 <script>
@@ -23,19 +22,20 @@
             for(var i=0; i<cityData.length;i++) {
               this.character.push(cityData[i]);
             };
-
         },
         methods: {
             handleLetterClick(event) {
                 var el = event.currentTarget;
-                console.log(el);
+                var getWord=el.innerHTML;
+                // alert(getWord);
+                this.$emit("getWord",getWord);
             },
-            broadcast() {//发布订阅模式（dispatcher让store说一声）//$(this).trigger(与jq相似)
-                this.emit("change");
-            },
-            addChangeFn(fn) {
-                this.on("change", fn);//当改变数据的时候，在store.js中改变存的数据内容
+            touchmoveword(ev) {
+                var e=ev||window.event;
+                var touchword=e.targetTouches[0].clientY;
+                this.$emit("handleMoveWord",touchword);
             }
+
         },
         watch: {
             letterChange: function(value) {
@@ -52,22 +52,7 @@
                     this.character.push(cityData[i]);
                 }
             }
-        }
-        // methods: {
-        //     handleCharacterClick(ev) {
-        //         var e = ev || window.event;
-        //         var word=e.path[0].innerHTML;
-        //         this.word;
-        //         if (window.localStorage) {
-        //             localStorage[word]=word;
-        //         } else {
-        //             Cookie.write("word",word);  
-        //         }
-
-                
-        //     }
-        // }
-        
+        }  
     }
 
    

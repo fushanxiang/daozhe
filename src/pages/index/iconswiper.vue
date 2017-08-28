@@ -6,6 +6,8 @@
 	    	<ul class="icon-list">
 	    		<li class="icon-item" v-for="item in page">
 	    			<img class="icon-img" :src="item.imgUrl" />
+	    			<div class="keywords" :title="item.title">{{item.title}}</div>
+	    			
 	    		</li>
 	    	</ul>
 	    </swiper-slide>
@@ -40,45 +42,57 @@ export default {
 				"title":"全部"
 			},{
 				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"景点门票"
 			},{
 				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"一日游"
 			},{
 				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/1c/a8a8d9023a814c02.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"文化古迹"
 			},{
 				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "https://img1.qunarzz.com/piao/fusion/1611/d1/1e49d9e4d7fca102.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"厦门观音山"
 			},{
 				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/12/a16a3980aec17602.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"展馆"
 			},{
 				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
 				"link": "/detail",
-				"title":"全部"
-			},{
+				"title":"自然风光"
+			}
+			,{
 				"id": "8",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/ea/10024e1e382b7e02.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"泡温泉"
 			},{
 				"id": "9",
 				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
 				"link": "/detail",
 				"title":"全部"
-			}]
+			},{
+				"id": "9",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
+				"link": "/detail",
+				"title":"自然风光"
+			},{
+				"id": "7",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
+				"link": "/detail",
+				"title":"自然风光"
+			}
+			]
     	}
 	},
 	methods: {
@@ -129,5 +143,17 @@ export default {
 		height: .66rem;
 		margin: 0 auto;
 	}
-	
+.keywords {
+    margin-top: .2rem;
+    color: #212121;
+    font-size: .28rem;
+   text-align: center;
+}
+.icon-list{
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 48%;
+	height:0;
+	background: #eee;
+}
 </style>

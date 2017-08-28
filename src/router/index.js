@@ -4,6 +4,7 @@ import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
+import Order from '@/pages/order/introduce'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
           component: SmallCity
         }
       ]
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: Order
     }
   ]
 })

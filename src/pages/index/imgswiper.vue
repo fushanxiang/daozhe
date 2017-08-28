@@ -9,6 +9,7 @@
 	    </swiper-slide>
 	    
 	    <div class="swiper-pagination"  slot="pagination"></div>
+	    
 	
 	</swiper>
 </template>

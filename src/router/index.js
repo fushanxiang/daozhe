@@ -36,7 +36,7 @@ export default new Router({
         component: WeekendIndex
     },{
         path: '/weekend/detail/:id',
-        name: 'weekend',
+        name: 'weekendDetail',
         component: WeekendDetail
     }
   ]

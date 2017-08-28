@@ -1,6 +1,6 @@
 <template>
 	<div @mousewheel="test">   
-    <header-fixed></header-fixed>  
+    <header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>  
     <discuss></discuss>
     <recommend></recommend>
     <recommend-sites></recommend-sites>
@@ -24,7 +24,9 @@ export default {
   name: 'hello',
   data () {
     return {
-      deltaY :true
+      deltaY :true,
+      scrollTop: 0,
+      headerShow: false
      }
   },
   components: {
@@ -35,6 +37,17 @@ export default {
     "header-fixed":HeaderFixed,
     "discuss":Discuss
   },
+  mounted() {
+    var this_ = this;
+    window.addEventListener('scroll', function () {
+                this_.scrollTop = document.body.scrollTop;
+            }, false);
+  },
+  beforeDestroy: function () {
+            window.removeEventListener("scroll", function () {
+                this_.scrollTop = document.body.scrollTop;
+            }, false);
+    },
    methods:{
     test(e) {
       if(e.deltaY < 0) {
@@ -43,6 +56,15 @@ export default {
       }else{
         this.deltaY=true;
       }
+    }
+  },
+  computed: {
+    style: function() {
+     if(this.headerShow) {
+         return "opacity:1"
+                } else {
+                    return "opacity:" + this.scrollTop / 200
+     }
     }
   }
 }

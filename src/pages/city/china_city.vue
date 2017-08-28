@@ -21,7 +21,7 @@
     var appData = require('./china.json');
     var abroadData = require('./abroad.json');
     export default {
-        name: 'hello',
+        // name: 'hello',
         data () {
             return {
                 cityClass: [],
@@ -55,6 +55,12 @@
                 }
             }
         }
+        // watch: {
+        //     handleWord: function (newQuestion) {
+        //         // this.strStoreDate = window.localStorage ? localStorage.getItem("word"): Cookie.read("word");
+        //     }
+            
+        // }
     }
 </script>
 

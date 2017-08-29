@@ -55,7 +55,7 @@
 	import ImgComment from "./imgcomment.vue"
 
 	export default {
-	    created: function() {
+	    created() {
 	        this.$http.get( '/static/commentweekend.json' ).then( response => {
 	            this.commentlistInfo = response.body.data.indexInfo;            
 	        }, response => {

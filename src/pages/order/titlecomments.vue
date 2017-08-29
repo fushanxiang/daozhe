@@ -47,7 +47,7 @@ export default {
     .evaluate {
         width: 100%;
         height: .8rem;
-        background: yellowgreen;
+        background: white;
         line-height: .8rem;
         position: relative;
         margin-top: .2rem;
@@ -79,7 +79,8 @@ export default {
     .comments-border {
         width: 100%;
         height: 1.68rem;
-        background: paleturquoise;
+        border-top:1px dashed grey; 
+        background: white;
     }
     .comments-item {
        padding: .2rem 
@@ -103,5 +104,6 @@ export default {
         -webkit-line-clamp: 2; 
         overflow: hidden;
         text-overflow: ellipsis;
+         color: #616161;
     }
 </style>

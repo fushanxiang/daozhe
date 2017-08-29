@@ -17,7 +17,7 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	}
 }
@@ -26,13 +26,16 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.header {
-		position: relative;
+		position: fixed;
 	    overflow: hidden;
+	    top: 0;
+	    left: 0;
 	    width: 100%;
 	    height: .88rem;
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
+	    z-index: 99;
 	}
 	.header-left {
 		float: left;

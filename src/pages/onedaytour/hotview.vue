@@ -7,7 +7,7 @@
 			<li class="hotroutes-item border-bottom" v-for="item in hotViewInfo" :key="item.id">
 				<img class="item-img" :src="item.imgUrl"/>
 				<span class="item-tomorrow" v-if="item.book == true">
-					<span class="tommorrow">可订明日</span>
+					<span class="tomorrow">可订明日</span>
 				</span>
 				<span class="item-today" v-else="item.book == false">
 					<span class="today">可订今日</span>
@@ -26,16 +26,18 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	},
-	props:["hotViewInfo"]
+	props: ["hotViewInfo"]
 }
 </script>
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
 	.hotroutes {
+		position: relative;
+		top: .88rem;
 		background: #fff;
 		margin-top: .2rem;
 	}
@@ -85,7 +87,7 @@ export default {
 	}
 	.tomorrow {
 	    display: block;
-	    font-size: .2rem;
+	    font-size: .24rem;
 	}
 	.item-today {
 	    position: absolute;
@@ -110,7 +112,7 @@ export default {
 	}
 	.today {
 	    display: block;
-	    font-size: .2rem;
+	    font-size: .24rem;
 	}
 	.item-title {
 		line-height: .38rem;

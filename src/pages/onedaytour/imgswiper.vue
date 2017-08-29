@@ -14,7 +14,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
-	data () {
+	data() {
 		return {
 			swiperOption: {
 				direction : 'horizontal',
@@ -27,7 +27,7 @@ export default {
 			}
 		}
 	},
-	props:["imgsInfo"],
+	props: ["imgsInfo"],
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide
@@ -38,7 +38,9 @@ export default {
 <style scoped>
 	@import '~swiper/dist/css/swiper.css';
 	.carousel {
-	background: #fff;
+		position: relative;
+		top: .88rem;
+		background: #fff;
 	}
 	.img-container {
 		overflow: hidden;

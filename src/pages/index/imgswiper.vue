@@ -1,20 +1,16 @@
 <template>
 	<swiper :options="swiperOption" >
 		<slot></slot>
-
 	    <swiper-slide v-for="item in imgsInfo" :key="item.id">
 	    	<div class="img-container">
 	    		<img class="swiper-img" :src="item.imgUrl" />
 	    	</div>
-	    </swiper-slide>
-	    
-	    <div class="swiper-pagination"  slot="pagination"></div>
-	
+	    </swiper-slide>	    
+	    <div class="swiper-pagination"  slot="pagination"></div>	
 	</swiper>
 </template>
 
 <script>
-
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {

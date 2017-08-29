@@ -13,15 +13,17 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	},
-	props:["addressInfo"]	
+	props: ["addressInfo"]	
 }
 </script>
 
 <style scoped>
 	.hot-city {
+		position: relative;
+		top: .88rem;
 		background: #fff;
 	}
 	.city-title {
@@ -34,6 +36,7 @@ export default {
 	.city-all {
 		display: block;
 		float: right;
+		position: relative;
 		font-size: .26rem;
 		margin-right: .3rem;
 	}
@@ -42,6 +45,10 @@ export default {
 		color: #1cc3d9;
 		font-size: .35rem;	
 	}
+	.city {
+		overflow: hidden;
+		padding: 0 .1rem;
+	}
 	.city-list{
 		overflow: hidden;
 		margin: .04rem .08rem;
@@ -49,15 +56,16 @@ export default {
 	.city-item {
 		width: 25%;
 		float: left;
+		text-align: center;
 		margin-bottom: .2rem;
 	}
 	.city-name {	
 		height: .6rem;
 		line-height: .6rem;
-		text-align: center;
 		margin: 0 .1rem;
 		font-size: .28rem;
 		border-radius: .04rem;
+		color: #212121;
 		background: #f0fbfd;
 	}	
 </style>

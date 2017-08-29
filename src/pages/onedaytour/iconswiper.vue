@@ -17,7 +17,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
-	data () {
+	data() {
 		return {
 			swiperOption: {
 				direction : 'horizontal',
@@ -27,7 +27,7 @@ export default {
 			}
     	}
 	},
-	props:["iconsInfo"],
+	props: ["iconsInfo"],
 	computed: {
 		pages: function() {
 			const pages = [];
@@ -41,7 +41,7 @@ export default {
 			return pages;
 		}
 	},
-	components:{
+	components: {
 		"swiper": swiper,
 		"swiper-slide": swiperSlide
 	}
@@ -51,6 +51,8 @@ export default {
 <style scoped>
 	@import '~swiper/dist/css/swiper.css';
 	.icon {
+		position: relative;
+		top: .88rem;
 		height: 1.76rem;
 		background: #fff;
 	}

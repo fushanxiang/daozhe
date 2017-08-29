@@ -23,7 +23,7 @@ import HotView from './hotview.vue'
 
 export default {
 	name: 'index',
-	data () {
+	data() {
 		return {
 			imgsInfo:[],
 			iconsInfo:[],
@@ -49,7 +49,7 @@ export default {
 			console.log("error")
 		});
 	},
-	components:{
+	components: {
 		"index-header": IndexHeader,
 		"img-swiper": ImgSwiper,
 		"icon-swiper": IconSwiper,

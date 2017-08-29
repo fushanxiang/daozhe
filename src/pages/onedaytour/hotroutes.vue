@@ -10,7 +10,7 @@
 			<li class="hotroutes-item border-bottom" v-for="item in hotRouterInfo" :key="item.id">
 				<img class="item-img" :src="item.imgUrl"/>
 				<span class="item-tomorrow" v-if="item.book == true">
-					<span class="tommorrow">可订明日</span>
+					<span class="tomorrow">可订明日</span>
 				</span>
 				<span class="item-today" v-else="item.book == false">
 					<span class="today">可订今日</span>
@@ -23,22 +23,26 @@
 				</div>
 			</li>
 		</ul>
-		<p class="item-all iconfont">查看全部一日游 &#xe626;</p>
+		<router-link :to="{name:'onedaylist'}">
+			<p class="item-all iconfont">查看全部一日游 &#xe626;</p>
+		</router-link>
 	</div>
 </template>
 
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	},
-	props:["hotRouterInfo"]
+	props: ["hotRouterInfo"]
 }
 </script>
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
 	.hotroutes {
+		position: relative;
+		top: .88rem;
 		background: #fff;
 		margin-top: .2rem;
 	}
@@ -110,7 +114,7 @@ export default {
 	}
 	.tomorrow {
 	    display: block;
-	    font-size: .2rem;
+	    font-size: .24rem;
 	}
 	.item-today {
 	    position: absolute;
@@ -135,7 +139,7 @@ export default {
 	}
 	.today {
 	    display: block;
-	    font-size: .2rem;
+	    font-size: .24rem;
 	}
 	.item-title {
 		overflow : hidden;

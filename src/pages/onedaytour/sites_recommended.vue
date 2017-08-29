@@ -24,15 +24,17 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	},
-	props:["sitesImgsInfo"]	
+	props: ["sitesImgsInfo"]	
 }
 </script>
 
 <style scoped>
 	.sites {
+		position: relative;
+		top: .88rem;
 		margin: .2rem 0;
 		padding-bottom: .2rem;
 		background: #fff;	

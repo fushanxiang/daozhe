@@ -12,16 +12,18 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	},
-	props:["twoItemsInfo"]
+	props: ["twoItemsInfo"]
 }
 </script>
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
 	.miditem {
+		position: relative;
+		top: .88rem;
 		height: 1.2rem;
 		background: #fff;
 		margin-top: .2rem;
@@ -32,9 +34,6 @@ export default {
 		position: relative;
 		float: left;
 		border-color: #ccc;
-	}
-	.miditem-item:nth-child(odd){
-		border-right: none;
 	}
 	.miditem-title {
 	    line-height: .44rem;

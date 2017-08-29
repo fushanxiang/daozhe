@@ -1,32 +1,47 @@
 <template>
-	<div>
-		<index-header></index-header>
-		<img-swiper></img-swiper>
-    <icon-swiper></icon-swiper>
-	</div>
+  <div class="index">
+	<index-top :itemshotcity="hotCity"></index-top>
+  	<img-topic :imgsInfo="products"></img-topic>
+  	<list-lvyou :lvyou="lvyou"></list-lvyou>
+  </div>
 </template>
 
 <script>
-
-import IndexHeader from './header.vue'
-import ImgSwiper from './imgswiper.vue'
-import IconSwiper from './iconswiper.vue'
-
+import IndexHeader from './../topictickets/header.vue'
+import Topic from './../topictickets/topic.vue'
+import Listlvyou from './../topictickets/lvyou.vue'
 export default {
   name: 'index',
   data () {
     return {
+    	hotCity:[],
+    	products:[],
+    	lvyou:[]
     }
-     
+  },
+  created(){
+  	/*console.log(123)
+  	console.log(this.$http)*/
+	  this.$http.get('/static/index.json').then(response => {
+	    //console.log(response.body.data.hotCity)
+	    var data = response.body.data;
+	    this.hotCity = data.hotCity;
+	    this.products = data.products.北京;
+	    this.lvyou = data.lvyou;
+	    }, response => {
+	      console.log("ajax error");
+	    });
   },
   components:{
-  	"index-header": IndexHeader,
-  	"img-swiper": ImgSwiper,
-    "icon-swiper": IconSwiper
+  	"index-top":IndexHeader,
+  	"img-topic":Topic,
+  	"list-lvyou":Listlvyou
   }
 }
 </script>
 
 <style scoped>
-
+	.index{
+		background: #fd551e;
+	}
 </style>

@@ -87,5 +87,6 @@
         border-top: 1px solid #dfe0e1;
         font-size: .28rem;
         color: #212121;
+        background: #fff;
     }
 </style>

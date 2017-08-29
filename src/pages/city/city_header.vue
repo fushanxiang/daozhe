@@ -9,7 +9,12 @@
         </div>
         <div class="header-keyword">
             <input type="text" value="输入城市名或拼音" class="city-keyword" 
-            @focus="handleFocus" @blur="handleBlur" :style="styleObj">
+            @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleInput">
+            <div class="search-cities">
+                <router-link to="/">
+                    <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
+                </router-link>
+            </div>
         </div>
         <city-area :change="cityChange" :datas="datas"></city-area>
     </div>
@@ -21,6 +26,7 @@
         data () {
             return {
                 cityChange: '',
+                cities: [],
                 styleObj:{
                     "text-align": "center"
                 },
@@ -29,8 +35,11 @@
                     "background": "#fff"
                 },
                 colorAbroad: {
-                        
-                }
+                    "color": "#fff",
+                    "background": "#00afc7"
+                },
+                country: true,
+                cities: []
             }
         },
         props: ['datas'],
@@ -62,6 +71,7 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                this.country = true;
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
@@ -73,6 +83,35 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                this.country = false;
+            },
+            handleInput(ev) {
+                var e = ev || window.event,
+                    searchWord = e.target.value.toLowerCase(),
+                    searchCharacter = e.target.value,
+                    searchCities = this.country? this.datas.chinaCity:this.datas.abroadCity,
+                    allSearchCities = [];
+                for (var i = 0; i < searchCities.length; i++) {
+                    var getCities = searchCities[i][1];
+                        getCities.filter(function (item) {
+                            if(item.itemName.toLowerCase().indexOf(searchWord) !== -1 || item.cityarea.indexOf(searchCharacter) !== -1) {
+                                allSearchCities.push(item.cityarea);                          
+                            }
+                        })
+
+                }
+                if(allSearchCities.length === 0) {
+                    allSearchCities = ['无搜索匹配城市'];
+                }
+                this.cities = allSearchCities;
+                if (searchWord.length === 0) {
+                    this.cities = [];
+                }
+            },
+            selectCity(ev) {
+                var e = ev || window.event;
+                this.$store.commit("changeCity", {city: e.target.innerText});
+                localStorage.selectedCity = e.target.innerText;
             }
         }
     }
@@ -81,7 +120,7 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
-  	.city-header-area {
+    .city-header-area {
         width: 100%;
         line-height: .88rem;
         overflow: hidden;
@@ -132,5 +171,20 @@
         line-height: .3rem;
         padding: .16rem 0 .16rem .1rem;
         border-radius: .1rem;
+    }
+    .search-cities {
+        position: absolute;
+        left: 0;
+        top: 1.68rem;
+        background: #fff;
+        width: 100%;
+    }
+    .search-city {
+        line-height: .76rem;
+        width: 100%;
+        padding-left: .2rem;
+        border-top: 1px solid #dfe0e1;
+        font-size: .28rem;
+        color: #212121;
     }
 </style>

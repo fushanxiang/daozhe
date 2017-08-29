@@ -6,8 +6,13 @@
             <span :style="colorAbroad" class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
         </div>
         <div class="header-keyword">
-            <input type="text" value="输入城市名或拼音" class="city-keyword" 
-            @focus="handleFocus" @blur="handleBlur" :style="styleObj">
+            <input type="text"class="city-keyword" value="输入城市名或拼音"
+            @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleSearch">
+        </div>
+         <div class="header-search">
+                <p class="header-search-city" v-for="city in cities">
+                    {{city}}
+                </p>
         </div>
         <city-area :change="cityChange" :datas="datas"></city-area>
     </div>
@@ -19,6 +24,7 @@
         data () {
             return {
                 cityChange: '',
+                cities: [],
                 styleObj:{
                     "text-align": "center"
                 },
@@ -72,6 +78,30 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+            },
+            handleSearch(e) {
+                var e = e || window.event,
+                    china = this.datas.chinaCity,
+                    china = china.concat(this.datas.abroadCity),
+                    allSearchCities = [],
+                    searchWord = e.target.value.toLowerCase(),
+                    searchCharacter = e.target.value;
+                for(var i = 0; i < china.length; i++) {
+                    china[i][1].filter(function (item) {
+                        if(item.itemName.toLowerCase().indexOf(searchWord) !== -1 || item.cityarea.indexOf(searchCharacter) !== -1) {
+                            allSearchCities.push(item.cityarea);                          
+                        }
+                    })
+                }
+                
+                if(allSearchCities.length == 0) {
+                    allSearchCities = ['无搜索匹配城市'];
+                }
+                this.cities = allSearchCities;
+                if(searchWord.length === 0) {
+                    this.cities = [];
+                }
+                
             }
         }
     }
@@ -80,6 +110,7 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
+    @import "../../assets/css/common/border.css";
   	.city-header-area {
         width: 100%;
         line-height: .88rem;
@@ -131,5 +162,18 @@
         line-height: .3rem;
         padding: .16rem 0 .16rem .1rem;
         border-radius: .1rem;
+    }
+    .header-search {
+        width: 100%;
+        position: absolute;
+        top: 1.72rem;
+        background: #fff;
+    }
+    .header-search-city {
+        line-height: .76rem;
+        padding-left: .2rem;
+        font-size: .28rem;
+        color: #212121;
+        border-bottom: 0.01rem solid #c9cccd;
     }
 </style>

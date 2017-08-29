@@ -57,7 +57,7 @@
 				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/ad/a357cc8f0d4a6a02.jpg_228x168_5cf9e316.jpg"/></div>
 			</div>
 		<router-link to="/discussall">
-		<div class="discuss-refresh mp-border-top">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
+			<div class="discuss-refresh mp-border-top">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
 		</router-link>
 
 	</div>

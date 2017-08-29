@@ -16,7 +16,7 @@
 
 <style scoped>
 	.recommend{
-		background: red;
+		position: relative;
 	}
 	.mp-recommend-title {
 	    padding: 0 .2rem;
@@ -35,8 +35,6 @@
 	    width: .06rem;
 	    height: .25rem;
 	    background: #1ba9ba;
-	    -webkit-border-radius: .04rem;
-	    -moz-border-radius: .04rem;
 	    border-radius: .04rem;
 	}
 </style>

@@ -1,16 +1,29 @@
 <template>
-	<router-link to="/uacheckout">
-	<a class="mp-download" mp-role="appDownLeft" href="#" :style="this.deltaY?'display:none':'display:inline-block'"></a>
-	</router-link>
+	
+	<a class="mp-download" mp-role="appDownLeft" href="#" :style="this.deltaY?'display:none':'display:inline-block'" @click="downloadapp"></a>
+	
 </template>
 
 <script>
+	import detect from '../../brower-version/browVersion.js'
 	export default {
 		data () {
 			return {				
 			}		
 		},
-		props:["deltaY"]
+		props:["deltaY"],
+		methods:{
+			downloadapp: function(){
+				console.log(detect.os);
+				if( detect.os == 'iOS'){
+        			window.open("https://itunes.apple.com/cn/app/id395096736");
+      			}else if(detect.os == 'Android'){
+        			window.open("https://play.google.com/store/apps/details?id=com.Qunar&hl=zh", "_self");
+      			}else if(detect.os != 'iOS' || 'Android'){
+        			window.open("http://app.qunar.com/");
+     		 	}
+    		}			
+		}
 		
 }
 </script>

@@ -28,24 +28,26 @@ export default new Router({
       component: ParkDetail
     },
      {
-          path: '/uacheckout',
-          name: 'uacheckout',
-          component: uaCheckout
-        },{
-          path: '/discussall',
-          name: 'discussall',
-          component: Discussall
-    }],
+      path: '/uacheckout',
+      name: 'uacheckout',
+      component: uaCheckout
+    },
+    {
+      path: '/discussall',
+      name: 'discussall',
+      component: Discussall
+    }
+    ],
       
-      children: [
-        {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
+    children: [
+    {
+    path: 'bigCity',
+    component: BigCity
+    },
+    {
           path: 'smallCity',
           component: SmallCity
-        }
-      ]
+    }
+    ]
 
     })

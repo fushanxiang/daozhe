@@ -49,7 +49,8 @@ export default {
 		height: .72rem;
 		line-height: .72rem;
 		color: #fff;
-		font-size: .60rem;
+		font-size: .5rem;
+		font-weight: bold;
 	}
 	.top-title {
 		overflow: hidden;

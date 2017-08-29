@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="backgroud-color">
         <div class="city-header-area">
             <router-link to="/">
                 <span class="iconfont city-header-goback">&#xe624;</span>
@@ -128,6 +128,10 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
+    .backgroud-color{
+        height: 11.38rem;
+        background: #F5F5F5;
+    }
     .city-header-area {
         width: 100%;
         line-height: .88rem;

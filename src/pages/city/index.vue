@@ -23,10 +23,11 @@
         },
         created() {
             this.$http.get('/static/city_select.json').then(response => {
-                this.datas.chinaCity = response.body.china;
-                this.datas.abroadCity = response.body.abroad;
-                this.datas.hotChinaCity = response.body.hotcity;
-                this.datas.hotAbroadCity = response.body.hotcityAbroad;
+                var res = response.body;
+                this.datas.chinaCity = res.china;
+                this.datas.abroadCity = res.abroad;
+                this.datas.hotChinaCity = res.hotcity;
+                this.datas.hotAbroadCity = res.hotcityAbroad;
             }, response => {
                 console.log("ajax error");
             });

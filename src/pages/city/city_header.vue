@@ -1,18 +1,20 @@
 <template>
     <div>
         <div class="city-header-area">
-            <span class="iconfont city-header-goback">&#xe624;</span>
+            <router-link to="/">
+                <span class="iconfont city-header-goback">&#xe624;</span>
+            </router-link>
             <span :style="colorChina" class="city-china city-area" v-on:click="handleChina" >国内</span>
             <span :style="colorAbroad" class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
         </div>
         <div class="header-keyword">
-            <input type="text"class="city-keyword" value="输入城市名或拼音"
-            @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleSearch">
-        </div>
-         <div class="header-search">
-                <p class="header-search-city" v-for="city in cities">
-                    {{city}}
-                </p>
+            <input type="text" value="输入城市名或拼音" class="city-keyword" 
+            @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleInput">
+            <div class="search-cities">
+                <router-link to="/">
+                    <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
+                </router-link>
+            </div>
         </div>
         <city-area :change="cityChange" :datas="datas"></city-area>
     </div>
@@ -35,7 +37,9 @@
                 colorAbroad: {
                     "color": "#fff",
                     "background": "#00afc7"
-                }
+                },
+                country: true,
+                cities: []
             }
         },
         props: ['datas'],
@@ -67,6 +71,7 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                this.country = true;
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
@@ -78,30 +83,35 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                this.country = false;
             },
-            handleSearch(e) {
-                var e = e || window.event,
-                    china = this.datas.chinaCity,
-                    china = china.concat(this.datas.abroadCity),
-                    allSearchCities = [],
+            handleInput(ev) {
+                var e = ev || window.event,
                     searchWord = e.target.value.toLowerCase(),
-                    searchCharacter = e.target.value;
-                for(var i = 0; i < china.length; i++) {
-                    china[i][1].filter(function (item) {
-                        if(item.itemName.toLowerCase().indexOf(searchWord) !== -1 || item.cityarea.indexOf(searchCharacter) !== -1) {
-                            allSearchCities.push(item.cityarea);                          
-                        }
-                    })
+                    searchCharacter = e.target.value,
+                    searchCities = this.country? this.datas.chinaCity:this.datas.abroadCity,
+                    allSearchCities = [];
+                for (var i = 0; i < searchCities.length; i++) {
+                    var getCities = searchCities[i][1];
+                        getCities.filter(function (item) {
+                            if(item.itemName.toLowerCase().indexOf(searchWord) !== -1 || item.cityarea.indexOf(searchCharacter) !== -1) {
+                                allSearchCities.push(item.cityarea);                          
+                            }
+                        })
+
                 }
-                
-                if(allSearchCities.length == 0) {
+                if(allSearchCities.length === 0) {
                     allSearchCities = ['无搜索匹配城市'];
                 }
                 this.cities = allSearchCities;
-                if(searchWord.length === 0) {
+                if (searchWord.length === 0) {
                     this.cities = [];
                 }
-                
+            },
+            selectCity(ev) {
+                var e = ev || window.event;
+                this.$store.commit("changeCity", {city: e.target.innerText});
+                localStorage.selectedCity = e.target.innerText;
             }
         }
     }
@@ -110,8 +120,7 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
-    @import "../../assets/css/common/border.css";
-  	.city-header-area {
+    .city-header-area {
         width: 100%;
         line-height: .88rem;
         overflow: hidden;
@@ -163,17 +172,19 @@
         padding: .16rem 0 .16rem .1rem;
         border-radius: .1rem;
     }
-    .header-search {
-        width: 100%;
+    .search-cities {
         position: absolute;
-        top: 1.72rem;
+        left: 0;
+        top: 1.68rem;
         background: #fff;
+        width: 100%;
     }
-    .header-search-city {
+    .search-city {
         line-height: .76rem;
+        width: 100%;
         padding-left: .2rem;
+        border-top: 1px solid #dfe0e1;
         font-size: .28rem;
         color: #212121;
-        border-bottom: 0.01rem solid #c9cccd;
     }
 </style>

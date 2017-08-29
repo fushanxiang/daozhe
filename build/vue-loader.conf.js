@@ -4,7 +4,7 @@ var isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   loaders: utils.cssLoaders({
-    sourceMap: isProduction  //sourceMap方便线上代码测试
+    sourceMap: isProduction
       ? config.build.productionSourceMap
       : config.dev.cssSourceMap,
     extract: isProduction

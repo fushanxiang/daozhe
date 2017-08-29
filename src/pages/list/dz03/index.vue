@@ -52,18 +52,9 @@
         data () {
             return {
                 index: 0,
-                content: [],
             }
         },
-        created() {
-
-            this.$http.get('/static/productItems.json').then(response => {
-                this.content = response.body.content;
-                this.hot = response.body.content        
-            }, response => {
-                console.log("response error")
-            });
-        },
+        props: ["productItems"],
         methods: {
             handPageUp() {
                 this.index--;
@@ -84,12 +75,12 @@
         computed: {
             pages() {
                 const pages = [];
-                for (var i = 0; i < this.content.length; i++) {
+                for (var i = 0; i < this.productItems.length; i++) {
                     let page = Math.floor(i/4);
                     if(!pages[page]){
                         pages[page] = [];
                     }
-                    pages[page].push(this.content[i])
+                    pages[page].push(this.productItems[i])
                 }
                 return pages;
             }
@@ -247,7 +238,7 @@
     display: block;
     background: #f5f5f5;
     width:100%;
-    height:100%;
+    height:992px;
     overflow: hidden;
 }
 .sight-group{
@@ -263,7 +254,7 @@
 .sight-imgcon{
     width: 1.6rem;
     height: 1.6rem;
-    background: pink;
+    background: #ccc;
     float:left;
 }
 .sight-img{

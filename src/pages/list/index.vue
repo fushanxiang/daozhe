@@ -1,7 +1,7 @@
 <template>
     <div>
         <index-header :dataScen="hotSearchScen" :dataArea="hotSearchArea"></index-header>
-        <item-products></item-products>
+        <item-products :productItems="content"></item-products>
     </div>
 </template>
 
@@ -24,7 +24,6 @@ export default {
         this.hotSearchScen=data.hotSearchScen;
         this.hotSearchArea=data.hotSearchArea;
         this.content=data.content;
-      console.log(this.hotSearchScen)
       }, response => {
       });
   },

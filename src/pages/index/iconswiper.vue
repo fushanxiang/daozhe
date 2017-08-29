@@ -12,7 +12,6 @@
 	    	</ul>
 	    </swiper-slide>
 
-	   
 	    
 	    <div class="swiper-pagination"  slot="pagination"></div>
 	
@@ -34,67 +33,10 @@ export default {
 				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
-			},
-			iconsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-				"link": "/detail",
-				"title":"景点门票"
-			},{
-				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
-				"link": "/detail",
-				"title":"一日游"
-			},{
-				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/1c/a8a8d9023a814c02.png",
-				"link": "/detail",
-				"title":"文化古迹"
-			},{
-				"id": "5",
-				"imgUrl": "https://img1.qunarzz.com/piao/fusion/1611/d1/1e49d9e4d7fca102.png",
-				"link": "/detail",
-				"title":"厦门观音山"
-			},{
-				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/12/a16a3980aec17602.png",
-				"link": "/detail",
-				"title":"展馆"
-			},{
-				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
-				"link": "/detail",
-				"title":"自然风光"
-			}
-			,{
-				"id": "8",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/ea/10024e1e382b7e02.png",
-				"link": "/detail",
-				"title":"泡温泉"
-			},{
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
-				"link": "/detail",
-				"title":"自然风光"
-			},{
-				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
-				"link": "/detail",
-				"title":"自然风光"
-			}
-			]
+
     	}
 	},
+	props:["iconsInfo"],
 	methods: {
 		handleButton: function(){
 			this.iconsInfo.push({

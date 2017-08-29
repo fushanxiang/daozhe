@@ -25,7 +25,7 @@ export default {
   	"index-header": IndexHeader,
   	"img-swiper": ImgSwiper,
     "icon-swiper": IconSwiper,
-    "hot-recommend":HotRecommend,
+    "hot-recommend":HotRecommend
   }
 }
 </script>

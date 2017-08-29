@@ -1,0 +1,290 @@
+<template>
+	<div class="mp-page">
+		<div class="mp-img-container">
+			<img class="mp-topic-images" src="//img1.qunarzz.com/piao/fusion/1707/5c/d2562a5021bff502.jpg" style="opacity: 1;">
+		</div>
+	
+		<div class="mp-caption">
+			<img class="mp-topic-imga" src="//s.qunarzz.com/piao_topic/image/touch/custom/2016/1772travel10/170710/caption1.jpg" style="opacity: 1;">
+		</div>
+			<ul class="ticket">
+				<li class="mp-product-item" v-for="item in piclistInfo" :key="item.id">
+					<div class="mp-product-show">
+						<img class="mp-topic-img" :src="item.imagesUrl">
+						<span class="mp-product-flag">
+							<em class="mp-product-tag">{{item.ticket}}</em>
+						</span>
+						<span class="mp-product-desc">
+							<strong class="mp-product-in">				{{item.title}}
+							</strong>
+						</span>
+					</div>
+					<div class="mp-product-info">
+						<h4 class="mp-product-name">
+							{{item.text}}
+						</h4>
+						<div class="active-product">
+							<div class="mp-product-price">
+								<strong class="mp-product-sale">￥
+									<em class="mpg-price-num">{{item.price}}</em>
+								</strong>
+								<span class="mp-product-cost">
+									票面价
+									<span class="mpg-price">￥
+										<em class="mpg-price-num">{{item.numprice}}</em>
+									</span>
+								</span>
+							</div>
+							<div class="mp-product-btn">立即预订</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		
+	</div>
+	
+</template>
+
+
+<script>
+export default {
+	data () {
+		return {
+			piclistInfo:[{
+				"id":1,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1706/61/61cbf3401445d0fca3.img.jpg_600x276_f10389c3.jpg",
+				"link":"/detail",
+				"title":"十渡爱琴海薰衣草庄园",
+				"text":"【活动票】爱琴海薰衣草庄园成人特惠票（下午场）",
+				"ticket":"特惠票",
+				"price":"9.9",
+				"numprice":"35"
+			},{
+				"id":2,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":3,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":4,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":5,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":6,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":7,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":8,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			},{
+				"id":9,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100"
+			}]
+    	}
+	}
+}
+</script>
+
+<style scoped>
+	.mp-page{
+		position:relative;
+		width:100%;
+		min-height:14rem;
+		background:#28a3e1;
+	}
+	.mp-img-container{
+		overflow:hidden;
+		width:100%;
+	}
+	.mp-topic-images{
+		width:100%;
+	}
+	.mp-caption{
+		overflow:hidden;
+		min-height:0.88rem;
+	}
+	.mp-topic-imga{
+		width:100%;
+	}
+	.ticket{
+		margin:0 0.2rem;
+	}
+	.mp-product-item{
+		position: relative;
+		border-radius:0.06rem;
+		width:100%;
+		margin-top:0.2rem;
+	}
+	.ticket li:nth-child(1){
+		margin-top:0;
+	}
+	.mp-product-show{
+		overflow:hidden;
+		position:relative;
+		width:100%;
+		/*margin:0 0.2rem;*/
+		/*padding-bottom: 46%;*/
+
+	}
+	.mp-topic-img{
+		width:100%;
+		height:3.26rem;
+		border-radius:0.06rem 0.06rem 0 0;
+	}
+	.mp-product-flag{
+		position:absolute;
+		top:0.12rem;
+		left:0.12rem;
+		width:90%;
+	}
+	.mp-product-tag{
+		display:inline-block;
+		overflow:hidden;
+		max-width:50%;
+		height:0. 32rem;
+		border:0.02rem solid #3dc929;
+		padding:0.08rem;
+		background:rgba(98,212,79,.7);
+		color:#fff;
+		font-weight:bold;
+		font-size:0.28rem;
+		line-height:0.32rem;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		text-align:center;
+		border-radius:0.04rem;
+
+	}
+	.mp-product-desc{
+		position: absolute;
+	    top:42%;
+	    left:0;
+	    width:100%;
+	    color:#fff;
+	    text-align:center;
+	    font-size:0.28em;
+    	line-height:1;
+	}
+	.mp-product-in{
+		display:block;
+	    font-weight:bold!important;
+	    font-size:0.4rem;
+	    line-height:0.58rem;
+	    text-shadow:0 0 0.06rem rgba(0,0,0,1);
+	}
+	.mp-product-info{
+		position:relative;
+		padding:0.1rem 0.2rem;
+		background:#fff;
+	}
+	.mp-product-name {
+	    margin-bottom:0.06rem;
+	    color:#333;
+	    font-size:0.28rem;
+	   	line-height:0.4rem;
+	}
+	.active-product{
+		overflow: hidden;
+		height:0.54rem;
+		display:flex;
+		justify-content:space-between;
+		line-height:0.48rem;
+		
+	}   
+	.mp-product-sale {
+	    display: inline-block;
+	    font-size:0.28rem;
+	    vertical-align: middle;
+	    color: #ff4c56;
+	    font-size:0.24rem;
+	}
+	.mpg-price-num{
+		font-size: 0.4rem;
+		line-height: .48rem;
+		font-family:Tahoma,Helvetica,sans-serif
+	}
+	.mp-product-cost{
+		display: inline-block;
+	    margin-left: .1rem;
+	    color: #aaa;
+	    font-size: .24rem;
+	    text-decoration: line-through;
+	    vertical-align: middle;
+	}
+	.mp-product-cost .mpg-price-num{
+		font-size:0.24rem;
+	}
+	.mp-product-disabled .mp-product-btn {
+   		background: #aaa;
+	}
+	.mp-product-btn {
+	    position: absolute;
+	    right: .2rem;
+	    bottom: .12rem;
+	    margin-top: -.3rem;
+	    width: 1.3rem;
+	    height: .5rem;
+	    background: #ff4c56;
+	    color: #fff;
+	    font-size: .28rem;
+	    line-height: .5rem;
+	    text-align: center;
+	    -webkit-border-radius: .06rem;
+	    -moz-border-radius: .06rem;
+	    border-radius: .06rem;
+	}
+	
+	
+</style>

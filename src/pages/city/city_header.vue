@@ -129,7 +129,7 @@
 <style scoped>
     @import "../../assets/font/iconfont.css";
     .backgroud-color{
-        height: 11.38rem;
+        height: 10.46rem;
         background: #F5F5F5;
     }
     .city-header-area {

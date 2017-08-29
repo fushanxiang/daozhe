@@ -19,12 +19,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-	/*@import "../../../assets/css/common/border.css";
-	.chosen::before {
-		border-color: #c9cccd;
-	}*/
 	.chosen {
 		background: #fff;
 		margin-top: .2rem;

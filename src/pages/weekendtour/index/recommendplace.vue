@@ -1,15 +1,21 @@
 <template>
-  <div class="chosenplace">
+	<div class="chosenplace">
 		<h2 class="hot-top"><span class="hot-title">精选玩法</span></h2>
 		<ul class="chosen-list">
 			<li class="icon-item" v-for="item in goods" :key="item.id">
-    			<div class="chosen-imgwrapper"><router-link :to="'/weekend/detail/id='+item.id" class="back-btn iconfont"><img :src="item.src" class="chosen-img"></router-link></div>
+    			<div class="chosen-imgwrapper">
+	    			<router-link :to="'/weekendtour/detail/id='+item.id" class="back-btn iconfont">
+	    				<img :src="item.src" class="chosen-img">
+	    			</router-link>
+    			</div>
 				<div class="chosen-info">
 					<h5 class="chosen-title">{{item.title}}</h5>
 					<div class="chosen-des"><span>{{item.address}}</span></div>
 					<div class="chosen-price1">
 						<div class="chosen-price">
-							<span class="chosen-newprice">&yen;{{item.sellPrice}}</span>/份<span class="chosen-oldprice">&yen;{{item.marketPrice}}</span>
+							<span class="chosen-newprice">&yen;{{item.sellPrice}}</span>
+							<span class="fen">/份</span>
+							<span class="chosen-oldprice">&yen;{{item.marketPrice}}</span>
 						</div>
 					</div>
 				</div>
@@ -18,20 +24,19 @@
 	</div>
 </template>
 
-<script>
 
-export default {
-	data () {
-	    return {
-	    	
-	    }
-	},
-  	props:["goods"]
-}
+<script>
+	export default {
+		data () {
+		    return {
+		    	
+		    }
+		},
+	  	props:["goods"]
+	}
 </script>
 
 <style scoped>
-	
 	.chosenplace{
 		background: #fff;
 		margin-top: .2rem;
@@ -43,7 +48,7 @@ export default {
 	    width: 100%;
 	    height: .02rem;
 		background: #c9cccd;
-		    transform: scaleY(.51);
+		transform: scaleY(.51);
 	}
 	.hot-top{
 		overflow: hidden;
@@ -88,6 +93,9 @@ export default {
 		height: 0;
 		padding-bottom: 43.75%; /*高和宽的比*/
 		background: url("../../../assets/images/loading_camel.gif") center center no-repeat;
+	}
+	.chosen-list{
+		
 	}
 	.chosen-img{
 		width: 100%	;
@@ -142,13 +150,18 @@ export default {
 	    border-right: .14rem solid transparent;
 	}
 	.chosen-newprice{
-		font-size: .2rem;
-		color: #fff;
     	line-height: .45rem;
+		font-size: .255rem;
+		font-weight: bold;
+		color: #fff;
 	}
 	.chosen-oldprice{
 		color: #fff;
 	    font-size: .18rem;
 	    text-decoration: line-through;
+	}
+	.fen{
+		font-size: .2rem;
+		margin-left: -3px;
 	}
 </style>

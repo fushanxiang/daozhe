@@ -2,7 +2,7 @@
 	<header class="header">
 		<a class="header-left iconfont">&#xe600;</a>
 		<div class="header-title">
-			<span class="iconfont icon-search">&#xe60a;</span >
+			<span class="iconfont icon-search"></span >
 			<span class="single-line">输入城市/景点/游玩主题</span>
 		</div>
 		<div class="header-right">
@@ -93,6 +93,7 @@ export default {
 	}
 	.nav-city {
 		margin-left: -0.04rem;
+		color:#fff;
 	}
 	.downarrow {
 		position: relative;

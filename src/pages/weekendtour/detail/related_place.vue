@@ -2,105 +2,49 @@
 
 <div class="related-place-box">
 	<div class="related-place">
+
 		<div class="title">
 			<div class="detail-title">
 				<h3>相关推荐</h3>
 			</div>
 		</div>
 
-		<div class="detail-box">
+
+
+		<div class="detail-box"  v-for="item in goodsInfo.relatedPlace" :key="item.id">
 			<div class="detail-group">
+
 				<div class="detail-name">
-					<h2 class="detail-related-name">小汤山温泉度假区</h2>
+					<h2 class="detail-related-name">{{item.title}}</h2>
 					<span class="level">(4A)</span>
 				</div>
+
 				<div class="detail-price">
 					<span class="Icon">&yen;</span>
-					<span id="price">58</span>
+					<span id="price">{{item.sellPrice}}</span>
 					<span class="priceunit">起/张</span>
 				</div>
+
 				<div class="detail-enter">
-					<a href="javascript:;" class="sight">
-						<div class="item">
-							<span class="next-icon iconfont">&#xe614;</span>
-							<span class="detail-related-text">北京市昌平区小汤山现代农业科技示范园内</span>
-							<span class="next-icon iconfont d-right">&#58918;</span>
+					<router-link  :to="'/weekendtour/slightmap/id=' + item.id" class="fl">
+						<div class="sight">
+							<div class="item">
+								<span class="next-icon iconfont">&#xe614;</span>
+								<span class="detail-related-text">{{item.address}}</span>
+								<span class="next-icon iconfont d-right">&#58918;</span>
+							</div>
 						</div>
-					</a>
+					</router-link>
 				</div>
+
 			</div>
 	    </div>
 		
 
 
-		<div class="detail-box">
-			<div class="detail-group">
-				<div class="detail-name">
-					<h2 class="detail-related-name">温都水城养生馆</h2>
-					<span class="level">(4A)</span>
-				</div>
-				<div class="detail-price">
-					<span class="Icon">&yen;</span>
-					<span id="price">77</span>
-					<span class="priceunit">起/张</span>
-				</div>
-				<div class="detail-enter">
-					<a href="javascript:;" class="sight">
-						<div class="item">
-							<span class="next-icon iconfont">&#xe614;</span>
-							<span class="detail-related-text">北京市昌平区北七家镇郑各庄村王府街51号</span>
-							<span class="next-icon iconfont d-right">&#58918;</span>
-						</div>
-					</a>
-				</div>
-			</div>
-	    </div>
+	
 
-		<div class="detail-box">
-			<div class="detail-group">
-				<div class="detail-name">
-					<h2 class="detail-related-name">温都水城</h2>
-					<span class="level">(4A)</span>
-				</div>
-				<div class="detail-price">
-					<span class="Icon">&yen;</span>
-					<span id="price">25</span>
-					<span class="priceunit">起/张</span>
-				</div>
-				<div class="detail-enter">
-					<a href="javascript:;" class="sight">
-						<div class="item">
-							<span class="next-icon iconfont">&#xe614;</span>
-							<span class="detail-related-text">北京市昌平区北七家镇郑各庄村王府街55号</span>
-							<span class="next-icon iconfont d-right">&#58918;</span>
-						</div>
-					</a>
-				</div>
-			</div>
-	    </div>
-		
-		<div class="detail-box">
-			<div class="detail-group">
-				<div class="detail-name">
-					<h2 class="detail-related-name">温都水城HI水空间</h2>
-					<span class="level">(4A)</span>
-				</div>
-				<div class="detail-price">
-					<span class="Icon">&yen;</span>
-					<span id="price">77</span>
-					<span class="priceunit">起/张</span>
-				</div>
-				<div class="detail-enter">
-					<a href="javascript:;" class="sight">
-						<div class="item">
-							<span class="next-icon iconfont">&#xe614;</span>
-							<span class="detail-related-text">北京市昌平区北七家镇平西府街51号宏福创业园8号</span>
-							<span class="next-icon iconfont d-right">&#58918;</span>
-						</div>
-					</a>
-				</div>
-			</div>
-	    </div>
+
 	</div>
 </div>
 
@@ -112,9 +56,14 @@ export default {
     	return {
 
     	}
-	}
+	},
+	props:["goodsInfo"]
 }
 </script>
+
+
+
+
 
 <style scoped>
 .related-place-box{
@@ -284,7 +233,10 @@ export default {
 	right: 0;
 	top: 0;
 }
-
+.fl{
+	display: block;
+	height: 100%;
+}
 
 
 

@@ -1,15 +1,18 @@
 <template>
-	<div class="packages-box">
-		<div class="packages">
-			<div class="packages-content">
-				<h3 class="title packages-title"><span class="word">套餐包括</span></h3>
-				<div class="packages-des">
-			        <p class="packages-des-content" v-html="goodsInfo.combo"></p>
-			    </div>
+	<div class="highlight-box">
+		<div class="highlight">
+			<div class="highlight-content">
+				<h3 class="title highlight-title"><span class="word">亮点先知道</span></h3>
+				<div class="highlight-des">
+					<h4 class="highlight-des-title">{{goodsInfo.lightSpot ? goodsInfo.lightSpot[0] : []}}</h4>
+					<p class="highlight-des-content"><br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[1] : []}}<br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[2] : []}}</p>
+				</div>
 			</div>
+			<router-link :to="'/weekendtour/detail_info/id=' + goodsInfo.id">
+				<h3 class="title highlight-detail"><span class="word">详情介绍</span>
+				<span class="next-icon iconfont">&#58918;</span></h3>
+			</router-link>
 			
-			<h3 class="title purchase-notes"><span class="word">购买须知</span><span class="next-icon iconfont">&#58918;</span></h3>
-			<h3 class="title fun-around"><span class="word">周边好玩</span><span class="next-icon iconfont">&#58918;</span></h3>
 		</div>
 	</div>
 </template>
@@ -19,7 +22,7 @@ export default {
 	data () {
 	    return {
 
-	    }   
+	    } 
 	},
 	props : ["goodsInfo"]
 }
@@ -27,22 +30,22 @@ export default {
 
 <style scoped>
 	@import "../../../assets/font/iconfont.css";
-	.packages-box{
+	.highlight-box{
 		background: #f1f1f1;
-		padding-top: .2rem;;
+		padding-top: .2rem;
 	}
-	.packages{
+	.highlight{
 	    padding: 0 .2rem;
 	    background-color: #fff;
 	}
-	.packages:before,.packages:after{
+	.highlight:before,.highlight:after{
 		content:"";
 		position: absolute;
 		left: 0;
 		width: 100%;
 		height: .02rem;
 		background: #c9cccd;
-	} 
+	}
 	.title{
 		overflow: hidden;
 		position: relative;
@@ -64,7 +67,10 @@ export default {
 		-moz-border-radius: .04rem;
 		border-radius: .04rem;
 	}
-	.purchase-notes,.fun-around{
+	.word {
+		color: #333;
+	}
+	.highlight-detail{
 		border-top: .02rem dashed #efefef;
 	}
 	.next-icon {
@@ -73,11 +79,11 @@ export default {
 		right: 0;
 		color: #9e9e9e;
 	}
-	.packages{
-		padding: 0 .2rem;
+	.highlight-des-title{
+		color: #212121;
 	}
-	.packages-des-content{
-	        padding-bottom: .15rem;
+	.highlight-des-content{
+	    padding-bottom: .15rem;
 	    line-height: .48rem;
 	    color: #616161;
 	}

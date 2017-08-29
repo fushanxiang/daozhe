@@ -4,9 +4,9 @@
 		<index-header :goodsInfo="goodsInfo"></index-header>
 		<light-spot :goodsInfo="goodsInfo"></light-spot>
 		<combo-detail :goodsInfo="goodsInfo"></combo-detail>
-		<related-place></related-place>
+		<related-place :goodsInfo="goodsInfo"></related-place>
 		<index-footer></index-footer>
-		<footer-fixed></footer-fixed>
+		<footer-fixed :goodsInfo="goodsInfo"></footer-fixed>
 	</div>
 </template>
 

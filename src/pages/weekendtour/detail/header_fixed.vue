@@ -1,6 +1,6 @@
 <template>
 	<div class="top-container" v-bind:style='{opacity: this.activeOpacity}'>
-		<router-link to="/weekend/index" class="back-icon iconfont">&#59031;</router-link>
+		<router-link to="/weekendtour/index" class="back-icon iconfont">&#59031;</router-link>
 		<h1 class="top-title">{{goodsInfo.title}}</h1>
 	</div>
 </template>
@@ -49,14 +49,16 @@ export default {
 		height: .72rem;
 		line-height: .72rem;
 		color: #fff;
-		font-size: .60rem;
+		font-size: .5rem;
+		font-weight: bold;
 	}
 	.top-title {
+		margin: 0 1rem;
+		font-size: .32rem;
+		line-height: .88rem;
+		text-align: center;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		margin: 0 1rem;
-		font-size: .32rem;
-		line-height: .88rem
 	}
 </style>

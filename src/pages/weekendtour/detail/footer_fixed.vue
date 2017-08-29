@@ -3,8 +3,8 @@
 		<div class="footer">
 			<div class="left">
 				<span class="icon">&yen;</span>
-				<span class="price" >127</span>
-				<span class="original-price">178</span>
+				<span class="price" >{{goodsInfo.sellPrice}}</span>
+				<span class="original-price">{{goodsInfo.marketPrice}}</span>
 			</div>
 			<div class="right">
 				<a href="javascript:;" id="bookingBtn" class="ljyd">立即预订</a>
@@ -19,7 +19,9 @@ export default {
 		return {
 
 		}
-	}
+	},
+	props: ["goodsInfo"]
+
 }
 </script>
 

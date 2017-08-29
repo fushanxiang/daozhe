@@ -1,6 +1,6 @@
 <template>
-	<div @mousewheel="test">   
-	<park-location></park-location>
+	   <div @mousewheel="test">   
+	   <park-location></park-location>
     <header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>  
     <discuss></discuss>
     <recommend></recommend>
@@ -12,10 +12,10 @@
 </template>
 
 <script>
-	import ParkLocation from './parkLocation.vue'
+	   import ParkLocation from './parkLocation.vue'
   	import Recommend from './recommend.vue'
   	import RecommendSites from './recommendsites.vue'
- 	import Uapop from './uapop.vue'
+ 	  import Uapop from './uapop.vue'
   	import Order from './order.vue'
   	import HeaderFixed from './headerfixed.vue'
   	import Discuss from './discuss.vue'

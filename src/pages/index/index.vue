@@ -3,7 +3,6 @@
     		<index-header></index-header>
     		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
         <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
-        <position-sale></position-sale>
         <hot-sale></hot-sale>
         <holiday></holiday>
         <foot></foot>
@@ -15,7 +14,6 @@
 import IndexHeader from './header.vue'
 import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
-import PositionSale from './positionsale.vue'
 import HotSale from './hotsale.vue'
 import Holiday from './holiday'
 import Foot from './foot.vue'
@@ -41,7 +39,6 @@ export default {
   	"index-header": IndexHeader,
     "img-swiper": ImgSwiper,
     "icon-swiper": IconSwiper,
-    "position-sale": PositionSale,
     "hot-sale": HotSale,
     "holiday":Holiday,
     "foot": Foot

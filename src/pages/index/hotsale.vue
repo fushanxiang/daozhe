@@ -55,6 +55,9 @@ export default {
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
+	.hotsale-list{
+		background: #fff;
+	}
 	.hotsale-title {
 		background: #f5f5f5;
 		padding-left: .28rem;
@@ -104,6 +107,7 @@ export default {
 	.item-all {
 		line-height: .86rem;
 		text-align: center;
+		background: #fff;
 		font-size: .28rem;
 		color: #00b7d7;
 	}

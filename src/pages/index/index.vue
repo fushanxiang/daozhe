@@ -19,6 +19,10 @@ export default {
     }
      
   },
+  created() {
+   
+  },
+
   components:{
   	"index-header": IndexHeader,
   	"img-swiper": ImgSwiper,

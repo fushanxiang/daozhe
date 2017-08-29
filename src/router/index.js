@@ -31,8 +31,8 @@ export default new Router({
       ]
     },
     {
-       path: '/onedaylist',
-      name: 'list',
+      path: '/onedaylist',
+      name: 'onedaylist',
       component: OnedayList
     }
   ]

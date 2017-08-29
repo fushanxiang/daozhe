@@ -1,14 +1,14 @@
 <template>
 	<div id="tour">
 		 <div class="tab-main">
-		    <ul :class='{tab:true, "tab-fixed":tabFixed, "border-bottom":true}'>
-		    	<li v-for="(item, index) in tabInfo.index.tabs" :class="{tabs:true, active: index==activeIndex}" @click="hadleTabItemClick(index)"
-		    	 :key="index + 'tab'">{{item.title}}</li>
-		    </ul>
-		     <tourinstrctor :tourItinerary="tabInfo.tourItinerary"></tourinstrctor>
-		     <tourcost :expenseExplanation="tabInfo.expenseExplanation"></tourcost>
-		     <tourdescription :instructions="tabInfo.instructions" :userComment="tabInfo.userComment"></tourdescription>
-		     </div>
+		   <ul :class='{tab:true, "tab-fixed":tabFixed, "border-bottom":true}'>
+             <li v-for="(item, index) in tabInfo.index.tabs" :class="{tabs:true, active: index==activeIndex}" @click="hadleTabItemClick(index)"
+              :key="index + 'tab'">{{item.title}}</li>
+            </ul>
+           <tourinstrctor :tourItinerary="tabInfo.tourItinerary"></tourinstrctor>
+           <tourcost :expenseExplanation="tabInfo.expenseExplanation"></tourcost>
+           <tourdescription :instructions="tabInfo.instructions" :userComment="tabInfo.userComment"></tourdescription>           
+		 </div>
 	</div>
 </template>
 <script>
@@ -87,9 +87,6 @@
  }
 </script>
 <style scoped>
-        #tour{
-        	margin-top: .88rem;
-        }
         .tab-main {
         	position: relative;
         	margin-top: .2rem;

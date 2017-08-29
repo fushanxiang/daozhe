@@ -5,11 +5,11 @@ import fastclick from 'fastclick'
 import VueResource from 'vue-resource'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueAMap  from 'vue-amap';
-/*import IScrollView from 'vue-iscroll-view'
-import IScroll from 'iscroll'*/
+import IScrollView from 'vue-iscroll-view'
+import IScroll from 'iscroll'
 Vue.use(IScrollView, IScroll)
 Vue.use(VueAMap);
-Vue.use(vueResource);
+Vue.use(VueResource);
 VueAMap.initAMapApiLoader({
   key: 'f6b8d097b1d7ef560072dce35c0e81e4',
   // 插件集合

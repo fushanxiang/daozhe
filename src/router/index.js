@@ -29,17 +29,6 @@ export default new Router({
       path: '/city/:id',
       name: 'city',
       component: City,
-       children: [
-        {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
-          path: 'smallCity',
-          component: SmallCity
-        }
-      ]
-
     },
     {
       path: '/productdetail',

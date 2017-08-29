@@ -146,7 +146,7 @@
         border: 1px solid white;
         display: inline-block;
         line-height: .56rem;
-        width: 2.04rem;
+        width: 30%;
         color: white;
     }
     .city-china {

@@ -1,15 +1,20 @@
 <template>
+
   <div id="order">
      <div class="mp-page">
+
+       <header-image :swiperInfo="swiperInfo"></header-image>
+       <sight-note :headerTitle="headerTitle"></sight-note>
        <title-comment></title-comment>
        <Tab :tabInfo="tabInfo" :scrollTop="scrollTop"></Tab>
        <other-comment></other-comment>
       </div>
-	</div>
+  </div>
 </template>
 
 <script>
-
+import headerImage from './header-image.vue'
+import sightNote from './sight-note.vue'
 import TitleComment from './titlecomments.vue'
 import OtherComment from './othercomment.vue'
 import Tab from './components/tab.vue'
@@ -18,6 +23,8 @@ export default {
   name: 'index',
   		data(){
   			return{
+          swiperInfo: [],
+          headerTitle: '',
   				zoom: 12,
   				center: [116.397003, 39.922501],
   				address:"",
@@ -80,9 +87,14 @@ export default {
       		        this_.scrollTop = document.body.scrollTop;
       		    }, false);
       		},
-      		created:function(){
+      		created (){
       			this.$http.get('/static/onedaytour-details.json').then(response => {
-      			    this.$data.tabInfo =JSON.parse(JSON.stringify(response.body.data.tab));
+      			     this.swiperInfo = response.body.data.swiperImg;
+               
+                 console.log(response.body.data.swiperImg)
+                 this.headerTitle = response.body.data.index;
+                
+                this.tabInfo =JSON.parse(JSON.stringify(response.body.data.tab));
                 console.log(this.$data.tabInfo);
       			  }, response => {
       			    console.log("获取数据失败")
@@ -92,12 +104,16 @@ export default {
               "title-comment": TitleComment,
               "other-comment":OtherComment,
               "Tab":Tab,
-        	    "detailsMap":detailsMap
+        	    "detailsMap":detailsMap,
+              "header-image": headerImage,
+              "sight-note": sightNote
           }
 }
 </script>
 <style scoped>
- @import "../../assets/font/iconfont.css";
+  @import '../../assets/css/base/reset.css';
+  // @import '../../assets/css/common/border.css';
+  @import "../../assets/font/iconfont.css";
     .top-head{
         width: 100%;
         height: 7.16rem;
@@ -118,4 +134,8 @@ export default {
     	    background: #f5f5f5;
     	}
 
-</style>
+
+
+</script>
+
+

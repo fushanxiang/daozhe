@@ -3,13 +3,15 @@ import Router from 'vue-router'
 import Order from '@/pages/order/index'
 import Comment from '@/pages/order/comment'
 import map from '@/pages/order/detailsMap'
+
 Vue.use(Router)
 export default new Router({
-  routes: [
+  routes: [   
     {
       path: '/order',
       name: 'order',
       component: Order
+
     },
     {
       path: "/order/comments",
@@ -21,5 +23,6 @@ export default new Router({
       name: 'detail',
       component: map
     }
+
   ]
 })

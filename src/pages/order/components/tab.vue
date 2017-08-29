@@ -71,13 +71,13 @@
             	if (!this.haveGetOffset) {
             		var tabMainElement = document.querySelectorAll('.tab-main');
             		var tabElement = document.querySelectorAll('.tab');
-            		//var headerElement = document.querySelectorAll('.header');
+            	//var headerElement = document.querySelectorAll('.header');
             		var expenseElement = document.querySelectorAll('#tourCost');
             		var instructionsElement = document.querySelectorAll('#tourDescription');
             		this.mainOffsetTop = tabMainElement[0].offsetTop;
             		this.tabOffsetHeight = tabElement[0].offsetHeight;
                 console.log(this.tabOffsetHeight);
-            		//this.headerOffsetHeight = headerElement[0].offsetHeight;
+            	 //this.headerOffsetHeight = headerElement[0].offsetHeight;
             		this.headerOffsetHeight=0;
                 this.expenseElementOffsetTop = expenseElement[0].offsetTop;
             		this.expenseElementOffsetHeight = expenseElement[0].offsetHeight;

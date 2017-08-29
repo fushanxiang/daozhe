@@ -26,6 +26,7 @@
         data () {
             return {
                 cityChange: '',
+                cities: [],
                 styleObj:{
                     "text-align": "center"
                 },
@@ -88,17 +89,17 @@
             handleInput(ev) {
                 var e = ev || window.event,
                     searchWord = e.target.value.toLowerCase(),
+                    searchCharacter = e.target.value,
                     searchCities = this.country? this.datas.chinaCity:this.datas.abroadCity,
                     allSearchCities = [];
                 for (var i = 0; i < searchCities.length; i++) {
                     var getCities = searchCities[i][1];
-                    for (var j = 0; j < getCities.length; j++) {
-                        var citiesSpell = getCities[j],
-                            searchSpell = citiesSpell.itemName;
-                        if (searchSpell.indexOf(searchWord) !== -1) {
-                            allSearchCities.push(citiesSpell.cityarea);
-                        }
-                    }
+                        getCities.filter(function (item) {
+                            if(item.itemName.toLowerCase().indexOf(searchWord) !== -1 || item.cityarea.indexOf(searchCharacter) !== -1) {
+                                allSearchCities.push(item.cityarea);                          
+                            }
+                        })
+
                 }
                 if(allSearchCities.length === 0) {
                     allSearchCities = ['无搜索匹配城市'];

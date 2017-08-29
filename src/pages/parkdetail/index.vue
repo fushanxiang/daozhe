@@ -7,7 +7,7 @@
     <recommend></recommend>
     <recommend-sites></recommend-sites>
     <ua-pop :deltaY="deltaY"></ua-pop>
-    <order></order>
+   
  </div>  
 </template>
 
@@ -17,7 +17,7 @@
   	import Recommend from './recommend.vue'
   	import RecommendSites from './recommendsites.vue'
     import Uapop from './uapop.vue'
-  	import Order from './order.vue'
+  	
   	import HeaderFixed from './headerfixed.vue'
   	import Discuss from './discuss.vue'
   
@@ -36,7 +36,7 @@ export default {
     "recommend": Recommend,
     "recommend-sites": RecommendSites,
     "ua-pop":Uapop,
-    "order":Order,
+    
     "header-fixed":HeaderFixed,
     "discuss":Discuss
   },

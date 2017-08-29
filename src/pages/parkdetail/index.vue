@@ -8,7 +8,6 @@
     <recommend></recommend>
     <recommend-sites :recommendInfo="recommendInfo"></recommend-sites>
     <ua-pop :deltaY="deltaY"></ua-pop>
-   
  </div>  
 </template>
 
@@ -22,6 +21,7 @@
   	import HeaderFixed from './headerfixed.vue'
   	import Discuss from './discuss.vue'
     import Swiper from './swiper.vue'
+
     
 export default {
   name: 'hello',
@@ -69,8 +69,9 @@ export default {
             }, false);
     },
    methods:{
-    test(e) {
-      if(e.deltaY < 0) {
+        test(e) {
+          if(e.deltaY < 0) {
+
         this.deltaY=false;
          
       }else{
@@ -88,7 +89,9 @@ export default {
       }
 
   }
-  
+
+
+    
 }
 
 </script>

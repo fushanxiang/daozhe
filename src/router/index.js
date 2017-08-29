@@ -2,10 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
-import SummerVacation from '@/pages/summervacation/index'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
-
+import SummerVacation from '@/pages/summervacation/index'
 
 Vue.use(Router)
 
@@ -23,10 +22,6 @@ export default new Router({
       path:'/seckill',
       name:'seckill',
       component:SecKill
-    },{
-      path: '/city/:id',
-      name: 'city',
-      component: City
     },{
       path: '/summervacation',
       name: 'vacation',

@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import ParkDetail from '@/pages/parkdetail/index'
+import BigCity from '@/pages/city/big_city'
+import SmallCity from '@/pages/city/small_city'
+
 
 Vue.use(Router)
 
@@ -14,13 +17,29 @@ export default new Router({
       component: Index
     },
     {
-      path: '/city',
+      path: '/city/:id',
       name: 'city',
+
       component: City
     },{
       path: '/parkdetail',
       name: 'parkdetail',
       component: ParkDetail
+    },
+
+    { path: '/city/:id',
+      component: City,
+      children: [
+        {
+          path: 'bigCity',
+          component: BigCity
+        },
+        {
+          path: 'smallCity',
+          component: SmallCity
+        }
+      ]
+
     }
   ]
 })

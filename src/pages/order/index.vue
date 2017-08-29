@@ -19,16 +19,16 @@ import TitleComment from './titlecomments.vue'
 import OtherComment from './othercomment.vue'
 
 export default {
-  name: 'index',
-  data () {
-    return {
+    name: 'index',
+        data () {
+            return {
+
+            }
+    },
+    components:{
+        "title-comment": TitleComment,
+        "other-comment":OtherComment
     }
-     
-  },
-  components:{
-      "title-comment": TitleComment,
-      "other-comment":OtherComment
-  }
 }
 </script>
 

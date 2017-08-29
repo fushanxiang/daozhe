@@ -43,7 +43,7 @@ export default {
     "icon-swiper": IconSwiper,
     "position-sale": PositionSale,
     "hot-sale": HotSale,
-    "holiday":Holiday
+    "holiday":Holiday,
     "foot": Foot
   }
 }

@@ -59,16 +59,16 @@
 		margin: 0;
 	}
 	.foot-one{
-        width: 6rem;
+        width: 100%;
+        box-sizing: border-box;
 	    height: .5rem;
-	    padding: .2rem .1rem 0 .1rem;
-	    margin-left: .7rem;
+	    padding: .1rem;
 	    overflow: hidden;
 	}
 	.foot-li{
-		padding-left: .2rem;
+		box-sizing: border-box;
 	    height: .62rem;
-	    width: 1.3rem;
+	    width: 25%;
 	    float: left;
 	}
 	.foot-li a{

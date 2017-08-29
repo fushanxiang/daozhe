@@ -27,11 +27,14 @@
 
 <script>
 export default {
+	created(){
+		console.log("颐和园");
+	},
 	data () {
 		return {
 			itemsInfo:[
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/6d/8109e5c09afdec02.jpg_240x220_c8498419.jpg',
 					sightName:"颐和园",
 					itemName:"【1探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
 					itemIntro:"探寻古代皇帝祭天仪",
@@ -40,7 +43,7 @@ export default {
 					id:0
 				},
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/6d/8109e5c09afdec02.jpg_240x220_c8498419.jpg',
 					sightName:"颐和园",
 					itemName:"【2探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
 					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
@@ -49,7 +52,7 @@ export default {
 					id:1
 				},
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/48/4b3827d68eae2d02.jpg_240x220_7f8d22b7.jpg',
 					sightName:"颐和园",
 					itemName:"【3探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
 					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
@@ -58,7 +61,7 @@ export default {
 					id:2
 				},
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_240x220_0b84c224.jpg',
 					sightName:"颐和园",
 					itemName:"【4探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
 					itemIntro:"探寻古代皇帝祭天仪式的奥秘",

@@ -51,7 +51,6 @@ export default {
     			this.showTemple = this.showTemple = false;
     			this.showPalace = true;
     		}else if(this.tabChoosedIndex == 1){
-  
     			this.showTemple = true;
     		}else if(this.tabChoosedIndex == 2){
     			this.showSummer = true;

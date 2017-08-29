@@ -8,11 +8,8 @@
 
 <script>
 import IndexHeader from './dz01/header.vue'
-<<<<<<< HEAD
 import ItemProducts from './dz03/index.vue'
-=======
 
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 export default {
   data () {
     return {

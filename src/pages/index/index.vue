@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<index-header></index-header>
-		<img-swiper></img-swiper>
-    <icon-swiper></icon-swiper>
+		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
+    <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
 	</div>
 </template>
 
@@ -16,8 +16,21 @@ export default {
   name: 'index',
   data () {
     return {
+      iconsInfo:[],
+      imgsInfo:[]
     }
      
+  },
+  created(){
+
+    this.$http.get('/static/index.json').then(response => {
+        var data = response.body.data;
+        this.iconsInfo = data.iconsInfo;
+        this.imgsInfo = data.imgsInfo;
+
+    }, response => {
+      // error callback
+    });
   },
   components:{
   	"index-header": IndexHeader,

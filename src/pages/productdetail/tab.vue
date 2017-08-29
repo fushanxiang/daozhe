@@ -56,7 +56,7 @@ export default {
 		addClassFun(index,tab) {  
 		    this.tabChoosedIndex = index;  
 		    this.tabChoosedSight = tab.sight;
-		    console.log(this.tabChoosedSight)
+		   //console.log(this.tabChoosedSight)
 		    this.show = false;
 		}
 	},

@@ -27,43 +27,41 @@
 
 <script>
 export default {
+	created(){
+		this.$http.get('/someUrl').then(response => {
+			this.someData = response.body;
+		},response => {
+			console.log("url输入有误")
+		});
+	},
 	data () {
 		return {
 			itemsInfo:[
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/93/e46fb508820f3d02.jpg_240x220_f4d28630.jpg',
 					sightName:"故宫",
-					itemName:"【1探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪",
+					itemName:"【大内御讲9:00场】蓝琪儿格格带您穿越故宫（不含故宫门票）",
+					itemIntro:"无与伦比的古代建筑杰作",
 					nowPrice:65,
 					prePrice:88,
 					id:0
 				},
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/93/e46fb508820f3d02.jpg_240x220_f4d28630.jpg',
 					sightName:"故宫",
-					itemName:"【2探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
-					nowPrice:99,
-					prePrice:58,
+					itemName:"【09:00场次】故宫讲解服务（配无线耳麦，不含故宫门票）",
+					itemIntro:"无与伦比的古代建筑杰作",
+					nowPrice:135,
+					prePrice:178,
 					id:1
 				},
 				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
+					imgSrc:'//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_240x220_50b98380.jpg',
 					sightName:"故宫",
 					itemName:"【3探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
 					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
-					nowPrice:65,
-					prePrice:188,
-					id:2
-				},
-				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
-					sightName:"故宫",
-					itemName:"【4探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
-					nowPrice:66,
-					prePrice:77,
+					nowPrice:27,
+					prePrice:39,
 					id:2
 				}
 			]

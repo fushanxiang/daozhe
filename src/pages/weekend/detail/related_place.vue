@@ -13,18 +13,20 @@
 
 		<div class="detail-box"  v-for="item in goodsInfo.relatedPlace" :key="item.id">
 			<div class="detail-group">
+
 				<div class="detail-name">
 					<h2 class="detail-related-name">{{item.title}}</h2>
 					<span class="level">(4A)</span>
 				</div>
+
 				<div class="detail-price">
 					<span class="Icon">&yen;</span>
 					<span id="price">{{item.sellPrice}}</span>
 					<span class="priceunit">起/张</span>
 				</div>
+
 				<div class="detail-enter">
-					
-					<router-link  :to="'/weekend/detail/id=' + item.id" class="fl">
+					<router-link  :to="'/weekend/slightmap/id=' + item.id" class="fl">
 						<div class="sight">
 							<div class="item">
 								<span class="next-icon iconfont">&#xe614;</span>
@@ -33,8 +35,8 @@
 							</div>
 						</div>
 					</router-link>
-					
 				</div>
+
 			</div>
 	    </div>
 		

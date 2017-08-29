@@ -1,6 +1,6 @@
 <template>
     <div>
-        <index-header></index-header>
+        <index-header :dataScen="hotSearchScen" :dataArea="hotSearchArea"></index-header>
         <div class="wo-ding"></div>
         <item-products></item-products>
     </div>

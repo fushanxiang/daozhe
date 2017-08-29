@@ -23,15 +23,15 @@
       </div>
       <div class="hot-search-info">
         <div class="hot-search-scenicz">
-          <span class="hot-search-icon hotcss iconfont">&#xe63e;</span>
+          <span class="hot-search-icon hotsceniczcss iconfont">&#xe63e;</span>
           <ul class="hot-box scenicz"  v-bind:style="{ top: this.sentop }">
-          <li class="hot-info" v-for="item in hotSearchScen">{{item.name}}</li>
+          <li class="hot-info" v-for="item in dataScen">{{item.name}}</li>
           </ul>
         </div>
         <div class="hot-search-area">
-          <span class="hot-search-icon iconfont">&#xe607;</span>
+          <span class="hot-search-icon hotAreacss iconfont">&#xe607;</span>
           <ul class="hot-box" v-bind:style="{ top: this.areatop }">
-          <li class="hot-info area" v-for="item in hotSearchArea">{{item.name}}</li>
+          <li class="hot-info area" v-for="item in dataArea">{{item.name}}</li>
           </ul>
         </div>
       </div>
@@ -54,66 +54,10 @@ export default {
         historyarr:[],
         searchNear:false,
         searchHistory:true,
-        historysearch:"",
-        hotSearchScen:[{
-          id:1,
-          name:"故宫"
-        },{
-          id:2,
-          name:"颐和园"
-        },{
-          id:3,
-          name:"恭王府"
-        },{
-          id:4,
-          name:"南浔古镇冰雪世界"
-        },{
-          id:5,
-          name:"八达岭长城"
-        },{
-          id:6,
-          name:"天坛公园"
-        },{
-          id:7,
-          name:"天坛公园"
-        },{
-          id:8,
-          name:"天坛公园"
-        },{
-          id:9,
-          name:"天坛公园"
-        },{
-          id:10,
-          name:"天坛公园"
-        },{
-          id:11,
-          name:"天坛公园"
-        },
-        {
-          id:12,
-          name:"天坛公园"
-        }],
-        hotSearchArea:[{
-          id:1,
-          name:"昌平区"
-        },{
-          id:2,
-          name:"天津"
-        },{
-          id:3,
-          name:"秦皇岛"
-        },{
-          id:4,
-          name:"大连"
-        },{
-          id:5,
-          name:"青岛"
-        },{
-          id:6,
-          name:"沈阳"
-        }]
-      }
-    },
+        historysearch:""
+    }
+  },
+    props:["dataScen","dataArea"],
     updated(){
       if (this.inputtext!=="") {
         this.searchNear=false;
@@ -175,16 +119,16 @@ export default {
     handleHotChange(){
         this.index++;
         this.areaindex++;
-        var topvalue=-1.5*this.index
+        var topvalue=-1.6*this.index
         this.sentop=topvalue+"rem";
-        this.areatop=this.areaindex*-.6+"rem";
+        this.areatop=this.areaindex*-.8+"rem";
         if (this.index==4) {
          this.areaindex=0;
-         this.areatop=0.2+"rem";
+         this.areatop=0+"rem";
         }else if (this.index==5) {
-          this.sentop=0.2+"rem";
+          this.sentop=0+"rem";
           this.index=0;
-          this.areatop=0.2+"rem";
+          this.areatop=0+"rem";
         }   
     }
   }
@@ -282,6 +226,7 @@ export default {
     padding: .2rem;
   }
   .search-history-info{
+    background: #fff;
     height: 1.2rem;
     line-height:1.2rem; 
     overflow:auto;
@@ -311,21 +256,23 @@ export default {
   }
   .hot-search-scenicz{
     border-bottom: 1px solid #ccc;
-    height: 1.3rem;
-    padding: .2rem 0;
+    height: 1.6rem;
+    margin: .2rem 0;
     position: relative;
     overflow: hidden;
   }
   .hot-search-area{
     border-bottom: 1px solid #ccc;
-    height: .6rem;
-    line-height: .6rem;
-    padding: .2rem 0;
+    height: .8rem;
+    margin: .2rem 0;
     position: relative;
     overflow: hidden;
   }
-  .hotcss{
+  .hotsceniczcss{
     line-height: 1.3rem;
+  }
+  .hotAreacss{
+    line-height: .6rem;
   }
   .hot-box{
     left: 10%;
@@ -349,9 +296,9 @@ export default {
     float: left;
     line-height: .5rem;
     padding: 0 .3rem;
-    margin-bottom: .3rem;
+    margin: .1rem 0 .2rem 0;
   }
   .area{
-    padding: 0 .47rem;
+    padding: 0 .5rem;
   }
 </style>

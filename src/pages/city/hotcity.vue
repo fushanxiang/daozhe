@@ -5,7 +5,7 @@
 			<div class="cityarea-title">您的位置</div>
 			<div class="cityarea-content city-now" >
 				<div class="cityitem-light">
-					<p class="cityitem-name cityitem-seleted ellipsis">{{$store.state.city}}</p>
+					<p class="cityitem-name  cityitem-seleted ellipsis">{{$store.state.city}}</p>
 				</div>
 			</div>
 		</div>
@@ -14,7 +14,7 @@
 			<div class="cityarea-content city-now">
 			 
 				<div class="cityitem-light" v-for="item in cityclass">
-						<p  v-bind:id="item.id" @click="handleSelectedClick($event)"  class="cityitem-name ellipsis">{{item.city}}</p>
+						<p  v-bind:id="item.id" @click="handleSelectedClick($event)" class=" cityitem-name ellipsis">{{item.city}}</p>
 				</div>
 			
 			</div>
@@ -30,22 +30,18 @@ export default {
 	data () {
 		return {
 			foreign: false,
-			dataId:[],
-			show:false,
-
+			dataId:[]
     	}
 	},
 	props: ['countryChange', 'datas'],
 	methods: {
 		handleSelectedClick(event) {
 			var  event = event || window.event;
-			const SelectId = event.target.id;
+			var SelectId = event.target.id;
 			this.$store.commit ("changeCity", {city: event.target.innerText});
 			location.href = 'http://localhost:8080/#/';
 			this.dataId.push(SelectId);
-			var showctrol = this.$store.getters.perfectCity;
-			
-			this.show = showctrol ? true: false;
+			var showctrol = this.$store.getters.perfectCity;	
 		}
 	},
 	computed: {
@@ -67,7 +63,7 @@ export default {
 </script>
 
 <style scoped>
-	.content-city{
+	.content-city {
 		background: #F5F5F5;
 	}
 	.city-now {

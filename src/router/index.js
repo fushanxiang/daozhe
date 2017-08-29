@@ -17,13 +17,6 @@ export default new Router({
       path: '/city',
       name: 'city',
       component: City
-      // children: [{
-      //   path: '',
-      //   component: ChinaCity
-      // },{
-      //   path: 'abroadCity',
-      //   component: AbroadCity
-      // }]
     }
   ]
 })

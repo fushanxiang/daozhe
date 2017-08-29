@@ -47,7 +47,7 @@
         },
         methods: {
             changePlace:function(word) {
-                // console.log(word);//传入点击各个单独单词的字母对应的单词
+                //console.log(word);//传入点击各个单独单词的字母对应的单词
                 var spells = this.$refs.spell;
                 for(var i = 0; i < spells.length; i++) {
                     if(spells[i].innerText === word) {
@@ -56,7 +56,7 @@
                 }
             },
             handleTouchWord:function(num) {
-                // console.log(num);//获取手指在字母上移动时，该字母距离屏幕顶部的高度
+                 //console.log(num);//获取手指在字母上移动时，该字母距离屏幕顶部的高度
                 var spells = this.$refs.spell;
                 if(num < spells.length && num >= 0) {
                     document.body.scrollTop = spells[num].offsetTop-44;

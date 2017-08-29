@@ -4,6 +4,7 @@ import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import ParkDetail from '@/pages/parkdetail/index'
 import Discussall from '@/pages/parkdetail/discussall'
+import Logined from '@/pages/parkdetail/logined'
 import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
@@ -37,6 +38,10 @@ export default new Router({
     	path: '/discussall',
       name: 'discussall',
       component: Discussall
+    },{
+    	path: '/logined',
+      name: 'logined',
+      component: Logined
     }],
      
     children:[

@@ -269,156 +269,156 @@
         "moreProduct": 46
     }],
     "hotSearchScen":[{
-          "id":1,
+          "id":"scen1",
           "name":"故宫"
         },{
-          "id":2,
+          "id":"scen2",
           "name":"颐和园"
         },{
-          "id":3,
+          "id":"scen3",
           "name":"恭王府"
         },{
-          "id":4,
+          "id":"scen4",
           "name":"八达岭长城"
         },{
-          "id":5,
+          "id":"scen5",
           "name":"南浔古镇冰雪世界"
         },{
-          "id":6,
+          "id":"scen6",
           "name":"天坛公园"
         },{
-          "id":7,
+          "id":"scen7",
           "name":"北京欢乐谷"
         },{
-          "id":8,
+          "id":"scen8",
           "name":"圆明园"
         },{
-          "id":9,
+          "id":"scen9",
           "name":"北京动物园"
         },{
-          "id":10,
+          "id":"scen10",
           "name":"北京海洋馆"
         },{
-          "id":11,
+          "id":"scen11",
           "name":"古北水镇"
         },
         {
-          "id":13,
+          "id":"scen13",
           "name":"北京杜莎夫人蜡像馆"
         },{
-          "id":14,
+          "id":"scen14",
           "name":"北京科学技术馆"
         },{
-          "id":15,
+          "id":"scen15",
           "name":"雍和宫"
         },{
-          "id":16,
+          "id":"scen16",
           "name":"杭州浪浪浪水公园"
         },{
-          "id":17,
+          "id":"scen17",
           "name":"天安门广场"
         },{
-          "id":18,
+          "id":"scen18",
           "name":"云龙水上乐园"
         },{
-          "id":19,
+          "id":"scen19",
           "name":"京杭大运河"
         },{
-          "id":20,
+          "id":"scen20",
           "name":"十渡风景区"
         },{
-          "id":21,
+          "id":"scen21",
           "name":"京东石林峡"
         },{
-          "id":22,
+          "id":"scen22",
           "name":"太平洋海底世界"
         },{
-          "id":23,
+          "id":"scen23",
           "name":"北京大观园"
         },{
-          "id":24,
+          "id":"scen24",
           "name":"天门狐仙"
         },{
-          "id":25,
+          "id":"scen25",
           "name":"鸟巢"
         },{
-          "id":26,
+          "id":"scen26",
           "name":"明十三陵"
         },{
-          "id":27,
+          "id":"scen27",
           "name":"慕田峪长城"
         },{
-          "id":28,
+          "id":"scen28",
           "name":"慕田峪长城箱式索道"
         },{
-          "id":29,
+          "id":"scen29",
           "name":"北京大学"
         },{
-          "id":30,
+          "id":"scen30",
           "name":"富国海底世界"
         },{
-          "id":31,
+          "id":"scen31",
           "name":"前门大街"
         }],
         "hotSearchArea":[{
-          "id":1,
+          "id":"area1",
           "name":"昌平区"
         },{
-          "id":2,
+          "id":"area2",
           "name":"天津"
         },{
-          "id":3,
+          "id":"area3",
           "name":"秦皇岛"
         },{
-          "id":4,
+          "id":"area4",
           "name":"大连"
         },{
-          "id":5,
+          "id":"area5",
           "name":"青岛"
         },{
-          "id":6,
+          "id":"area6",
           "name":"沈阳"
         },{
-          "id":7,
+          "id":"area7",
           "name":"怀柔区"
         },{
-          "id":8,
+          "id":"area8",
           "name":"承德"
         },{
-          "id":9,
+          "id":"area9",
           "name":"密云县"
         },{
-          "id":10,
+          "id":"area10",
           "name":"房山区"
         },{
-          "id":11,
+          "id":"area11",
           "name":"潍坊"
         },{
-          "id":12,
+          "id":"area12",
           "name":"西安"
         },{
-          "id":13,
+          "id":"area13",
           "name":"保定"
         },{
-          "id":14,
+          "id":"area14",
           "name":"上海"
         },{
-          "id":15,
+          "id":"area15",
           "name":"张家口"
         },{
-          "id":16,
+          "id":"area16",
           "name":"葫芦岛"
         },{
-          "id":17,
+          "id":"area17",
           "name":"济南"
         },{
-          "id":18,
+          "id":"area18",
           "name":"烟台"
         },{
-          "id":19,
+          "id":"area19",
           "name":"哈尔滨"
         },{
-          "id":20,
+          "id":"area20",
           "name":"广州"
         }]
     }

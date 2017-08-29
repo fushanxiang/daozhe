@@ -7,14 +7,16 @@
       <span class="search-del iconfont" @click="handleSearchDel">&#xe60d;</span>
     </span>
     <div class="header-right">
-      <span class="header-submit" @click="handlesearch">搜索 </span>
+      <router-link to="/">
+      <span class="header-submit" @click="handlesearch" >搜索 </span>
+      </router-link>
     </div>
   </header>
   <div class="search-near-box"  @click="handleclick" v-show="this.searchNear">
     <div class="search-history"  v-show="this.searchHistory">
       <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
       <div class="search-history-info">
-        <span class="historyarr" v-for="item in this.historyarr">{{item.historysearch}}</span>
+        <span class="historyarr" v-for="item in this.historyarr" :key="item.id" @click="handlehistory(item.id)">{{item.historysearch}}</span>
       </div>
     </div>
     <div class="hot-search-box">
@@ -25,19 +27,19 @@
         <div class="hot-search-scenicz">
           <span class="hot-search-icon hotsceniczcss iconfont">&#xe63e;</span>
           <ul class="hot-box scenicz"  v-bind:style="{ top: this.sentop }">
-          <li class="hot-info" v-for="item in dataScen">{{item.name}}</li>
+          <li class="hot-info" v-for="item in dataScen" @click="handlehotScen(item.id)">{{item.name}}</li>
           </ul>
         </div>
         <div class="hot-search-area">
           <span class="hot-search-icon hotAreacss iconfont">&#xe607;</span>
           <ul class="hot-box" v-bind:style="{ top: this.areatop }">
-          <li class="hot-info area" v-for="item in dataArea">{{item.name}}</li>
+          <li class="hot-info area" v-for="item in dataArea" @click="handlehotArea(item.id)">{{item.name}}</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="search-near-box-info">
-    <div class="search-near">搜索身边的景点</div>
+    <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
     </div>
   </div>
   </div>
@@ -97,7 +99,7 @@ export default {
         if (this.historyarr[i].historysearch==this.inputtext||(this.historyarr[i].historysearch=="北京"&&this.inputtext=="")) {
             return this.historyarr.splice(0,1);
             }
-          }
+      }
       if (this.inputtext=="") {
           this.inputtext="北京";
           this.historyarr.unshift({historysearch:this.inputtext});
@@ -130,6 +132,18 @@ export default {
           this.index=0;
           this.areatop=0+"rem";
         }   
+    },
+    handlehistory(e){
+      alert(e);
+    },
+    handlehotScen(e){
+      alert(e);
+    },
+    handlehotArea(e){
+      alert(e);
+    },
+    handlehotSearchNear(){
+      alert("周边景点");
     }
   }
 }
@@ -137,6 +151,7 @@ export default {
 <style scoped>
 @import "../../../assets/font/iconfont.css";
 	.header {
+      box-sizing: border-box;
       position: relative;
       overflow: hidden;
       width: 100%;
@@ -146,9 +161,10 @@ export default {
       color: #fff;
   }
   .header-left {
+      box-sizing: border-box;
       float: left;
       display: block;
-      width: .4rem;
+      width: 10%;
       line-height: .88rem;
       padding: 0 .2rem;
       margin: .02rem 0 0 -0.08rem;
@@ -158,6 +174,8 @@ export default {
       text-align: left;
   }
   .header-title {
+      box-sizing: border-box;
+      float: left;
       height: .6rem;
       margin: .14rem .96rem .14rem .8rem;
       background: #fff;
@@ -168,7 +186,7 @@ export default {
       left: 0;
       top: 0;
       padding-left: 0.2rem;
-      width: 5.3rem;
+      width: 70%;
       white-space: nowrap;
       text-overflow: ellipsis;
       font-size: .28rem;
@@ -180,7 +198,7 @@ export default {
     float: left;
     font-family: "Microsoft Yahei",Arial;
     line-height: .6rem;
-    width: 4.3rem;
+    width: 89%;
   }
   .search-del{
     line-height: .6rem;
@@ -190,6 +208,9 @@ export default {
     padding-right: 0.1rem;
   }
   .header-right{
+      box-sizing: border-box;
+      width: 20%;
+      float: right;
       position: absolute;
       top: 0;
       right: 0;
@@ -227,9 +248,8 @@ export default {
   }
   .search-history-info{
     background: #fff;
-    height: 1.2rem;
-    line-height:1.2rem; 
-    overflow:auto;
+    overflow: auto; 
+    padding: 0 .2rem;
   }
   .search-history-title,.search-history-title{
     height: .72rem;
@@ -250,9 +270,10 @@ export default {
     border:1px solid #bbb;
     height: .2rem;
     padding: 0.1rem 0.12rem;
-    margin-left: .2rem;
     text-align: center;
-    float: left;
+    float:left;
+    margin: .3rem .2rem .2rem 0 ;
+    overflow: hidden;
   }
   .hot-search-scenicz{
     border-bottom: 1px solid #ccc;
@@ -295,10 +316,12 @@ export default {
     border-right: 1px dashed #ccc;
     float: left;
     line-height: .5rem;
-    padding: 0 .3rem;
+    padding: 0 .4rem;
     margin: .1rem 0 .2rem 0;
   }
   .area{
+    box-sizing: border-box;
     padding: 0 .5rem;
+    width: 25%;
   }
 </style>

@@ -11,9 +11,7 @@
             <input type="text" value="输入城市名或拼音" class="city-keyword" 
             @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleInput">
             <div class="search-cities">
-                <router-link to="/">
                     <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
-                </router-link>
             </div>
         </div>
         <city-area :change="cityChange" :datas="datas"></city-area>
@@ -27,6 +25,7 @@
             return {
                 cityChange: '',
                 cities: [],
+                url: "",
                 styleObj:{
                     "text-align": "center"
                 },
@@ -48,12 +47,11 @@
         },
         methods: {
             handleBlur(e) {
-                if(e.target.value == "") {
                     e.target.value = "输入城市名或拼音";
-                }
                 this.styleObj = {
                     textAlign: "center"
                 }
+                this.cities = [];
             },
             handleFocus(e) {
                 e.target.value = "";
@@ -110,8 +108,14 @@
             },
             selectCity(ev) {
                 var e = ev || window.event;
-                this.$store.commit("changeCity", {city: e.target.innerText});
-                localStorage.selectedCity = e.target.innerText;
+                if(e.target.innerText !== '无搜索匹配城市') {
+                    this.$store.commit("changeCity", {city: e.target.innerText});
+                    localStorage.selectedCity = e.target.innerText;
+                    this.$router.push('/')
+                }else {
+                    this.$router.push('')
+                }
+                
             }
         }
     }

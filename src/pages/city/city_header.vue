@@ -48,7 +48,7 @@
         },
         methods: {
             handleBlur(e) {
-                    e.target.value = e.target.value? e.target.value: "输入城市名或拼音";
+                    e.target.value = "输入城市名或拼音";
                 this.styleObj = {
                     textAlign: "center"
                 }
@@ -56,6 +56,8 @@
             },
             handleFocus(e) {
                 e.target.value = "";
+                this.cities = [];
+                this.show = true;
                 this.styleObj = {
                     textAlign: "left"
                 }
@@ -118,8 +120,8 @@
                 }else {
                     this.$router.push('');
                     this.show = true;
-                }
-                
+                    this.cities = [];
+                } 
             }
         }
     }

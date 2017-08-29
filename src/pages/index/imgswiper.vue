@@ -27,11 +27,11 @@ export default {
 				paginationClickable :true,
 				observeParents:true
 			}
-			
+
     	}
 	},
-	
-	props:['imgsInfo'],
+	props:["imgsInfo"],
+
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide

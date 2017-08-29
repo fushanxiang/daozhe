@@ -8,30 +8,32 @@
     <recommend></recommend>
     <recommend-sites :recommendInfo="recommendInfo"></recommend-sites>
     <ua-pop :deltaY="deltaY"></ua-pop>
+   
  </div>  
 </template>
 
 <script>
 	  
     import DetailTree from './detailtree.vue'
-	import ParkLocation from './parkLocation.vue'
+	  import ParkLocation from './parkLocation.vue'
   	import Recommend from './recommend.vue'
   	import RecommendSites from './recommendsites.vue'
     import Uapop from './uapop.vue'
   	import HeaderFixed from './headerfixed.vue'
   	import Discuss from './discuss.vue'
     import Swiper from './swiper.vue'
-
+    
 export default {
   name: 'hello',
   data () {
-    return {
-      
+    return {      
       deltaY :true,
       scrollTop: 0,
       headerShow: false,
-      recommendInfo:[]
-      
+      recommendInfo:[],
+      calendar: {
+          "months": []
+        }     
      }
   },
   created() {
@@ -41,6 +43,7 @@ export default {
       }, response => {
         console.log("dfs");
       });
+
     },
     
   components: {
@@ -51,7 +54,8 @@ export default {
     "ua-pop":Uapop,
     "header-fixed":HeaderFixed,
     "discuss":Discuss,
-    "swiper": Swiper
+    "swiper": Swiper,
+    
   },
   mounted() {
     var this_ = this;

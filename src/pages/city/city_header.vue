@@ -48,11 +48,11 @@
         },
         methods: {
             handleBlur(e) {
-                    e.target.value = "输入城市名或拼音";
+                    e.target.value = e.target.value? e.target.value: "输入城市名或拼音";
                 this.styleObj = {
                     textAlign: "center"
                 }
-                this.cities = [];
+                // this.cities = [];
             },
             handleFocus(e) {
                 e.target.value = "";

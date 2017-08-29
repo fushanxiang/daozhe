@@ -2,7 +2,8 @@
 	<div>
 		<index-header></index-header>
 		<img-swiper></img-swiper>
-    <icon-swiper></icon-swiper>
+        <icon-swiper></icon-swiper>
+    
 	</div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
   	"index-header": IndexHeader,
   	"img-swiper": ImgSwiper,
     "icon-swiper": IconSwiper
+   
   }
 }
 </script>

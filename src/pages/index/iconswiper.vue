@@ -1,15 +1,6 @@
 <template>
 	<div>
-		<!-- <swiper :options="swiperOption" >
-		    <swiper-slide>
-		    	icon1
-		    </swiper-slide>
-		    <swiper-slide>
-		    	icon2
-		    </swiper-slide>
-		    
-		    <div class="swiper-pagination"  slot="pagination"></div>
-		</swiper> -->
+		
 	</div>
 </template>
 

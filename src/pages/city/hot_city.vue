@@ -1,5 +1,4 @@
 <template>
-
 	<div class="content-city">
 		<div class="cityarea-group">
 			<div class="cityarea-title">您的位置</div>
@@ -12,15 +11,14 @@
 		<div class="cityarea-group">
 			<div class="cityarea-title">热门城市</div>
 			<div class="cityarea-content city-now">
-			 
 				<div class="cityitem-light" v-for="item in cityclass">
-						<p  v-bind:id="item.id" @click="handleSelectedClick($event)" class=" cityitem-name ellipsis">{{item.city}}</p>
+					<router-link to="/">
+						<p v-bind:id="item.id" @click="handleSelectedClick($event)" class="cityitem-name ellipsis">{{item.city}}</p>
+					</router-link>
 				</div>
-			
 			</div>
 		</div>
 	</div>
-
 </template>
 
 <script>
@@ -39,9 +37,8 @@ export default {
 			var  event = event || window.event;
 			var SelectId = event.target.id;
 			this.$store.commit ("changeCity", {city: event.target.innerText});
-			location.href = 'http://localhost:8080/#/';
+			localStorage.selectedCity = event.target.innerText;
 			this.dataId.push(SelectId);
-			var showctrol = this.$store.getters.perfectCity;	
 		}
 	},
 	computed: {

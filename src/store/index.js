@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		"city": "南京"
+		"city": "北京"
 	},
 	getters: {
 		"perfectCity": function(state) {

@@ -5,9 +5,11 @@
             <div v-for="city in cityclass" class="city-item">
                 <p class="city-class" ref="spell">{{city[0]}}</p>
                 <ul >
-                    <li v-for="cityName in city[1]" class="city-list" v-bind:spell="cityName.itemName" v-bind:key="cityName.id" v-on:click="handleHref">
-                        {{cityName.cityarea}}
-                    </li>
+                    <router-link to="/">
+                        <li v-for="cityName in city[1]" class="city-list" v-bind:spell="cityName.itemName" v-bind:key="cityName.id" v-on:click="handleHref">
+                            {{cityName.cityarea}}
+                        </li>
+                    </router-link>
                 </ul>
             </div>
         </div>
@@ -16,8 +18,8 @@
 </template>
 
 <script>
-    import HotCity from './hotcity.vue';
-    import CityLetter from './cityletter.vue'; 
+    import HotCity from './hot_city.vue';
+    import CityLetter from './city_letter.vue'; 
 
     export default {
         data () {
@@ -47,7 +49,6 @@
         },
         methods: {
             changePlace:function(word) {
-                //console.log(word);//传入点击各个单独单词的字母对应的单词
                 var spells = this.$refs.spell;
                 for(var i = 0; i < spells.length; i++) {
                     if(spells[i].innerText === word) {
@@ -56,7 +57,6 @@
                 }
             },
             handleTouchWord:function(num) {
-                 //console.log(num);//获取手指在字母上移动时，该字母距离屏幕顶部的高度
                 var spells = this.$refs.spell;
                 if(num < spells.length && num >= 0) {
                     document.body.scrollTop = spells[num].offsetTop-44;
@@ -65,7 +65,7 @@
             handleHref:function(ev) {
                 var e = ev || window.event;
                 this.$store.commit("changeCity", {city: e.target.innerText});
-                location.href = 'http://localhost:8080/#/';
+                localStorage.selectedCity = e.target.innerText;
             }
         }
     }
@@ -75,17 +75,17 @@
     .city-class {
         line-height: .54rem;
         padding-left: .3rem;
-        color: #616161;
-        font-size: .26rem;
         border-top: 1px solid #dfe0e1;
         background: #f5f5f5;
+        color: #616161;
+        font-size: .26rem;
     }
     .city-list {
         display: block;
         line-height: .76rem;
         padding-left: .2rem;
+        border-top: 1px solid #dfe0e1;
         font-size: .28rem;
         color: #212121;
-        border-top: 1px solid #dfe0e1;
     }
 </style>

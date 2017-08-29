@@ -74,6 +74,9 @@ export default {
 	    border-right: 0;
 	    background: #fff;
 	}
+	.city-now::after {
+		border-color: red;
+	}
 	.cityarea-title {
 	    line-height: .54rem;
 	    padding-left: .3rem;

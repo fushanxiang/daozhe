@@ -29,8 +29,7 @@
                     "background": "#fff"
                 },
                 colorAbroad: {
-                    "color": "#fff",
-                    "background": "#00afc7"
+                        
                 }
             }
         },

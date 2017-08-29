@@ -2,7 +2,7 @@
     <div>
         <div class="city-header-area">
             <router-link to="/">
-            <span class="iconfont city-header-goback">&#xe624;</span>
+                <span class="iconfont city-header-goback">&#xe624;</span>
             </router-link>
             <span :style="colorChina" class="city-china city-area" v-on:click="handleChina" >国内</span>
             <span :style="colorAbroad" class="city-abroad city-area" v-on:click="handleAbroad">海外</span>

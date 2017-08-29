@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import Weekend from '@/pages/weekend/index'
@@ -23,7 +22,7 @@ export default new Router({
       name:'seckill',
       component:SecKill
     },{
-      path: '/city/:id',
+      path: '/city',
       name: 'city',
       component: City
     }

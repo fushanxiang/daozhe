@@ -1,9 +1,22 @@
+
+
+
 {
     "ret": true,
-    "data": {
+    "data":{
         "index": {
             "headerTitle": "[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游"
         },
+        "swiperImg":[{
+        	"src":"http://img0.imgtn.bdimg.com/it/u=680036873,124146097&fm=26&gp=0.jpg"
+        },{
+        	"src":"http://img1.imgtn.bdimg.com/it/u=720172448,1930149107&fm=26&gp=0.jpg"
+        },{
+        	"src":"http://img1.imgtn.bdimg.com/it/u=195861986,1768510367&fm=26&gp=0.jpg"
+        },{
+        	"src":"http://img4.imgtn.bdimg.com/it/u=747038940,4162159520&fm=26&gp=0.jpg"
+        }],
+
         "tab": {
             "index": {
                 "tabs": [
@@ -35,9 +48,10 @@
                             ],
                             "content": "天安门",
                             "visible": true
-                        }
-                    ]
-                },
+
+                        }]
+    
+                },               
                 "routesum": [
                     {
                         "icon": "&#xe601;",
@@ -875,4 +889,5 @@
             }
         }
     }
+    
 }

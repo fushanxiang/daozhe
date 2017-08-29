@@ -1,6 +1,5 @@
 <template>
     <div>
-       
         <div class="evaluate">
             <div class="evaluate-title">
                 <span class="evaluate-title-score">4.7</span>

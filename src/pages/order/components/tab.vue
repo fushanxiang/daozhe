@@ -76,12 +76,13 @@
             		var instructionsElement = document.querySelectorAll('#tourDescription');
             		this.mainOffsetTop = tabMainElement[0].offsetTop;
             		this.tabOffsetHeight = tabElement[0].offsetHeight;
+                console.log(this.tabOffsetHeight);
             		//this.headerOffsetHeight = headerElement[0].offsetHeight;
             		this.headerOffsetHeight=0;
-                    this.expenseElementOffsetTop = expenseElement[0].offsetTop;
+                this.expenseElementOffsetTop = expenseElement[0].offsetTop;
             		this.expenseElementOffsetHeight = expenseElement[0].offsetHeight;
             		this.instructionsElementOffsetTop = instructionsElement[0].offsetTop;
-                    this.haveGetOffset = true;
+                this.haveGetOffset = true;
             	}
             }
  }
@@ -92,7 +93,6 @@
         	margin-top: .2rem;
         	padding: 0 .2rem;
         }
-
         .tab {
         	/* position: absolute; */
         	left: 0;

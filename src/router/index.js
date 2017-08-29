@@ -5,6 +5,7 @@ import WeekendIndex from '@/pages/weekend/index/index'
 import WeekendDetail from '@/pages/weekend/detail/index'
 import WeekendDetailInfo from '@/pages/weekend/detail_info/index'
 import WeekendComment from '@/pages/weekend/comment/index'
+import Slightmap from '@/pages/weekend/slightmap/index'
 import City from '@/pages/city/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
@@ -48,6 +49,10 @@ export default new Router({
         path: '/weekend/comment/:id',
         name: 'weekendComment',
         component: WeekendComment
+    },{
+        path: '/weekend/slightmap/:id',
+        name: 'Slightmap',
+        component: Slightmap
     }
   ]
 })

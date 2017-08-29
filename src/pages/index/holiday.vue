@@ -5,7 +5,7 @@
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
 					<div class="product-item-img" >
-						<img v-lazy="item.imgUrl">
+						<img v-lazy="item.imgUrl" class="img-info">
 					</div>
 					<div class="product-item-text" >
 						<p class="product-name">{{item.title}}</p>
@@ -24,41 +24,10 @@
 
 <script>
 	export default {
+		props:["holidayInfo"],
 		data () {
 			return {
-				holidayOption: {
-					direction : 'horizontal',
-					autoHeight: true,
-					pagination : '.swiper-pagination',
-					paginationClickable :true,
-					observeParents:true
-				},
-				holidayInfo: [{
-					"id":1,
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
-				},{
-					"id":1,
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
-				},{
-					"id":1,
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
-				},{
-					"id":1,
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
-				},{
-					"id":1,
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
-				},]
+
 	    	}
 		}
 	}
@@ -99,8 +68,8 @@
 	    height: 0;
 	    padding-bottom: 37.4375%;
 	}
-	.product-item-img img{
-	    transition: opacity 400ms;
+	.img-info{
+		vertical-align: bottom;
     	width: 100%;
 	}
 	.product-item-text {
@@ -130,12 +99,11 @@
 	}
 	.type{
 		font-weight: bold;
-		line-height: .32rem;
 	}
 	.price-info{
 		background: #fff;
+		line-height: .32rem;
 		color: #616161;
-		height:.32rem;
 		padding:.14rem .1rem; 
 		font-size: .24rem;
 	}

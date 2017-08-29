@@ -1,7 +1,7 @@
 <template>
 <div>
 	<swiper :options="swiperOption" > 
-	    <swiper-slide v-for="page in pages">
+	    <swiper-slide v-for="page in pages" :key='page.key'>
 	    	<ul class="icon-list">
 	    		<li class="icon-item" v-for="item in page" :key='item.id'>
 	    			<img class="icon-img" :src="item.imgUrl" />
@@ -55,6 +55,9 @@ export default {
 					pages[page] = [];
 				}
 				pages[page].push(this.iconsInfo[i])
+			}
+			for(var j = 0;j < pages.length;j++){
+				pages[j].key = (new Date()).getTime()
 			}
 			return pages;
     	}

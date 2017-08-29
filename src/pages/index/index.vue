@@ -3,8 +3,8 @@
     		<index-header></index-header>
     		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
         <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
-        <hot-sale></hot-sale>
-        <holiday></holiday>
+        <hot-sale :itemsInfo="itemsInfo"></hot-sale>
+        <holiday :holidayInfo="holidayInfo"></holiday>
         <foot></foot>
 	  </div>
 </template>
@@ -23,7 +23,9 @@ export default {
   data () {
     return {
       iconsInfo:[],
-      imgsInfo:[]
+      imgsInfo:[],
+      itemsInfo:[],
+      holidayInfo:[]
     } 
   },
   created() {
@@ -31,6 +33,8 @@ export default {
       var data = response.body.data;
       this.iconsInfo = data.iconsInfo;
       this.imgsInfo = data.imgsInfo;
+      this.itemsInfo = data.itemsInfo;
+      this.holidayInfo = data.holidayInfo;
     }, response => {
       console.log("ajax error");
     });

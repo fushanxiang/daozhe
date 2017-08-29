@@ -8,7 +8,7 @@
 					<p class="highlight-des-content"><br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[1] : []}}<br>{{goodsInfo.lightSpot ? goodsInfo.lightSpot[2] : []}}</p>
 				</div>
 			</div>
-			<router-link :to="'/weekend/detail_info/id=' + goodsInfo.id">
+			<router-link :to="'/weekendtour/detail_info/id=' + goodsInfo.id">
 				<h3 class="title highlight-detail"><span class="word">详情介绍</span>
 				<span class="next-icon iconfont">&#58918;</span></h3>
 			</router-link>

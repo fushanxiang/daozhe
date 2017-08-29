@@ -1,7 +1,7 @@
 <template>
 	<div class="header-container">
 		<div class="img-container">
-			<router-link to="/weekend/index" class="back-btn iconfont">&#59031;</router-link>
+			<router-link to="/weekendtour/index" class="back-btn iconfont">&#59031;</router-link>
 			<img :src="goodsInfo.src" class="header-img" />
 			<div class="show-images">
 				<span class="pic-iconh iconfont">&#59180;</span>
@@ -25,7 +25,7 @@
 					</span>
 					
 					<span class="comment-score">{{goodsInfo.starLevel}}分</span>
-					<router-link :to="'/weekend/comment/id='+goodsInfo.id">
+					<router-link :to="'/weekendtour/comment/id='+goodsInfo.id">
 						<span class="comment-totalnum">{{goodsInfo.comments ? goodsInfo.comments.length : 0}}评论</span>
 						<span class="next-icon iconfont">&#58918;</span>
 					</router-link>

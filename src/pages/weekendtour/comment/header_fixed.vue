@@ -1,6 +1,6 @@
 <template>
 	<div class="top-container">
-		<router-link :to="'/weekend/detail/id=' + goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
+		<router-link :to="'/weekendtour/detail/id=' + goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
 		<h1 class="top-title">点评</h1>
 	</div>
 </template>

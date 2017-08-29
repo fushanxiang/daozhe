@@ -1,7 +1,9 @@
 <template>
 	<div class="top-container">
-		<router-link :to="'/weekend/detail/id=' + goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
-		<h1 class="top-title">详情介绍</h1>
+		<router-link :to="'/weekendtour/detail/id='+goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
+		<div class="box">
+			<h1 class="top-title">景点地图</h1>
+		</div>
 	</div>
 </template>
 
@@ -35,15 +37,23 @@ export default {
 		height: .72rem;
 		line-height: .72rem;
 		color: #fff;
-		font-size: .60rem;
+		font-size: .5rem;
+		font-weight: bold;
+	}
+	.box{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
 	}
 	.top-title {
-		margin: 0 1rem;
-		font-size: .32rem;
-		line-height: .88rem;
-		text-align: center;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		margin: 0 1rem;
+		font-size: .32rem;
+		line-height: .88rem
 	}
 </style>

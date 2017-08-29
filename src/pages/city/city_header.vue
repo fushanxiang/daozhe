@@ -4,8 +4,8 @@
             <router-link to="/">
                 <span class="iconfont city-header-goback">&#xe624;</span>
             </router-link>
-            <span :style="colorChina" class="city-china city-area" v-on:click="handleChina" >国内</span>
-            <span :style="colorAbroad" class="city-abroad city-area" v-on:click="handleAbroad">海外</span>
+            <span :style="colorChina" class="city-china city-area" v-on:click="handleChina">国内</span>
+            <span :style="colorAbroad" class="city-abroad city-area border" v-on:click="handleAbroad">海外</span>
         </div>
         <div class="header-keyword">
             <input type="text" value="输入城市名或拼音" class="city-keyword" 
@@ -14,7 +14,7 @@
                     <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
             </div>
         </div>
-        <city-area :change="cityChange" :datas="datas"></city-area>
+        <city-area :change="cityChange" :datas="datas" v-show="show"></city-area>
     </div>
 </template>
 
@@ -38,7 +38,8 @@
                     "background": "#00afc7"
                 },
                 country: true,
-                cities: []
+                cities: [],
+                show: true
             }
         },
         props: ['datas'],
@@ -102,8 +103,10 @@
                     allSearchCities = ['无搜索匹配城市'];
                 }
                 this.cities = allSearchCities;
+                this.show = false;
                 if (searchWord.length === 0) {
                     this.cities = [];
+                    this.show = true;
                 }
             },
             selectCity(ev) {
@@ -131,27 +134,29 @@
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 100;
         background: #00afc7;
         text-align: center;
     }
     .city-header-goback {
+        width: 6%;
+        float: left;
+        padding: 0 .22rem;
         font-size: .36rem;
         color: #fff;
         font-weight: bold;
-        float: left;
-        padding: 0 .22rem;
     }
     .city-area {
         border: 1px solid white;
         display: inline-block;
         line-height: .56rem;
-        width: 2.04rem;
+        width: 30%;
         color: white;
     }
     .city-china {
         border-radius: 3px 0 0 3px;
         float: left;
-        margin-left: 10%;
+        margin-left: 8%;
         margin-top: .14rem;
         color: #00afc7;
         background: #fff;
@@ -187,7 +192,7 @@
         line-height: .76rem;
         width: 100%;
         padding-left: .2rem;
-        border-top: 1px solid #dfe0e1;
+        border-bottom: 1px solid #dfe0e1;
         font-size: .28rem;
         color: #212121;
     }

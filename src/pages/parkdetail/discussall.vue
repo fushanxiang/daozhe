@@ -165,9 +165,6 @@
             	}
             	var item = this.items[index];
             	item.actived = true;
-            	
-//          	this.items.splice(index,1,item);            	
-            	// index, id, ajax
             }
         }
 	}
@@ -304,7 +301,7 @@
 	    margin-right: .2rem;
 	    margin-top: .2rem;
 	}
-	.border-top{
+	.border-top {
 		border-bottom: 1px solid #f5f5f5;
 		padding-bottom: .3rem;
 		overflow: hidden;

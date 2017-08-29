@@ -4,7 +4,13 @@ import router from './router'
 import fastclick from 'fastclick'
 import vueResource from 'vue-resource'
 
+import IScrollView from 'vue-iscroll-view'
+import IScroll from 'iscroll'
+
+
 Vue.use(vueResource); 
+
+
 
 
 
@@ -12,7 +18,8 @@ Vue.use(vueResource);
 fastclick.attach(document.body);
 
 Vue.config.productionTip = false
-
+Vue.use(vueResource)
+Vue.use(IScrollView, IScroll)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -184,8 +184,7 @@ export default {
 	}
 	.item-price {
 	    color: #ff433e;
-	}
-	
+	}	
 	.now-price-num {
 	    font-size: 18px;
 	    color: #ff433e;

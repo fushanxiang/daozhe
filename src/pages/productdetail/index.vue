@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 import Header from './header.vue'
 import Tab from './tab.vue'
 

@@ -8,6 +8,7 @@ import WeekendComment from '@/pages/weekend/comment/index'
 import City from '@/pages/city/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
+import Order from '@/pages/order/form'
 
 Vue.use(Router)
 
@@ -48,6 +49,10 @@ export default new Router({
         path: '/weekend/comment/:id',
         name: 'weekendComment',
         component: WeekendComment
+    },{
+        path: '/weekend/order/:id',
+        name: 'order',
+        component: Order
     }
   ]
 })

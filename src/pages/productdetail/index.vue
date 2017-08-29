@@ -1,14 +1,7 @@
 <template>
-    <div>
-    <header class="header">
-        <a class="header-left iconfont">&#xe600;</a>      
-    </header>
-    <div>
-  <index-header></index-header>
-  <index-tab></index-tab>
-  111
-
-  </div>
+  <div>
+    <index-header></index-header>
+    <index-tab></index-tab>
   </div>
 </template>
 

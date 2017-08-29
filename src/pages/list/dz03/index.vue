@@ -10,7 +10,7 @@
                         <div class="sight-detail">
                             <p class="item-float-p">
                                 <h3 class="sight-name sight-name-float">{{item.scenic}}</h3>
-                                <span class="tag-word">热</span>
+                                <span class="tag-word" v-if="item.hot">热</span>
                                 <span class="sight-price">¥<em>{{item.price}}</em><span class="lowprice-text">&nbsp;起</span></span>
                             </p>
                             <div class="sight-comments">
@@ -20,15 +20,17 @@
                             <div class="sight-location"><span class="sight-address">{{item.location}}</span></div>
                         </div>
                     </div>
+
                     <div class="sight-ticket-item border-top">
                         <h4 class="ticket-name">{{item.tourGuide}}</h4>
                         <span class="ticket-qunarprice">¥<em>{{item.tourPrice}}</em></span>
                     </div>
-
+                    
                     <div class="sight-ticket-item border-top">
                         <h4 class="ticket-name">{{item.navigation}}</h4>
                         <span class="ticket-qunarprice">¥<em>{{item.navigationPrice}}</em></span>
                     </div>
+
                 </div>
                 <div class="item-more-ticket ">查看全部{{item.moreProduct}}个产品<span class="more-ticketicon">&gt;</span>
                 </div> 
@@ -50,176 +52,17 @@
         data () {
             return {
                 index: 0,
-                content: [{
-                    "id": 0,
-                    "scenic": "故宫(5A)",
-                    "hot": true,
-                    "price": 20,
-                    "star": 5,
-                    "comment": "3000评论",
-                    "location": "北京·东城区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_110x110_fac6a6cd.jpg" ,
-                    "tourGuide": "恭王府讲解服务（中文）",
-                    "tourPrice":15,
-                    "navigation": "恭王府景区手机电子导览服务",
-                    "navigationPrice": 5,
-                    "moreProduct": 24
-                },{
-                    "id": 1,
-                    "scenic": "颐和园(5A)",
-                    "hot": true,
-                    "price": 65,
-                    "star": 5,
-                    "comment": "13782评论",
-                    "location": "北京·海淀区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_110x110_d9d85877.jpg",
-                    "tourGuide": "旺季【上午场】故宫成人票",
-                    "tourPrice":59.6,
-                    "navigation": "旺季【上午场】故宫成人票",
-                    "navigationPrice": 5,
-                    "moreProduct": 426
-                },{
-                    "id": 2,
-                    "scenic": "八达岭长城(5A)",
-                    "hot": true,
-                    "price": 39.7,
-                    "star": 5,
-                    "comment": "13782评论",
-                    "location": "北京·延庆县",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_110x110_1efa2758.jpg",
-                    "tourGuide": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "tourPrice":59.6,
-                    "navigation": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 3,
-                    "scenic": "恭王府(5A)",
-                    "hot": false,
-                    "price": 65,
-                    "star": 5,
-                    "comment": "133454评论",
-                    "location": "北京·西城区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_110x110_d957be56.jpg",
-                    "tourGuide": "恭王府讲解服务（中文）",
-                    "tourPrice":59.6,
-                    "navigation": "恭王府景区手机电子导览服务",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 4,
-                    "scenic": "八达岭长城(5A)",
-                    "hot": true,
-                    "price": 39.7,
-                    "star": 5,
-                    "comment": "13782评论",
-                    "location": "北京·延庆县",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_110x110_1efa2758.jpg",
-                    "tourGuide": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "tourPrice":59.6,
-                    "navigation": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 5,
-                    "scenic": "恭王府(5A)",
-                    "hot": false,
-                    "price": 65,
-                    "star": 5,
-                    "comment": "133454评论",
-                    "location": "北京·西城区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_110x110_d957be56.jpg",
-                    "tourGuide": "恭王府讲解服务（中文）",
-                    "tourPrice":59.6,
-                    "navigation": "恭王府景区手机电子导览服务",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 0,
-                    "scenic": "故宫(5A)",
-                    "hot": true,
-                    "price": 20,
-                    "star": 5,
-                    "comment": "3000评论",
-                    "location": "北京·东城区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_110x110_fac6a6cd.jpg" ,
-                    "tourGuide": "恭王府讲解服务（中文）",
-                    "tourPrice":15,
-                    "navigation": "恭王府景区手机电子导览服务",
-                    "navigationPrice": 5,
-                    "moreProduct": 24
-                },{
-                    "id": 1,
-                    "scenic": "颐和园(5A)",
-                    "hot": true,
-                    "price": 65,
-                    "star": 5,
-                    "comment": "13782评论",
-                    "location": "北京·海淀区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_110x110_d9d85877.jpg",
-                    "tourGuide": "旺季【上午场】故宫成人票",
-                    "tourPrice":59.6,
-                    "navigation": "旺季【上午场】故宫成人票",
-                    "navigationPrice": 5,
-                    "moreProduct": 426
-                },{
-                    "id": 2,
-                    "scenic": "八达岭长城(5A)",
-                    "hot": true,
-                    "price": 39.7,
-                    "star": 5,
-                    "comment": "13782评论",
-                    "location": "北京·延庆县",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_110x110_1efa2758.jpg",
-                    "tourGuide": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "tourPrice":59.6,
-                    "navigation": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 3,
-                    "scenic": "恭王府(5A)",
-                    "hot": false,
-                    "price": 65,
-                    "star": 5,
-                    "comment": "133454评论",
-                    "location": "北京·西城区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_110x110_d957be56.jpg",
-                    "tourGuide": "恭王府讲解服务（中文）",
-                    "tourPrice":59.6,
-                    "navigation": "恭王府景区手机电子导览服务",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 4,
-                    "scenic": "八达岭长城(5A)",
-                    "hot": true,
-                    "price": 39.7,
-                    "star": 5,
-                    "comment": "13782评论",
-                    "location": "北京·延庆县",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_110x110_1efa2758.jpg",
-                    "tourGuide": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "tourPrice":59.6,
-                    "navigation": "【旺季】八达岭长城门票+空中索道往返成人票",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                },{
-                    "id": 5,
-                    "scenic": "恭王府(5A)",
-                    "hot": false,
-                    "price": 65,
-                    "star": 5,
-                    "comment": "133454评论",
-                    "location": "北京·西城区",
-                    "imgSrc": "https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_110x110_d957be56.jpg",
-                    "tourGuide": "恭王府讲解服务（中文）",
-                    "tourPrice":59.6,
-                    "navigation": "恭王府景区手机电子导览服务",
-                    "navigationPrice": 5,
-                    "moreProduct": 46
-                }]
+                content: [],
             }
+        },
+        created() {
+
+            this.$http.get('/static/productItems.json').then(response => {
+                this.content = response.body.content;
+                this.hot = response.body.content        
+            }, response => {
+                console.log("response error")
+            });
         },
         methods: {
             handPageUp() {
@@ -227,13 +70,16 @@
                 if(this.index <= 0) {
                     this.index = 0
                 }
+                window.scrollTo(0,0)
             },
             handPageDown() {
                 this.index++;
                 if(this.index >= this.pages.length) {
                     this.index = this.pages.length - 1;
                 }
+                window.scrollTo(0,0)
             }
+            
         },
         computed: {
             pages() {
@@ -425,10 +271,9 @@
     height: 1.6rem;
 }
 .sight-ticket-item::before{
-    border:1px dashed #ccc;
+    border-color:#ccc;
+    border-style: dashed;
+    transform: scaleY(.2);
 }
-.border-top::before, .border-topbottom::before, .border-topleft::before, .border-topright::before {
-    border-top: 0;
-    transform-origin: 0 0;
-}
+
 </style>

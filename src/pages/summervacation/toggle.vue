@@ -1,5 +1,5 @@
 <template>
-	<div class="toggle">
+	<div id="toggle" class="toggle">
 		<ul class="toggle-list">
 			<li class="toggle-li one">玩法分类</li>
 			<li class="toggle-li two">冲浪漂流</li>
@@ -30,49 +30,52 @@
 <style scoped>
     @import "../../assets/font/iconfont.css";
 	.toggle{
+		position: relative;
 		overflow: hidden;
-		width: 100%;
 		padding-bottom:.2rem;
+		padding-right: .2rem;
 		background-color: #23a4e5;
 		box-shadow: 0 0 0.2rem #000;
+		padding:.2rem;
+		padding-top:0;
 	}
 	.toggle-list{
-       float: left;
-       margin: 0 .2rem;
-       height: .44rem;
-       padding: .13rem;
-       padding-right: 1rem;
+	   float: left;
        background: #0b68e6;
-       position: relative;
-       border-radius: .08rem .7rem .7rem 0;
+       width: 96%;
+       padding:.13rem;
+       border-radius: 0 .7rem .7rem 0;
 	}
 	.toggle-li{
 		float: left;
-		height: .44rem;
-	    padding: 0 .08rem 0 .14rem;
-	    color: #fff;
-	    font-size: .26rem;
-	    line-height: .44rem;
+		width: 20%;
+		line-height: .44rem;
+		color: #fff;
+	    font-size: .2rem;
 	    text-align: center;
 	}
 	.one{
-		width: 1.24rem;
-		height: .44rem;
-		padding-right: .06rem;
 		background: #4f9aff;
 		color: #fff;
 		font-style: italic;
 		font-size: .26rem;
-		line-height: .44rem;
 		text-align: center;
-		border-radius: 0 .44rem .44rem 0;
+		border-radius: 0 .44rem .44rem 0; 
 	}
 	.two{
-		height: .44rem;
-		padding: 0 .08rem 0 .14rem;
 		color: #ffe800;
 		font-size: .26rem;
 	    line-height: .44rem;
-	    text-align: center;
+	}
+	.toggle-fixed{
+		z-index: 999;
+		padding-bottom:.2rem;
+		padding-right: .2rem;
+		background-color: #23a4e5;
+		box-shadow: 0 0 0.2rem #000;
+		padding:.2rem;
+		padding-top:0;
+		position: fixed;
+		top:0;
 	}
 </style>

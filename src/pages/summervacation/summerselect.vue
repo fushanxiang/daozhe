@@ -3,10 +3,10 @@
 		<div class="sumselect-play">
 			<img src="//s.qunarzz.com/piao_topic/image/touch/custom/2016/1772travel10/170710/caption2.jpg">
 		</div>
-		<toggle ref="toggle"></toggle>
+		<toggle></toggle>
 		<div class="sumselect-item">
 			 <ul class="sumselect-content">
-			 	<li class="sumselect-li" v-for="item in selectInfo">
+			 	<li class="sumselect-category" v-for="item in selectInfo">
 			 	    <div class="sumselect-frame">
 			 	   	    <div class="sumselect-img">
 			 			    <img  :src="item.imgeUrl">
@@ -15,8 +15,8 @@
 				 		<div class="sumselect-word">
 				 			<div class="sumselect-title">{{item.title}}</div>
 				 			<div class="sumselect-price">
-				 			    <span class="price-red">{{item.redPrice}}</span>
-				 			    <span class="price-gray">{{item.grayPrice}}</span>
+				 			    <span class="price-new">{{item.redPrice}}</span>
+				 			    <span class="price-old">{{item.grayPrice}}</span>
 				 			</div>
 				 			<div class="sumselect-booked">立即预订</div>
 				 		</div>
@@ -34,6 +34,11 @@
 	import Toggle from './toggle.vue'
 	export default {
 		name: 'summerselect',
+
+		components: {
+            "toggle": Toggle
+		},
+
 		data() {
 			return {
 				selectInfo: [{
@@ -101,15 +106,7 @@
 
 				}]
 			}
-		},
-
-		components: {
-            "toggle": Toggle
-		},
-
-        created() {
-	        window.addEventListener('scroll', this.handleScroll);
-	    }
+		}
 	}
 </script>
 
@@ -136,7 +133,7 @@
 	width: 100%;
 	margin: 0 .12rem -.2rem;
 }
-.sumselect-li{
+.sumselect-category{
 	float: left;
     width: 48.4%;
 }
@@ -192,11 +189,11 @@
     line-height: .4rem;
     vertical-align: middle;
 }
-.price-red{
+.price-new{
 	color: #ff4c56;
     font-size: .24rem;
 }
-.price-gray{
+.price-old{
 	color: #999;
     font-size: .24rem;
     text-decoration: line-through;

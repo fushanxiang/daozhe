@@ -1,5 +1,5 @@
 <template>
-	<dir class="foot">
+	<div class="foot">
 		<ul class="foot-one">
 			<li class="foot-li">
 				<a href="#">
@@ -37,7 +37,7 @@
 			<li class="telephone">手机版</li>
 		</ul>
 		<div class="foot-four">Qunar 京ICP备05021087<span>意见反馈</span></div>
-	</dir>
+	</div>
 </template>
 
 <script>

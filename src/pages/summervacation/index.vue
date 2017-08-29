@@ -1,6 +1,6 @@
 <template>
-	<div>
-    <summerselect></summerselect>
+	<div @scroll="handleScroll">
+        <summerselect></summerselect>
 	</div>
 </template>
 
@@ -8,15 +8,37 @@
 import SummerSelect from './summerselect.vue'
 
 export default {
-  name: 'index',
-  data () {
-    return {
-    }  
-  },
+    name: 'index',
+
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+
+    destroyed(){
+        window.removeEventListener("scroll", this.handleScroll)
+    },
+
+    methods:{
+        handleScroll(){
+            let scrollTop=document.body.scrollTop,
+                oToggle=document.getElementById("toggle"),
+                offsetTop=oToggle.offsetTop;
+            if(scrollTop>=offsetTop){
+                oToggle.className="toggle-fixed";
+            }else{
+                oToggle.className="toggle";
+            }
+        }
+    },
+
+    data () {
+        return {
+        }  
+    },
   
-  components:{
-    "summerselect": SummerSelect
-  }
+    components:{
+        "summerselect": SummerSelect
+    }
 }
 </script>
 

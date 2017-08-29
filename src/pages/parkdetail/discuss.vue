@@ -2,7 +2,7 @@
 	<div class="discuss-container">
 		
 		<h3 class="container-title">用户评论</h3>
-		<div class="jiange"></div>
+		<div class="space"></div>
 		
 		<div class="container-comment border-top">
 			<div class="container-comment-stardate">
@@ -14,7 +14,7 @@
 				</span>
 			</div>
 			<div class="">
-				<p id="comment-content-p" v-bind:class="active?'a':'b'">
+				<p id="comment-content-p" v-bind:class="active?'down':'up'">
 					亲子套票还是挺划算的，里面有几项是要求小孩子80斤才可以玩的，我家宝贝只有70斤，有几个项目没有玩，必须得说说，去玩自己备好一双拖鞋，大热天赤脚走地上不是一般的烫，水可以带进去，里面最便宜的水10元，一杯奶茶25元，饭68一份，不是一般的贵，但必须吃否则没有力气玩。总体还是很棒的一次游玩，一票通玩，建议把大型的项目全部玩了再去小的项目，因为时间原因还有几个项目要排队没有玩到，晚上还有表演可以看。很开心的一次体验
 				</p>
 				<div class="foldbtn iconfont js-foldbtn" v-on:click="handleClick">{{active?'&#xe62d;':'&#xe62e;'}}</div>
@@ -30,8 +30,7 @@
 				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/f6/3baa272158ce0e02.jpg"/></div>
 			</div>
 		
-	
-		<div class="jiange-a"></div>
+		<div class="space-small"></div>
 		
 		<div class="container-comment border-top">
 			<div class="container-comment-stardate">
@@ -42,7 +41,7 @@
 				</span>
 			</div>
 			<div class="">
-				<p id="comment-content-p" v-bind:class="active?'a':'b'">
+				<p id="comment-content-p" v-bind:class="active?'down':'up'">
 					里面环境很棒。可惜姨妈来了不能去玩。老公只有带着孩子在小池里面玩。这里面真的是太完善了。各种大小型号的儿童漂浮衣（救身衣）一岁多的小朋友都有合适他穿的。大人们如果要玩大型的刺激的又快又方便。还是不要带小朋友来。自己来玩更尽兴！如果人多的时候去玩。建议还是购买VIP通到票。但是里面吃的挺贵的。不可以带吃的进去，如果有吃的话，必须先寄存。
 				</p>
 				<div class="foldbtn iconfont js-foldbtn" v-on:click="handleClick">{{active?'&#xe62d;':'&#xe62e;'}}</div>
@@ -58,17 +57,14 @@
 				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/ad/a357cc8f0d4a6a02.jpg_228x168_5cf9e316.jpg"/></div>
 			</div>
 		<router-link to="/discussall">
-			<div class="mp-more-refresh mp-border-top" @click="goDiscuss">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
+			<div class="discuss-refresh mp-border-top">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
 		</router-link>
-
 
 	</div>
 	
 </template>
 
 <script>
-	
-
 export default {
   
   	data () {
@@ -79,28 +75,21 @@ export default {
   	methods: {
 		handleClick() {	
 			this.active=!this.active
- 		},
- 		goDiscuss() {
- 			this.$router.push('/parkdetail/goDiscuss')
  		}
-
 	}	
-
 }
 </script>
 
 <style scoped>
 		
-	@import "../../assets/font/iconfont.css";
-	
-	.a {
+	@import "../../assets/font/iconfont.css";	
+	.down {
 		height:105px;
 		overflow: hidden;
 	}
-	.b {
+	.up {
 		height: 100%;
 	}
-	
 	.container-title {
 	    padding: 0 .2rem;
 	    height: .88rem;
@@ -109,6 +98,7 @@ export default {
 	    font-size: .3rem;
 	    line-height: .88rem;
 	    text-indent: .2rem;
+	    position: relative;
 	}
 	.container-title::after {
 	    content: " ";
@@ -122,16 +112,16 @@ export default {
 	    -moz-border-radius: .04rem;
 	    border-radius: .04rem;
 	}
-	.jiange {
+	.space {
 		width: 100%;
 		height: .08rem;
 		background: #f5f5f5;
 	}
-	.jiange-a {
+	.space-small {
 		width: 100%;
 		height: .08rem;
-		background: #f5f5f5;
 		margin-top: .2rem;
+		background: #f5f5f5;
 	}
 	.container-comment {
 		width: 100%;
@@ -150,7 +140,7 @@ export default {
 	.container-comment-date {
 		float: right;
 	}
-	#comment-content-p{
+	#comment-content-p {
 		word-break: break-all;
 	    word-wrap: break-word;
 	    line-height: .42rem;
@@ -164,11 +154,6 @@ export default {
 	    font-size: .26rem;
 	    color: #9e9e9e;
 	}
-	.con {
-		display: block;
-		height: 100%;
-	}
-	
 	.discuss-photo {
 		box-sizing: border-box;
 		padding: .1rem;
@@ -186,7 +171,7 @@ export default {
 		width: 100%;
 		height: 100%;		
 	}
-	.mp-more-refresh {
+	.discuss-refresh {
 		width: 100%;
 	    margin-top: .02rem;
 	    height: .8rem;

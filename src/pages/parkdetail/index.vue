@@ -1,7 +1,6 @@
 <template>
-
 	<div @mousewheel="test"> 
-   <swiper></swiper>  
+   	<swiper></swiper>  
     <park-location></park-location>
     <detail-tree></detail-tree>
     <header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>  
@@ -15,7 +14,7 @@
 <script>
 	  
     import DetailTree from './detailtree.vue'
-	  import ParkLocation from './parkLocation.vue'
+	import ParkLocation from './parkLocation.vue'
   	import Recommend from './recommend.vue'
   	import RecommendSites from './recommendsites.vue'
     import Uapop from './uapop.vue'
@@ -87,9 +86,10 @@ export default {
   }
   
 }
+
 </script>
 
 <style scoped>
 
-	
+
 </style>

@@ -8,8 +8,10 @@ import WeekendComment from '@/pages/weekend/comment/index'
 import City from '@/pages/city/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
+import VueScroller from 'vue-scroller'
 
 Vue.use(Router)
+Vue.use(VueScroller)
 
 export default new Router({
   routes: [

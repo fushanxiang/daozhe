@@ -1,5 +1,5 @@
 <template>
-  <div class="chosenplace">
+	<div class="chosenplace">
 		<h2 class="hot-top"><span class="hot-title">精选玩法</span></h2>
 		<ul class="chosen-list">
 			<li class="icon-item" v-for="item in goods" :key="item.id">
@@ -24,20 +24,19 @@
 	</div>
 </template>
 
-<script>
 
-export default {
-	data () {
-	    return {
-	    	
-	    }
-	},
-  	props:["goods"]
-}
+<script>
+	export default {
+		data () {
+		    return {
+		    	
+		    }
+		},
+	  	props:["goods"]
+	}
 </script>
 
 <style scoped>
-	
 	.chosenplace{
 		background: #fff;
 		margin-top: .2rem;
@@ -49,7 +48,7 @@ export default {
 	    width: 100%;
 	    height: .02rem;
 		background: #c9cccd;
-		    transform: scaleY(.51);
+		transform: scaleY(.51);
 	}
 	.hot-top{
 		overflow: hidden;
@@ -94,6 +93,9 @@ export default {
 		height: 0;
 		padding-bottom: 43.75%; /*高和宽的比*/
 		background: url("../../../assets/images/loading_camel.gif") center center no-repeat;
+	}
+	.chosen-list{
+		
 	}
 	.chosen-img{
 		width: 100%	;

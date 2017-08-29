@@ -26,10 +26,9 @@ export default {
 </script>
 
 <style scoped>
-	@import "../../../assets/font/iconfont.css";
 	.packages-box{
+		padding-top: .2rem;
 		background: #f1f1f1;
-		padding-top: .2rem;;
 	}
 	.packages{
 	    padding: 0 .2rem;
@@ -77,7 +76,7 @@ export default {
 		padding: 0 .2rem;
 	}
 	.packages-des-content{
-	        padding-bottom: .15rem;
+	    padding-bottom: .15rem;
 	    line-height: .48rem;
 	    color: #616161;
 	}

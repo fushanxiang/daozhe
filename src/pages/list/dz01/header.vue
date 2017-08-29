@@ -1,53 +1,53 @@
 <template>
 	<div>
-  <header class="header">
-    <a class="header-left iconfont">&#xe600;</a>
-    <span class="header-title">
-      <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus" @blur="handleblur" v-model="inputtext"/>
-      <span class="search-del iconfont" @click="handleSearchDel">&#xe60d;</span>
-    </span>
-    <div class="header-right">
-      <router-link to="/">
-      <span class="header-submit" @click="handlesearch" >搜索 </span>
-      </router-link>
-    </div>
-  </header>
-  <div class="search-near-box"  @click="handleclick" v-show="this.searchNear">
-    <div class="search-history"  v-show="this.searchHistory">
-      <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
-      <div class="search-history-info">
-        <span class="historyarr" v-for="item in this.historyarr" :key="item.id" @click="handlehistory(item.id)">{{item.historysearch}}</span>
-      </div>
-    </div>
-    <div class="hot-search-box">
-      <div class="hot-search-title">
-        <h1 class="search-history-title">热门搜索<span class="history-change iconfont"  @click="handleHotChange">&#xe61f; 换一批</span></h1>
-      </div>
-      <div class="hot-search-info">
-        <div class="hot-search-scenicz">
-          <span class="hot-search-icon hotsceniczcss iconfont">&#xe63e;</span>
-          <ul class="hot-box scenicz"  v-bind:style="{ top: this.sentop }">
-          <li class="hot-info" v-for="item in dataScen" @click="handlehotScen(item.id)">{{item.name}}</li>
-          </ul>
+        <header class="header">
+            <a class="header-left iconfont">&#xe600;</a>
+            <span class="header-title">
+            <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus" @blur="handleblur" v-model="inputtext"/>
+            <span class="search-del iconfont" @click="handleSearchDel" v-show="this.searchDel">&#xe60d;</span>
+            </span>
+            <div class="header-right">
+            <router-link to="/">
+            <span class="header-submit" @click="handlesearch" >搜索 </span>
+            </router-link>
+            </div>
+        </header>
+        <div class="search-near-box"  @click="handleclick" v-show="this.searchNear">
+            <div class="search-history"  v-show="this.searchHistory">
+                <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
+                <div class="search-history-info">
+                <span class="historyarr" v-for="item in this.historyarr" :key="item.id" @click="handlehistory(item.id)">{{item.historysearch}}</span>
+                </div>
+            </div>
+            <div class="hot-search-box">
+            <div class="hot-search-title">
+                <h1 class="search-history-title">热门搜索<span class="history-change iconfont"  @click="handleHotChange">&#xe61f; 换一批</span></h1>
+                </div>
+                <div class="hot-search-info">
+                <div class="hot-search-scenicz">
+                <span class="hot-search-icon hotsceniczcss iconfont">&#xe63e;</span>
+                <ul class="hot-box scenicz"  v-bind:style="{ top: this.sentop }">
+                <li class="hot-info" v-for="item in dataScen" @click="handlehotScen(item.id)">{{item.name}}</li>
+                </ul>
+                </div>
+                <div class="hot-search-area">
+                    <span class="hot-search-icon hotAreacss iconfont">&#xe607;</span>
+                    <ul class="hot-box" v-bind:style="{ top: this.areatop }">
+                    <li class="hot-info area" v-for="item in dataArea" @click="handlehotArea(item.id)">{{item.name}}</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="search-near-box-info">
+            <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
+            </div>
         </div>
-        <div class="hot-search-area">
-          <span class="hot-search-icon hotAreacss iconfont">&#xe607;</span>
-          <ul class="hot-box" v-bind:style="{ top: this.areatop }">
-          <li class="hot-info area" v-for="item in dataArea" @click="handlehotArea(item.id)">{{item.name}}</li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div class="search-near-box-info">
-    <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
-    </div>
-  </div>
-  </div>
 </template>
 <script>
 export default {
     data(){
-      return {
+        return {
         index:0,
         areaindex:0,
         sentop:"",
@@ -56,96 +56,99 @@ export default {
         historyarr:[],
         searchNear:false,
         searchHistory:true,
+        searchDel:false,
         historysearch:""
-    }
-  },
+        }
+    },
     props:["dataScen","dataArea"],
-    updated(){
-      if (this.inputtext!=="") {
-        this.searchNear=false;
-      }
+        updated(){
+        if (this.inputtext!=="") {
+            this.searchNear=false;
+            this.searchDel=true;
+        }else{
+            this.searchDel=false;
+        }
     },
     methods: {
-    handlefocus(){
-      if (this.inputtext=="") {
-        this.searchNear=true;
-       
-      }else{
-        this.searchNear=false;
-      }
-       if (localStorage.history==undefined) {
-        this.searchHistory=false;
-      }else{
-        this.searchHistory=true
-        this.historyarr=JSON.parse(localStorage.history);
-      } 
-    },
-    handledel(){
-    this.searchHistory=false;
-    localStorage.removeItem('history');
-    this.historyarr=[];
-    },
-    handleblur(){
-    this.searchNear=false;
-    },
-    handleclick(){
-    this.searchNear=true;;
-    },
-    handleSearchDel(){
-      this.inputtext="";
-    },
-    handlesearch(){
-      for (var i = 0; i < this.historyarr.length; i++) {
-        if (this.historyarr[i].historysearch==this.inputtext||(this.historyarr[i].historysearch=="北京"&&this.inputtext=="")) {
-            return this.historyarr.splice(0,1);
+        handlefocus(){
+            if (this.inputtext=="") {
+                this.searchNear=true;
+            }else{
+                this.searchNear=false;
             }
-      }
-      if (this.inputtext=="") {
-          this.inputtext="北京";
-          this.historyarr.unshift({historysearch:this.inputtext});
-          localStorage.history=JSON.stringify(this.historyarr);
-      }else{   
+            if (localStorage.history==undefined) {
+                this.searchHistory=false;
+            }else{
+                this.searchHistory=true
+                this.historyarr=JSON.parse(localStorage.history);
+            } 
+        },
+        handledel(){
+            this.searchHistory=false;
+            localStorage.removeItem('history');
+            this.historyarr=[];
+        },
+        handleblur(){
+            this.searchNear=false;
+        },
+        handleclick(){
+            this.searchNear=true;;
+        },
+        handleSearchDel(){
+            this.inputtext="";
+        },
+        handlesearch(){
+        for (var i = 0; i < this.historyarr.length; i++) {
+            if (this.historyarr[i].historysearch==this.inputtext||(this.historyarr[i].historysearch=="北京"&&this.inputtext=="")) {
+                return this.historyarr.splice(0,1);
+            }
+        }
+        if (this.inputtext=="") {
+            this.inputtext="北京";
+            this.historyarr.unshift({historysearch:this.inputtext});
+            localStorage.history=JSON.stringify(this.historyarr);
+        }else{   
         if (localStorage.history) {
             var id=new Date().getTime();
             this.historyarr=JSON.parse(localStorage.history);
             this.historyarr.unshift({id:id,historysearch:this.inputtext});
             localStorage.history=JSON.stringify(this.historyarr);
-          }else{
+        }else{
             var id=new Date().getTime();
-           this.historyarr=[];
-           this.historyarr.unshift({id:id,historysearch:this.inputtext});
-          localStorage.history=JSON.stringify(this.historyarr);
-          }   
-        } 
-    },
-    handleHotChange(){
-        this.index++;
-        this.areaindex++;
-        var topvalue=-1.6*this.index
-        this.sentop=topvalue+"rem";
-        this.areatop=this.areaindex*-.8+"rem";
-        if (this.index==4) {
-         this.areaindex=0;
-         this.areatop=0+"rem";
-        }else if (this.index==5) {
-          this.sentop=0+"rem";
-          this.index=0;
-          this.areatop=0+"rem";
+            this.historyarr=[];
+            this.historyarr.unshift({id:id,historysearch:this.inputtext});
+            localStorage.history=JSON.stringify(this.historyarr);
         }   
-    },
-    handlehistory(e){
-      alert(e);
-    },
-    handlehotScen(e){
-      alert(e);
-    },
-    handlehotArea(e){
-      alert(e);
-    },
-    handlehotSearchNear(){
-      alert("周边景点");
+        } 
+        },
+        handleHotChange(){
+            this.index++;
+            this.areaindex++;
+            var topvalue=-1.6*this.index
+            this.sentop=topvalue+"rem";
+            this.areatop=this.areaindex*-.8+"rem";
+            if (this.index==4) {
+                this.areaindex=0;
+                this.areatop=0+"rem";
+            }else if (this.index==5) {
+                this.sentop=0+"rem";
+                this.index=0;
+                this.areatop=0+"rem";
+            }   
+        },
+        handlehistory(e){
+            alert(e);
+        },
+        handlehotScen(e){
+            alert(e);
+        },
+        handlehotArea(e){
+            alert(e);
+        },
+        handlehotSearchNear(){
+            alert("周边景点");
+        }
     }
-  }
 }
 </script>
 <style scoped>
@@ -198,7 +201,7 @@ export default {
     float: left;
     font-family: "Microsoft Yahei",Arial;
     line-height: .6rem;
-    width: 89%;
+    width: 88%;
   }
   .search-del{
     line-height: .6rem;
@@ -321,7 +324,8 @@ export default {
   }
   .area{
     box-sizing: border-box;
-    padding: 0 .5rem;
+    padding: 0 .2rem;
     width: 25%;
+    text-align: center;
   }
 </style>

@@ -1,19 +1,31 @@
 <template>
 <div>
 	<swiper :options="swiperOption" > 
-	    <swiper-slide v-for="page in pages">
-	    	<ul class="icon-list">
-	    		<li class="icon-item" v-for="item in page">
-	    			<img class="icon-img" :src="item.imgUrl" />
-	    			<h1 class="icon-title">{{item.title}}</h1>
-	    		</li>
-	    	</ul>
+	    <swiper-slide v-for="page in pages" :key='page.key'>
+	        <router-link to="/summervacation">
+		    	<ul class="icon-list">
+		    		<li class="icon-item" v-for="item in page" :key='item.id'>
+		    			<img class="icon-img" :src="item.imgUrl" />
+		    			<h1 class="icon-title">{{item.title}}</h1>
+		    		</li>
+		    	</ul>
+	    	</router-link>
 	    </swiper-slide>
-
 	    <div class="swiper-pagination"  slot="pagination"></div>
-	
 	</swiper>
-   <!--  <div @click="handleButton">button</div> -->
+	<div class="position-sale">
+	    <div class="position">
+	    	<div class="position-directon">
+	    	    <span class="position-left iconfont">&#xe615;</span>
+			    定位失败
+			</div>
+			<div class="position-directon">
+			    <span class="position-right iconfont">&#xe629;</span>
+				九元门票
+			</div>
+	    </div>
+        <div class="sale"></div>
+	</div>
 </div>
 </template>
 
@@ -30,100 +42,12 @@ export default {
 				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
-			},
-			iconsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-				"link": "/detail",
-				"title":"景点门票"
-			},{
-				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
-				"link": "/detail",
-				"title":"一日游"
-			},{
-				"id": "3",
-				"imgUrl": "https://img1.qunarzz.com/piao/fusion/1611/d1/1e49d9e4d7fca102.png",
-				"link": "/detail",
-				"title":"暑期大促"
-			},{
-				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
-				"link": "/detail",
-				"title":"必游榜单"
-			},{
-				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1707/34/9285073fde1eb702.png",
-				"link": "/detail",
-				"title":"景点讲解"
-			},{
-				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/1a/261d4530330c202.png",
-				"link": "/detail",
-				"title":"水上玩乐"
-			},{
-				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png",
-				"link": "/detail",
-				"title":"故宫"
-			},{
-				"id": "8",
-				"imgUrl": "https://img1.qunarzz.com/piao/fusion/1602/f2/71eb19f77e3f21f7.png",
-				"link": "/detail",
-				"title":"周边游"
-			},{
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/29/c16cd064d85d8502.png",
-				"link": "/detail",
-				"title":"玻璃栈道"
-			},{
-				"id": "10",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/ea/8cb1dce519375d02.png",
-				"link": "/detail",
-				"title":"古北水镇"
-			},{
-				"id": "11",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/aa/a4cc16ba5e66a702.png",
-				"link": "/detail",
-				"title":"亲子游"
-			},{
-				"id": "12",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
-				"link": "/detail",
-				"title":"游乐场"
-			},{
-				"id": "13",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/c3/133460666f6f9202.png",
-				"link": "/detail",
-				"title":"室内娱乐"
-			},{
-				"id": "14",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
-				"link": "/detail",
-				"title":"动植物园"
-			},{
-				"id": "15",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/4c/cb6f790552dc3002.png",
-				"link": "/detail",
-				"title":"农家度假"
-			},{
-				"id": "16",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			}]
+			}
     	}
 	},
-	// methods: {
-	// 	handleButton: function(){
-	// 		this.iconsInfo.push({
-	// 			"id": "9",
-	// 			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-	// 			"link": "/detail",
-	// 			"title":"全部"
-	// 		})
-	// 	}
-	// },
+	props:["iconsInfo"],
+	methods: {
+	},
 	computed: {
 		pages: function() {
 			const pages = [];
@@ -134,8 +58,11 @@ export default {
 				}
 				pages[page].push(this.iconsInfo[i])
 			}
+			for(var j = 0;j < pages.length;j++){
+				pages[j].key = (new Date()).getTime()
+			}
 			return pages;
-		}
+    	}
 	},
 	components:{
 		"swiper": swiper,
@@ -149,6 +76,7 @@ export default {
 	.icon-list {
 		overflow: hidden;
 		height: 3.7rem;
+		background: #fff;
 		padding-top:.1rem;
 	}
 	.icon-item {
@@ -171,5 +99,47 @@ export default {
 		color:#212121;
 
 	}
-	
+	.position-sale{
+    	overflow: hidden;
+    	background-color: #f5f5f5;
+    }
+    .position{
+    	width: 100%; 	
+    	border-top:1px solid #e0e0e0;
+    	overflow: hidden;
+    	margin-bottom: .24rem;
+
+    }
+    .position-directon{  
+    	float: left;
+    	width: 50%;
+    	font-size:.28rem;
+    	color:#212121;
+    	line-height: .98rem;
+    	text-align: center;
+        box-sizing: border-box;
+    	background-color: #fff; 
+    }
+    .position-directon:nth-child(1){
+    	border-right: 1px solid #e0e0e0;
+    }
+    .position-left{
+    	font-size: .32rem;
+    	margin-right: .05rem;
+    	color:#616161;
+    }
+    .position-right{
+    	font-size: .32rem;
+    	margin-right: .05rem;
+    	color:#616161;
+    }
+    .sale{
+    	width: 100%;
+    	height: 1.4rem;
+    	text-align: center;
+    	border:1px solid #e0e0e0;
+    	background:#fff url(http://img1.qunarzz.com/piao/fusion/1601/29/30427c0e0658b5f7.png) center center no-repeat;
+    	background-size:auto 100%;
+
+    }
 </style>

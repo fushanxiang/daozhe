@@ -5,7 +5,9 @@ import store from './store'
 import fastclick from 'fastclick'
 import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
-
+import IScrollView from 'vue-iscroll-view'
+import IScroll from 'iscroll'
+Vue.use(IScrollView,IScroll)
 
 Vue.use(BaiduMap, {
   /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */

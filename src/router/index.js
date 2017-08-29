@@ -9,16 +9,12 @@ import OnedayList from '@/pages/onedaylist/onedaylist'
 
 Vue.use(Router)  
 
-export default new Router({
+export default new Router({      
   routes: [
     {
         path: '/',
         name: 'index',
         component: Index
-    },{
-        path: '/onedaytour',
-        name: 'onedaytour',
-        component: Onedaytour
     },{
         path: '/city/:id',
         name: 'city',
@@ -32,10 +28,13 @@ export default new Router({
             component: SmallCity
         }
       ]
-    },
-    {
-       path: '/onedaylist',
-      name: 'index',
+    },{
+        path: '/onedaytour',
+        name: 'onedaytour',
+        component: Onedaytour
+    },{
+      path: '/onedaylist',
+      name: 'onedaylist',
       component: OnedayList
     }
   ]

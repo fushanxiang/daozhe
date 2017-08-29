@@ -16,9 +16,11 @@
 	    		</li>
 	    	</ul>
 	    </div>	
-	    <div class="all">
-	    	北京全部一日游
-	    </div>    
+	    <router-link :to="{name:'onedaylist'}">
+		    <div class="all">
+		    	北京全部一日游
+		    </div>
+	    </router-link>    
 	</div>
 </template>
 
@@ -112,5 +114,6 @@ export default {
 		margin: .2rem auto .2rem auto;
 		border: .02rem solid #bdbdbd;
 		border-radius: .2rem;
+		color: #212121;
 	}
 </style>

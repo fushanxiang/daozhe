@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<a class="header-left iconfont">&#xe600;</a>
+		<a class="header-left iconfont" @click="handleClick">&#xe600;</a>
 		<div class="header-title">
 			<span class="iconfont icon-search">&#xe60a;</span>
 			<span class="single-line">景点/目的地/主题</span>
@@ -19,7 +19,12 @@
 export default {
 	data() {
 		return {}
-	}
+	},
+	methods: {
+        handleClick() {
+            this.$router.go(-1)
+        }
+    }
 }
 </script>
 

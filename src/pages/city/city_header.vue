@@ -116,7 +116,8 @@
                     localStorage.selectedCity = e.target.innerText;
                     this.$router.push('/')
                 }else {
-                    this.$router.push('')
+                    this.$router.push('');
+                    this.show = true;
                 }
                 
             }

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="park-header">
-			<span class="iconfont header-left">&#xe600;</span><span class="header-title">详情介绍</span>
+			<span class="iconfont header-left" @click="handleBackClick">&#xe600;</span><span class="header-title">详情介绍</span>
 		</div>
 		<div class="park-empty"></div>
 		<div class="park-reference">入园参考</div>
@@ -35,17 +35,21 @@
 			"water-traffic":WaterTraffic
 		},
 		methods:{
+			handleBackClick:function(){
+				window.history.go(-1);
+			},
 			handleModeClick:function(){
 				this.mode=false;
 				this.prompt=true;
 			}
+			
 		}
 	}
 </script>
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
-	.park-header{
+	.park-header {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -55,13 +59,13 @@
 		background: #00bcd4;
 	    color: #fff;
 	}
-	.header-left{
+	.header-left {
 		width: .8rem;
 	    height: .88rem;
 	    line-height: .88rem;
 	    margin-left:.2rem ;
 	}
-	.header-title{
+	.header-title {
 		flex:1;
 		overflow: hidden;
 	    margin: 0 auto;
@@ -72,12 +76,12 @@
 	    font-size: .32rem;
 	    text-align: center;
 	}
-	.park-empty{
+	.park-empty {
 		width: 100%;
 		height:.88rem;
 	}
 	/*入园参考*/
-	.park-reference{
+	.park-reference {
 		position: relative;
 	    overflow: hidden;
 	    height: .9rem;
@@ -109,18 +113,18 @@
 	    font-size: .28rem;
 	    color: #212121;
 	}
-	.park-opentime{
+	.park-opentime {
 		word-break: break-all;
 	    word-wrap: break-word;
 	    line-height: .42rem;
 	    color: #616161;
 	}
 	/*展示更多*/
-	.park-expand{
+	.park-expand {
 		line-height: .88rem;
     	text-align: center;
 	}
-	.more-arrow{
+	.more-arrow {
 		font-size: .24rem;
 	    padding-left: .16rem;
 	    color: #9e9e9e;

@@ -5,6 +5,7 @@ import City from '@/pages/city/index'
 import Onedaytour from '@/pages/onedaytour/index'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
+import OnedayList from '@/pages/onedaylist/onedaylist'
 
 Vue.use(Router)  
 
@@ -31,6 +32,11 @@ export default new Router({
             component: SmallCity
         }
       ]
+    },
+    {
+       path: '/onedaylist',
+      name: 'index',
+      component: OnedayList
     }
   ]
 })

@@ -139,10 +139,12 @@ export default {
 			this.barrieShow = false;
 			this.show = '';
 			this.opacity = 0.5;
+			this.followed = '';
 		},
 		handleClickContainer(n,type) {
 			this.containerLeft = n;
 			this.type = type;
+			this.followed = '';
 		},
 		handleClickAll(n,type) {
 			if(n==1){
@@ -159,12 +161,14 @@ export default {
 			this.barrieShow = false;
 			this.show = '';
 			this.itemsBcolor = '';
+			this.followed = '';
 		},
 		handleClickItemB(index) {
 			this.itemsBcolor = index;
 			this.barrieShow = false;
 			this.show = '';
 			this.itemsAcolor = ''
+			this.followed = '';
 		},
 		handleClickallA(text) {
 			this.barrieShow = false;

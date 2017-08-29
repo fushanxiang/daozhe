@@ -51,7 +51,7 @@ export default {
       this.listWidth = listWidth + 40 + "px";
       this.$refs.inner.style.width = this.listWidth;
     }
-    this.$refs.fillter.style.height = window.innerHeight - 60 + "px";
+    this.$refs.fillter.style.height = window.innerHeight + "px";
     this.setNewScroll();
   },
 

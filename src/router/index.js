@@ -8,7 +8,7 @@ import OnedayList from '@/pages/onedaylist/onedaylist'
 
 Vue.use(Router)
 
-export default new Router({
+export default new Router({      
   routes: [
     {
       path: '/',
@@ -32,7 +32,7 @@ export default new Router({
     },
     {
        path: '/onedaylist',
-      name: 'index',
+      name: 'list',
       component: OnedayList
     }
   ]

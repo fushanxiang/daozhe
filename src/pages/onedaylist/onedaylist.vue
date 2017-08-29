@@ -1,21 +1,21 @@
 <template>
-	<div>
-	 123
-	</div>
+  <oneday-tab></oneday-tab>
 </template>
 
 <script>
-
-
+import onedayTab from './oneday-tab.vue'
 export default {
-  name: 'index',
   data () {
     return {
+      
     }
-     
+  },
+   components:{
+    "oneday-tab":onedayTab
   }
 }
 </script>
+
 
 <style scoped>
 

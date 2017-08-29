@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1503925429559'); /* IE9*/
-  src: url('iconfont.eot?t=1503925429559#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1503925429559') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1503925429559') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1503925429559#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1503973226491'); /* IE9*/
+  src: url('iconfont.eot?t=1503973226491#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1503973226491') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1503973226491') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1503973226491#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -16,6 +16,8 @@
 }
 
 .icon-favorfill:before { content: "\e64b"; }
+
+.icon-shanchu1:before { content: "\e60d"; }
 
 .icon-back:before { content: "\e697"; }
 

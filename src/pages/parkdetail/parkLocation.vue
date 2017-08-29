@@ -9,12 +9,12 @@
 					</p>
 				</div>
 			</router-link>
-			
-			<a class="baseinfo-intro border-top">
+
+			<router-link to="/waterpark" class="baseinfo-intro border-top">
 				<p class="baseinfo-intro-txt">
 					<span class="iconfont baseinfo-intro-icon">&#xe646;</span>查看景点简介及开放时间<span class="iconfont baseinfo-address-arrow">&#xe626;</span>
 				</p>
-			</a>
+			</router-link>
 		</div>
 		
 		<router-link to="/discussall">
@@ -36,8 +36,7 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
 </template>
 
 <script>

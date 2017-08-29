@@ -8,16 +8,25 @@
 
 <script>
 import IndexHeader from './dz01/header.vue'
-<<<<<<< HEAD
 import ItemProducts from './dz03/index.vue'
-=======
 
->>>>>>> a26bb9163dcb8979702f575bad4f036909c29175
 export default {
   data () {
     return {
-      name: 'list page'
+      hotSearchScen:[],
+      hotSearchArea:[],
+      content:[]
     }
+  },
+  created(){
+       this.$http.get('/static/productItems.json').then(response => {
+        var data=response.body.data;
+        this.hotSearchScen=data.hotSearchScen;
+        this.hotSearchArea=data.hotSearchArea;
+        this.content=data.content;
+      console.log(this.hotSearchScen)
+      }, response => {
+      });
   },
   components:{
     "index-header": IndexHeader,

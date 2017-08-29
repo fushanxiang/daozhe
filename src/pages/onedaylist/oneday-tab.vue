@@ -224,6 +224,7 @@ export default {
 	bottom: 0.75rem;
 	background: #fff;
 	height: 5.3rem;
+	z-index:92;
 }
 .recommend{
 	background: #fff;

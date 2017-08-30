@@ -48,6 +48,7 @@
 <style scoped>
 @import '~swiper/dist/css/swiper.css';
 @import "../../assets/font/iconfont.css";
+
     .swiper-box {
         width: 100%;
         position: fixed;

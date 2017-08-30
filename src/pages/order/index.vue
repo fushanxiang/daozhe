@@ -19,12 +19,14 @@ import TitleComment from './titlecomments.vue'
 import OtherComment from './othercomment.vue'
 import Tab from './components/tab.vue'
 import detailsMap from './detailsMap.vue'
+
 export default {
+
   name: 'index',
   		data(){
   			return{
-          swiperInfo: [],
-          headerTitle: '',
+                swiperInfo: [],
+                headerTitle: '',
   				zoom: 12,
   				center: [116.397003, 39.922501],
   				address:"",
@@ -40,12 +42,12 @@ export default {
   				    }
   				          ],
   				scrollTop: 0,
-          "tabInfo":{},
-                 "tabInfo": {
-                     "index": {
-                         "tabs": [],
-                         "tabOfset": {}
-                     },
+          
+                "tabInfo": {
+                    "index": {
+                        "tabs": [],
+                        "tabOfset": {}
+                    },
                      "tourItinerary": {
                          "map": {},
                          "routesum": [],
@@ -57,31 +59,31 @@ export default {
                          "list": []
                      },
                      "expenseExplanation": {
-                         "title": "",
-                         "content": {
-                             "expense": [{
-                                 "title": "",
-                                 "list": []
-                             }, {
-                                 "title": "",
-                                 "list": []
-                             }],
-                             "last": {
-                                 "title": "",
-                                 "content": ""
-                             }
-                         }
-                     }
-                 },
+                        "title": "",
+                        "content": {
+                            "expense": [{
+                                "title": "",
+                                "list": []
+                            }, {
+                                "title": "",
+                                "list": []
+                            }],
+                            "last": {
+                                "title": "",
+                                "content": ""
+                            }
+                        }
+                    }
+                },
   			}
   		},
-      		mounted() {
-      		    var this_ = this;
-      		    window.addEventListener('scroll', function () {
-      		        this_.scrollTop = document.body.scrollTop;
-      		    }, false);
-      		    this.headerContent = this.headerTitle;
-      		},
+        mounted() {
+            var this_ = this;
+            window.addEventListener('scroll', function () {
+                this_.scrollTop = document.body.scrollTop;
+            }, false);
+             this.headerContent = this.headerTitle;
+        },
       		beforeDestroy: function () {
       		    window.removeEventListener("scroll", function () {
       		        this_.scrollTop = document.body.scrollTop;
@@ -101,41 +103,40 @@ export default {
       			  });
       		},
           components:{
-              "title-comment": TitleComment,
-              "other-comment":OtherComment,
-              "Tab":Tab,
-        	    "detailsMap":detailsMap,
-              "header-image": headerImage,
-              "sight-note": sightNote
+            "title-comment": TitleComment,
+            "other-comment":OtherComment,
+            "Tab":Tab,
+            "detailsMap":detailsMap,
+            "header-image": headerImage,
+            "sight-note": sightNote
+              
           }
+
 }
 </script>
 <style scoped>
-  @import '../../assets/css/base/reset.css';
-  // @import '../../assets/css/common/border.css';
-  @import "../../assets/font/iconfont.css";
-    .top-head{
+
+    @import '../../assets/css/base/reset.css';
+
+    @import "../../assets/font/iconfont.css";
+
+    .top-head {
         width: 100%;
         height: 7.16rem;
         background: pink;
     }
-    .comments{
-      overflow: hidden;
+    .comments {
+       overflow: hidden;
+    }
+    #order {
+        background: #f1f5f6;
+    }
+    .mp-page {
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        left: 0;
+        background: #f5f5f5;
     }
 
-    	#order{
-    		background: #f1f5f6;
-    	}
-    	.mp-page {
-    	    position: absolute;
-    	    left: 0;
-    	    width: 100%;
-    	    min-height: 100%;
-    	    background: #f5f5f5;
-    	}
-
-
-
-</script>
-
-
+</style>

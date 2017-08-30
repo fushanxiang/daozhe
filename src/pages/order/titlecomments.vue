@@ -43,34 +43,28 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 
-    .evaluate{
+    .evaluate {
         width: 100%;
         height: .8rem;
-        background: yellowgreen;
-    
+        background: white;
         line-height: .8rem;
         position: relative;
         margin-top: .2rem;
-        
-    }
-    .evaluate-title{
-
     }
     .evaluate-title-score {
         font-size: .4rem;
         color: #00afc7;
         margin-left: .2rem;
-       
     }
-    .evaluate-title-text{
+    .evaluate-title-text {
         color: #00afc7;
     }
-    .evaluate-title-tagscore{
+    .evaluate-title-tagscore {
         display: inline-block;
         margin-left: .1rem;
         color: #616161;
     }
-    .evaluate-title-totalnum{
+    .evaluate-title-totalnum {
         float: right;
         position: relative;
         top: .25rem;
@@ -81,33 +75,34 @@ export default {
         margin-right: .2rem;
         color: #9e9e9e;
     }
-
-    .comments-border{
+    .comments-border {
         width: 100%;
         height: 1.68rem;
-        background: paleturquoise;
+        border-top:1px dashed grey; 
+        background: white;
     }
-    .comments-item{
+    .comments-item {
        padding: .2rem 
     }
-    .comments-start{
+    .comments-start {
         color: #00bcd4;
         display: inline-block;
         position: relative;
         width: 1.4rem;
         height: .28rem;
     }
-    .comments-date{
+    .comments-date {
         float: right;
         margin-left: .2rem;
         color: #616161;
     }
-    .comments-text{
+    .comments-text {
         line-height: .4rem;
         display: -webkit-box; 
         -webkit-box-orient: vertical; 
         -webkit-line-clamp: 2; 
         overflow: hidden;
         text-overflow: ellipsis;
+         color: #616161;
     }
 </style>

@@ -6,6 +6,7 @@ import ParkDetail from '@/pages/parkdetail/index'
 import Logined from '@/pages/parkdetail/logined'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
+import WaterPark from '@/pages/parkdetail/waterpark'
 import Discussall from '@/pages/parkdetail/discussall'
 import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
@@ -31,21 +32,22 @@ export default new Router({
       path: '/city/:id',
       name: 'city',
       component: City
-    },
-    {
+    },{
       path: '/parkdetail',
       name: 'parkdetail',
       component: ParkDetail
-    },
-     {
+    },{
       path: '/uacheckout',
       name: 'uacheckout',
       component: uaCheckout
-    },
-    {
+    },{
       path: '/discussall',
       name: 'discussall',
       component: Discussall
+    },{
+      path: '/waterpark',
+      name: 'waterpark',
+      component: WaterPark
     },{
     	path: '/logined',
       name: 'logined',

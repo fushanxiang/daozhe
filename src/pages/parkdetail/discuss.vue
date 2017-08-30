@@ -90,6 +90,9 @@ export default {
 	.up {
 		height: 100%;
 	}
+	.discuss-container{
+		position: relative;
+	}
 	.container-title {
 	    padding: 0 .2rem;
 	    height: .88rem;

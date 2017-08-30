@@ -3,10 +3,6 @@
     		<index-header></index-header>
     		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
         <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
-<<<<<<< HEAD
-=======
-        <position-sale></position-sale>
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
         <hot-sale :itemsInfo="itemsInfo"></hot-sale>
         <holiday :holidayInfo="holidayInfo"></holiday>
         <foot></foot>

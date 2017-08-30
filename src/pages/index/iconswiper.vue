@@ -59,10 +59,6 @@ export default {
 			for(var j = 0;j < pages.length;j++){
 				pages[j].key = (new Date()).getTime()
 			}
-<<<<<<< HEAD
-=======
-
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
 			return pages;
     	}
 	},
@@ -119,18 +115,15 @@ export default {
     .position-directon{  
     	float: left;
     	width: 50%;
-<<<<<<< HEAD
     	line-height: .98rem;
     	font-size:.28rem;
     	color:#212121;
     	overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-=======
     	font-size:.28rem;
     	color:#212121;
     	line-height: .98rem;
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
     	text-align: center;
         box-sizing: border-box;
     	background-color: #fff; 
@@ -139,13 +132,8 @@ export default {
     	border-right: 1px solid #e0e0e0;
     }
     .position-left{
-<<<<<<< HEAD
-    	margin-right: .05rem;
-    	font-size: .32rem;
-=======
     	font-size: .32rem;
     	margin-right: .05rem;
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
     	color:#616161;
     }
     .position-right{

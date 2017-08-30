@@ -7,10 +7,6 @@
         <div class="content">
             <div class="content-list" v-for='item in listInfo' :key='item.id' @click="handleClick($event)">
                 <div class="content-img">
-<<<<<<< HEAD
-=======
-                    <img :src="item.img" class="content-list-img">
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
                     <img v-lazy="item.img" class="content-list-img">
                 </div>
                 <p class="content-list-title">

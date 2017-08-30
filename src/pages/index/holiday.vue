@@ -5,10 +5,6 @@
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
 					<div class="product-item-img" >
-<<<<<<< HEAD
-=======
-						<img v-lazy="item.imgUrl">
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
 						<img v-lazy="item.imgUrl" class="img-info">
 					</div>
 					<div class="product-item-text" >
@@ -31,10 +27,7 @@
 		props:["holidayInfo"],
 		data () {
 			return {
-<<<<<<< HEAD
 
-=======
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
 	    	}
 		}
 	}
@@ -72,12 +65,6 @@
 	    height: 0;
 	    padding-bottom: 37.4375%;
 	}
-<<<<<<< HEAD
-=======
-	.product-item-img img{
-	    transition: opacity 400ms;
-	}
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
 	.img-info{
 		vertical-align: bottom;
     	width: 100%;
@@ -111,18 +98,14 @@
 		font-weight: bold;
 	}
 	.price-info{
-		background: #fff;
-<<<<<<< HEAD
 		height: .54rem;
 		line-height: .32rem;
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
-=======
-		line-height: .32rem;
->>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
 		color: #616161;
+		background: #fff;
 		padding:.14rem .1rem; 
 		font-size: .24rem;
 	}

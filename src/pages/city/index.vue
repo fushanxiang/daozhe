@@ -1,33 +1,41 @@
 <template>
     <div>
-        <div>{{$route.params.id}}</div>
-        <div>{{$route.query.name}}</div>
-        <router-link to="/city/shanghai">link</router-link>
-        <button @click="handleClick">跳转</button>
-        <router-view></router-view>
+        <city-header :datas="datas"></city-header>
     </div>
-</template>
+</template> 
 
 <script>
-export default {
-    data () {
-        return {
-            
-        }
-    },
-    methods: {
-        handleClick() {
-            this.$router.go(-1)
-        }
+   import cityHeader from './city_header.vue';
+
+    export default {
+        data () {
+            return {
+                datas: {
+                    chinaCity: [],
+                    abroadCity: [],
+                    hotChinaCity: [],
+                    hotAbroadCity: []
+                }
+            } 
+        },
+        components: {
+          "city-header": cityHeader
+        },
+        created() {
+            this.$http.get('/static/city_select.json').then(response => {
+                var res = response.body;
+                this.datas.chinaCity = res.china;
+                this.datas.abroadCity = res.abroad;
+                this.datas.hotChinaCity = res.hotcity;
+                this.datas.hotAbroadCity = res.hotcityAbroad;
+            }, response => {
+                console.log("ajax error");
+            });
+        },
+
     }
-}
 </script>
 
-
 <style scoped>
-	div {
-		background: red;
-        color: #fff;
-        font-size: 100px;
-	}
+
 </style>

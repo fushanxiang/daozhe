@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="backgroud-color" ref="outer">
         <div class="city-header-area">
             <router-link to="/">
                 <span class="iconfont city-header-goback">&#xe624;</span>
@@ -64,6 +64,8 @@
             },
             handleChina() {
                 this.cityChange = 'china';
+                this.cities = [];
+                this.show = true;
                 this.colorChina = {
                     "color": "#00afc7",
                     "background": "#fff"
@@ -80,6 +82,8 @@
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
+                this.cities = [];
+                this.show = true;
                 this.colorAbroad = {
                     "color": "#00afc7",
                     "background": "#fff"
@@ -108,7 +112,6 @@
                                 allSearchCities.push(item.cityarea);                          
                             }
                         })
-
                 }
                 if(allSearchCities.length === 0) {
                     allSearchCities = ['无搜索匹配城市'];
@@ -128,18 +131,23 @@
                     this.$router.push('/')
                 }else {
                     this.$router.push('')
+                    this.cities = [];
                     this.show = true;
                     this.cities = [];
                 }
-                
-
             }
+        },
+        mounted() {
+            this.$refs.outer.style.height = window.innerHeight * 0.02 - 0.88 + 'rem';
         }
     }
 </script>
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
+    .backgroud-color {
+        background: #f5f5f5;
+    }
     .city-header-area {
         width: 100%;
         line-height: .88rem;

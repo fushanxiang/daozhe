@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="container">
 		<header-fixed></header-fixed>
 		<form class="order-form-outer">
 			<form-header></form-header>
@@ -31,9 +31,9 @@
 </script>
 <style scoped>
 	.order-form-outer {
-		padding-bottom: 100%;
+		height: 100%;
+		box-sizing: border-box;
 		display: block;
 		background: #f1f1f1;
 	}
-	
 </style>

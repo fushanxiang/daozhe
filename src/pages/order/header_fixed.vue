@@ -18,7 +18,7 @@
 
 <style scoped>
 	.top-container {
-		position: relative;
+		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 3;

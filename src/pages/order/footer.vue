@@ -1,22 +1,33 @@
 <template>
-	<div class="footer-content">
-		<div class="footer-left">
-			<span class="price-title">产品价格</span>
-			<em class="price-symbol">
-				&yen;
-				<em class="price-num" >{{totalPrice}}</em>
-				<span class="arrows-icon iconfont">&#59045;</span>
-			</em>
-		</div>
-		<router-link to="#" class="submit-order">提交订单</router-link>
-	</div>
+		<div class="wrapper">
+			<div class="footer-content">
+		
+				<div class="footer-left" @click="handleclick">
+				<span class="price-title">产品价格</span>
+				<em class="price-symbol">
+					&yen;
+					<em class="price-num" >{{totalPrice}}</em>
+					<span class="arrows-icon iconfont" v-if="!show">&#59045;</span>
+					<span class="arrows-icon iconfont" v-if="show">&#xe6a6;</span>
+				</em>
+					</div>
+					<router-link to="#" class="submit-order">提交订单</router-link>
+			</div>
+			<div class="mask" @click="handleclick"v-if="show"></div>
+			<div class="booking-detail"v-if="show">
+				<h2 class="booking-detail-title">温都水城两馆通票（温泉养生馆+H1水空间）</h2>
+				<p class="booking-detail-price">￥127&times;</p>
+			</div>
+		</div>		
+		
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				totalPrice: 127
+				totalPrice: 127,
+				show : false
 			}
 		},
 		mounted() {
@@ -25,12 +36,22 @@
 			})
 		},
 		methods: {
-			
+			handleclick () {
+				this.show = !this.show;
+				console.log(this.show)
+			}
 		}
+
+			
+		
 	}
 </script>
 
 <style scoped>
+	.wrapper {
+		width: 100%;
+		height: 100%;
+	}
 	.footer-content {
 		position: fixed;
 		z-index: 10;
@@ -78,4 +99,39 @@
 		line-height: 1rem;
 		font-size: .36rem;
 	}
+	.mask {
+		position: fixed;
+		top: 0;
+		bottom: 1rem;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0,.5);
+		z-index: 10;
+	}
+	.booking-detail {
+		position: fixed;
+		bottom:1rem;
+		width: 100%;
+		height: 1.3rem;
+		background: #fff;
+		padding: .15rem .2rem;
+		z-index: 11;
+
+	}
+	.booking-detail-title {
+		width: 6rem;
+		height: .88rem;
+		color: #212121;
+	    font-size: .32rem;
+	    line-height: .44rem;
+	    margin-bottom: .04rem;
+
+	}
+	.booking-detail-price {
+		height: .44rem;
+	    line-height: .44rem;
+	    color: #9e9e9e;
+	    font-size: .24rem;
+	}
+	
 </style>

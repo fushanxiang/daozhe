@@ -35,6 +35,7 @@
 
 <style scoped>
 	.order-info-outer {
+		margin-top:1rem;
 		position: relative;
 		overflow: hidden;
 		min-height: 1.1rem;

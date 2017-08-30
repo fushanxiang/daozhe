@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class = "header-box">
 		<header class="header">
 			<a class="header-left iconfont">&#xe600;</a>
 			<div class="header-title">
@@ -25,13 +25,17 @@ export default {
 
     	}
 	}
+
 }
 </script>
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
+	.header-box{
+		overflow: hidden;
+	}
 	.header {
-		position: relative;
+		position: fixed;
 	    overflow: hidden;
 	    width: 100%;
 	    height: .88rem;
@@ -39,6 +43,7 @@ export default {
 	    text-align: center;
 	    color: #fff;
 	    padding-left: .1rem;
+	    z-index: 12;
 	}
 	.header-left {
 		float: left;
@@ -59,6 +64,12 @@ export default {
 	    line-height: .6rem;
 	    border-radius: .06rem;
 	    font-size: .32rem;
+	}
+	.banner-box{
+		position: fixed;
+		top:.88rem;
+		
+
 	}
 	.single-line {
 		    display: inline-block;

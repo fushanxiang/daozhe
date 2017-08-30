@@ -18,13 +18,12 @@
 	 		</div>  
 	 	</div>
 	</div>
+
 	<index-content :tabChoosedIndex="tabChoosedIndex"></index-content>
-	
 </div>
 </template>
 
 <script>
-
 import Content from './content.vue'
 
 export default {
@@ -58,6 +57,7 @@ export default {
 		    this.tabChoosedSight = tab.sight;
 		   //console.log(this.tabChoosedSight)
 		    this.show = false;
+
 		}
 	},
 	components:{
@@ -71,14 +71,17 @@ export default {
 	@import "../../assets/font/iconfont.css";
 	
 	.tab {
+
 		min-width: 1.12rem;
-    	position: absolute;
+    	position: fixed;
 	    left: 0.05rem;
+	    top:4.8rem;
 	    height: 0.6rem;
-	    margin-top: -0.64rem;
+	    margin-top: -0.70rem;
 	    background: #ff7200;
 	    border-radius: 8px;
-		margin-left: .12rem;	
+		margin-left: .12rem;
+		z-index: 1000;	
 	}
     .tab-name {
 	    border: 0 none;
@@ -139,5 +142,5 @@ export default {
 	    font-size: 14px;
 	    line-height: 30px;
 	}
-
+  
 </style>

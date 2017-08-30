@@ -32,20 +32,7 @@ export default {
 				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
-			},
-			"iconsInfo":[{
-				"id":"1",
-				"imgUrl":"http://img1.qunarzz.com/piao/fusion/1707/90/2ab6fd356529aa02.jpg_640x200_5a7251a0.jpg",
-				"link":"/detail",
-				"title":"全部"
-			},
-			{
-				"id":"2",
-				"imgUrl":"http://img1.qunarzz.com/piao/fusion/1707/90/2ab6fd356529aa02.jpg_640x200_5a7251a0.jpg",
-				"link":"/detail",
-				"title":"全部"
 			}
-	    ]
 
     	}
 	},

@@ -3,7 +3,7 @@
 		<li class = 'item' v-for="item in itemsInfo" :key="item.id">
 			<a href="###">
 				<div class = 'item-show'>
-					<img class = "loading" :src="item.imgSrc" alt="">
+					<img class = "loading" v-lazy="item.imgSrc"  alt="">
 					<span class = 'name'>
 						<span class = 'name-inner'>{{item.sightName}}</span>
 					</span>
@@ -28,48 +28,31 @@
 <script>
 export default {
 	created(){
-		this.$http.get('/someUrl').then(response => {
-			this.someData = response.body;
-		},response => {
-			console.log("url输入有误")
-		});
+		this.$http.get('/static/productDetail_palace.json').then(response => {
+				this.someData = response.body;
+				this.itemsInfo = this.someData.data.itemsInfo;	
+				this.handleGetLength();
+			},response => {
+				console.log("url输入有误")
+			});
+
+		
 	},
 	data () {
 		return {
-			itemsInfo:[
-				{
-					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/93/e46fb508820f3d02.jpg_240x220_f4d28630.jpg',
-					sightName:"故宫",
-					itemName:"【大内御讲9:00场】蓝琪儿格格带您穿越故宫（不含故宫门票）",
-					itemIntro:"无与伦比的古代建筑杰作",
-					nowPrice:65,
-					prePrice:88,
-					id:0
-				},
-				{
-					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/93/e46fb508820f3d02.jpg_240x220_f4d28630.jpg',
-					sightName:"故宫",
-					itemName:"【09:00场次】故宫讲解服务（配无线耳麦，不含故宫门票）",
-					itemIntro:"无与伦比的古代建筑杰作",
-					nowPrice:135,
-					prePrice:178,
-					id:1
-				},
-				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_240x220_50b98380.jpg',
-					sightName:"故宫",
-					itemName:"【3探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
-					nowPrice:27,
-					prePrice:39,
-					id:2
-				}
-			]
+			itemsInfo:this.itemsInfoLatter,
+			length:2
     	}
 	},
 	methods:{
+        handleGetLength(){
+        	this.length = this.itemsInfo.length;
+        	this.$emit("getLength",this.length,this.itemsInfo);
+        	//console.log(this.length + "...");   
+        }
 		
-	}
+	},
+	props:["itemsInfoLatter"]
 }
 </script>
 

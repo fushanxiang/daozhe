@@ -28,43 +28,26 @@
 <script>
 export default {
 	created(){
-		console.log("天坛公园");
+		this.$http.get('/static/productDetail_temple.json').then(response => {
+				this.someData = response.body;
+				this.itemsInfo = this.someData.data.itemsInfo;
+				this.handleGetLength();
+			},response => {
+				console.log("url输入有误")
+			});
 	},
 	data () {
 		return {
-			itemsInfo:[
-				{
-					imgSrc:'//img1.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_240x220_2b7af661.jpg',
-					sightName:"天坛公园",
-					itemName:"【1探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪",
-					nowPrice:65,
-					prePrice:88,
-					id:0
-				},
-				{
-					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/96/23d7c59655332002.jpg_240x220_2b087424.jpg',
-					sightName:"天坛公园",
-					itemName:"【2探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
-					nowPrice:99,
-					prePrice:58,
-					id:1
-				},
-				{
-					imgSrc:'//img1.qunarzz.com/piao/fusion/1707/3d/761813b5a9baa302.jpg_240x220_254a7bf3.jpg',
-					sightName:"天坛公园",
-					itemName:"【3探秘天圆地方奥秘】北京天坛人工讲解服务含门票—08:00场",
-					itemIntro:"探寻古代皇帝祭天仪式的奥秘",
-					nowPrice:65,
-					prePrice:188,
-					id:2
-				}
-			]
+			itemsInfo:[]
     	}
 	},
 	methods:{
-		
+		 handleGetLength(){
+        	this.length = this.itemsInfo.length;
+        	this.$emit("getLength",this.length);
+        	console.log(this.length + "...");
+        	
+        }
 	}
 }
 </script>

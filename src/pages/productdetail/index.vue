@@ -1,17 +1,23 @@
 <template>
-	<div>
-    <index-header></index-header>
-    <index-tab></index-tab>
+	<div class = 'b-box'>
+     <index-header></index-header>
+     <index-tab></index-tab>   
   </div>
 </template>
 
+
 <script>
+
 import Header from './header.vue'
 import Tab from './tab.vue'
 
 
+
 export default {
   name: 'hello',
+  created(){
+
+  },
   data () {
     return {
       name: 'list page'
@@ -26,6 +32,10 @@ export default {
 
 <style scoped>
   @import "../../assets/font/iconfont.css";
+  .b-box{
+    height: 100%;
+    background: #FFE6AA;
+  }
   .header {
     position: relative;
       overflow: hidden;
@@ -94,5 +104,5 @@ export default {
       border-right: 0.12rem solid transparent;
       border-top: 0.12rem solid #FFFFFF;
   }
-
+  
 </style>

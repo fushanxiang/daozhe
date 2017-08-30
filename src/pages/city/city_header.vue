@@ -70,7 +70,10 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
                 this.country = true;
+                this.show = true;
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
@@ -82,7 +85,11 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+                
                 this.country = false;
+                this.show = true;
             },
             handleInput(ev) {
                 var e = ev || window.event,
@@ -157,7 +164,7 @@
     .city-china {
         border-radius: 3px 0 0 3px;
         float: left;
-        margin-left: 8%;
+        margin-left: 10%;
         margin-top: .14rem;
         color: #00afc7;
         background: #fff;
@@ -179,8 +186,10 @@
         width: 100%;
         height: .3rem;
         line-height: .3rem;
-        padding: .16rem 0 .16rem .1rem;
+        padding: .16rem 0 .16rem .2rem;
         border-radius: .1rem;
+        border: none;
+        color: #777;
     }
     .search-cities {
         position: absolute;

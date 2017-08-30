@@ -35,6 +35,7 @@ export default {
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
+	    z-index: 999;
 	}
 	.header-left {
 		float: left;

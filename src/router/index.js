@@ -10,7 +10,6 @@ import Order from '@/pages/order/purchaseorder'
 
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
->>>>>>> origin/master
 
 Vue.use(Router)
 

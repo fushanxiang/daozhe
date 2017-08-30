@@ -60,9 +60,9 @@ export default {
 	@import "../../assets/font/iconfont.css";
 	.item {
 		position: relative;
-	    height: 110px;
-	    margin-top: 5px;
-	    padding: 5px;
+	    height: 2.2rem;
+	    margin-top: 0.1rem;
+	    padding: 0.1rem;
 	    background: #fff;
 	    cursor: pointer;
 	}
@@ -74,11 +74,11 @@ export default {
 	.item-show{
 		position: relative;
 	    float: left;
-	    width: 120px;
+	    width: 2.4rem;
 	}
 	.item-show img {
 	    width: 100%;
-	    min-height: 100px;
+	    min-height: 2rem;
 	    background-color: #f0f0f0;
 	    vertical-align: top;
 	    border: 0;
@@ -91,33 +91,33 @@ export default {
 	    left: 0;
 	    bottom: 0;
 	    width: 100%;
-	    padding: 4px 0;
+	    padding: .08rem 0;
 	    background-color: rgba(0,0,0,.5);
 	    color: #fff;
-	    line-height: 16px;
+	    line-height: .32rem;
 	}
 	.item-show .name-inner {
 	    display: block;
-	    padding: 0 5px;
+	    padding: 0 0.1rem;
 	}
 	.item-info {
-	    margin-left: 125px;
+	    margin-left: 2.5rem;
 
 	}
 	.item-name {
-	    padding: 3px 0;
-	    font-size: 16px;
-	    line-height: 20px;
+	    padding: 0.06rem 0;
+	    font-size: 0.32rem;
+	    line-height: 0.4rem;
 	    color: #333;
 	    display: -webkit-box;
 	    overflow: hidden;
 	    text-overflow: ellipsis;
 	    -webkit-line-clamp: 2;
-	    -webkit-box-orient: vertical;
+	    -webkit-box-orient: vertical
 	}
 	.item-intro {
-	    margin-top: 2px;
-	    line-height: 16px;
+	    margin-top: 0.04rem;
+	    line-height: 0.32rem;
 	    color: #666;
 	    overflow: hidden;
 	    width: 100%;
@@ -126,49 +126,49 @@ export default {
 	}
 	.item-do {
 	    position: absolute;
-	    right: 5px;
-	    bottom: 5px;
+	    right: 0.1rem;
+	    bottom: 0.1rem;
 	}
 	.order-btn {
 	    display: inline-block;
 	    overflow: hidden;
-	    width: 40px;
-	    height: 30px;
-	    font-size: 14px;
-	    line-height: 30px;
+	    width: 0.8rem;
+	    height: 0.5rem;
+	    font-size: .28rem;
+	    line-height: .5rem;
 	    text-align: center;
 	    color: #fff;
 	    background-color: #ff433e;
-	    -webkit-border-radius: 3px;
-	    -moz-border-radius: 3px;
-	    border-radius: 3px;
+	    -webkit-border-radius: .06rem;
+	    -moz-border-radius: .06rem;
+	    border-radius: .06rem;
 	}
 	.item-lure {
 	    position: absolute;
-	    bottom: 5px;
-	    line-height: 30px;
+	    bottom: .1rem;
+	    line-height: .6rem;
 	}
 	.item-cost {
-	    font-size: 12px;
-	    margin-right: 5px;
+	    font-size: .24rem;
+	    margin-right: .1rem;
 	    color: #9c9c9c;
 	    text-decoration: line-through;
 	}
 	.item-cost .cost-num {
-	    font-size: 12px;
+	    font-size: .24rem;
 	}
 	.price-num {
-	    font: 14px;
+	    font: .28rem;
 	}
 	.item-price {
 	    color: #ff433e;
 	}
 	
 	.now-price-num {
-	    font-size: 18px;
+	    font-size: .36rem;
 	    color: #ff433e;
 	}
 	.price {
-	    font: 12px;
+	    font: .24rem;
 	}
 </style>

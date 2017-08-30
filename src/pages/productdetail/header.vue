@@ -21,9 +21,7 @@
 <script>
 export default {
 	data () {
-		return {
-
-    	}
+		return {}
 	}
 
 }
@@ -33,6 +31,7 @@ export default {
 	@import "../../assets/font/iconfont.css";
 	.header-box{
 		overflow: hidden;
+
 	}
 	.header {
 		position: fixed;
@@ -68,24 +67,22 @@ export default {
 	.banner-box{
 		position: fixed;
 		top:.88rem;
-		
-
 	}
 	.single-line {
-		    display: inline-block;
-		    overflow: hidden;
-		    position: absolute;
-		    left: .3rem;
-		    top: 0;
-		    width: 3.6rem;
-		    white-space: nowrap;
-		    text-overflow: ellipsis;
-		    color: #e4e7ea;
+	    display: inline-block;
+	    overflow: hidden;
+	    position: absolute;
+	    left: .3rem;
+	    top: 0;
+	    width: 3.6rem;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #e4e7ea;
 	}
 	.icon-search {
-		    position: absolute;
-		    left: .2rem;
-		    color: #e4e7ea;
+	    position: absolute;
+	    left: .2rem;
+	    color: #e4e7ea;
 	}
 	.header-right{
 		position: absolute;
@@ -114,6 +111,13 @@ export default {
 	    border-left: 0.12rem solid transparent;
 	    border-right: 0.12rem solid transparent;
 	    border-top: 0.12rem solid #FFFFFF;
+	}
+	.banner-box{
+		height: 184.56px;
+		width:100%;
+		background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504071760554&di=413ba194d7df15b26cc8784f14d1de3e&imgtype=0&src=http%3A%2F%2Fwww.whtlhq.com%2Fpics%2Fbd16766656.jpg");
+		background-position:  0  0; 
+		background-size: 200px 100px;
 	}
 	.banner {
 	    width: 100%;

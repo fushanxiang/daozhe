@@ -11,8 +11,6 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-<<<<<<< HEAD
 *.project
-=======
-*.project
->>>>>>> origin/master
+
+

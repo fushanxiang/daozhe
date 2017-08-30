@@ -1,7 +1,7 @@
 <template>
     <div>
-        <index-header></index-header>
-        <item-products></item-products>
+        <index-header :dataScen="hotSearchScen" :dataArea="hotSearchArea"></index-header>
+        <item-products :productItems="content"></item-products>
     </div>
 </template>
 
@@ -13,8 +13,19 @@ import ItemProducts from './dz03/index.vue'
 export default {
   data () {
     return {
-      name: 'list page'
+      hotSearchScen:[],
+      hotSearchArea:[],
+      content:[]
     }
+  },
+  created(){
+       this.$http.get('/static/productItems.json').then(response => {
+        var data=response.body.data;
+        this.hotSearchScen=data.hotSearchScen;
+        this.hotSearchArea=data.hotSearchArea;
+        this.content=data.content;
+      }, response => {
+      });
   },
   components:{
     "index-header": IndexHeader,

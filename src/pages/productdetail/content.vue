@@ -1,5 +1,5 @@
 <template>
-<div class="bg"  ref = "ContentBox" >
+<div class="bg"  ref = "box" >
    <iscroll-view  class="scroll-view" 
         @pullUp="pullUp"
         @pullDown="pullDown"  
@@ -9,7 +9,7 @@
         :options="{preventDefault: false}"    
 
     >
-		<div class = "content-box" >
+		
 			<div class = "content">
 				<div class = "tab-list">
 					<div class = "caption">
@@ -19,11 +19,10 @@
 					</div>
 				    <content-palace v-if="showPalace" @getLength = "handleGetLength" >{{getContend}}</content-palace>
 					<content-temple v-if="showTemple" @getLength = "handleGetLength">{{getContend}}</content-temple>
-					<content-summer v-if="showSummer" @getLength = "handleGetLength">{{getContend}}</content-summer>
-					
+					<content-summer v-if="showSummer" @getLength = "handleGetLength">{{getContend}}</content-summer>	
 				</div>	
 			</div>
-		</div>
+		
 	</iscroll-view>
 </div>
 </template>
@@ -90,8 +89,7 @@ export default {
     	handleGetLength(length,getLatterItems){
 	    	//console.log("haha,handleGetLength",+ length);
 	    	this.height = this.perItemHeight * (length+1.6);
-	    	this.$refs.ContentBox.style.height = this.height + "px";
-	    	this.$refs.ContentBox.style.backgroundColor = "pink";
+	    	this.$refs.box.style.height = this.height + "px";
 	    	console.log(getLatterItems + "getLatterItems");
 	    	this.itemsInfo = getLatterItems;
 	    },
@@ -151,9 +149,10 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.bg{
-	
-		background: #FFE6AA;
-		height:1300px;
+		width:100%;
+		position: fixed;
+		top:4.6rem;
+		
 	}
 	.content-box{
 		padding-top: .2rem;
@@ -162,7 +161,7 @@ export default {
     .content{
 		background: #FFE6AA;
 		position: relative;
-	    margin: 0 .5rem;
+	    margin: 0 .2rem;
 	    padding-bottom: .1rem;
     }
     .tab-list{
@@ -176,23 +175,24 @@ export default {
     .inner{
     	background-color: #ff4444;
     	position: absolute;
-	    top: -4px;
+	    top: -0.08rem;
 	    left: 50%;
-	    width: 106px;
-	    height: 24px;
-	    margin-left: -45px;
+	    width: 2.12rem;
+	    height: 0.48rem;
+	    margin-left: -0.9rem;
     }
     .name{
-	    padding: 4px 0;
+	    padding: 0.08rem 0;
 	    color: #fff;
-	    font: 14px/16px;
+	    font: 0.28rem;
 	    text-align: center;
     }
     .scroll-view {
+    	padding-top:0.2rem; 
 	    touch-action: none;
 	    background: #FFE6AA;
 	    position: fixed;
-	    top:34.6%;
+	    top:34.4%;
 	    bottom: 0;
 	    left: 0;
 	    right: 0;

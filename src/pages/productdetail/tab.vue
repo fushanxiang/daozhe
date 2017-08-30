@@ -1,7 +1,6 @@
 <template>
 <div>
 	<div class="tab-box">
-	 	<div class = 'tab-outer'>
 	 		<div class = 'tab'>
 	 			<b class = 'tab-name'  @click="handleToggleClick">{{tabChoosedSight}}</b>
 	 			<span class = 'tab-arrow-sign'></span>
@@ -16,7 +15,6 @@
 	 				</li>
 	 			</ul>
 	 		</div>  
-	 	</div>
 	</div>
 
 	<index-content :tabChoosedIndex="tabChoosedIndex"></index-content>
@@ -75,11 +73,11 @@ export default {
 		min-width: 1.12rem;
     	position: fixed;
 	    left: 0.05rem;
-	    top:4.8rem;
+	    top:37.5%;
 	    height: 0.6rem;
-	    margin-top: -0.70rem;
+	    margin-top: -1rem;
 	    background: #ff7200;
-	    border-radius: 8px;
+	    border-radius: 0.16rem;
 		margin-left: .12rem;
 		z-index: 1000;	
 	}
@@ -94,53 +92,53 @@ export default {
 	    overflow: hidden;
 	    position: absolute;
 	    z-index: 2;
-	    top: 14px;
-	    right: 9px;
+	    top: 0.28rem;
+	    right: 0.18rem;
 	    width: 0;
 	    height: 0;
-	    border-width: 4px 4px 0;
+	    border-width: 0.08rem 0.08rem 0;
 	    border-style: solid;
 	    border-color: #ed3d00 transparent transparent;
     }
     .tab-arrow-circle{
     	position: absolute;
 	    z-index: 1;
-	    top: 50%;
-	    right: 4px;
-	    width: 14px;
-	    height: 14px;
-	    margin-top: -9px;
-	    border: 2px solid #ed3d00;
+	    top: -10%;
+	    right: .08rem;
+	    width: .28rem;
+	    height: .28rem;
+	    margin-top: .18rem;
+	    border: .04rem solid #ed3d00;
 	    background: #fff;
 	    border-radius: 50%;
     }
     .tab-inner {
 	    position: absolute;
-	    top: 31px;
+	    top: .62rem;
 	    left: 0;
-	    width: 300px;
+	    width: 6rem;
 	    z-index: 10;
 	}
     .tab-inner li {
 	    float: left;
-	    width: 99px;
-	    min-height: 30px;
-	    margin: 0 1px 1px 0;
+	    width: 1.98rem;
+	    min-height: .6rem;
+	    margin: 0 .02rem .02rem 0;
 	}
 	.tab-inner .tabSelected {
 	    background-color: #683478;
 	}
 	.item {
 	    overflow: hidden;
-	    height: 30px;
+	    height: .6rem;
 	    background: #ff9900;
 	    white-space: nowrap;
 	    text-overflow: ellipsis;
 	    text-align: center;
 	    display: block;
 	    color: #fff;
-	    font-size: 14px;
-	    line-height: 30px;
+	    font-size: .28rem;
+	    line-height: .6rem;
 	}
   
 </style>

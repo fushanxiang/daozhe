@@ -117,6 +117,7 @@
                     this.$router.push('/')
                 }else {
                     this.$router.push('')
+                    this.show = true;
                 }
                 
             }

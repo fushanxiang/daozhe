@@ -217,4 +217,10 @@
 		width:100%;
 		height: 30rem;
 	}
+	.activity{
+		background: linear-gradient(to bottom,#9003b7,#8e03ba);
+		border-bottom: 1px solid #f062ff;
+		text-align: center;
+		color: #e064ed;
+	}
 </style>

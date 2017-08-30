@@ -17,7 +17,10 @@ export default {
     },
     components:{
         'seckill-banner':SeckillBanner,
+<<<<<<< HEAD
         'toggle':Toggle
+=======
+>>>>>>> 51922e4f9f0ee0e53e76edd014bae6b668cfd337
     }
 }
 </script>

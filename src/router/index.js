@@ -28,15 +28,14 @@ export default new Router({
       name: 'city',
       component: City,
       children: [
-        {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
-          path: 'smallCity',
-          component: SmallCity
+                {
+                    path: 'bigCity',
+                    component: BigCity
+                },{
+                    path: 'smallCity',
+                    component: SmallCity
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 })

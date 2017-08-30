@@ -1,114 +1,67 @@
 <template>
-<div>
-	<swiper :options="swiperOption" >
-	    
-	    <swiper-slide v-for="page in pages">
-	    	<ul class="icon-list">
-	    		<li class="icon-item" v-for="item in page">
-	    			<img class="icon-img" :src="item.imgUrl" />
-	    		</li>
-	    	</ul>
-	    </swiper-slide>
-
-	   
-	    
-	    <div class="swiper-pagination"  slot="pagination"></div>
-	
-	</swiper>
-	 <div @click="handleButton">button</div>
-	 </div>
+	<div>
+		<swiper :options="swiperOption" >	    
+			<swiper-slide v-for="page in pages" :key="1">				
+				<ul class="icon-list">
+					<router-link to="/ticketSale">
+						<li class="icon-item" v-for="item in page" >
+							<img class="icon-img" :src="item.imgUrl" />
+							<p class="icon-itemTitle">{{item.title}}</p>
+						</li>
+					</router-link>
+				</ul>
+			</swiper-slide>	    
+			<div class="swiper-pagination"  slot="pagination"></div>	
+		</swiper>
+		<div @click="handleButton">button</div>
+	</div>
 </template>
 
 <script>
 
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
-export default {
-	data () {
-		return {
-			swiperOption: {
-				direction : 'horizontal',
-				autoHeight: true,
-				pagination : '.swiper-pagination',
-				paginationClickable :true,
-				observeParents:true
-			},
-			iconsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "8",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			},{
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			}]
-    	}
-	},
-	methods: {
-		handleButton: function(){
-			this.iconsInfo.push({
-				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
-				"link": "/detail",
-				"title":"全部"
-			})
-		}
-	},
-	computed: {
-		pages: function() {
-			const pages = [];
-			for (var i = 0; i < this.iconsInfo.length; i++) {
-				let page = Math.floor(i/8);
-				if (!pages[page]) {
-					pages[page] = [];
+	export default {
+		data () {
+			return {
+				swiperOption: {
+					direction : 'horizontal',
+					autoHeight: true,
+					pagination : '.swiper-pagination',
+					paginationClickable :true,
+					observeParents:true
 				}
-				pages[page].push(this.iconsInfo[i])
 			}
-			return pages;
+		},
+		props:["iconsInfo"],
+		methods: {
+			handleButton: function(){
+				this.iconsInfo.push({
+					"id": "9",
+					"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+					"link": "/detail",
+					"title":"全部"
+				})
+			}
+		},
+		computed: {
+			pages: function() {
+				const pages = [];
+				for (var i = 0; i < this.iconsInfo.length; i++) {
+					let page = Math.floor(i/8);
+					if (!pages[page]) {
+						pages[page] = [];
+					}
+					pages[page].push(this.iconsInfo[i])
+				}
+				return pages;
+			}
+		},
+		components:{
+			"swiper": swiper,
+			"swiper-slide": swiperSlide
 		}
-	},
-	components:{
-		"swiper": swiper,
-		"swiper-slide": swiperSlide
 	}
-}
 </script>
 
 <style scoped>
@@ -116,12 +69,24 @@ export default {
 	.icon-list {
 		overflow: hidden;
 		padding-bottom: .6rem;
+		padding-top: .1rem;
+		overflow: hidden;
+		height: 3.7rem;
+		background-color: #fff;
 	}
 	.icon-item {
 		display: block;
 		width: 25%;
 		float: left;
+		text-align: center;
 		padding: .2rem 0;
+		color:#212121;
+	}
+	.icon-item .icon-itemTitle{
+		margin-top: .2rem;
+		color: #212121;
+		font-size: .28rem;
+
 	}
 	.icon-img {
 		display: block;

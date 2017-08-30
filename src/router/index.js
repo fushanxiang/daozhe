@@ -4,6 +4,10 @@ import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 
 import TicketSale from '@/pages/ticketSale/index'
+import Detail from '@/pages/detail/index'
+
+
+
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 
@@ -24,18 +28,11 @@ export default new Router({
     {
       path: '/ticketSale',
       name: 'ticketSale',
-      component: TicketSale,
-      component: City,
-      children: [
-        {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
-          path: 'smallCity',
-          component: SmallCity
-        }
-      ]
-    }
-  ]
+      component: TicketSale
+    },
+    {
+      path: '/detail/:id',
+      name: 'detail',
+      component: Detail
+    }]
 })

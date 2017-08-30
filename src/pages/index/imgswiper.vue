@@ -1,19 +1,11 @@
 <template>
 	<swiper :options="swiperOption" >
-
 		<swiper-slide v-for="item in imgsInfo" :key="item.id">
 			<div class="img-container">
 				<img class="swiper-img" v-bind:src="item.imgUrl" />
 			</div>
 		</swiper-slide>	 
-		<slot></slot>
-
-		<swiper-slide v-for="item in imgsInfo" :key="item.id">
-			<div class="img-container">
-				<img class="swiper-img" :src="item.imgUrl" />
-			</div>
-		</swiper-slide>
-		
+		<slot></slot>		
 		<div class="swiper-pagination"  slot="pagination"></div>
 		
 	</swiper>
@@ -23,33 +15,24 @@
 
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
-	export default {
-		data () {
-			return {
-				swiperOption: {
-					direction : 'horizontal',
-					autoHeight: true,
-					pagination : '.swiper-pagination',
-					paginationClickable :true,
-					observeParents:true
-				},
-				imgsInfo:[
-				{
-					"id":"001",
-					"imgUrl": "http://img1.qunarzz.com/piao/fusion/1708/2a/f848fc9f80eace02.jpg_640x200_a3238bf3.jpg",
-					"link":"/ticketSale"
-				},{
-					"id":"002",
-					"imgUrl": "http://img1.qunarzz.com/piao/fusion/1707/90/2ab6fd356529aa02.jpg_640x200_5a7251a0.jpg",
-					"link":"/ticketSale"
-				}]
+export default {
+	data () {
+		return {
+			swiperOption: {
+				direction : 'horizontal',
+				autoHeight: true,
+				pagination : '.swiper-pagination',
+				paginationClickable :true,
+				observeParents:true
 			}
-		},
-		components:{
-			"swiper": swiper,
-			"swiper-slide": swiperSlide
-		}
+    	}
+	},
+	props:["imgsInfo"],
+	components:{
+		"swiper": swiper,
+		"swiper-slide": swiperSlide
 	}
+}
 </script>
 
 <style scoped>

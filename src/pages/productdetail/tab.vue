@@ -1,20 +1,16 @@
 <template>
 <div>
 	<div class="tab-box">
-	 		<div class = 'tab'>
-	 			<b class = 'tab-name'  @click="handleToggleClick">{{tabChoosedSight}}</b>
-	 			<span class = 'tab-arrow-sign'></span>
-	 			<span class = 'tab-arrow-circle' @click = "handleToggleClick"></span>
-	 			<ul class = 'tab-inner' v-show="show">
-	 				<li 
-	 				    v-for = '(tab,key,index) in tabs' 
-	 				    @click = "addClassFun(index,tab)" 
-	 				    :class = "{item:true,tabSelected: tabChoosedIndex == index}" :tabChoosedSight = "tab.sight"
-	 				>
-	 					{{tab.sight}}
-	 				</li>
-	 			</ul>
-	 		</div>  
+ 		<div class = 'tab'>
+ 			<b class = 'tab-name' @click="handleToggleClick">{{tabChoosedSight}}</b>
+ 			<span class = 'tab-arrow-sign'></span>
+ 			<span class = 'tab-arrow-circle' @click = "handleToggleClick"></span>
+ 			<ul class = 'tab-inner' v-show="show">
+ 				<li  v-for = '(tab,key,index) in tabs' @click = "addClassFun(index,tab)"  :class = "{item:true,tabSelected: tabChoosedIndex == index}" :tabChoosedSight = "tab.sight" >
+ 					{{tab.sight}}
+ 				</li>
+ 			</ul>
+ 		</div>  
 	</div>
 
 	<index-content :tabChoosedIndex="tabChoosedIndex"></index-content>
@@ -27,8 +23,8 @@ import Content from './content.vue'
 export default {
 	data () {
 		return {
-			show:false,
-			tabs:{
+			show: false,
+			tabs: {
 				tab1:{
 					sight:"故宫",
 					id:0
@@ -42,23 +38,21 @@ export default {
 					id:2
 				}
 			},
-			tabChoosedIndex:"0",
-			tabChoosedSight:'故宫'
+			tabChoosedIndex: "0",
+			tabChoosedSight: '故宫'
     	}
 	},
-	methods:{
+	methods: {
 		handleToggleClick(){
 			this.show == true ? this.show = false : this.show = true;
 		},
 		addClassFun(index,tab) {  
 		    this.tabChoosedIndex = index;  
 		    this.tabChoosedSight = tab.sight;
-		   //console.log(this.tabChoosedSight)
 		    this.show = false;
-
 		}
 	},
-	components:{
+	components: {
 		"index-content":Content
 	}
 
@@ -69,17 +63,16 @@ export default {
 	@import "../../assets/font/iconfont.css";
 	
 	.tab {
-
 		min-width: 1.12rem;
     	position: fixed;
-	    left: 0.05rem;
-	    top:37.5%;
-	    height: 0.6rem;
+	    left: .05rem;
+	    top: 37.5%;
+	    height: .6rem;
 	    margin-top: -1rem;
 	    background: #ff7200;
-	    border-radius: 0.16rem;
+	    border-radius: .16rem;
 		margin-left: .12rem;
-		z-index: 1000;	
+		z-index: 200;	
 	}
     .tab-name {
 	    border: 0 none;
@@ -92,15 +85,15 @@ export default {
 	    overflow: hidden;
 	    position: absolute;
 	    z-index: 2;
-	    top: 0.28rem;
-	    right: 0.18rem;
+	    top: .28rem;
+	    right: .18rem;
 	    width: 0;
 	    height: 0;
-	    border-width: 0.08rem 0.08rem 0;
+	    border-width: .08rem .08rem 0;
 	    border-style: solid;
 	    border-color: #ed3d00 transparent transparent;
     }
-    .tab-arrow-circle{
+    .tab-arrow-circle {
     	position: absolute;
 	    z-index: 1;
 	    top: -10%;
@@ -139,6 +132,5 @@ export default {
 	    color: #fff;
 	    font-size: .28rem;
 	    line-height: .6rem;
-	}
-  
+	} 
 </style>

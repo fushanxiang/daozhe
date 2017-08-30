@@ -13,12 +13,14 @@
             </router-link>
             </div>
         </header>
-        <div class="search-near-box"  @click="handleclick" v-show="this.$store.state.searchNear">
+        <div class="search-near-box" v-show="this.$store.state.searchNear">
             <div class="search-history"  v-show="this.searchHistory">
                 <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
                 <div class="search-history-info">
+                <router-link to="/search">
                 <span class="historyarr" v-for="item in this.historyarr" :key="item.id" @click="handlehistory(item.id)">{{item.historysearch}}</span>
-                </div>
+                </router-link>
+                </div> 
             </div>
             <div class="hot-search-box">
             <div class="hot-search-title">
@@ -89,9 +91,6 @@ export default {
             localStorage.removeItem('history');
             this.historyarr=[];
         },
-        handleclick(){
-            this.$store.commit("showNear",true)
-        },
         handleSearchDel(){
             this.inputtext="";
         },
@@ -137,7 +136,8 @@ export default {
             }   
         },
         handlehistory(e){
-            alert(e);
+            alert(e)
+            this.$store.commit("showNear",false)
         },
         handlehotScen(e){
             alert(e);

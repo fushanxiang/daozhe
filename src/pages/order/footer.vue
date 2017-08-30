@@ -4,7 +4,7 @@
 			<span class="price-title">产品价格</span>
 			<em class="price-symbol">
 				&yen;
-				<em class="price-num">127</em>
+				<em class="price-num" >{{totalPrice}}</em>
 				<span class="arrows-icon iconfont">&#59045;</span>
 			</em>
 		</div>
@@ -15,7 +15,17 @@
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+				totalPrice: 127
+			}
+		},
+		mounted() {
+			this.$bus.on('totalPriceChange', (props)=> {
+				this.totalPrice= props;
+			})
+		},
+		methods: {
+			
 		}
 	}
 </script>

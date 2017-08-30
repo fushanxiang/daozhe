@@ -5,13 +5,13 @@
 			<div class="order-time-select">
 				<input type="hidden" id="data" value="2017-8-30" name="data" notfocus='true'>
 				<div class="order-info-datacard">
-					<span class="datacart-item">
-						<em class="datacart-item-name">今天</em>
-						<strong class="datecart-item-date">8月29日</strong>
+					<span class="datacart-item datacart-item-today" :class="selected1 ? 'datacart-item-selected' : ''" @click="handleDateSelect">
+						<em class="datacart-item-name datacart-item-today" :class="selected1 ? 'datacart-item-name-selected' : ''">今天</em>
+						<strong class="datecart-item-date datacart-item-today">8月29日</strong>
 					</span>
-					<span class="datacart-item">
-						<em class="datacart-item-name">明天</em>
-						<strong class="datecart-item-date">8月30日</strong>
+					<span class="datacart-item datacart-item-tomorrow" :class="selected2 ? 'datacart-item-selected' : ''" @click="handleDateSelect">
+						<em class="datacart-item-name datacart-item-tomorrow" :class="selected2 ? 'datacart-item-name-selected' : ''">明天</em>
+						<strong class="datecart-item-date datacart-item-tomorrow">8月30日</strong>
 					</span>
 					<span class="datacart-item">
 						<em class="datacart-item-name">其他日期</em>
@@ -23,19 +23,41 @@
 		<div class="order-info-num">
 			<label class="order-num-title">购买数量</label>
 			<div class="order-num-input">
-				<span class="minus-btn">-</span>
-				<input class="order-num-current" type="text" value="1" />
-				<span class="add-btn">+</span>
+				<span class="minus-btn" v-on:click="handleMinusBtnClick">-</span>
+				<input class="order-num-current" type="text" :value="value" />
+				<span class="add-btn" v-on:click="handleAddBtnClick">+</span>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+
 	export default {
 		data() {
 			return {
-
+				value: 1,
+				selected1: false,
+				selected2: false
+			}
+		},
+		methods: {
+			handleAddBtnClick() {
+				this.value += 1;
+				this.$bus.emit('totalPriceChange', this.value*127)
+			},
+			handleMinusBtnClick() {
+				this.value > 1 ? this.value -= 1 : this.value = 1;
+				this.$bus.emit('totalPriceChange', this.value*127)
+			},
+			handleDateSelect(event) {
+				if(/datacart-item-today$/.test(event.target.className)) {
+					this.selected1 = !this.selected1;
+					this.selected2 = false;
+				}else if(/datacart-item-tomorrow$/.test(event.target.className)) {
+					this.selected2 = !this.selected2;
+					this.selected1 = false;
+				};
 			}
 		}
 	}
@@ -84,6 +106,9 @@
 		font-size: .28rem;
 		line-height: .36rem;
 	}
+	.datacart-item-name-selected {
+		color: #fff;
+	}
 	.datecart-item-date {
 		line-height: .32rem;
 	}
@@ -92,7 +117,11 @@
 		margin-left: 4.6%;
 		font-size: .24rem;
 		color: #888;
+	}.datacart-item-selected {
+		background: #00bcd4;
+		color: #fff;
 	}
+	
 	.datacart-item:first-of-type {
 		margin-left: 0;
 	}

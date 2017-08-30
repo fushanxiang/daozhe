@@ -3,7 +3,7 @@
 		<h3 class="hotsale-title">热销推荐</h3>
 		<ul class="hotsale-list">
 			<li class="hotsale-item border-bottom" v-for="item in itemsInfo" :key="item.id">
-				<img class="item-img" :src="item.imgUrl"/>
+				<img class="item-img" v-lazy='item.imgUrl'/>
 				<p class="item-title">{{item.title}}</p>
 				<p class="item-content">{{item.content}}</p>
 				<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">起</span></p>
@@ -15,6 +15,7 @@
 
 <script>
 export default {
+	props:["itemsInfo"],
 	data () {
 		return {
 			
@@ -29,6 +30,9 @@ export default {
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
+	.hotsale-list{
+		background: #fff;
+	}
 	.hotsale-title {
 		background: #f5f5f5;
 		padding-left: .28rem;
@@ -78,6 +82,7 @@ export default {
 	.item-all {
 		line-height: .86rem;
 		text-align: center;
+		background: #fff;
 		font-size: .28rem;
 		color: #00b7d7;
 	}

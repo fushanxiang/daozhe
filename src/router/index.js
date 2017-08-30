@@ -15,53 +15,53 @@ import SecKill from '@/pages/seckill/index'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: Index
-    },{
-      path: '/weekend',
-      name: 'weekend',
-      component: Weekend
-    },{
-      path:'/seckill',
-      name:'seckill',
-      component:SecKill
-    },{
-      path: '/city/:id',
-      name: 'city',
-      component: City
-    },{
-      path: '/parkdetail',
-      name: 'parkdetail',
-      component: ParkDetail
-    },{
-      path: '/uacheckout',
-      name: 'uacheckout',
-      component: uaCheckout
-    },{
-      path: '/discussall',
-      name: 'discussall',
-      component: Discussall
-    },{
-      path: '/waterpark',
-      name: 'waterpark',
-      component: WaterPark
-    },{
-    	path: '/logined',
-      name: 'logined',
-      component: Logined
-    }],
-     
-    children:[
-      {
-        path: 'bigCity',
-        component: BigCity
-      },
-      {
-        path: 'smallCity',
-        component: SmallCity
-      }
-    ]
+	  routes: [
+		    {
+		      path: '/',
+		      name: 'index',
+		      component: Index
+		    },{
+		      path: '/weekend',
+		      name: 'weekend',
+		      component: Weekend
+		    },{
+		      path:'/seckill',
+		      name:'seckill',
+		      component:SecKill
+		    },{
+		      path: '/city/:id',
+		      name: 'city',
+		      component: City
+		    },{
+		      path: '/parkdetail',
+		      name: 'parkdetail',
+		      component: ParkDetail
+		    },{
+		      path: '/uacheckout',
+		      name: 'uacheckout',
+		      component: uaCheckout
+		    },{
+		      path: '/discussall',
+		      name: 'discussall',
+		      component: Discussall
+		    },{
+		      path: '/waterpark',
+		      name: 'waterpark',
+		      component: WaterPark
+		    },{
+		    	path: '/logined',
+		      name: 'logined',
+		      component: Logined
+		    }],
+		     
+		    children:[
+		      {
+		        path: 'bigCity',
+		        component: BigCity
+		      },
+		      {
+		        path: 'smallCity',
+		        component: SmallCity
+		      }
+		    ]
 })

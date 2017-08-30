@@ -6,13 +6,17 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
 		"city": localStorage.selectedCity || "北京",
-		"searchNear":false
+		"searchNear":true,
+		"searchHistory":true
 	},
 	getters: {
 		"perfectCity": function(state) {
 			return state.city
 		},
 		"searchNear":function(state){
+			return state.searchNear
+		},
+		"searchHistory":function(state){
 			return state.searchNear
 		}
 	},
@@ -22,6 +26,9 @@ export default new Vuex.Store({
 		},
 		showNear:function(state,ifshow){
 			state.searchNear = ifshow;
+		},
+		searchHistory:function(state,ifshow){
+			state.searchHistory = ifshow;
 		}
 	},
 	actions: {

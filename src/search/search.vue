@@ -15,6 +15,7 @@ export default {
     return {
       hotSearchScen:[],
       hotSearchArea:[],
+      historyarr:JSON.parse(localStorage.history)
     }
   },
   created(){

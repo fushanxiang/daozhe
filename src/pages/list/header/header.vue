@@ -4,7 +4,7 @@
             <a class="header-left iconfont" @click="routerBack">&#xe600;</a>
             <span class="header-title">
             <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus" v-model="inputtext" 
-            />
+            @input="handleinput"/>
             <span class="search-del iconfont" @click="handleSearchDel" v-show="this.searchDel">&#xe60d;</span>
             </span>
             <div class="header-right">
@@ -14,7 +14,7 @@
             </div>
         </header>
         <div class="search-near-box" v-show="this.$store.state.searchNear">
-            <div class="search-history"  v-show="this.searchHistory">
+            <div class="search-history"  v-show="this.$store.state.searchHistory">
                 <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
                 <div class="search-history-info">
                 <router-link to="/search">
@@ -38,7 +38,7 @@
                 <div class="hot-search-area">
                     <span class="hot-search-icon hotAreacss iconfont">&#xe607;</span>
                     <ul class="hot-box" v-bind:style="{ top: this.areatop }">
-                    <router-link to="/">
+                    <router-link to="/list">
                     <li class="hot-info area" v-for="item in dataArea" @click="handlehotArea(item.id,item.name)">{{item.name}}</li>
                     </router-link>
                     </ul>
@@ -61,12 +61,18 @@ export default {
         areatop:"",
         inputtext:"",
         historyarr:[],
-        searchHistory:true,
-        searchDel:false,
-        historysearch:""
+        searchDel:false
         }
     },
     props:["dataScen","dataArea"],
+        created(){
+          if (localStorage.history==undefined) {
+                this.$store.commit("searchHistory",false);
+            }else{
+                this.$store.commit("searchHistory",true);
+                this.historyarr=JSON.parse(localStorage.history);
+            } 
+          },
         updated(){
         if (this.inputtext!=="") {
             this.$store.commit("showNear",false)
@@ -84,16 +90,22 @@ export default {
                 this.$store.commit("showNear",true);
             }
             if (localStorage.history==undefined) {
-                this.searchHistory=false;
+                this.$store.commit("searchHistory",false);
             }else{
-                this.searchHistory=true
+                this.$store.commit("searchHistory",true);
                 this.historyarr=JSON.parse(localStorage.history);
             } 
         },
         handledel(){
-            this.searchHistory=false;
+            this.$store.commit("searchHistory",false);
             localStorage.removeItem('history');
             this.historyarr=[];
+        },
+        handleinput(){
+          if (this.inputtext!=="") {
+
+          }
+          console.log(123)
         },
         handleSearchDel(){
             this.inputtext="";

@@ -18,7 +18,7 @@
 				<span class="order-role">起</span>
 				/张
 			</div>
-			<div class="order-info-note">预定须知</div>
+			<div class="order-info-note">预订须知</div>
 		</div>
 	</div>
 </template>

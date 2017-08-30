@@ -39,31 +39,14 @@
 <script>
 	export default {
 	  	data () {
-
 	    	return {
 	    		flag: true
 	   		}
-	     
 		},
 		props: ['goodsInfo', 'comments', 'id'],
-		//created() {
-			//console.log(comments);
-			//console.log(id);
-			//console.log(goodsInfo);
-			//for(var i in comments){
-				//console.log(comments[i].id);
-				//console.log(id);
-		    	/*if(comments[i].id  == id){
-		    		var data = comments[i]
-		    		console.log(data);
-		    		return ;
-		    	}*/
-		    //}
-		//}
 		methods: {
 	        handleClick() {
 	            this.flag = !this.flag;
-	           
 	        }
 	    }
 	}

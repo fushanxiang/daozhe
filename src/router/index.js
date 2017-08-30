@@ -62,7 +62,7 @@ export default new Router({
         name: 'weekendComment',
         component: WeekendComment
     },{
-        path: '/weekend/order/:id',
+        path: '/order/:id',
         name: 'order',
         component: Order
     },{

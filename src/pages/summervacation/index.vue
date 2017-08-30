@@ -1,10 +1,16 @@
 <template>
-	<div @scroll="handleScroll">
+	<div @scroll="handleScroll">       
+    	<common-header></common-header>
+    	<pic-list></pic-list>
+    	<choose-city></choose-city>
         <summerselect></summerselect>
 	</div>
 </template>
 
 <script>
+import CommonHeader from './commonheader'
+import PicList from './piclist'
+import ChooseCity from './choosecity'
 import SummerSelect from './summerselect.vue'
 
 export default {
@@ -21,23 +27,39 @@ export default {
     methods:{
         handleScroll(){
             let scrollTop=document.body.scrollTop,
+                clientHeight=document.body.clientHeight,
+                oSumSelect=document.getElementById("summer-select"),
                 oToggle=document.getElementById("toggle"),
-                offsetTop=oToggle.offsetTop;
-            if(scrollTop>=offsetTop){
-                oToggle.className="toggle-fixed";
-            }else{
-                oToggle.className="toggle";
-            }
+                oSumSelectH=oSumSelect.offsetTop,
+                oToggleH=oToggle.offsetTop;
+                console.log(scrollTop)
+                console.log(clientHeight)
+                console.log(oToggleH)
+                if(scrollTop=oSumSelectH+oToggleH) {
+                    oToggle.className="toggle-fixed";
+                }else{
+                    oToggle.className="toggle";
+                }
+            // if(scrollTop-offsetTop<clientHeight){
+            //     console.log(scrollTop-offsetTop)
+            //     console.log(clientHeight)
+            //     oToggle.className="toggle-fixed";
+            // }else{
+            //     oToggle.className="toggle";
+            // }
         }
+    },
+
+    components:{
+        "summerselect": SummerSelect,
+        "common-header":CommonHeader,
+        "pic-list":PicList,
+        "choose-city":ChooseCity
     },
 
     data () {
         return {
         }  
-    },
-  
-    components:{
-        "summerselect": SummerSelect
     }
 }
 </script>

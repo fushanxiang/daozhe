@@ -8,7 +8,7 @@
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
 				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
-			</span>
+			    </span>
 			</router-link>
 		</div>
 	</header>

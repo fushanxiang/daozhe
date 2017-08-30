@@ -39,6 +39,17 @@
 		padding:.2rem;
 		padding-top:0;
 	}
+	.toggle-fixed{
+		z-index: 10;
+		padding-top:.2rem;
+		padding-bottom:.2rem;
+		padding-right: .2rem;
+		background-color: #23a4e5;
+		box-shadow: 0 0 0.2rem #000;
+		padding:.2rem;
+		position: fixed;
+		top:0;
+	}
 	.toggle-list{
 	   float: left;
        background: #0b68e6;
@@ -67,15 +78,5 @@
 		font-size: .26rem;
 	    line-height: .44rem;
 	}
-	.toggle-fixed{
-		z-index: 999;
-		padding-bottom:.2rem;
-		padding-right: .2rem;
-		background-color: #23a4e5;
-		box-shadow: 0 0 0.2rem #000;
-		padding:.2rem;
-		padding-top:0;
-		position: fixed;
-		top:0;
-	}
+
 </style>

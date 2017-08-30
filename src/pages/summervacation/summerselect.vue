@@ -1,5 +1,5 @@
 <template>
-	<div class="summer-select">    
+	<div class="summer-select" id="summer-select">    
 		<div class="sumselect-play">
 			<img src="//s.qunarzz.com/piao_topic/image/touch/custom/2016/1772travel10/170710/caption2.jpg">
 		</div>

@@ -1,113 +1,91 @@
 <template>
 <div class="bg"  ref = "box" >
-   <iscroll-view  class="scroll-view" 
-        @pullUp="pullUp"
-        @pullDown="pullDown"  
-        @scrollStart="log" 
-        ref="iscroll" 
-        :scrollerStyle="{color: 'red'}"
-        :options="{preventDefault: false}"    
-
-    >
-		
+   <iscroll-view  class = "scroll-view" @pullUp = "pullUp" @pullDown = "pullDown" @scrollStart = "log" ref="iscroll":scrollerStyle = "{color: 'red'}"  :options = "{preventDefault: false}" >
 			<div class = "content">
 				<div class = "tab-list">
 					<div class = "caption">
 						<div class = 'inner'>
-							<h2 class = 'name'>热销区</h2>
+							<h2 class = 'hot-sale-area'>热销区</h2>
 						</div>
 					</div>
-				    <content-palace v-if="showPalace" @getLength = "handleGetLength" >{{getContend}}</content-palace>
-					<content-temple v-if="showTemple" @getLength = "handleGetLength">{{getContend}}</content-temple>
-					<content-summer v-if="showSummer" @getLength = "handleGetLength">{{getContend}}</content-summer>	
+				    <content-imperial v-if = "showImperial" @getLength = "handleGetLength" >{{getContend}}</content-imperial>
+					<content-temple v-if ="showTemple" @getLength = "handleGetLength">{{getContend}}</content-temple>
+					<content-summer v-if = "showSummer" @getLength = "handleGetLength">{{getContend}}</content-summer>	
 				</div>	
 			</div>
-		
 	</iscroll-view>
 </div>
 </template>
 
+
 <script>
 
-import ContentPalace from './content_palace.vue'
+import ContentImperial from './content_imperial.vue'
 import ContentTemple from './content_temple.vue'
 import ContentSummer from './content_summer.vue'
 
-
 import Vue from 'vue'
-import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
-Vue.use(IScrollView, IScroll);
-
+import IScrollView from 'vue-iscroll-view'
 import Alert from 'vue-alert-component'
-Vue.use(Alert)
 
-
+Vue.use(Alert);
+Vue.use(IScrollView, IScroll);
 
 
 export default {
-    mounted () {
-	    const $scroller = this.$refs.iscroll.$refs.scroller
+    mounted() {
+	    const $scroller = this.$refs.iscroll.$refs.scroller;
     },
-	data () {
+	data() {
 		return {
-			showPalace:true,
-			showTemple:false,
-			showSummer:false,
-			contentHeight:"11",
-			perItemHeight:110,
-			scroll:{}
-			
+			showImperial: true,
+			showTemple: false,
+			showSummer: false,
+			perItemHeight: 110,
+			scroll: {}
     	}
 	},
-	props:["tabChoosedIndex"],
-	components:{
-    	"content-palace": ContentPalace,
+	props: ["tabChoosedIndex"],
+	components: {
+    	"content-imperial": ContentImperial,
     	"content-temple": ContentTemple,
     	"content-summer": ContentSummer
-   
     },
-    computed:{
+    computed: {
     	getContend:function(){
-    		this.showPalace = false;
+    		this.showImperial = false;
 			this.showTemple = false;
 			this.showSummer = false;
     		if(this.tabChoosedIndex == 0){
     			this.showTemple = this.showTemple = false;
-    			this.showPalace = true;
+    			this.showImperial = true;
     		}else if(this.tabChoosedIndex == 1){
     			this.showTemple = true;
     		}else if(this.tabChoosedIndex == 2){
     			this.showSummer = true;
     		}
-
     	}
-
     },
     methods: {
-    	handleGetLength(length,getLatterItems){
-	    	this.height = this.perItemHeight * (length+1.6);
+    	handleGetLength(length,getLatterItems) {
+	    	this.height = this.perItemHeight * (length + 1.6);
 	    	this.$refs.box.style.height = this.height + "px";
 	    	this.itemsInfo = getLatterItems;
 	    },
-	    log (iscroll) {   
+	    log(iscroll) {   
 	        this.scroll = iscroll;
 	    },
-		handleScroll:function(){
-	        console.log("滚")
+		handleScroll() {
+	        console.log("滚");
 	    },
-	    load (iscroll) {
-     	    console.log("aaa");
-	    },
-	    scrollToTop () {
+	    scrollToTop() {
 		    const iscroll = this.$refs.iscroll;
-		    iscroll.scrollTo(0, 0, 100)
+		    iscroll.scrollTo(0, 0, 100);
 		    iscroll.refresh();
 	    },
-	    pullDown () {
-	     	
-	    },
-	    pullUp(){
+	    pullDown() {},
+	    pullUp() {
 	    	var this_ = this;
 	    	if(this.tabChoosedIndex == 0){
     			this.$http.get('/static/productDetail_palace.json').then(response => {
@@ -119,24 +97,20 @@ export default {
 					setTimeout(()=>{
 						this.scroll.refresh();
 					},1000)
-					
 				},response => {
 					console.log("url输入有误")
 				});
 
-    		}else if(this.tabChoosedIndex == 1){
+    		}else if(this.tabChoosedIndex == 1) {
     			this.$alert("没有新内容了！去看看其他地方吧").then(function(){
 					this_.scrollToTop();
-				})
-    			
-    		}else if(this.tabChoosedIndex == 2){
+				})	
+    		}else if(this.tabChoosedIndex == 2) {
     			this.$alert("没有新内容了！去看看其他地方吧").then(function(){
 					this_.scrollToTop();
 				})
     		}
-
-	    }
-	   
+	    }   
 	}
 }
 </script>
@@ -144,10 +118,9 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.bg{
-		width:100%;
+		width: 100%;
 		position: fixed;
 		top:4.6rem;
-		
 	}
 	.content-box{
 		padding-top: .2rem;
@@ -173,7 +146,7 @@ export default {
 	    height: 0.48rem;
 	    margin-left: -0.9rem;
     }
-    .name{
+    .hot-sale-area{
 	    padding: 0.08rem 0;
 	    color: #fff;
 	    font: 0.28rem;

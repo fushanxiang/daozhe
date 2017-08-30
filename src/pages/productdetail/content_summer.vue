@@ -4,7 +4,7 @@
 			<a href="###">
 				<div class = 'item-show'>
 					<img class = "loading" :src="item.imgSrc" alt="">
-					<span class = 'name'>
+					<span class = 'item-name'>
 						<span class = 'name-inner'>{{item.sightName}}</span>
 					</span>
 				</div>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-	created(){
+	created() {
 		this.$http.get('/static/productDetail_summer.json').then(response => {
 				this.someData = response.body;
 				this.itemsInfo = this.someData.data.itemsInfo;
@@ -36,12 +36,12 @@ export default {
 				console.log("url输入有误")
 			});
 	},
-	data () {
+	data() {
 		return {
-			itemsInfo:[]
+			itemsInfo: []
     	}
 	},
-	methods:{
+	methods: {
         handleGetLength(){
         	this.length = this.itemsInfo.length;
         	this.$emit("getLength",this.length); 	
@@ -52,16 +52,15 @@ export default {
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
-@import "../../assets/font/iconfont.css";
 	.item {
 		position: relative;
 	    height: 2.2rem;
-	    margin-top: 0.1rem;
-	    padding: 0.1rem;
+	    margin-top: .1rem;
+	    padding: .1rem;
 	    background: #fff;
 	    cursor: pointer;
 	}
-	.item a {
+	.item .item-link {
 	    display: block;
 	    text-decoration: none;
    		color: #25a4bb;
@@ -71,7 +70,7 @@ export default {
 	    float: left;
 	    width: 2.4rem;
 	}
-	.item-show img {
+	.item-show .loading {
 	    width: 100%;
 	    min-height: 2rem;
 	    background-color: #f0f0f0;
@@ -81,7 +80,7 @@ export default {
 	.loading {
 	    background: #dcdcdc url(//simg4.qunarzz.com/piao/images/camel_56_56.jpg) center no-repeat;
 	}
-	.item-show .name {
+	.item-show .item-name {
 	    position: absolute;
 	    left: 0;
 	    bottom: 0;
@@ -97,7 +96,6 @@ export default {
 	}
 	.item-info {
 	    margin-left: 2.5rem;
-
 	}
 	.item-name {
 	    padding: 0.06rem 0;
@@ -127,8 +125,8 @@ export default {
 	.order-btn {
 	    display: inline-block;
 	    overflow: hidden;
-	    width: 0.8rem;
-	    height: 0.5rem;
+	    width: .8rem;
+	    height: .5rem;
 	    font-size: .28rem;
 	    line-height: .5rem;
 	    text-align: center;
@@ -158,7 +156,6 @@ export default {
 	.item-price {
 	    color: #ff433e;
 	}
-	
 	.now-price-num {
 	    font-size: .36rem;
 	    color: #ff433e;

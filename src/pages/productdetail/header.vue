@@ -31,7 +31,6 @@ export default {
 	@import "../../assets/font/iconfont.css";
 	.header-box{
 		overflow: hidden;
-
 	}
 	.header {
 		position: fixed;
@@ -115,9 +114,9 @@ export default {
 	.banner-box{
 		height: 184.56px;
 		width:100%;
-		background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504071760554&di=413ba194d7df15b26cc8784f14d1de3e&imgtype=0&src=http%3A%2F%2Fwww.whtlhq.com%2Fpics%2Fbd16766656.jpg");
-		background-position:  0  0; 
-		background-size: 200px 100px;
+		background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504089486357&di=67d242ade647c3a538f3ce2349419ffa&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0137875543a8770000019ae99c3a31.jpg");
+		background-position:center; 
+		background-size: cover;
 	}
 	.banner {
 	    width: 100%;

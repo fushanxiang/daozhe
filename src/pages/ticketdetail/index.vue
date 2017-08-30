@@ -1,19 +1,17 @@
 <template>
-	  <recommend></recommend>
+		<commentaries></commentaries>
 </template>
 
 <script>
-    import Recommend from './recommend.vue'
+import Commentaries from './commentaries.vue'
 
-
-export default {
-  data () {
-    return {
-    }
-  },  
-  components:{
-  	"recommend": Recommend
-  }
+		export default {
+				data() {
+				return {}
+		},
+		components: {
+				"commentaries": Commentaries
+		}
 }
 </script>
 <style scoped>

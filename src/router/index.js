@@ -9,6 +9,7 @@ import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 import WaterPark from '@/pages/parkdetail/waterpark'
 import Discussall from '@/pages/parkdetail/discussall'
+import Commentariesall from '@/pages/ticketdetail/commentariesall'
 import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
@@ -49,6 +50,10 @@ export default new Router({
 		      path: '/discussall',
 		      name: 'discussall',
 		      component: Discussall
+		    },{
+		      path: '/commentariesall',
+		      name: 'commentariesall',
+		      component: Commentariesall
 		    },{
 		      path: '/waterpark',
 		      name: 'waterpark',

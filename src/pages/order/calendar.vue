@@ -221,7 +221,7 @@
   }
   #calendar{
   	width: 100%;
-  	height: 
+    margin-top:2rem; 
   	
 
   }

@@ -16,20 +16,15 @@
       <tell-calendar></tell-calendar>
   </div>
 	</div>
-    
 </template>
-
 <script>
 import Calendar from "./calendar.vue"
-
-
 export default {
   name: 'index',
   data () {
     return {
       isActive:false
     }
-     
   },
   methods:{
     handleClick(){
@@ -49,13 +44,11 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 
  .mpw-dock-fadein {
     transform: translateY(0);
 }
-
 .a{display: block;}
 .b{display: none;}  
 .mpw-dock {
@@ -82,9 +75,7 @@ export default {
 h1, h2, h3, h4, h5, h6, b, strong {
     font-weight: normal;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: tahoma,arial,"Hiragino Sans GB","\5FAE\8F6F\96C5\9ED1",simsun,sans-serif;
-}
+
 .mpg-ellipsis {
     overflow: hidden;
     width: 100%;
@@ -92,46 +83,11 @@ h1, h2, h3, h4, h5, h6 {
     text-overflow: ellipsis;
 }
 
-body, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, figure, form, fieldset, legend, input, textarea, button, p, blockquote, th, td, pre, xmp {
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-.mp-booking-title {
-    margin-right: .6rem;
-    padding: .3rem 0 .1rem 0;
-    font-size: .34rem;
-    line-height: .4rem;
-}
-
-h1, h2, h3, h4, h5, h6, b, strong {
-    font-weight: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: tahoma,arial,"Hiragino Sans GB","\5FAE\8F6F\96C5\9ED1",simsun,sans-serif;
-}
-
 .mp-booking-price {
     color: #9e9e9e;
     font-size: .24rem;
     line-height: .48rem;
 }
-
-body, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, figure, form, fieldset, legend, input, textarea, button, p, blockquote, th, td, pre, xmp {
-    margin: 0;
-    padding: 0;
-
-}
-
 p {
     display: block;
     -webkit-margin-before: 1em;
@@ -139,30 +95,16 @@ p {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
-
 .mp-booking-price .mpg-price {
     color: #ff8300;
     margin-right: .06rem;
-}
-
-.mp-booking-price {
-    color: #9e9e9e;
-    font-size: .24rem;
-    line-height: .48rem;
 }
 .mp-prdcard-gray, .mp-prdcard-supplier {
     color: #9e9e9e;
     font-size: .24rem;
 }
-
 .mp-prdcard-marketprice {
     text-decoration: line-through;
-}
-
-.mp-booking-price {
-    color: #9e9e9e;
-    font-size: .24rem;
-    line-height: .48rem;
 }
 element.style {
     height: 417.6px;
@@ -191,12 +133,10 @@ element.style {
     float: left;
     width: 22.5%;
     height: .86rem;
-    
     overflow: hidden;
 }
 
 .mpf-datecard-disabled {
-    
     background: #fff;
 }
 
@@ -205,16 +145,10 @@ element.style {
     min-width: 1.2rem;
     min-height: .82rem;
     border: .02rem solid #bdbdbd;
-
     text-align: center;
-    
-    
     border-radius: .1rem;
 }
 
-h1, h2, h3, h4, h5, h6, b, strong {
-    font-weight: normal;
-}
 .mp-booking-textcard {
     margin-top: -.15rem;
 }
@@ -231,49 +165,25 @@ h1, h2, h3, h4, h5, h6, b, strong {
     float: left;
     margin-right: .2rem;
     margin-top: .15rem;
-    
     padding: 0 .2rem;
     line-height: .53rem;
-    
     font-size: .28rem;
-   
     border-radius: .1rem;
 }
 .mp-booking-select {
     margin: 0 .2rem;
     padding-bottom: .3rem;
 }
+.mpf-datecard-name, .mpf-datecard-detail {
+    display: block;
+    width: 100%;
+}
 .mpf-datecard-name {
     padding-top: .08rem;
     color: #212121;
     font-size: .28rem;
     line-height: .36rem;
 }
-
-.mpf-datecard-name, .mpf-datecard-detail {
-    display: block;
-    width: 100%;
-}
-
-address, cite, dfn, em, i, optgroup, var {
-    font-style: normal;
-}
-
-
-
-
-.mpf-datecard-name {
-    padding-top: .08rem;
-    color: #212121;
-    font-size: .28rem;
-    line-height: .36rem;
-}
-
-.mpf-datecard-name, .mpf-datecard-detail {
-    display: block;
-    width: 100%;
-}
-
 address, cite, dfn, em, i, optgroup, var {
     font-style: normal;
 }
@@ -290,8 +200,6 @@ address, cite, dfn, em, i, optgroup, var {
 }
 
 .mp-booking-datecard .mpf-datecard {
-   
-  
     box-sizing: border-box;
     float: left;
     width: 22.5%;
@@ -312,7 +220,6 @@ address, cite, dfn, em, i, optgroup, var {
     border-radius: .1rem;
 }
 .mp-booking-datecard .mpf-datecard {
-   
     box-sizing: border-box;
     float: left;
     width: 22.5%;
@@ -321,16 +228,6 @@ address, cite, dfn, em, i, optgroup, var {
     overflow: hidden;
 }
 
-.mpf-datecard {
-    display: inline-block;
-    min-width: 1.2rem;
-    min-height: .82rem;
-    border: .02rem solid #bdbdbd;
-    background: #fff;
-    text-align: center;
-   
-    border-radius: .1rem;
-}
 .mpf-datecard-wait .mpf-datecard-name {
     line-height: .6rem;
 }
@@ -372,9 +269,7 @@ address, cite, dfn, em, i, optgroup, var {
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-
     -webkit-font-smoothing: antialiased;
-
 }
 .mp-booking-price{
   margin-top:-0.35rem;
@@ -382,11 +277,7 @@ address, cite, dfn, em, i, optgroup, var {
 .mp-booking-calendar{
   margin-top:-0.2rem;
 }
-.mp-booking-btn{
-  width: 375px;
-  height: 50px;
-  background: red;
-}
+
 .mp-booking-textcard{
   margin-top:-0.1rem;
 }
@@ -394,6 +285,8 @@ address, cite, dfn, em, i, optgroup, var {
   margin-top:-0.1rem;
 }
 .mp-booking-btn{
+  width: 375px;
+  height: 50px;
   margin-top:-0.5rem;
   background:#ff9800;
 }
@@ -404,7 +297,6 @@ address, cite, dfn, em, i, optgroup, var {
   position: fixed;
   bottom: 0;
   right: 0;
-
  }
  .mp-booking-btn a{
   color: #fff;

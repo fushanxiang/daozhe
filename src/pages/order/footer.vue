@@ -16,9 +16,9 @@
 			<div class="mask" @click="handleclick"v-if="show"></div>
 			<div class="booking-detail"v-if="show">
 				<h2 class="booking-detail-title">温都水城两馆通票（温泉养生馆+H1水空间）</h2>
-				<p class="booking-detail-price">￥127&times;</p>
+				<p class="booking-detail-price">&yen;{{goodsInfo.sellPrice}}&times;{{num}}</p>
 			</div>
-		</div>		
+		</div>
 		
 </template>
 
@@ -26,19 +26,21 @@
 	export default {
 		data() {
 			return {
-				totalPrice: 127,
+				totalPrice: this.goodsInfo.sellPrice,
+				num:1,
 				show : false
 			}
 		},
+		props:['goodsInfo'],
 		mounted() {
 			this.$bus.on('totalPriceChange', (props)=> {
-				this.totalPrice= props;
+				this.totalPrice = props*this.goodsInfo.sellPrice;
+				this.num = props;
 			})
 		},
 		methods: {
 			handleclick () {
 				this.show = !this.show;
-				console.log(this.show)
 			}
 		}
 

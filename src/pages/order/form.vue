@@ -1,11 +1,11 @@
 <template>
 	<div class="container">
-		<header-fixed></header-fixed>
+		<header-fixed :goodsInfo='goodsInfo'></header-fixed>
 		<form class="order-form-outer">
-			<form-header></form-header>
-			<time-and-number></time-and-number>
+			<form-header :goodsInfo='goodsInfo'></form-header>
+			<time-and-number :goodsInfo='goodsInfo'></time-and-number>
 		</form>
-		<footer-content></footer-content>
+		<footer-content :goodsInfo='goodsInfo'></footer-content>
 	</div>
 </template>
 
@@ -18,7 +18,7 @@
 	export default {
 		data() {
 			return {
-
+				goodsInfo:[]
 			}
 		},
 		components: {
@@ -26,6 +26,14 @@
 			'form-header': Header,
 			'time-and-number': TimeAndNumber,
 			'footer-content': Footer
+		},
+		created() {
+			this.$http.get('/static/weekend.json').then(response => {
+				var data = response.body.data;
+				this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
+			}, response => {
+				console.log("ajax error");
+	  		});
 		}
 	}
 </script>

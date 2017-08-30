@@ -3,7 +3,7 @@
         <header class="header">
             <a class="header-left iconfont">&#xe600;</a>
             <span class="header-title">
-            <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus" @blur="handleblur" v-model="inputtext"/>
+            <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus"v-model="inputtext"/>
             <span class="search-del iconfont" @click="handleSearchDel" v-show="this.searchDel">&#xe60d;</span>
             </span>
             <div class="header-right">
@@ -87,9 +87,6 @@ export default {
             this.searchHistory=false;
             localStorage.removeItem('history');
             this.historyarr=[];
-        },
-        handleblur(){
-            this.searchNear=false;
         },
         handleclick(){
             this.searchNear=true;;

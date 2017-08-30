@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import ParkDetail from '@/pages/parkdetail/index'
+import Ticketdetail from '@/pages/ticketdetail/index'
 import Logined from '@/pages/parkdetail/logined'
 import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
@@ -36,6 +37,10 @@ export default new Router({
 		      path: '/parkdetail',
 		      name: 'parkdetail',
 		      component: ParkDetail
+		    },{
+		      path: '/ticketdetail',
+		      name: 'ticketdetail',
+		      component: Ticketdetail
 		    },{
 		      path: '/uacheckout',
 		      name: 'uacheckout',

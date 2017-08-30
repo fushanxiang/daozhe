@@ -6,7 +6,7 @@ import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
-
+import SummerVacation from'@/pages/summervacation/index'
 Vue.use(Router)
 
 export default new Router({
@@ -23,6 +23,10 @@ export default new Router({
       path:'/seckill',
       name:'seckill',
       component:SecKill
+    },{
+      path:'/summervacation',
+      name:'summervacation',
+      component:SummerVacation
     },{
       path: '/city/:id',
       name: 'city',

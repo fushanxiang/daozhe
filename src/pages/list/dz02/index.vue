@@ -10,7 +10,7 @@
                 </div>
             </div> 
             <div class="mask" ref="mask" @click="clickmask"></div>
-            <div class="menu" ref="menu" >
+            <div class="menu" ref="menu">
                 <div class="sort checked" >推荐排序</div>
                 <div class="sort" >离我最近</div>
                 <div class="sort" >人气最高</div>

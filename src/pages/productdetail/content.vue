@@ -75,7 +75,6 @@ export default {
     		if(this.tabChoosedIndex == 0){
     			this.showTemple = this.showTemple = false;
     			this.showPalace = true;
-    			//console.log(this.contentHeight)
     		}else if(this.tabChoosedIndex == 1){
     			this.showTemple = true;
     		}else if(this.tabChoosedIndex == 2){
@@ -87,29 +86,26 @@ export default {
     },
     methods: {
     	handleGetLength(length,getLatterItems){
-	    	//console.log("haha,handleGetLength",+ length);
 	    	this.height = this.perItemHeight * (length+1.6);
 	    	this.$refs.box.style.height = this.height + "px";
-	    	console.log(getLatterItems + "getLatterItems");
 	    	this.itemsInfo = getLatterItems;
 	    },
-	    log (iscroll) {
-	        console.log("iscroll")
+	    log (iscroll) {   
 	        this.scroll = iscroll;
 	    },
 		handleScroll:function(){
-	      console.log("滚")
+	        console.log("滚")
 	    },
 	    load (iscroll) {
-     	   console.log("aaa");
+     	    console.log("aaa");
 	    },
 	    scrollToTop () {
-	      const iscroll = this.$refs.iscroll;
-	      iscroll.scrollTo(0, 0, 100)
-	      iscroll.refresh()
+		    const iscroll = this.$refs.iscroll;
+		    iscroll.scrollTo(0, 0, 100)
+		    iscroll.refresh();
 	    },
 	    pullDown () {
-	     	 //console.log('Pull down.')
+	     	
 	    },
 	    pullUp(){
 	    	var this_ = this;
@@ -139,7 +135,6 @@ export default {
 				})
     		}
 
-    		console.log("pop_up")
 	    }
 	   
 	}
@@ -163,9 +158,6 @@ export default {
 		position: relative;
 	    margin: 0 .2rem;
 	    padding-bottom: .1rem;
-    }
-    .tab-list{
-    	
     }
     .tab-list .caption{
     	background: #fdae08;
@@ -199,6 +191,6 @@ export default {
 	    overflow: hidden;
 	}
    .scroller {
-	  background: blue
+	    background: blue;
 	}
 </style>

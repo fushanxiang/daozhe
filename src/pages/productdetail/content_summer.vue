@@ -44,9 +44,7 @@ export default {
 	methods:{
         handleGetLength(){
         	this.length = this.itemsInfo.length;
-        	this.$emit("getLength",this.length);
-        	console.log(this.length + "...");
-        	
+        	this.$emit("getLength",this.length); 	
         }
 	}
 }

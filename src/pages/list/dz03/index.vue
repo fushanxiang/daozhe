@@ -5,7 +5,9 @@
                 <div class="item-content">
                     <div class="sight-info">
                         <div class="sight-imgcon">
-                            <img class="sight-img" :src="item.imgSrc" >                
+                            <router-link to="/productdetail">
+                                <img class="sight-img" v-lazy="item.imgSrc" >
+                            </router-link>                
                         </div>
                         <div class="sight-detail">
                             <p class="item-float-p">
@@ -20,17 +22,14 @@
                             <div class="sight-location"><span class="sight-address">{{item.location}}</span></div>
                         </div>
                     </div>
-
                     <div class="sight-ticket-item border-top">
                         <h4 class="ticket-name">{{item.tourGuide}}</h4>
                         <span class="ticket-qunarprice">¥<em>{{item.tourPrice}}</em></span>
-                    </div>
-                    
+                    </div>                    
                     <div class="sight-ticket-item border-top">
                         <h4 class="ticket-name">{{item.navigation}}</h4>
                         <span class="ticket-qunarprice">¥<em>{{item.navigationPrice}}</em></span>
                     </div>
-
                 </div>
                 <div class="item-more-ticket ">查看全部{{item.moreProduct}}个产品<span class="more-ticketicon">&gt;</span>
                 </div> 
@@ -38,9 +37,9 @@
         </ul>
         <div class="moreinfo">
             <div class="pagination">
-                <a href="javascript:;" class="" @click="handPageUp">上一页</a>
+                <a href="javascript:;" v-bind:class="{pageup:isActiveUp}" @click="handPageUp">上一页</a>
                 <span class="page-num">{{index+1}}</span>
-                <a href="javascript:;" class="" @click="handPageDown">下一页</a>
+                <a href="javascript:;" v-bind:class="{pagedown:isActiveDown}" @click="handPageDown">下一页</a>
             </div>
             <div class="mp-page-text">去哪儿门票</div>
         </div>
@@ -52,14 +51,28 @@
         data () {
             return {
                 index: 0,
+                isActiveUp: false,
+                isActiveDown: false
             }
         },
         props: ["productItems"],
-        methods: {
+        updated() {
+            if(this.index <= 0) {
+                this.isActiveUp = true
+            }else{
+                this.isActiveUp = false
+            }
+            if(this.index >= this.pages.length - 1) {
+                this.isActiveDown = true
+            }else{
+                this.isActiveDown = false
+            }
+        },
+        methods: {           
             handPageUp() {
                 this.index--;
                 if(this.index <= 0) {
-                    this.index = 0
+                    this.index = 0;
                 }
                 window.scrollTo(0,0)
             },
@@ -70,7 +83,6 @@
                 }
                 window.scrollTo(0,0)
             }
-            
         },
         computed: {
             pages() {
@@ -88,7 +100,6 @@
     }
 </script>
 
-
 <style scoped>
 @import "../../../assets/font/iconfont.css";
 @import '../../../assets/css/common/border.css';
@@ -105,6 +116,12 @@
     color: #00afc7;
     line-height: .6rem;
     border-radius: .06rem;
+}
+.pagination .pageup{
+    background: #ccc;
+}
+.pagination .pagedown{
+    background: #ccc;
 }
 .moreinfo{
     padding-top:.2rem;
@@ -238,7 +255,7 @@
     display: block;
     background: #f5f5f5;
     width:100%;
-    height:992px;
+    height:19.84rem;
     overflow: hidden;
 }
 .sight-group{

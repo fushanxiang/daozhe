@@ -4,7 +4,9 @@
 			<div class="cityarea-title">您的位置</div>
 			<div class="cityarea-content city-now" >
 				<div class="cityitem-light">
-					<p class="cityitem-name  cityitem-seleted ellipsis">{{$store.state.city}}</p>
+					<router-link to="/">
+						<p class="cityitem-name  cityitem-seleted ellipsis">{{$store.state.city}}</p>
+					</router-link>
 				</div>
 			</div>
 		</div>
@@ -22,7 +24,6 @@
 </template>
 
 <script>
-
 export default { 
 	
 	data () {
@@ -65,17 +66,11 @@ export default {
 	}
 	.city-now {
 		overflow: hidden;
-	    padding-top: .04rem;
-	    padding-bottom: .26rem;
-	    padding-right: .5rem;
-	    padding-left: .2rem;
+	    padding: .04rem .5rem .26rem .2rem;
 	    border:0.01rem solid #C9CCCD;
 	    border-left: 0;
 	    border-right: 0;
 	    background: #fff;
-	}
-	.city-now::after {
-		border-color: red;
 	}
 	.cityarea-title {
 	    line-height: .54rem;

@@ -59,9 +59,8 @@
     }
     .city-aside-set-character {
         line-height: .32rem;
+        padding: .02rem;
         font-size: .24rem;
         color: #00afc7;
-        padding: .02rem;
     }
-
 </style>

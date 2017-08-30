@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import TicketSale from '@/pages/ticketSale/index'
+import TicketDetail from '@/pages/ticketDetail/index'
+import Weekend from '@/pages/weekend/index'
+import SecKill from '@/pages/seckill/index'
 
 
 Vue.use(Router)
@@ -13,8 +16,15 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
-    },
-    {
+    },{
+      path: '/weekend',
+      name: 'weekend',
+      component: Weekend
+    },{
+      path:'/seckill',
+      name:'seckill',
+      component:SecKill
+    },{
       path: '/city',
       name: 'city',
       component: City
@@ -24,6 +34,10 @@ export default new Router({
       name: 'ticketSale',
       component: TicketSale
 
-    }
-  ]
+    },
+    {
+      path: '/ticketDetail/:id',
+      name: 'ticketDetail',
+      component: TicketDetail
+    }]
 })

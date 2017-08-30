@@ -9,6 +9,8 @@
 		<recommend></recommend>
 		<recommend-sites :recommendInfo="recommendInfo"></recommend-sites>
 		<ua-pop :deltaY="deltaY"></ua-pop>
+		<order></order>
+		
 	</div>
 
 </template>
@@ -22,7 +24,7 @@
 	import Recommend from './recommend.vue'
 	import RecommendSites from './recommendsites.vue'
 	import Uapop from './uapop.vue'
-
+	import Order from './order.vue'
 	export default {
 		
 		data() {
@@ -49,7 +51,8 @@
 			"ua-pop": Uapop,
 			"header-fixed": HeaderFixed,
 			"discuss": Discuss,
-			"swiper": Swiper
+			"swiper": Swiper,
+			"order":Order
 		},
 		mounted() {
 			var this_ = this;

@@ -1,0 +1,108 @@
+{
+	"ret": true,
+	"data": {
+		"hot": [{
+			"id": "1",
+			"titleImg": "//s.qunarzz.com/piao_topic/image/touch/custom/2017/2343grab08/caption_1_v2.png",
+			"class": "hot-color",
+			"hotInfo":[{
+				"id": "11",
+				"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+				"name": "故宫",
+				"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+				"price": "20",
+				"priceDel": "票面价￥20"	
+			},{
+				"id": "11",
+				"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+				"name": "故宫",
+				"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+				"price": "20",
+				"priceDel": "票面价￥20"	
+			},{
+				"id": "11",
+				"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+				"name": "故宫",
+				"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+				"price": "20",
+				"priceDel": "票面价￥20"	
+			},{
+				"id": "11",
+				"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+				"name": "故宫",
+				"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+				"price": "20",
+				"priceDel": "票面价￥20"	
+			}]
+		}],
+		"topic": [{
+				"id": "1",
+				"titleImg": "//s.qunarzz.com/piao_topic/image/touch/custom/2017/2343grab08/caption_2.jpg",
+				"class": "topic-color",
+				"hotInfo":[{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				},{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				},{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				},{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				}]
+			}],
+		"tour": [{
+				"id": "1",
+				"titleImg": "//s.qunarzz.com/piao_topic/image/touch/custom/2017/2343grab08/caption_3.jpg",
+				"class": "tour-color",
+				"hotInfo":[{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				},{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				},{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				},{
+					"id": "11",
+					"imgUrl": "//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_292x181_5b79f0ee.jpg",
+					"name": "故宫",
+					"title": "东方宫殿建筑代表，世界宫殿建筑典范",
+					"price": "20",
+					"priceDel": "票面价￥20"	
+				}]
+			}]
+		
+	}
+}

@@ -1,43 +1,43 @@
 <template>
-	<div class="foot">
-		<ul class="foot-one">
-			<li class="foot-li">
-				<a class='list-type' href="#">
+	<div class="footer">
+		<ul class="footer-list">
+			<li class="list-item">
+				<a class='item-type' href="#">
 					<div class="iconfont">&#xe635;</div>
-					<span class="foot-title">机票</span>
+					<span class="footer-title">机票</span>
 				</a>
 			</li>
-			<li class="foot-li">
-				<a class='list-type' href="#">
+			<li class="list-item">
+				<a class='item-type' href="#">
 					<div class="iconfont">&#xe609;</div>
-					<span class="foot-title">酒店</span>
+					<span class="footer-title">酒店</span>
 				</a>
 			</li>
-			<li class="foot-li">
-				<a class='list-type' href="#">
+			<li class="list-item">
+				<a class='item-type' href="#">
 					<div class="iconfont">&#xe698;</div>
-					<span class="foot-title">公寓</span>
+					<span class="footer-title">公寓</span>
 				</a>
 			</li>
-			<li class="foot-li">
-				<a class='list-type last' href="#">
+			<li class="list-item">
+				<a class='item-type last' href="#">
 					<div class="iconfont">&#xe608;</div>
-					<span class="foot-title">更多</span>
+					<span class="footer-title">更多</span>
 				</a>
 			</li>
 		</ul>
-		<ul class="foot-two">
-			<li class="order-item">登陆</li>
-			<li class="order-item">我的订单</li>
-			<li class="order-item">我的订单</li>
-			<li class="order-item">我的订单</li>
-			<li class="order-item">关于我们</li>
+		<ul class="footer-logon">
+			<li class="logon-item">登陆</li>
+			<li class="logon-item">我的订单</li>
+			<li class="logon-item">我的订单</li>
+			<li class="logon-item">我的订单</li>
+			<li class="logon-item">关于我们</li>
 		</ul>
-		<ul class="foot-three">
-			<li class="touch item-type">触屏版</li>
-			<li class="telephone item-type">手机版</li>
+		<ul class="footer-version">
+			<li class="touch version-type">触屏版</li>
+			<li class="telephone version-type">手机版</li>
 		</ul>
-		<div class="foot-four">Qunar 京ICP备05021087<span>意见反馈</span></div>
+		<div class="foot-copyright">Qunar 京ICP备05021087<span>意见反馈</span></div>
 	</div>
 </template>
 
@@ -53,38 +53,38 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
-	.foot{
+	.footer{
 		width: 100%;
 		background: #f3f3f3;
 		padding-left: 0;
 		margin: 0;
 	}
-	.foot-one{
+	.footer-list{
         width: 100%;
 	    height: .5rem;
 	    padding: .15rem .1rem 0;
 	    overflow: hidden;
 	}
-	.foot-li{
+	.list-item{
 		box-sizing: border-box;
 	    height: .62rem;
 	    width: 25%;
 	    float: left;
 	}
-	.list-type{
+	.item-type{
 		display: block;
 	    height: .44rem;
 	    width: 100%;
 	    font-size: .24rem;
 	}
-	.list-type .iconfont{
+	.item-type .iconfont{
 		float: left;
 	    width: .44rem;
 	    height: .44rem;
 	    color:#9e9e9e;
 	    background-size: 175px 50px;
 	}
-	.foot-title{
+	.footer-title{
 		float: left;
 	    display: inline-block;
 	    overflow: hidden;
@@ -95,16 +95,16 @@
 	    border-bottom: 1px solid #acacac;
 	    font-size: .24rem;
 	}
-	.foot-one .last{
+	.footer-list .last{
 		border-left: 1px solid #acacac;
 		padding-left: .3rem;
 	}
-	.foot-two{
+	.footer-logon{
 		width: 100%;
 		height:.78rem;
 		border-bottom: 1px solid #cacaca;
 	}
-	.order-item{
+	.logon-item{
 		width:20%;
 		overflow: hidden;
 	    white-space: nowrap;
@@ -115,12 +115,12 @@
 	    font-size: .28rem;
 	    line-height: .78rem;
 	}
-	.foot-three{
+	.footer-version{
 		width: 100%;
 		padding: .2rem 0 0 0;
         overflow: hidden;
 	}
-	.foot-three .item-type{
+	.footer-version .version-type{
 		color: black;
 		width:48%;
 		overflow: hidden;
@@ -129,15 +129,15 @@
 		float: left;
 		font-size: .28rem;
 	}
-	.foot-three .touch{
+	.footer-version .touch{
 		text-align: right;
 		padding-right: .1rem;
 	}
-	.foot-three .telephone{
+	.footer-version .telephone{
 		text-align: left;
 		padding-left: .1rem;
 	}
-	.foot-four{
+	.foot-copyright{
 		width: 100%;
 		overflow: hidden;
 	    white-space: nowrap;

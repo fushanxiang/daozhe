@@ -4,13 +4,15 @@
 		
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
-					<div class="product-item-img" >
-						<img v-lazy="item.imgUrl" class="img-info">
-					</div>
-					<div class="product-item-text" >
-						<p class="product-name">{{item.title}}</p>
-						<p class="product-descript">{{item.text}}</p>
-					</div>
+				    <router-link to="/weekend">
+						<div class="product-item-img" >
+							<img v-lazy="item.imgUrl" class="img-info">
+						</div>
+						<div class="product-item-text" >
+							<p class="product-name">{{item.title}}</p>
+							<p class="product-descript">{{item.text}}</p>
+						</div>
+					</router-link>
 				</a>
 			</div>
 		<div class="price-info">

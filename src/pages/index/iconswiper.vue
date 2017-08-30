@@ -2,12 +2,14 @@
 <div>
 	<swiper :options="swiperOption" > 
 	    <swiper-slide v-for="page in pages" :key='page.key'>
-	    	<ul class="icon-list">
-	    		<li class="icon-item" v-for="item in page" :key='item.id'>
-	    			<img class="icon-img" :src="item.imgUrl" />
-	    			<h1 class="icon-title">{{item.title}}</h1>
-	    		</li>
-	    	</ul>
+	        <router-link to="/summervacation">
+		    	<ul class="icon-list">
+		    		<li class="icon-item" v-for="item in page" :key='item.id'>
+		    			<img class="icon-img" :src="item.imgUrl" />
+		    			<h1 class="icon-title">{{item.title}}</h1>
+		    		</li>
+		    	</ul>
+	    	</router-link>
 	    </swiper-slide>
 	    <div class="swiper-pagination"  slot="pagination"></div>
 	</swiper>

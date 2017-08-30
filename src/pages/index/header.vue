@@ -1,3 +1,4 @@
+
 <template>
 	<header class="header">
 		<a class="header-left iconfont">&#xe600;</a>
@@ -8,7 +9,6 @@
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
 				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
-				</span>
 			</router-link>
 		</div>
 	</header>
@@ -70,20 +70,20 @@ export default {
 	    border-radius: .06rem;
 	}
 	.single-line {
-		    display: inline-block;
-		    overflow: hidden;
-		    position: absolute;
-		    left: .3rem;
-		    top: 0;
-		    width: 3.6rem;
-		    white-space: nowrap;
-		    text-overflow: ellipsis;
-		    color: #e4e7ea;
+	    display: inline-block;
+	    overflow: hidden;
+	    position: absolute;
+	    left: .3rem;
+	    top: 0;
+	    width: 3.6rem;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #e4e7ea;
 	}
 	.icon-search {
-		    position: absolute;
-		    left: .2rem;
-		    color: #e4e7ea;
+	    position: absolute;
+	    left: .2rem;
+	    color: #e4e7ea;
 	}
 	.header-right{
 		position: absolute;

@@ -54,16 +54,16 @@ export default {
     },
     computed: {
     	getContend:function(){
-    		this.showImperial = false;
-			this.showTemple = false;
-			this.showSummer = false;
+    		this.showImperial = this.showTemple  = this.showSummer = false;
     		if(this.tabChoosedIndex == 0){
     			this.showTemple = this.showTemple = false;
     			this.showImperial = true;
     		}else if(this.tabChoosedIndex == 1){
     			this.showTemple = true;
+    			//this.scrollToTop();
     		}else if(this.tabChoosedIndex == 2){
     			this.showSummer = true;
+    			//this.scrollToTop();
     		}
     	}
     },
@@ -102,6 +102,7 @@ export default {
 				});
 
     		}else if(this.tabChoosedIndex == 1) {
+
     			this.$alert("没有新内容了！去看看其他地方吧").then(function(){
 					this_.scrollToTop();
 				})	

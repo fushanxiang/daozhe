@@ -1,5 +1,5 @@
 <template>
-<div class="pd-ticket-main">
+	<div class="pd-ticket-main">
 		<div class="pd-ticket-group">
 			<h3 class="pd-ticket-type">
 				<span class="pd-ticketype-ticket"></span>
@@ -15,18 +15,18 @@
 						</p>
 					</div>
 				</div>
-			<div class="pd-ticket-side" >
-				<div>
-					<p class="pd-ticket-sale">
-						¥<em class="pd-price-num">262</em>
-					</p>
-					<p class="pd-ticket-cost">
-						票面价:¥<em>280</em>
-					</p>
-					<p class="pd-ticket-btn" style="background:#00bcd4;">下载APP</p>
+				<div class="pd-ticket-side" >
+					<div>
+						<p class="pd-ticket-sale">
+							¥<em class="pd-price-num">262</em>
+						</p>
+						<p class="pd-ticket-cost">
+							票面价:¥<em>280</em>
+						</p>
+						<p class="pd-ticket-btn" style="background:#00bcd4;">下载APP</p>
+					</div>
 				</div>
 			</div>
-		</div>
 			<div class="pd-ticketype-ticket-item2 pd-border-top">
 				<div class="pd-ticket-main2">
 					<div>
@@ -35,39 +35,39 @@
 						<p><span class="pd-ticket-desctag"><span class="iconfont pd-ticket-tagicon">&#xe64d;</span>18:00前可订今日</span><span class="pd-ticket-desctag"><span class="iconfont pd-ticket-tagicon"> &#xe627;</span> 条件退</span></p>
 					</div>
 				</div>
-			<div class="pd-ticket-side" >
-				<div>
-					<p class="pd-ticket-sale">
-						¥<em class="pd-price-num">262</em>
-					</p>
-					<p class="pd-ticket-cost">
-						票面价:¥<em>280</em>
-					</p>
-					<p class="pd-ticket-btn" @click="show=true">预订</p>
+				<div class="pd-ticket-side" >
+					<div>
+						<p class="pd-ticket-sale">
+							¥<em class="pd-price-num">262</em>
+						</p>
+						<p class="pd-ticket-cost">
+							票面价:¥<em>280</em>
+						</p>
+						<p class="pd-ticket-btn" @click="show=true">预订</p>
+					</div>
 				</div>
 			</div>
 		</div>
+		<tree-item></tree-item>
+		<tree-item></tree-item>
+		<tree-item></tree-item>
+		<transition name="slide-fade">
+			<div v-if="show">
+				<order></order>
+			</div>
+		</transition>	
 	</div>
-	<tree-item></tree-item>
-	<tree-item></tree-item>
-	<tree-item></tree-item>
-	<transition name="slide-fade">
-		<div v-if="show">
-			<order></order>
-		</div>
-	</transition>	
-</div>
 </template>
 
 <script>
 	import TreeItem from './treeitem/treeitem.vue'
 	import Order from './order.vue'
+	
 	export default {
 		  data () {
 		    return {
 		       show:false
 		    }
-		   
 		  },
 		   components:{
 		    	"tree-item":TreeItem,

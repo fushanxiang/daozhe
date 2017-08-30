@@ -1,6 +1,7 @@
 <template>
     <div>
         <index-header :dataScen="hotSearchScen" :dataArea="hotSearchArea"></index-header>
+        <index-detail></index-detail>
         <item-products :productItems="content"></item-products>
     </div>
 </template>
@@ -8,6 +9,7 @@
 <script>
 
 import IndexHeader from './dz01/header.vue'
+import IndexDetail from './dz02/index.vue'
 import ItemProducts from './dz03/index.vue'
 
 export default {
@@ -29,7 +31,8 @@ export default {
   },
   components:{
     "index-header": IndexHeader,
-    "item-products": ItemProducts
+    "item-products": ItemProducts,
+    "index-detail": IndexDetail
   }
 }
 </script>

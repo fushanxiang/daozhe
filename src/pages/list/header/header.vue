@@ -30,13 +30,17 @@
                 <div class="hot-search-scenicz">
                 <span class="hot-search-icon hotsceniczcss iconfont">&#xe63e;</span>
                 <ul class="hot-box scenicz"  v-bind:style="{ top: this.sentop }">
-                <li class="hot-info" v-for="item in dataScen" @click="handlehotScen(item.id)">{{item.name}}</li>
+                <router-link to="/">
+                <li class="hot-info" v-for="item in dataScen" @click="handlehotScen(item.id,item.name)">{{item.name}}</li>
+                </router-link>
                 </ul>
                 </div>
                 <div class="hot-search-area">
                     <span class="hot-search-icon hotAreacss iconfont">&#xe607;</span>
                     <ul class="hot-box" v-bind:style="{ top: this.areatop }">
-                    <li class="hot-info area" v-for="item in dataArea" @click="handlehotArea(item.id)">{{item.name}}</li>
+                    <router-link to="/">
+                    <li class="hot-info area" v-for="item in dataArea" @click="handlehotArea(item.id,item.name)">{{item.name}}</li>
+                    </router-link>
                     </ul>
                 </div>
             </div>
@@ -136,11 +140,23 @@ export default {
             alert(e)
             this.$store.commit("showNear",false)
         },
-        handlehotScen(e){
+        handlehotScen(e,v){
             alert(e);
+            for (var i = 0; i < this.historyarr.length; i++) {
+            if (this.historyarr[i].historysearch==v) {
+              //this.historyarr.unshift({id:e,historysearch:v});
+              this.historyarr.splice(0,1);
+              this.$store.commit("showNear",false)
+                return this.historyarr
+            }
+        }
+            this.historyarr.unshift({id:e,historysearch:v});
+            localStorage.history=JSON.stringify(this.historyarr);
+            this.$store.commit("showNear",false)
         },
-        handlehotArea(e){
+        handlehotArea(e,v){
             alert(e);
+            this.$store.commit("showNear",false)
         },
         handlehotSearchNear(){
             alert("周边景点");
@@ -271,6 +287,7 @@ export default {
   .historyarr{
     background: #fff;
     border:1px solid #bbb;
+    color: #333;
     height: .2rem;
     padding: 0.1rem 0.12rem;
     text-align: center;

@@ -55,6 +55,7 @@ export default {
 	}
 	.left{
 		position: relative;
+		background: #fff;
 		display: flex;
 		box-sizing: border-box;
 		width: 50%;

@@ -264,6 +264,7 @@ export default {
 		line-height: 1rem;
 	}
 	.b-left{
+		background: #fff;
 		position: relative;
 		display:flex; 
 	}

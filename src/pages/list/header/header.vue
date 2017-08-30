@@ -1,7 +1,7 @@
 <template>
 	  <div>
         <header class="header">
-            <a class="header-left iconfont">&#xe600;</a>
+            <a class="header-left iconfont" @click="routerBack">&#xe600;</a>
             <span class="header-title">
             <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus" v-model="inputtext" 
             />
@@ -70,6 +70,9 @@ export default {
         }
     },
     methods: {
+        routerBack() {
+            this.$router.go(-1);
+        },
         handlefocus(){
             if (this.inputtext=="") {
                 this.$store.commit("showNear",true);

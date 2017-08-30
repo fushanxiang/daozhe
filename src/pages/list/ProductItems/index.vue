@@ -260,7 +260,7 @@
     display: block;
     background: #f5f5f5;
     width:100%;
-    height:19.84rem;
+    height:100%;
     overflow: hidden;
 }
 .sight-group{

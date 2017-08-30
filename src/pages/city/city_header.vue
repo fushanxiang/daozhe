@@ -76,6 +76,7 @@
                 document.documentElement.scrollTop = 0
                 this.country = true;
                 this.show = true;
+                this.cities = [];
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
@@ -92,6 +93,7 @@
                 
                 this.country = false;
                 this.show = true;
+                this.cities = [];
             },
             handleInput(ev) {
                 var e = ev || window.event,

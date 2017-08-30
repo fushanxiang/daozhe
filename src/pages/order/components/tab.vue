@@ -50,7 +50,7 @@
             },
             computed: {
             	tabFixed: function () {
-            		return this.scrollTop > this.mainOffsetTop - this.headerOffsetHeight;
+            		return this.scrollTop > this.mainOffsetTop -42;
             	},
 
             	activeIndex: function () {
@@ -71,14 +71,13 @@
             	if (!this.haveGetOffset) {
             		var tabMainElement = document.querySelectorAll('.tab-main');
             		var tabElement = document.querySelectorAll('.tab');
-            	//var headerElement = document.querySelectorAll('.header');
+            	  var headerElement = document.querySelectorAll('.fix');
             		var expenseElement = document.querySelectorAll('#tourCost');
             		var instructionsElement = document.querySelectorAll('#tourDescription');
-            		this.mainOffsetTop = tabMainElement[0].offsetTop;
+            		this.mainOffsetTop = tabMainElement[0].offset Top;
             		this.tabOffsetHeight = tabElement[0].offsetHeight;
-                console.log(this.tabOffsetHeight);
-            	 //this.headerOffsetHeight = headerElement[0].offsetHeight;
-            		this.headerOffsetHeight=0;
+            	  //this.headerOffsetHeight = headerElement[0].offsetHeight;
+                this.headerOffsetHeight=40;
                 this.expenseElementOffsetTop = expenseElement[0].offsetTop;
             		this.expenseElementOffsetHeight = expenseElement[0].offsetHeight;
             		this.instructionsElementOffsetTop = instructionsElement[0].offsetTop;
@@ -90,7 +89,6 @@
 <style scoped>
         .tab-main {
         	position: relative;
-        	margin-top: .2rem;
         	padding: 0 .2rem;
         }
         .tab {
@@ -105,16 +103,17 @@
         	z-index: 1000;
         }
 
-        .tab-fixed {
-        	position: fixed;
-        	top: .88rem;
-        }
+       /*  .tab-fixed {
+         position: fixed;
+         top: .88rem;
+       } */
 
         .tab-fixed {
         	position: fixed;
         	left: 0;
         	right: 0;
-        	top: .88rem;
+        	top: .8rem;
+          padding: 0 .2rem;
         }
 
         .tabs {
@@ -124,6 +123,9 @@
         	height: .84rem;
         	line-height: .84rem;
         	color: #616161;
+        }
+        .fix{
+          z-index: 99999
         }
 
         .active {

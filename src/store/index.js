@@ -7,7 +7,8 @@ export default new Vuex.Store({
 	state: {
 		"city": localStorage.selectedCity || "北京",
 		"searchNear":true,
-		"searchHistory":true
+		"searchHistory":true,
+		"jsonpshow":false
 	},
 	getters: {
 		"perfectCity": function(state) {
@@ -18,6 +19,9 @@ export default new Vuex.Store({
 		},
 		"searchHistory":function(state){
 			return state.searchNear
+		},
+		jsonpshow:function(state){
+			return state.jsonpshow
 		}
 	},
 	mutations: {
@@ -29,6 +33,9 @@ export default new Vuex.Store({
 		},
 		searchHistory:function(state,ifshow){
 			state.searchHistory = ifshow;
+		},
+		jsonpshow:function(state,ifshow){
+			state.jsonpshow= ifshow;
 		}
 	},
 	actions: {

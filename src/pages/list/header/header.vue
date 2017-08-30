@@ -49,7 +49,10 @@
             <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
             </div>
         </div>
-        <div class="jsonpbox"></div>
+        <ul class="jsonpbox" v-show="this.$store.state.jsonpshow">
+         <h1 class="search-history-title">搜索建议<span class="history-change"> 关闭</span></h1>
+          <li v-for="(value,$index) in myData" class="jsonpinfo">{{value}}</li>
+        </ul>
     </div>
 </template>
 <script>
@@ -62,7 +65,8 @@ export default {
         areatop:"",
         inputtext:"",
         historyarr:[],
-        searchDel:false
+        searchDel:false,
+        myData:[]
         }
     },
     props:["dataScen","dataArea"],
@@ -106,11 +110,23 @@ export default {
           if (this.inputtext=="") {
                 this.$store.commit("showNear",true);
             }else if (this.inputtext!=="") {
-              console.log(123)
-          }  
+                this.$store.commit("showNear",false);
+                this.$store.commit("jsonpshow",true);
+                this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",{
+                params: {
+                    wd: this.inputtext
+                },
+                jsonp: 'cb'
+            }).then((res) => {
+                this.myData = res.body.s
+            },(res) => {
+                console.log(res.status)
+            })
+            }  
         },
         handleSearchDel(){
             this.inputtext="";
+            this.$store.commit("jsonpshow",false);
         },
         handlesearch(){
           this.$store.commit("showNear",false)
@@ -161,7 +177,6 @@ export default {
             alert(e);
             for (var i = 0; i < this.historyarr.length; i++) {
             if (this.historyarr[i].historysearch==v) {
-              //this.historyarr.unshift({id:e,historysearch:v});
               this.historyarr.splice(0,1);
               this.$store.commit("showNear",false)
                 return this.historyarr
@@ -362,5 +377,15 @@ export default {
     padding: 0 .2rem;
     width: 25%;
     text-align: center;
+  }
+  .jsonpbox{
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  .jsonpinfo{
+    padding: .2rem;
+    border-bottom: 1px solid #eee;
   }
 </style>

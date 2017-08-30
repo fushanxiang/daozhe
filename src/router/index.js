@@ -3,9 +3,7 @@ import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import TicketSale from '@/pages/ticketSale/index'
-import Detail from '@/pages/detail/index'
-import BigCity from '@/pages/city/big_city'
-import SmallCity from '@/pages/city/small_city'
+import TicketDetail from '@/pages/ticketDetail/index'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
 
@@ -36,8 +34,8 @@ export default new Router({
       component: TicketSale
     },
     {
-      path: '/detail/:id',
-      name: 'detail',
-      component: Detail
+      path: '/ticketDetail/:id',
+      name: 'ticketDetail',
+      component: TicketDetail
     }]
 })

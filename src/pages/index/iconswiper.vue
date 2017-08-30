@@ -22,7 +22,9 @@
 					九元门票
 				</div>
 			</div>
-			<div class="sale"></div>
+			<router-link :to="{name:'ticketSale'}">	    	
+				<div class="sale"></div>
+			</router-link>
 		</div>
 	</div>
 </template>
@@ -30,6 +32,7 @@
 <script>
 
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
 	export default {
 		data () {
 			return {
@@ -43,7 +46,9 @@
 			}
 		},
 		props:["iconsInfo"],
-		methods: {},
+		methods: {
+
+		},
 		computed: {
 			pages: function() {
 				const pages = [];
@@ -52,8 +57,12 @@
 					if (!pages[page]) {
 						pages[page] = [];
 					}
-					return pages;
+					pages[page].push(this.iconsInfo[i])
 				}
+				for(var j = 0;j < pages.length;j++){
+					pages[j].key = (new Date()).getTime()
+				}
+				return pages;
 			}
 		},
 		components:{
@@ -75,11 +84,6 @@
 		display: block;
 		width: 25%;
 		float: left;
-		text-align: center;
-		padding: .2rem 0;
-		color:#212121;
-	}
-	.icon-item .icon-itemTitle{
 		height: 1.3rem;
 		padding-top:.3rem;
 		text-align: center;

@@ -11,17 +11,20 @@
 		</div>
 		<div class="ticket-navbar">
 			<span class="nav-title">促销门票</span>
-			<p class="nav-city">
-				<span class="city-name">北京</span>
-				<i class="iconfont">&#xe65e;</i>
-			</p>
+			<router-link :to="{name:'city',params: {id:123}}">
+				<p class="nav-city" >
+					<span class="city-name">{{$store.getters.perfectCity}}</span>
+					<i class="iconfont">&#xe65e;</i>
+				</p>
+			</router-link>
+			
 		</div>
 
 		<div class="product-list">	
 			
 			<ul class="sale-list">
 				<li class="list-item" v-for="list in imgsInfo" :key="list.id">
-					<router-link :to="{name:'detail',params:{id:list.id}}">
+					<router-link :to="{name:'ticketDetail',params:{id:list.id}}">
 						<span class="hot-sale">
 							<i>热卖中</i>
 						</span>
@@ -53,7 +56,6 @@
 			let this_ = this;
 			let fiexdTop = document.querySelector(".sale-header");
 			window.addEventListener("scroll", function(){
-				this_.sTop = document.body.scrollTop;
 				if(window.scrollY>=45){         
 					fiexdTop.style.position="fixed";
 					fiexdTop.style.top=0;
@@ -68,10 +70,8 @@
 		data () {
 			return {
 				iconsInfo:[],
-				imgsInfo:[],
-				sTop:0
-			}   
-
+				imgsInfo:[]
+			}  
 		},
 		created(){
 			this.$http.get('./static/ticketSale.json').then( response =>{
@@ -83,12 +83,10 @@
 			})
 		},
 		computed:{
-			changeHeight:function(){
 
-			}
 		},
 		methods:{
-
+			
 		}
 
 
@@ -107,7 +105,7 @@
 		position: relative;
 		width:100%;
 		height: .88rem;
-		border-bottom: #1b7a8b 1px solid;
+		border-bottom: #1b7a8b .02rem solid;
 		z-index: 91;
 		background:#25a4bb;
 	}
@@ -133,10 +131,10 @@
 		color: #fff;
 	}
 	.load-page{
-		padding: 30px;
+		padding: .6rem;
 		color: #25a4bb;
-		font-size: 16px;
-		line-height: 20px;
+		font-size: .32rem;
+		line-height: .4rem;
 		text-align: center;
 		display: none;
 	}
@@ -157,7 +155,7 @@
 	}
 	.list-item{
 		width:100%;  
-		height:240px;  
+		height:4.2rem;  
 		overflow: hidden;  
 		position: relative;			
 	}
@@ -182,7 +180,7 @@
 	}
 	.list-item .sale-img{
 		width:100%;
-		height:172px;
+		height:2.3rem;
 		display: block;
 		background-image: url(//s.qunarzz.com/piao_topic/image/common/default/640x266.jpg);
 	}
@@ -200,7 +198,7 @@
 		padding: .1rem .3rem;
 		font-size: .32rem;  
 		color:#333;
-		width:80%;
+		width:77%;
 	}
 	.sale-price{
 		padding: .2rem;

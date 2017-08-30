@@ -87,7 +87,7 @@
 		}
 	}
 </script>
-<style>
+<style scoped>
 	@import '../../assets/css/common/border.css';
 	.banner{
 		width:100%;
@@ -147,7 +147,7 @@
 	}
 	.cheap-activity{
 		height:3.8rem;
-		margin: .4rem 0;
+		margin-top: .4rem;
 		box-sizing: border-box;
 		overflow-x: auto;
 		background: #8d03ba;
@@ -212,5 +212,9 @@
 	    font-size: .24rem;
 	    line-height: .5rem;
 	    text-align: center;
+	}
+	.page{
+		width:100%;
+		height: 30rem;
 	}
 </style>

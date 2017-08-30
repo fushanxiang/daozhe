@@ -19,16 +19,15 @@
 	</span>
 
 		<ul class="taglist">
-			<li class="taglist-childfirst"><img class="taglist-icontim" src="../../../images/download1.png">{{year}}-{{month}}-{{day}}</li>
-			<li class="taglist-childsecond"><img class="taglist-iconright" src="../../../images/download.png">条件退</li>
+			<li class="taglist-childfirst"><span class="iconfont small">&#xe64d;</span>{{year}}-{{month}}-{{day}}</li>
+			<li class="taglist-childsecond"><span class="iconfont small">&#xe604;</span>条件退</li>
 			
 		</ul>
 
 		<ul  class="taglist-second">
-			<li><img class="taglist-iconright" src="../../../images/download.png">含餐</li>
-			<li><img class="taglist-iconright" src="../../../images/download.png">成人</li>
-			<li><img class="taglist-iconright" src="../../../images/download.png">中文</li>
-			<li><img class="taglist-iconright" src="../../../images/download.png">7:30</li>
+			<li><span class="iconfont small">&#xe604;</span>儿童</li>
+			<li><span class="iconfont small">&#xe604;</span>成人</li>
+			<li><span class="iconfont small">&#xe604;</span>7:30</li>
 		</ul>
 	</div>
 	
@@ -81,6 +80,16 @@ export default {
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
+	.iconfont{
+		color: #00bcd4;
+		display: inline-block;
+		
+	}
+	.small{
+		font-size: .2rem;
+		padding-right: .05rem;
+	}
+	.
 	.box{
 		background:#edf8f4;
 		

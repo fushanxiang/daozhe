@@ -10,15 +10,20 @@ import SmallCity from '@/pages/city/small_city'
 import Purchaseorder from '@/pages/order/purchaseorder'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
+import Introduce from '@/pages/order/introduce'
 Vue.use(Router)
 export default new Router({
-  routes: [   
-    {
-      path: '/order',
-      name: 'order',
-      component: Order
-
-    },
+  routes: [
+     {
+       path: '/',
+       name: 'index',
+       component: Index
+     },  
+      {
+        path: '/order',
+        name: 'order',
+        component: Order
+      },
       {
       path: '/purchaseorder',
       name: 'purchaseorder',
@@ -44,7 +49,22 @@ export default new Router({
     },{
       path: '/city/:id',
       name: 'city',
-      component: City
+      component: City,
+      children: [
+        {
+          path: 'bigCity',
+          component: BigCity
+        },
+        {
+          path: 'smallCity',
+          component: SmallCity
+        }
+      ]
+    },
+    {
+      path: '/introduce',
+      name: 'introduce',
+      component: Introduce
     }
 
   ]

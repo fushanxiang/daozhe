@@ -5,7 +5,12 @@
 	    	<ul class="icon-list">
 	    		<li class="icon-item" v-for="item in page" :key='item.id'>
 	    			<img class="icon-img" :src="item.imgUrl" />
+
+	    			<div class="keywords" :title="item.title">{{item.title}}</div>
+	    			
+
 	    			<h1 class="icon-title">{{item.title}}</h1>
+
 	    		</li>
 	    	</ul>
 	    </swiper-slide>
@@ -44,8 +49,8 @@ export default {
     	}
 	},
 	props:["iconsInfo"],
-	methods: {
-	},
+	
+	
 	computed: {
 		pages: function() {
 			const pages = [];
@@ -91,6 +96,21 @@ export default {
 		height: .66rem;
 		margin: 0 auto;
 	}
+
+.keywords {
+    margin-top: .2rem;
+    color: #212121;
+    font-size: .28rem;
+   text-align: center;
+}
+.icon-list{
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 48%;
+	height:0;
+	background: #eee;
+}
+
 	.icon-title{
 		margin-top:.2rem;
 		font-size: .28rem;
@@ -115,7 +135,7 @@ export default {
     	color:#212121;
     	line-height: .98rem;
     	text-align: center;
-        box-sizing: border-box;
+        box-sizing: border-box; 
     	background-color: #fff; 
     }
     .position-directon:nth-child(1){
@@ -128,6 +148,7 @@ export default {
     }
     .position-right{
     	font-size: .32rem;
+    	
     	margin-right: .05rem;
     	color:#616161;
     }
@@ -140,4 +161,5 @@ export default {
     	background-size:auto 100%;
 
     }
+
 </style>

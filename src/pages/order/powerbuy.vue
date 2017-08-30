@@ -84,9 +84,7 @@
 </template>
 
 <script>
-
 export default {
-	
 	data () {
 		return {
 				price:187,
@@ -197,10 +195,11 @@ export default {
 	}
 
 	.iptconcent{
+		line-height:.54rem;
 		display:block;
 		text-algin:center;
 		float:right;
-		line-height:.54rem;
+		padding-left:.26rem;
 		display:inline-block;
 		width:.54rem;
 		height:.54rem;	

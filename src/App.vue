@@ -11,6 +11,6 @@ export default {}
 <style>
   
   @import './assets/css/base/reset.css';
-  /* @import './assets/css/common/border.css'; */
+/*   @import './assets/css/common/border.css'; */
 </style>
 

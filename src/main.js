@@ -20,6 +20,8 @@ VueAMap.initAMapApiLoader({
 });
 Vue.use(VueAwesomeSwiper);
 import VueLazyload from 'vue-lazyload'
+import vueEventCalendar from 'vue-event-calendar'
+Vue.use(vueEventCalendar, {locale: 'en'}) 
 // 整个页面使用fastclick避免300毫秒延迟问题
 fastclick.attach(document.body);
 Vue.config.productionTip = false

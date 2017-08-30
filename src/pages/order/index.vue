@@ -8,6 +8,9 @@
        <title-comment></title-comment>
        <Tab :tabInfo="tabInfo" :scrollTop="scrollTop"></Tab>
        <other-comment></other-comment>
+       <div class="mp-whitespace">
+       </div>
+       <Introduce></Introduce>
       </div>
   </div>
 </template>
@@ -19,6 +22,7 @@ import TitleComment from './titlecomments.vue'
 import OtherComment from './othercomment.vue'
 import Tab from './components/tab.vue'
 import detailsMap from './detailsMap.vue'
+import Introduce from '@/pages/order/introduce'
 export default {
 
   name: 'index',
@@ -106,7 +110,8 @@ export default {
             "Tab":Tab,
             "detailsMap":detailsMap,
             "header-image": headerImage,
-            "sight-note": sightNote
+            "sight-note": sightNote,
+            "Introduce": Introduce
               
           }
 
@@ -135,6 +140,10 @@ export default {
         position: absolute;
         left: 0;
         background: #f5f5f5;
+    }
+    .mp-whitespace {
+        width: 100%;
+        height: 1.2rem;
     }
 
 </style>

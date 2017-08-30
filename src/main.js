@@ -7,10 +7,9 @@ import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
-
+import VueLazyload from "vue-lazyload"
 
 Vue.use(IScrollView,IScroll)
-
 
 Vue.use(BaiduMap, {
 	ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'
@@ -18,7 +17,7 @@ Vue.use(BaiduMap, {
 
 fastclick.attach(document.body);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(vueResource);
 Vue.use(VueLazyload, {
 	error: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503918796244&di=34d35787875e6620437dc9ccce3e9000&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fwh%253D600%252C800%2Fsign%3Df2111a22a50f4bfb8c859652337f54c8%2Fb03533fa828ba61ed8c0bd924034970a304e5964.jpg',//这个是请求失败后显示的图片

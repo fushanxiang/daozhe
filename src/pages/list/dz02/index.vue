@@ -1,6 +1,6 @@
 <template>
 <div class="classify">
-	<div class="nav" :class='{"primary-position":primaryStyle}'>     
+	<div class="nav" ref="nav" :class='{"primary-position":primaryStyle}'>     
             <div class="filter">
                 <div class="all-categories select" ref="all" @click="searchclick">
                     <span class="select-caption">全部分类</span>
@@ -70,11 +70,13 @@ export default {
             })
         var h = 44;
         window.onscroll = function(){
-            var sTop = document.body.scrollTop || document.documentElement.scrollTop;
-            if( sTop > h ){
+            var Top = document.body.scrollTop || document.documentElement.scrollTop;
+            if( Top > h ){
                 this.primaryStyle = true;
+                this.$refs.nav.style.zIndex = "10";
             }else{
                 this.primaryStyle = false;
+                this.$refs.nav.style.zIndex = "5";
             }
         }.bind(this)
     },

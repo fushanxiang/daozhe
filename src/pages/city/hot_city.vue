@@ -4,7 +4,9 @@
 			<div class="cityarea-title">您的位置</div>
 			<div class="cityarea-content city-now" >
 				<div class="cityitem-light">
-					<p class="cityitem-name  cityitem-seleted ellipsis">{{$store.state.city}}</p>
+					<router-link to="/">
+						<p class="cityitem-name  cityitem-seleted ellipsis">{{$store.state.city}}</p>
+					</router-link>
 				</div>
 			</div>
 		</div>

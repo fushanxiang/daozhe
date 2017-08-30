@@ -74,7 +74,11 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
                 this.country = true;
+                this.show = true;
+                this.cities = [];
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
@@ -88,7 +92,12 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+                
                 this.country = false;
+                this.show = true;
+                this.cities = [];
             },
             handleInput(ev) {
                 var e = ev || window.event,
@@ -122,10 +131,9 @@
                     localStorage.selectedCity = e.target.innerText;
                     this.$router.push('/')
                 }else {
-                    this.$router.push('');
+                    this.$router.push('')
                     this.show = true;
-                    this.cities = [];
-                } 
+                }
             }
         }
     }
@@ -133,10 +141,6 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
-    .backgroud-color{
-        height: 10.46rem;
-        background: #F5F5F5;
-    }
     .city-header-area {
         width: 100%;
         line-height: .88rem;
@@ -166,7 +170,7 @@
     .city-china {
         border-radius: 3px 0 0 3px;
         float: left;
-        margin-left: 8%;
+        margin-left: 10%;
         margin-top: .14rem;
         background: #fff;
         color: #00afc7;
@@ -187,10 +191,10 @@
         display: block;
         width: 100%;
         line-height: .3rem;
-        padding: .16rem 0 .16rem .1rem;
-        border-radius: .06rem;
+        padding: .16rem 0 .16rem .2rem;
+        border-radius: .1rem;
         border: none;
-        color: #9e9e9e;
+        color: #777;
     }
     .search-cities {
         width: 100%;

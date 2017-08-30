@@ -74,7 +74,7 @@
             	  var headerElement = document.querySelectorAll('.fix');
             		var expenseElement = document.querySelectorAll('#tourCost');
             		var instructionsElement = document.querySelectorAll('#tourDescription');
-            		this.mainOffsetTop = tabMainElement[0].offset Top;
+            		this.mainOffsetTop = tabMainElement[0].offsetTop;
             		this.tabOffsetHeight = tabElement[0].offsetHeight;
             	  //this.headerOffsetHeight = headerElement[0].offsetHeight;
                 this.headerOffsetHeight=40;

@@ -1,6 +1,4 @@
 
-
-
 {
     "ret": true,
     "data":{
@@ -16,7 +14,6 @@
         },{
         	"src":"http://img4.imgtn.bdimg.com/it/u=747038940,4162159520&fm=26&gp=0.jpg"
         }],
-
         "tab": {
             "index": {
                 "tabs": [
@@ -40,7 +37,7 @@
                         116.3958138,
                         39.9109056
                     ],
-                    "windows": [
+                    "windows":[
                         {
                             "position": [
                                 116.3958138,
@@ -50,7 +47,6 @@
                             "visible": true
 
                         }]
-    
                 },               
                 "routesum": [
                     {
@@ -889,5 +885,4 @@
             }
         }
     }
-    
 }

@@ -19,7 +19,6 @@ import TitleComment from './titlecomments.vue'
 import OtherComment from './othercomment.vue'
 import Tab from './components/tab.vue'
 import detailsMap from './detailsMap.vue'
-
 export default {
 
   name: 'index',
@@ -49,7 +48,8 @@ export default {
                         "tabOfset": {}
                     },
                      "tourItinerary": {
-                         "map": {},
+                         "map": {
+                         },
                          "routesum": [],
                          "cardContent": [],
                          "timeLine": []
@@ -92,8 +92,6 @@ export default {
       		created (){
       			this.$http.get('/static/onedaytour-details.json').then(response => {
       			     this.swiperInfo = response.body.data.swiperImg;
-               
-                 console.log(response.body.data.swiperImg)
                  this.headerTitle = response.body.data.index;
                 
                 this.tabInfo =JSON.parse(JSON.stringify(response.body.data.tab));

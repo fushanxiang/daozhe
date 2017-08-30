@@ -41,11 +41,11 @@
 		               </div>
 		           </a>
 		    <div class="amap-page-container" @click="handleClick">
-		      <el-amap vid="amap" :zoom="12" :center="tourItinerary.map.center" class="amap-demo" >
-			     <el-amap-info-window v-for="(mapWindow, index) in tourItinerary.map.windows" :position="mapWindow.position" :content="mapWindow.content"
-			         :visible="mapWindow.visible" :key="index + 'map'">
-			     </el-amap-info-window>
-		      </el-amap>
+		     <el-amap vid="amap" :zoom="12" :center="tourItinerary.map.center" class="amap-demo" >
+ 			   <!--  <el-amap-info-window v-for="(mapWindow, index) in tourItinerary.map.windows" :position="mapWindow.position" :content="mapWindow.content"
+ 			      :visible="mapWindow.visible" :key="index + 'map'">
+ 			    </el-amap-info-window>  -->
+ 			  </el-amap>
 		    </div>
 	</div>
 </template>
@@ -54,12 +54,11 @@
 	export default{
 			data(){
 				return{
-                  
 				}
 			},
 			props:["tourItinerary"],
 			components:{
-				  /*  Mapp:Imap*/
+				
 			},
 			methods:{
 				handleClick:function(){

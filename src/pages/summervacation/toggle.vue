@@ -1,18 +1,18 @@
 <template>
 	<div id="toggle" class="toggle">
 		<ul class="toggle-list">
-			<li class="toggle-li one">玩法分类</li>
-			<li class="toggle-li two">冲浪漂流</li>
-			<li class="toggle-li">玩法分类</li>
-			<li class="toggle-li">玩法分类</li>
-			<li class="toggle-li">玩法</li>
+			<li class="toggle-item one">玩发达啊法分类</li>
+			<li class="toggle-item two">冲浪漂流</li>
+			<li class="toggle-item">玩法分类</li>
+			<li class="toggle-item">玩法分类</li>
+			<li class="toggle-item">玩法</li>
 		</ul>
 		<ul class="toggle-list">
-			<li class="toggle-li one">玩法分类</li>
-			<li class="toggle-li two">冲浪漂流</li>
-			<li class="toggle-li">玩法分类</li>
-			<li class="toggle-li">玩法分类</li>
-			<li class="toggle-li">玩法</li>
+			<li class="toggle-item one">玩法分类</li>
+			<li class="toggle-item two">冲浪漂流</li>
+			<li class="toggle-item">玩法分类</li>
+			<li class="toggle-item">玩法分类</li>
+			<li class="toggle-item">玩法</li>
 		</ul>
 	</div>
 </template>
@@ -57,13 +57,16 @@
        padding:.13rem;
        border-radius: 0 .7rem .7rem 0;
 	}
-	.toggle-li{
+	.toggle-item{
 		float: left;
 		width: 20%;
 		line-height: .44rem;
 		color: #fff;
 	    font-size: .2rem;
 	    text-align: center;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
 	}
 	.one{
 		background: #4f9aff;

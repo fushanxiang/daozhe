@@ -11,3 +11,8 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< HEAD
+*.project
+=======
+*.project
+>>>>>>> cbcf393c3e85336364c55392d9fd50fa1e482b8d

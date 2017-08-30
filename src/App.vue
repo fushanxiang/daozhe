@@ -3,13 +3,9 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
-export default {
-  
-}
+export default {}
 </script>
-
 <style>
 	@import './assets/css/base/reset.css'
 </style>

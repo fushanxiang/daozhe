@@ -56,7 +56,6 @@ export default {
     	getContend:function(){
     		this.showImperial = this.showTemple  = this.showSummer = false;
     		if(this.tabChoosedIndex == 0){
-    			this.showTemple = this.showTemple = false;
     			this.showImperial = true;
     		}else if(this.tabChoosedIndex == 1){
     			this.showTemple = true;

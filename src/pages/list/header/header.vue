@@ -49,6 +49,7 @@
             <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
             </div>
         </div>
+        <div class="jsonpbox"></div>
     </div>
 </template>
 <script>

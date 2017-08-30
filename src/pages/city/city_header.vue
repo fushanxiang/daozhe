@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroud-color">
+    <div>
         <div class="city-header-area">
             <router-link to="/">
                 <span class="iconfont city-header-goback">&#xe624;</span>
@@ -129,6 +129,7 @@
                 }else {
                     this.$router.push('')
                     this.show = true;
+                    this.cities = [];
                 }
                 
 
@@ -139,10 +140,6 @@
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
-    .backgroud-color{
-        height: 10.46rem;
-        background: #F5F5F5;
-    }
     .city-header-area {
         width: 100%;
         line-height: .88rem;

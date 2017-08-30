@@ -65,10 +65,12 @@
 	export default {
 		  data () {
 		    return {
-		       show:false
+		       show:false,
+		       
 		    }
 		   
 		  },
+		  
 		   components:{
 		    	"tree-item":TreeItem,
 		    	"order":Order

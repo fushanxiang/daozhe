@@ -99,6 +99,7 @@ export default {
 		      isActive3:true,
 		    }
 	  },
+	  props:["promogroup"],
 	  methods:{
 		  	handleClick(type){
 		  		switch(type){

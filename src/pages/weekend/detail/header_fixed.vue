@@ -53,11 +53,12 @@ export default {
 		font-weight: bold;
 	}
 	.top-title {
+		margin: 0 1rem;
+		font-size: .32rem;
+		line-height: .88rem;
+		text-align: center;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		margin: 0 1rem;
-		font-size: .32rem;
-		line-height: .88rem
 	}
 </style>

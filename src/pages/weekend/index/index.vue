@@ -1,10 +1,12 @@
 <template>
-	<div class="bg">
-		<index-herder></index-herder>
-		<index-category></index-category>
-		<hotplace :goods="goods"></hotplace>
-		<recommendplace :goods="goods"></recommendplace>
-	</div>
+	<scroller :on-refresh="refresh" :on-infinite="infinite">
+		<div class="bg">
+			<index-herder></index-herder>
+			<index-category></index-category>
+			<hotplace :goods="goods"></hotplace>
+			<recommendplace :goods="goods"></recommendplace>
+		</div>
+	</scroller>
 </template>
 
 <script>
@@ -24,10 +26,10 @@ export default {
 	},
 	created() {
 	    this.$http.get('/static/weekend.json').then(response => {
-	      var data = response.body.data;
-	      this.goods = data.goods
+	    	var data = response.body.data;
+	    	this.goods = data.goods.splice(0,2);
 	    }, response => {
-	      console.log("ajax error");
+	    	console.log("ajax error");
 	    });
 	},
 	components: {
@@ -35,7 +37,31 @@ export default {
 		'index-category' : IndexCategory,
 		'hotplace' : Hotplace,
 		'recommendplace' : Recommendplace
-	}
+	},
+	methods: {
+	    refresh: function (done) {
+	    	var this_ = this;
+	    	setTimeout(function () {
+		        
+		        done();
+	    	}, 1500)
+	    },
+
+	    infinite: function (done) {
+	    	var this_ = this;
+	    	var length = this.goods.length;
+	    	setTimeout(function () {
+		        this_.$http.get('/static/weekend.json').then(response => {
+        	    	var data1 = response.body.data.goods;
+        	    	var data2 = data1.splice(length,2);
+        	    	this_.goods = this_.goods.concat(data2);
+        	    }, response => {
+        	    	console.log("ajax error");
+        	    });
+			    done();
+	    	}, 1500)
+	    }
+	}    
 }
 </script>
 

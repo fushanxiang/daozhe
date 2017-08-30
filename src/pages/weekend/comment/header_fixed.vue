@@ -1,7 +1,7 @@
 <template>
 	<div class="top-container">
-		<router-link :to="'/weekend/detail/id='+goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
-		<h1 class="top-title">{{goodsInfo.title}}</h1>
+		<router-link :to="'/weekend/detail/id=' + goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
+		<h1 class="top-title">点评</h1>
 	</div>
 </template>
 
@@ -38,11 +38,12 @@ export default {
 		font-size: .60rem;
 	}
 	.top-title {
+		margin: 0 1rem;
+		font-size: .32rem;
+		line-height: .88rem;
+		text-align: center;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		margin: 0 1rem;
-		font-size: .32rem;
-		line-height: .88rem
 	}
 </style>

@@ -48,47 +48,7 @@
 
 					<div class="middle">
 
-						<iscroll-view ref="scrollView" class=""  @pullUp="pullUp" @pullDown="pullDown" :options="{mouseWheel:true}">
-							
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-							<p>asjlkdfjalskdjflskadjflksdjfkljasdl kf</p>
-						</iscroll-view>
+					
 
 							
 					</div>
@@ -126,16 +86,10 @@ export default {
 	methods:{
 		toogleClick:function(){
 			this.show = !this.show;
-		},
-		pullUp:function(){
-			console.log('Pull up.')
-		},
-		pullDown:function(){
-			console.log('pull Down.')
 		}
 	},
 	mounted () {
-	    this.$refs.scrollView.refresh()
+	    
 	},
 	props : ["goodsInfo"]
 		
@@ -143,6 +97,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 	@import "../../../assets/font/iconfont.css";
 
 	
@@ -160,16 +115,17 @@ export default {
 
 
 
+=======
+>>>>>>> d025038699a5a513aaea0b29214993421ce96472
 	.block{
 		display: block;
 	}
 	.none{
 		display: none;
 	}
-
 	.packages-box{
+		padding-top: .2rem;
 		background: #f1f1f1;
-		padding-top: .2rem;;
 	}
 	.packages{
 	    padding: 0 .2rem;
@@ -217,7 +173,7 @@ export default {
 		padding: 0 .2rem;
 	}
 	.packages-des-content{
-	        padding-bottom: .15rem;
+	    padding-bottom: .15rem;
 	    line-height: .48rem;
 	    color: #616161;
 	}

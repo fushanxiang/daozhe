@@ -8,9 +8,8 @@
                 <div class="recommended-sort select"  ref="sort" @click="menuclick">
                      <span class="select-caption">推荐排序</span>
                 </div>
-            </div>
-    </div>
-        <div class="mask" ref="mask" @click="clickmask"></div>
+            </div> 
+            <div class="mask" ref="mask" @click="clickmask"></div>
             <div class="menu" ref="menu" >
                 <div class="sort checked" >推荐排序</div>
                 <div class="sort" >离我最近</div>
@@ -38,6 +37,8 @@
                     </div> 
                 </iscroll-view>
             </div>
+    </div>
+       
 </div>
 </template>
 <script>
@@ -198,7 +199,7 @@ export default {
     border-top: .08rem solid #666;
 }
 .menu-inner-left {
-    top: 84px;
+    top: 40px;
     display: block;
     overflow: hidden;
     left: 0;
@@ -216,7 +217,7 @@ export default {
     border-bottom: 1px solid #eaeaea;
 }
 .menu-inner-right {
-    top: 84px;
+    top: 40px;
     display: block;
     overflow: hidden;
     background: #f1f1f1;
@@ -253,7 +254,7 @@ export default {
 }
 .menu {
     overflow: hidden;
-    top: 84px;
+    top: 40px;
     left: 0px;
     position: absolute;
     z-index: 10;

@@ -22,7 +22,6 @@
 </template>
 
 <script>
-
 export default { 
 	
 	data () {
@@ -65,10 +64,7 @@ export default {
 	}
 	.city-now {
 		overflow: hidden;
-	    padding-top: .04rem;
-	    padding-bottom: .26rem;
-	    padding-right: .5rem;
-	    padding-left: .2rem;
+	    padding: .04rem .5rem .26rem .2rem;
 	    border:0.01rem solid #C9CCCD;
 	    border-left: 0;
 	    border-right: 0;

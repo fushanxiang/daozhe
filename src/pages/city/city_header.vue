@@ -125,7 +125,6 @@
             }
         }
     }
-
 </script>
 
 <style scoped>
@@ -165,8 +164,8 @@
         float: left;
         margin-left: 8%;
         margin-top: .14rem;
-        color: #00afc7;
         background: #fff;
+        color: #00afc7;
     }
     .city-abroad {
         border-radius: 0 3px 3px 0;
@@ -176,24 +175,23 @@
     .header-keyword {
         margin-top: .88rem;
         padding: 0 .4rem .1rem .2rem;
+        background: #00afc7;
         font-size: .26rem;
         color: #9e9e9e;
-        background: #00afc7;
     }
     .city-keyword {
         display: block;
         width: 100%;
-        height: .3rem;
         line-height: .3rem;
         padding: .16rem 0 .16rem .1rem;
         border-radius: .1rem;
     }
     .search-cities {
+        width: 100%;
         position: absolute;
         left: 0;
         top: 1.68rem;
         background: #fff;
-        width: 100%;
     }
     .search-city {
         line-height: .76rem;

@@ -7,7 +7,7 @@
 
 <script>
 
-import IndexHeader from '../pages/list/dz01/header.vue'
+import IndexHeader from '../pages/list/header/header.vue'
 
 
 export default {

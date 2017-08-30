@@ -10,9 +10,15 @@
 
 <script>
 
+<<<<<<< HEAD
 import IndexHeader from './header/header.vue'
 import IndexDetail from './sort/index.vue'
 import ItemProducts from './ProductItems/index.vue'
+=======
+import IndexHeader from './dz01/header.vue'
+import IndexDetail from './sort/index.vue'
+import ItemProducts from './dz03/index.vue'
+>>>>>>> d90f09898f0cbfbc105239289e586aab1b455f99
 
 export default {
   data () {

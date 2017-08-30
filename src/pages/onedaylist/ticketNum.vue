@@ -56,15 +56,11 @@ Vue.use(IScrollView, IScroll)
 	
 	methods: {
 		 log (iscroll) {
-          console.log(iscroll)
          }, 
-         load (iscroll) {
-         	
+         load (iscroll) {	
         },
      	
-        refresh (iscroll) {
-        	
-        }
+        refresh (iscroll) {}
 		
 	}
 	
@@ -81,12 +77,12 @@ Vue.use(IScrollView, IScroll)
 	}
 	.scroll-view {
 	  touch-action: none;
-	  position: fixed;
+	  position: absolute;
 	  top: 15%;
 	  bottom: 10%;
 	  left: 0;
 	  right: 0;
-	  overflow: hidden;
+	  overflow: auto;
 	}
 	.ticket-list {
 		height: 45rem;

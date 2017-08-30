@@ -25,7 +25,7 @@ export default new Router({
       name:'seckill',
       component:SecKill
     },{
-      path: '/city/:id',
+      path: '/city',
       name: 'city',
       component: City,
     },
@@ -40,4 +40,6 @@ export default new Router({
       component: List
 
     }]
+
+
 })

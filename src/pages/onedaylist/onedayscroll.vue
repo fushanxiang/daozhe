@@ -15,7 +15,9 @@
           <span class="rightIcon iconfont" 
           :class="{'list-iconfont': isActive, '': !isActive}" @click="ChangeScrollStyle">&#xe6a6;</span>
         </div>
+        <div :class="{'mask': isActive}" @click="ChangeScrollStyle"></div>
 	</div>
+  
 </template>
 
 <script>
@@ -23,6 +25,7 @@
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 import Vue from 'vue'
+
 
 Vue.use(IScrollView, IScroll)
 
@@ -64,6 +67,7 @@ export default {
         this.$refs.inner.style.width = this.$refs.fillterList.offsetWidth + "px";
         this.setNewScroll(false, true);
       }
+        this.$refs.fillter.style.height = window.innerHeight + "px";
         this.isActive = !this.isActive;    
     },
 
@@ -103,11 +107,12 @@ export default {
   .content .show{
     box-sizing: border-box;
     position: absolute;
-    top: 1.7rem;
+    top: 1.6rem;
     left: 0;
     margin-right: 0;
     width: 100%;
     height: auto;
+    z-index:6;
   }
   .content .lists{
     height:auto;
@@ -125,29 +130,27 @@ export default {
   }
   .moreSight{
     position: absolute;
-    z-index: 3;
-    top: .9rem;
+    z-index: 6;
+    top: 0.88rem;
     right: 0;
     width: .8rem;
     height: .78rem;
     border-left:1px solid #d7dbde;
   }
-  .content{
+  .content {
     height: .8rem;
   }
-  .head{
+  .head {
     position: relative;
-    top: .88rem;
-    z-index: 3;
+    z-index: 6;
     color: #212121;
     font-size: .28rem;
     line-height: .8rem;
     text-indent: .2rem;
     background: #e5e7e8;
     display: block;
-    border-bottom: 1px solid #d7dbde;
   }
-  .moreChose{
+  .moreChose {
     color: #212121;
     line-height: .8rem;
     text-indent: .2rem;
@@ -155,20 +158,23 @@ export default {
     font-size: .24rem;
     padding-left: .1rem
   }
+
   .listCon{
     position: relative;
-    top: .88rem;
+    top: 0;
     overflow: hidden;
     height: .68rem;
     max-height: 6rem;
     padding: .08rem .12rem;
     background: #e5e7e8;
+    z-index:6;
   }
-  .listInner{
+  .listInner {
      height:.68rem;
      touch-action: none;
+     z-index: 3
   }
-  .listItem{
+  .listItem {
     padding-top: .08rem;
     padding-bottom: .08rem;
     display: inline-block;
@@ -176,7 +182,7 @@ export default {
     position: relative;
     padding: .04rem .08rem;
   }
-  .itemCon{
+  .itemCon {
     position: relative;
     display: block;
     min-width: .26rem;
@@ -191,5 +197,14 @@ export default {
   .scroll-view {
     touch-action:none;
     overflow: hidden; 
+  }
+  .mask {
+    background: rgba(0,0,0,0.45);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    z-index: 5;
   }
 </style>

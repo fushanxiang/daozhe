@@ -31,7 +31,7 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.header {
-		position: fixed;
+		position: relative;
 	    overflow: hidden;
 	    top: 0;
 	    left: 0;

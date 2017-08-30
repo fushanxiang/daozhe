@@ -8,7 +8,7 @@
 		</div>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
-				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
+				<span class="nav-city">搜索<span class="downarrow"></span>
 			</span>
 			</router-link>
 		</div>
@@ -17,23 +17,7 @@
 </template>
 
 <script>
-export default {
-	data () {
-		return {
-
-    	}
-	},
-	methods: {
-		changeCity: function() {
-			// this.$store.commit("changeCity", {
-			// 	city: "西安"
-			// });
-			this.$store.dispatch("fiveSecondsChangeCity",{
-				city:"云南"
-			});
-		}
-	}
-}
+export default {}
 </script>
 
 <style scoped>
@@ -46,6 +30,7 @@ export default {
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
+	    z-index: 999;
 	}
 	.header-left {
 		float: left;

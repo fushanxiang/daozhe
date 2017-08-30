@@ -96,13 +96,13 @@ Vue.use(IScrollView, IScroll)
 export default {
 	data () {
 		return {
-			followed : '',
+			followed:'',
 			show:'',
 			opacity:'',
 			recommend:'',
 			barrieShow:false,
 			valueA:'全部分类',
-			valueC: '推荐排序',
+			valueC:'推荐排序',
 			containerLeft:1,
 			type:'A',
 			type1:'',
@@ -139,10 +139,12 @@ export default {
 			this.barrieShow = false;
 			this.show = '';
 			this.opacity = 0.5;
+			this.followed = '';
 		},
 		handleClickContainer(n,type) {
 			this.containerLeft = n;
-			this.type=type;
+			this.type = type;
+			this.followed = '';
 		},
 		handleClickAll(n,type) {
 			if(n==1){
@@ -151,7 +153,7 @@ export default {
 				this.opacity = 0.5;
 			}
 			this.allLeft = n;
-			this.type1=type;
+			this.type1 = type;
 			this.followed = '';
 		},
 		handleClickItemA(index) {
@@ -159,14 +161,16 @@ export default {
 			this.barrieShow = false;
 			this.show = '';
 			this.itemsBcolor = '';
+			this.followed = '';
 		},
 		handleClickItemB(index) {
 			this.itemsBcolor = index;
 			this.barrieShow = false;
 			this.show = '';
 			this.itemsAcolor = ''
+			this.followed = '';
 		},
-		handleClickallA(text){
+		handleClickallA(text) {
 			this.barrieShow = false;
 			this.show = '';
 			this.followed = '';
@@ -180,7 +184,7 @@ export default {
 <style scoped>
 @import "../../assets/font/iconfont.css";
 .fr{
-	float:right;
+	float: right;
 }
 .list-footer{
 	position: fixed;
@@ -192,65 +196,65 @@ export default {
 }
 .typefilte{
 	display:flex;
-	justify-content:space-around;
-	background:black;
-	opacity:.5;
+	justify-content: space-around;
+	background: black;
+	opacity: .5;
 }
 .footer-icon{
-	color:#fff;
-	display:flex;
-	z-index:92;
-	flex-direction:column;
-	align-items:center;
-	margin-top:.15rem;
-	width:30%;
-	height:100%;
+	color: #fff;
+	display: flex;
+	z-index: 92;
+	flex-direction: column;
+	align-items: center;
+	margin-top: .15rem;
+	width: 30%;
+	height: 100%;
 }
 .color{
-	color : #00afc7;
+	color: #00afc7;
 }
 .background{
-	background:#fff;
+	background: #fff;
 }
 .footer-container{
-	width:100%;
+	width: 100%;
 	position: fixed;
-	left:0;
-	right:0;
-	bottom:0.75rem;
-	background:#fff;
-	height:5.3rem;
+	left: 0;
+	right: 0;
+	bottom: 0.75rem;
+	background: #fff;
+	height: 5.3rem;
+	z-index:92;
 }
 .recommend{
-	background:#fff;
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-	width:100%;
-	height:5.4rem;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 5.4rem;
 }
 .container-ul,all-ul{
-	width:100%;
-	height:5.4rem;
+	width: 100%;
+	height: 5.4rem;
 }
-
 .recommend-item{
-	text-align:center;
-	height:2.25rem;
-	width:100%;
-	line-height:.9rem;
+	text-align: center;
+	height: 2.25rem;
+	width: 100%;
+	line-height: .9rem;
 }
 .border-bottom{
-	border-bottom:0.01rem solid #e4e6e8;
+	border-bottom: 0.01rem solid #e4e6e8;
 }
 .barrie{
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	opacity:0.3;
-	background:rgba(0,0,0,0.45);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.3;
+	background: rgba(0,0,0,0.45);
 }
 .scroll-view{
   touch-action: none;
@@ -268,9 +272,9 @@ export default {
   overflow: hidden;
 }
 .container-left{
-	float:left;
-	width:30%;
-	height:100%
+	float: left;
+	width: 30%;
+	height: 100%
 }
 .footer-container-color{
 	background:#f4f5f6;
@@ -310,3 +314,4 @@ export default {
 	background:#fff;
 }
 </style>
+

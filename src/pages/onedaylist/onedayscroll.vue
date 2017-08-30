@@ -1,21 +1,21 @@
 <template>
-	<div class="content border-bottom" ref="fillter">
-    <h3 class="head border-bottom" v-show="isActive">
-        游玩景点
-      <span class="moreChose">(可多选)</span>
-    </h3>
-    <div id="fillterWraper" ref="fillterList" class="listCon" :class="{'show': isActive, '': !isActive}" >
-        <ul class="listInner"  ref="inner" :class="{'lists': isActive, '': !isActive}"  >
-          <li :class="{itemActive: itemActive[index] }" ref="list" class="listItem" @click="handleChose(index)" v-for="(item, index) in dataInfo">
-            <span :class="{'txtActive': itemActive[index]}" class="itemCon">{{item.name}}</span>
-          </li>
-        </ul>
-    </div>
-    <div class="moreSight border-left">
-      <span class="rightIcon iconfont" 
-      :class="{'list-iconfont': isActive, '': !isActive}" @click="ChangeScrollStyle">&#xe6a6;</span>
-    </div>
-    <div :class="{'mask': isActive}" @click="ChangeScrollStyle" ></div>
+	<div class="content" ref="fillter">
+        <h3 class="head" v-show="isActive">
+            游玩景点
+          <span class="moreChose">(可多选)</span>
+        </h3>
+        <div id="fillterWraper" ref="fillterList" class="listCon" :class="{'show': isActive, '': !isActive}" >
+            <ul class="listInner"  ref="inner" :class="{'lists': isActive, '': !isActive}"  >
+              <li :class="{itemActive: itemActive[index] }" ref="list" class="listItem" @click="handleChose(index)" v-for="(item, index) in dataInfo">
+                <span :class="{'txtActive': itemActive[index]}" class="itemCon">{{item.name}}</span>
+              </li>
+            </ul>
+        </div>
+        <div class="moreSight">
+          <span class="rightIcon iconfont" 
+          :class="{'list-iconfont': isActive, '': !isActive}" @click="ChangeScrollStyle">&#xe6a6;</span>
+        </div>
+        <div :class="{'mask': isActive}" @click="ChangeScrollStyle"></div>
 	</div>
   
 </template>
@@ -54,6 +54,7 @@ export default {
       this.listWidth = listWidth + 40 + "px";
       this.$refs.inner.style.width = this.listWidth;
     }
+    this.$refs.fillter.style.height = window.innerHeight + "px";
     this.setNewScroll();
   },
 
@@ -96,10 +97,6 @@ export default {
 </script>
 
 <style scoped>
-@import '../../assets/css/common/border.css';
-  .content .moreSight{
-    border-color:red;
-  }
   .content .list-iconfont{
     transform: rotate(180deg);
   }
@@ -110,7 +107,7 @@ export default {
   .content .show{
     box-sizing: border-box;
     position: absolute;
-    top: .8rem;
+    top: 1.6rem;
     left: 0;
     margin-right: 0;
     width: 100%;
@@ -134,13 +131,11 @@ export default {
   .moreSight{
     position: absolute;
     z-index: 6;
-    top: 0;
+    top: 0.88rem;
     right: 0;
     width: .8rem;
     height: .78rem;
-  }
-  .moreSight::before{
-    border-color: #d7dbde;
+    border-left:1px solid #d7dbde;
   }
   .content {
     height: .8rem;
@@ -155,10 +150,6 @@ export default {
     background: #e5e7e8;
     display: block;
   }
-  .head::before {
-    border-color: #d7dbde;
-  }
-  .
   .moreChose {
     color: #212121;
     line-height: .8rem;
@@ -167,7 +158,10 @@ export default {
     font-size: .24rem;
     padding-left: .1rem
   }
-  .listCon {
+
+  .listCon{
+    position: relative;
+    top: 0;
     overflow: hidden;
     height: .68rem;
     max-height: 6rem;

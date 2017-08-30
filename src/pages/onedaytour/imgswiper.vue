@@ -1,12 +1,12 @@
 <template>
-	<swiper :options="swiperOption" >
+	<swiper :options="swiperOption" class="carousel">
 		<slot></slot>
 	    <swiper-slide v-for="item in imgsInfo" :key="item.id">
 	    	<div class="img-container">
 	    		<img class="swiper-img" :src="item.imgUrl" />
 	    	</div>
 	    </swiper-slide>	    
-	    <div class="swiper-pagination"  slot="pagination"></div>	
+	    <div class="swiper-pagination swiper-btn"  slot="pagination"></div>	
 	</swiper>
 </template>
 
@@ -14,18 +14,20 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
-	data () {
+	data() {
 		return {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
+				autoplay: 3000,
+				loop: true,
 				pagination : '.swiper-pagination',
 				paginationClickable :true,
 				observeParents:true
 			}
-    	}
+		}
 	},
-	props:["imgsInfo"],
+	props: ["imgsInfo"],
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide
@@ -35,12 +37,17 @@ export default {
 
 <style scoped>
 	@import '~swiper/dist/css/swiper.css';
+	.carousel {
+		position: relative;
+		top: .88rem;
+		background: #fff;
+	}
 	.img-container {
-		background: #eee;
 		overflow: hidden;
 		width: 100%;
-		padding-bottom: 31.25%;
 		height: 0;
+		padding-bottom: 26.56%;
+		background: #eee;
 	}
 	.swiper-img {
 		width:100%;

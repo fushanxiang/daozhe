@@ -1,6 +1,6 @@
 <template>
 	<div>
-    	<common-header></common-header>
+    	<common-header message="暑假大放价"></common-header>
     	<pic-list></pic-list>
     	<choose-city></choose-city>
 	</div>
@@ -8,11 +8,9 @@
 
 <script>
 
-import CommonHeader from './commonheader'
+import CommonHeader from '../components/commonheader'
 import PicList from './piclist'
 import ChooseCity from './choosecity'
-
-
 
 export default {
   name: 'index',

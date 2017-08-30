@@ -1,7 +1,7 @@
 <template>
 	<header class="commonheader">
 		<span class="header-left iconfont">&#xe600;</span>
-		<h1 class="summer-title">暑期大放价</h1>
+		<h1 class="summer-title">{{message}}</h1>
 		<div class="header-right">
 			<span class="icon_scenic iconfont">&#xe63e;</span>
 			<span class="home">首页</span>
@@ -14,10 +14,9 @@
 <script>
 export default {
 	data () {
-		return {
-
-    	}
-	}
+		return {}
+	},
+	props: ["message"]
 }
 </script>
 

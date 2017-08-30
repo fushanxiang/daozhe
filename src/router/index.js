@@ -5,10 +5,9 @@ import Hello from '@/components/Hello'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import Onedaytour from '@/pages/onedaytour/index'
-import BigCity from '@/pages/city/big_city'
-import SmallCity from '@/pages/city/small_city'
 import OnedayList from '@/pages/onedaylist/onedaylist'
-
+import Weekend from '@/pages/weekend/index'
+import SecKill from '@/pages/seckill/index'
 
 Vue.use(Router)  
 
@@ -19,19 +18,6 @@ export default new Router({
         name: 'index',
         component: Index
     },{
-        path: '/city/:id',
-        name: 'city',
-        component: City,
-        children: [
-        {
-            path: 'bigCity',
-            component: BigCity
-        },{
-            path: 'smallCity',
-            component: SmallCity
-        }
-      ]
-    },{
         path: '/onedaytour',
         name: 'onedaytour',
         component: Onedaytour
@@ -39,6 +25,18 @@ export default new Router({
       path: '/onedaylist',
       name: 'onedaylist',
       component: OnedayList
+    },{
+      path: '/weekend',
+      name: 'weekend',
+      component: Weekend
+    },{
+      path:'/seckill',
+      name:'seckill',
+      component:SecKill
+    },{
+      path: '/city',
+      name: 'city',
+      component: City
     }
   ]
 })

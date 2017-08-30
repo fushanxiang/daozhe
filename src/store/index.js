@@ -5,11 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		"city": "南京" 
+		"city": localStorage.selectedCity || "北京"
 	},
 	getters: {
 		"perfectCity": function(state) {
-			return state.city + "^<>^"
+			return state.city
 		}
 	},
 	mutations: {

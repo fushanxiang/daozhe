@@ -72,6 +72,13 @@ Vue.use(IScrollView, IScroll)
 
 </script>
 <style scoped>
+	::-webkit-scrollbar {
+		width: 2px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 6px;    
+		background: rgba(0,0,0,0.1);    
+	}
 	.scroll-view {
 	  touch-action: none;
 	  position: fixed;

@@ -1,12 +1,12 @@
 <template>
 	<div class="main">
-		<swiper></swiper>
-		<recommend></recommend>
-		<ticket-notes></ticket-notes>
-		<scenic-area></scenic-area>
-        <header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>
+			<swiper></swiper>
+			<recommend></recommend>
+			<ticket-notes></ticket-notes>
+			<scenic-area></scenic-area>
+      <header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>
     	<recommend :recommendInfo="recommendInfo" :style="styleRec"></recommend>
-        <foot-fixed :style="styleObject"></foot-fixed>
+      <foot-fixed :style="styleObject"></foot-fixed>
     </div>
 </template>
 
@@ -33,19 +33,19 @@
 		            marginBottom:".88rem"
 		        }
 		    }
-		}, 
+			}, 
 		  	mounted() {
 		      	var this_ = this;
 		      	window.addEventListener('scroll', function() {
 		        	this_.scrollTop = document.body.scrollTop;
 		    }, false);
-		},
+			},
 
 		  	beforeDestroy: function() {
 		    	window.removeEventListener("scroll", function() {
 		      		this_.scrollTop = document.body.scrollTop;
 		    }, false);
-		},
+			},
 		   	created() {
 		      	this.$http.get('../../../static/ticketdetail.json').then(response => {
 		        var data = response.data;
@@ -53,7 +53,7 @@
 		    	}, response => {
 		        console.log("dfs");
 		    });
-		},
+			},
 		  	components:{ 	
 			  	"ticket-notes":TicketNotes,
 			  	"scenic-area":ScenicArea,

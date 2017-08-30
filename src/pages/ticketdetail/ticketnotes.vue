@@ -98,8 +98,6 @@
 		data () {
 			return {
 				isActive:true,
-				
-
 			}
 		},
 		methods:{

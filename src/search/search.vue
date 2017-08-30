@@ -1,25 +1,20 @@
 <template>
     <div>
         <index-header :dataScen="hotSearchScen" :dataArea="hotSearchArea"></index-header>
-        <div class="footer" @click="handlefooter">
-        <index-detail></index-detail>
-        <item-products :productItems="content"></item-products>
-        </div>
+        <div class="footer" @click="handlefooter"></div>
     </div>
 </template>
 
 <script>
 
-import IndexHeader from './header/header.vue'
-import IndexDetail from './sort/index.vue'
-import ItemProducts from './ProductItems/index.vue'
+import IndexHeader from '../pages/list/header/header.vue'
+
 
 export default {
   data () {
     return {
       hotSearchScen:[],
       hotSearchArea:[],
-      content:[]
     }
   },
   created(){
@@ -27,14 +22,11 @@ export default {
         var data=response.body.data;
         this.hotSearchScen=data.hotSearchScen;
         this.hotSearchArea=data.hotSearchArea;
-        this.content=data.content;
       }, response => {
       });
   },
   components:{
     "index-header": IndexHeader,
-    "item-products": ItemProducts,
-    "index-detail": IndexDetail
   },
    methods: {
     handlefooter(){
@@ -46,4 +38,10 @@ export default {
 
 
 <style scoped>
+  .footer{
+    position: absolute;
+    top: 5.82rem;
+    width: 100%;
+    height: 100%;
+  }
 </style>

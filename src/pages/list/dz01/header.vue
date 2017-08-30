@@ -1,9 +1,10 @@
 <template>
-	<div>
+	  <div>
         <header class="header">
             <a class="header-left iconfont">&#xe600;</a>
             <span class="header-title">
-            <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus"v-model="inputtext"/>
+            <input class="header-title-input" placeholder="输入城市或景点" @focus="handlefocus" v-model="inputtext" 
+            />
             <span class="search-del iconfont" @click="handleSearchDel" v-show="this.searchDel">&#xe60d;</span>
             </span>
             <div class="header-right">
@@ -12,7 +13,7 @@
             </router-link>
             </div>
         </header>
-        <div class="search-near-box"  @click="handleclick" v-show="this.searchNear">
+        <div class="search-near-box"  @click="handleclick" v-show="this.$store.state.searchNear">
             <div class="search-history"  v-show="this.searchHistory">
                 <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
                 <div class="search-history-info">
@@ -54,7 +55,6 @@ export default {
         areatop:"",
         inputtext:"",
         historyarr:[],
-        searchNear:false,
         searchHistory:true,
         searchDel:false,
         historysearch:""
@@ -63,7 +63,7 @@ export default {
     props:["dataScen","dataArea"],
         updated(){
         if (this.inputtext!=="") {
-            this.searchNear=false;
+            this.$store.commit("showNear",false)
             this.searchDel=true;
         }else{
             this.searchDel=false;
@@ -72,9 +72,7 @@ export default {
     methods: {
         handlefocus(){
             if (this.inputtext=="") {
-                this.searchNear=true;
-            }else{
-                this.searchNear=false;
+                this.$store.commit("showNear",true);
             }
             if (localStorage.history==undefined) {
                 this.searchHistory=false;
@@ -89,7 +87,7 @@ export default {
             this.historyarr=[];
         },
         handleclick(){
-            this.searchNear=true;;
+            this.$store.commit("showNear",true)
         },
         handleSearchDel(){
             this.inputtext="";
@@ -144,6 +142,9 @@ export default {
         },
         handlehotSearchNear(){
             alert("周边景点");
+        },
+        handlebox(){
+          alert("sss")
         }
     }
 }

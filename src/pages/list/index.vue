@@ -1,8 +1,10 @@
 <template>
     <div>
         <index-header :dataScen="hotSearchScen" :dataArea="hotSearchArea"></index-header>
+        <div class="footer" @click="handlefooter">
         <index-detail></index-detail>
         <item-products :productItems="content"></item-products>
+        </div>
     </div>
 </template>
 
@@ -33,7 +35,12 @@ export default {
     "index-header": IndexHeader,
     "item-products": ItemProducts,
     "index-detail": IndexDetail
-  }
+  },
+   methods: {
+    handlefooter(){
+       this.$store.commit("showNear",false)
+    }
+   }
 }
 </script>
 

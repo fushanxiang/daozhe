@@ -6,7 +6,7 @@
 				<div role="textItem" class="text-item">
 					<div class="text-title">长隆水上乐园</div>
 					<div class="imgwrap" role="textInnerElem">
-						<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1410/13/1b8ad559bdf2c90ad477a867b5afafea.jpg_710x420_23f1c77a.jpg" src="http://img1.qunarzz.com/sight/p0/1410/13/1b8ad559bdf2c90ad477a867b5afafea.jpg_710x420_23f1c77a.jpg" style="">
+						<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1504/7f/7fc254c4d628610.water.jpg_710x420_e65ffe54.jpg" src="http://img1.qunarzz.com/sight/p0/1410/13/1b8ad559bdf2c90ad477a867b5afafea.jpg_710x420_23f1c77a.jpg" style="">
 						<p class="imginfo ellipsis" role="textInnerElem">酷炫的设施</p>
 					</div>
 					<div class="text-info" role="textInnerElem">有各种水上游艺设备，从滑道高速下滑，带来刺激的体验。还有专门为孩子设计的宝贝水城和亲子滑道，适合家庭出游，带孩子游玩。</div>
@@ -15,22 +15,21 @@
 						<p class="imginfo ellipsis" role="textInnerElem">全家游</p>
 					</div>
 					<div class="text-info" role="textInnerElem">哇~和粑粑麻麻一起到水上乐园来消暑，好开心！！！</div>
-						
-						<div class="imgwrap" role="textInnerElem" :style="styleObj">
-							<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1507/97/56c577cf6c05088eb6150b0491871528.water.jpg_710x420_b8c36305.jpg" src="http://img1.qunarzz.com/sight/p0/1507/97/56c577cf6c05088eb6150b0491871528.water.jpg_710x420_b8c36305.jpg">
-							<p class="imginfo ellipsis" role="textInnerElem" :style="styleObj">超级巨兽碗</p>
-						</div>
-						<div class="text-info" role="textInnerElem" :style="styleObj">超级巨兽碗，你先在紫水晶通道穿越，来到一个巨碗中。当你稍觉平稳，仰望到蓝天白云时，突然被吸进一个黑洞，你的大声呼喊还没结束，你已穿越黑洞回到现实。</div>
-						<div class="imgwrap" role="textInnerElem" :style="styleObj">
-							<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1410/13/eb00e1f6c7f4a4d10d1276417b84bf03.jpg_710x420_e4b9d6d0.jpg" src="http://img1.qunarzz.com/sight/p0/1410/13/eb00e1f6c7f4a4d10d1276417b84bf03.jpg_710x420_e4b9d6d0.jpg">
-							<p class="imginfo ellipsis" role="textInnerElem" :style="styleObj">超级大喇叭</p>
-						</div>
-						<div class="text-info" role="textInnerElem" :style="styleObj">超级大喇叭，家人一起坐在四叶草浮圈里，从六层多楼高的平台出发，像被龙卷风吸进一个巨大喇叭中，在快速滑行中倾情欢叫，大喇叭会让你的声音传遍整个园区。</div>
-						<div class="imgwrap" role="textInnerElem" :style="styleObj">
-							<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1504/92/92c82c4e0c17755e.water.jpg_710x420_5d0b7c69.jpg" src="http://img1.qunarzz.com/sight/p0/1504/92/92c82c4e0c17755e.water.jpg_710x420_5d0b7c69.jpg">
-							<p class="imginfo ellipsis" role="textInnerElem" :style="styleObj">去玩~~</p>
-						</div>
-						<div class="text-info" role="textInnerElem" :style="styleObj">嗯？粑粑去哪儿了？村长在这里耶~~</div>
+					<div class="imgwrap" role="textInnerElem" :style="styleObj">
+						<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1507/97/56c577cf6c05088eb6150b0491871528.water.jpg_710x420_b8c36305.jpg" src="http://img1.qunarzz.com/sight/p0/1507/97/56c577cf6c05088eb6150b0491871528.water.jpg_710x420_b8c36305.jpg">
+						<p class="imginfo ellipsis" role="textInnerElem" :style="styleObj">超级巨兽碗</p>
+					</div>
+					<div class="text-info" role="textInnerElem" :style="styleObj">超级巨兽碗，你先在紫水晶通道穿越，来到一个巨碗中。当你稍觉平稳，仰望到蓝天白云时，突然被吸进一个黑洞，你的大声呼喊还没结束，你已穿越黑洞回到现实。</div>
+					<div class="imgwrap" role="textInnerElem" :style="styleObj">
+						<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1410/13/eb00e1f6c7f4a4d10d1276417b84bf03.jpg_710x420_e4b9d6d0.jpg" src="http://img1.qunarzz.com/sight/p0/1410/13/eb00e1f6c7f4a4d10d1276417b84bf03.jpg_710x420_e4b9d6d0.jpg">
+						<p class="imginfo ellipsis" role="textInnerElem" :style="styleObj">超级大喇叭</p>
+					</div>
+					<div class="text-info" role="textInnerElem" :style="styleObj">超级大喇叭，家人一起坐在四叶草浮圈里，从六层多楼高的平台出发，像被龙卷风吸进一个巨大喇叭中，在快速滑行中倾情欢叫，大喇叭会让你的声音传遍整个园区。</div>
+					<div class="imgwrap" role="textInnerElem" :style="styleObj">
+						<img class="park-img" role="lazyLoadImg" data-original-src="http://img1.qunarzz.com/sight/p0/1504/92/92c82c4e0c17755e.water.jpg_710x420_5d0b7c69.jpg" src="http://img1.qunarzz.com/sight/p0/1504/92/92c82c4e0c17755e.water.jpg_710x420_5d0b7c69.jpg">
+						<p class="imginfo ellipsis" role="textInnerElem" :style="styleObj">去玩~~</p>
+					</div>
+					<div class="text-info" role="textInnerElem" :style="styleObj">嗯？粑粑去哪儿了？村长在这里耶~~</div>
 				
 				</div>
 			</div>
@@ -53,8 +52,8 @@
 				}
 			}
 		},
-		methods:{
-			handleModeClick:function(){
+		methods: {
+			handleModeClick:function() {
 				this.mode=false;
 				this.prompt=true;
 				this.styleObj.display="block";

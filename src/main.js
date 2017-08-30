@@ -7,9 +7,13 @@ import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
 import VueLazyload from 'vue-lazyload'
 import VueBus from 'vue-bus'
+import IScrollView from 'vue-iscroll-view'
+import IScroll from 'iscroll'
+
+Vue.use(IScrollView,IScroll)
 
 Vue.use(BaiduMap, {
-  ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'
+	ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'
 })
 
 fastclick.attach(document.body);

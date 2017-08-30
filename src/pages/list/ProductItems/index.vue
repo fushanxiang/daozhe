@@ -1,7 +1,7 @@
 <template>
     <div class="products-main">
         <ul class="view-list">
-            <li class="sight-group border-topbottom" v-for="item in this.pages[index]" :key="item.id">
+            <li class="sight-group border-bottom" v-for="item in this.pages[index]" :key="item.id">
                 <div class="item-content">
                     <div class="sight-info">
                         <div class="sight-imgcon">
@@ -31,7 +31,7 @@
                         <span class="ticket-qunarprice">¥<em>{{item.navigationPrice}}</em></span>
                     </div>
                 </div>
-                <div class="item-more-ticket ">查看全部{{item.moreProduct}}个产品<span class="more-ticketicon">&gt;</span>
+                <div class="item-more-ticket border-top">查看全部{{item.moreProduct}}个产品<span class="more-ticketicon">&gt;</span>
                 </div> 
             </li>
         </ul>
@@ -103,6 +103,15 @@
 <style scoped>
 @import "../../../assets/font/iconfont.css";
 @import '../../../assets/css/common/border.css';
+.item-more-ticket::before{
+    border-color:#ccc;
+}
+.sight-ticket-item::before{
+    border-color:#ccc;
+}
+.sight-group::before{
+    border-color:#ccc;
+}
 .pagination .page-num {
     color: #212121;
     line-height: .6rem;
@@ -136,16 +145,12 @@
     color: #9e9e9e;
     font-size: .28rem;
     line-height: .9rem;
-    border-bottom:1px solid #ccc;
 }
 .more-ticketicon {
     float: right;
     height: .9rem;
     font-size: .22rem;
     line-height: .9rem;
-}
-.item-content{
-    border-bottom:1px solid #ccc;
 }
 .ticket-qunarprice em {
     font-size: .36rem;
@@ -255,7 +260,7 @@
     display: block;
     background: #f5f5f5;
     width:100%;
-    height:19.84rem;
+    height:100%;
     overflow: hidden;
 }
 .sight-group{
@@ -265,7 +270,6 @@
 }
 .sight-info{
     overflow: hidden;
-    border-top: 1px solid #ccc;
     padding: .2rem;
 }
 .sight-imgcon{
@@ -278,10 +282,4 @@
     width: 1.6rem;
     height: 1.6rem;
 }
-.sight-ticket-item::before{
-    border-color:#ccc;
-    border-style: dashed;
-    transform: scaleY(.2);
-}
-
 </style>

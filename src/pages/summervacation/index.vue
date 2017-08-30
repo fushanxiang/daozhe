@@ -3,6 +3,7 @@
     	<common-header></common-header>
     	<pic-list></pic-list>
     	<choose-city></choose-city>
+        <toggle></toggle>
         <summerselect></summerselect>
 	</div>
 </template>
@@ -12,7 +13,7 @@ import CommonHeader from './commonheader'
 import PicList from './piclist'
 import ChooseCity from './choosecity'
 import SummerSelect from './summerselect.vue'
-
+import Toggle from './toggle.vue'
 export default {
     name: 'index',
 
@@ -26,27 +27,18 @@ export default {
 
     methods:{
         handleScroll(){
-            let scrollTop=document.body.scrollTop,
-                clientHeight=document.body.clientHeight,
-                oSumSelect=document.getElementById("summer-select"),
-                oToggle=document.getElementById("toggle"),
-                oSumSelectH=oSumSelect.offsetTop,
-                oToggleH=oToggle.offsetTop;
-                console.log(scrollTop)
-                console.log(clientHeight)
+            let scrollTop = document.body.scrollTop,
+                clientHeight = document.body.clientHeight,
+                oToggle = document.getElementById("toggle"),
+                oToggleImg =document.getElementById("sumselect-img"),
+                oToggleH=oToggleImg.offsetTop;
                 console.log(oToggleH)
-                if(scrollTop=oSumSelectH+oToggleH) {
+                if(scrollTop>=oToggleH) {
                     oToggle.className="toggle-fixed";
+                    
                 }else{
-                    oToggle.className="toggle";
-                }
-            // if(scrollTop-offsetTop<clientHeight){
-            //     console.log(scrollTop-offsetTop)
-            //     console.log(clientHeight)
-            //     oToggle.className="toggle-fixed";
-            // }else{
-            //     oToggle.className="toggle";
-            // }
+                        oToggle.className="toggle";
+                    }
         }
     },
 
@@ -54,7 +46,8 @@ export default {
         "summerselect": SummerSelect,
         "common-header":CommonHeader,
         "pic-list":PicList,
-        "choose-city":ChooseCity
+        "choose-city":ChooseCity,
+         "toggle": Toggle
     },
 
     data () {

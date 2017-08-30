@@ -1,9 +1,5 @@
 <template>
 	<div class="summer-select" id="summer-select">    
-		<div class="sumselect-play">
-			<img src="//s.qunarzz.com/piao_topic/image/touch/custom/2016/1772travel10/170710/caption2.jpg">
-		</div>
-		<toggle></toggle>
 		<div class="sumselect-item">
 			 <ul class="sumselect-content">
 			 	<li class="sumselect-category" v-for="item in selectInfo">
@@ -31,12 +27,12 @@
 </template>
 
 <script>
-	import Toggle from './toggle.vue'
+	
 	export default {
 		name: 'summerselect',
 
 		components: {
-            "toggle": Toggle
+           
 		},
 
 		data() {
@@ -116,14 +112,6 @@
 	position: relative;
 	width: 100%;
 	background: #23a4e5;
-}
-.sumselect-play{
-	overflow: hidden;
-    min-height: .88rem;
-}
-.sumselect-play img{
-    width: 100%;
-    vertical-align: top;
 }
 .sumselect-item{
 	width: 100%;

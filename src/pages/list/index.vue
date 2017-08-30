@@ -11,7 +11,7 @@
 <script>
 
 import IndexHeader from './dz01/header.vue'
-import IndexDetail from './dz02/index.vue'
+import IndexDetail from './sort/index.vue'
 import ItemProducts from './dz03/index.vue'
 
 export default {

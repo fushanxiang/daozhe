@@ -1,12 +1,12 @@
 <template>
-	  <div class="main-content">
-    		<index-header></index-header>
-    		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
+    <div class="main-content">
+  		<index-header></index-header>
+  		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
         <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
         <hot-sale :itemsInfo="itemsInfo"></hot-sale>
         <holiday :holidayInfo="holidayInfo"></holiday>
         <foot></foot>
-	  </div>
+	</div>
 </template>
 
 <script>
@@ -50,26 +50,27 @@ export default {
   }
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
+
 .main-content{
     background: #f5f5f5;
 }
 h1, h2 {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 li {
-  display: inline-block;
-  margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 a {
-  color: #42b983;
+    color: #42b983;
 }
 </style>

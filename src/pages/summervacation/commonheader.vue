@@ -1,0 +1,75 @@
+<template>
+	<header class="commonheader">
+		<span class="header-left iconfont">&#xe600;</span>
+		<h1 class="summer-title">暑期大放价</h1>
+		<div class="header-right">
+			<span class="icon_scenic iconfont">&#xe63e;</span>
+			<span class="home">首页</span>
+		</div>
+	</header>
+	
+</template>
+
+
+<script>
+export default {
+	data () {
+		return {
+
+    	}
+	}
+}
+</script>
+
+<style scoped>
+	@import "../../assets/font/iconfont.css";
+	.commonheader{
+		width:100%;
+		height:0.88rem;
+		background:#1ba9ba;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		color:#fff;
+	}
+	.header-left{
+		display:inline-block;
+		width:0.88rem;
+		height:0.88rem;
+		font-size:0.36rem;
+		line-height:0.88rem;
+		text-align:center;
+		color:#fff;
+
+	}
+	.summer-title{
+		width:5.5rem;
+		height:0.88rem;
+		text-align:center;
+		line-height:0.88rem;
+	}
+	.header-right{
+		display:flex;
+		flex-flow:column;
+		width:0.88rem;
+		height:0.88rem;
+		color:#fff;
+		align-items:center;
+	}
+	.icon_scenic{
+		width:0.88rem;
+		height:0.5rem;
+		font-size:0.4rem;
+		line-height:0.58rem;
+		text-align:center;
+	
+	}
+	.home{
+		width:0.88rem;
+		height:0.38rem;
+		font-size:0.24rem;
+		text-align:center;
+		line-height:0.38rem;
+
+	}
+</style>

@@ -64,6 +64,8 @@
             },
             handleChina() {
                 this.cityChange = 'china';
+                this.cities = [];
+                this.show = true;
                 this.colorChina = {
                     "color": "#00afc7",
                     "background": "#fff"
@@ -76,6 +78,8 @@
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
+                this.cities = [];
+                this.show = true;
                 this.colorAbroad = {
                     "color": "#00afc7",
                     "background": "#fff"
@@ -184,7 +188,9 @@
         width: 100%;
         line-height: .3rem;
         padding: .16rem 0 .16rem .1rem;
-        border-radius: .1rem;
+        border-radius: .06rem;
+        border: none;
+        color: #9e9e9e;
     }
     .search-cities {
         width: 100%;

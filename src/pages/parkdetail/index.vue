@@ -1,4 +1,5 @@
 <template>
+
 	<div @mousewheel="test">
 		<swiper></swiper>
 		<park-location></park-location>
@@ -9,6 +10,7 @@
 		<recommend-sites :recommendInfo="recommendInfo"></recommend-sites>
 		<ua-pop :deltaY="deltaY"></ua-pop>
 	</div>
+
 </template>
 
 <script>
@@ -39,7 +41,6 @@
 				console.log("dfs");
 			});
 		},
-
 		components: {
 			"park-location": ParkLocation,
 			"detail-tree": DetailTree,
@@ -62,7 +63,7 @@
 			}, false);
 		},
 		methods: {
-			test(e) {
+			 test(e) {
 				if(e.deltaY < 0) {
 					this.deltaY = false;
 
@@ -78,7 +79,7 @@
 				} else {
 					return "opacity:" + this.scrollTop / 200
 				}
-			}
+			} 
 
 		}
 

@@ -1,7 +1,8 @@
 <template>
-	<div id="page-category" class="mpw-dock mpw-dock-fadein" style=""><div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div><div class="mpw-dock-content" mp-role="dockContent"><div class="mpf-control-outer">
+	<div id="page-category" class="mpw-dock mpw-dock-fadein" style=""  v-show="mode"><div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div><div class="mpw-dock-content" mp-role="dockContent"><div class="mpf-control-outer">
     <div class="mp-booking-info">
         <h5 class="mpf-booking-title">太平洋海底世界成人票+海洋动物表演电子套票（文惠券产品）</h5>
+        <div class="mpw-dock-close iconfont" @click="handleClick">&#xe633;</div>
         <p class="mpf-booking-price">
             <span class="mpg-price">¥<em class="mpg-price-num" id="price">80</em></span>
             <span id="price-text">/张</span>
@@ -37,14 +38,21 @@
 <script>
 	export default {
 		data () {
-			return {				
+			return {
+                mode:true
 			}		
-		}
+		},
+        methods:{
+            handleClick() {
+               this.mode=false
+            }
+        }
 		
 }
 </script>
 
 <style scoped>
+    @import "../../assets/font/iconfont.css";
 	.mpw-dock {
     position: fixed;
     z-index: 92;
@@ -66,7 +74,18 @@
     font: normal .36rem/1rem Arial,"Microsoft Yahei","Helvetica Neue",Helvetica,sans-serif;
     text-align: center;
 }
-
+.mpw-dock-close {
+    z-index: 2;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: .88rem;
+    height: 1rem;
+    color: #9e9e9e;
+    font-size: .4rem;
+    line-height: 1rem;
+    text-align: center;
+}
 .mpf-booking-title {
     margin-right: .6rem;
     padding: .3rem 0 .1rem;

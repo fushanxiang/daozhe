@@ -1,5 +1,5 @@
 <template>
-	<dir class="foot">
+	<div class="foot">
 		<ul class="foot-one">
 			<li class="foot-li">
 				<a href="#">
@@ -8,36 +8,37 @@
 				</a>
 			</li>
 			<li class="foot-li">
-				<a href="#">
+				<a class='list-type' href="#">
 					<div class="iconfont">&#xe609;</div>
 					<span class="foot-title">酒店</span>
 				</a>
 			</li>
 			<li class="foot-li">
-				<a href="#">
+				<a class='list-type' href="#">
 					<div class="iconfont">&#xe698;</div>
 					<span class="foot-title">公寓</span>
 				</a>
 			</li>
 			<li class="foot-li">
-				<a href="#" class="last">
+				<a class='list-type last' href="#">
 					<div class="iconfont">&#xe608;</div>
 					<span class="foot-title">更多</span>
 				</a>
 			</li>
 		</ul>
 		<ul class="foot-two">
-			<li>登陆</li>
-			<li>我的订单</li>
-			<li>我的订单</li>
-			<li>我的订单</li>
+			<li class="order-item">登陆</li>
+			<li class="order-item">我的订单</li>
+			<li class="order-item">我的订单</li>
+			<li class="order-item">我的订单</li>
+			<li class="order-item">关于我们</li>
 		</ul>
 		<ul class="foot-three">
-			<li class="touch">触屏版</li>
-			<li class="telephone">手机版</li>
+			<li class="touch item-type">触屏版</li>
+			<li class="telephone item-type">手机版</li>
 		</ul>
 		<div class="foot-four">Qunar 京ICP备05021087<span>意见反馈</span></div>
-	</dir>
+	</div>
 </template>
 
 <script>
@@ -60,9 +61,8 @@
 	}
 	.foot-one{
         width: 100%;
-        box-sizing: border-box;
 	    height: .5rem;
-	    padding: .1rem;
+	    padding: .15rem .1rem 0;
 	    overflow: hidden;
 	}
 	.foot-li{
@@ -71,13 +71,14 @@
 	    width: 25%;
 	    float: left;
 	}
-	.foot-li a{
+
+	.list-type{
 		display: block;
 	    height: .44rem;
 	    width: 100%;
 	    font-size: .24rem;
 	}
-	.foot-li a .iconfont{
+	.list-type .iconfont{
 		float: left;
 	    width: .44rem;
 	    height: .44rem;
@@ -101,9 +102,10 @@
 		height:.78rem;
 		border-bottom: 1px solid #cacaca;
 	}
-	.foot-two li{
+	.order-item{
+		width:20%;
 		float: left;
-		padding-left: .4rem;
+		text-align: center;
 		color: #25a4bb;
 	    font-size: .28rem;
 	    line-height: .78rem;
@@ -113,18 +115,19 @@
 		padding: .2rem 0 0 0;
         overflow: hidden;
 	}
-	.foot-three li{
+	.foot-three .item-type{
 		color: black;
+		width:48%;
+		float: left;
 		font-size: .28rem;
 	}
 	.foot-three .touch{
-		float: left;
-		margin-left: 2.44rem;
+		text-align: right;
+		padding-right: .1rem;
 	}
 	.foot-three .telephone{
-		float: right;
-		color:#25a4bb;
-		margin-right: 2.44rem;
+		text-align: left;
+		padding-left: .1rem;
 	}
 	.foot-four{
 		width: 100%;

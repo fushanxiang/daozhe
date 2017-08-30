@@ -11,42 +11,37 @@ import SecKill from '@/pages/seckill/index'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: Index
-    },{
-      path: '/weekend',
-      name: 'weekend',
-      component: Weekend
-    },{
-      path: '/summervacation',
-      name: 'vacation',
-      component: SummerVacation
-    },{
-      path:'/seckill',
-      name:'seckill',
-      component:SecKill
-    },{
-      path: '/city/:id',
-      name: 'city',
-      component: City,
-      children: [
+    routes: [
         {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
-          path: 'smallCity',
-          component: SmallCity
+            path: '/',
+            name: 'index',
+            component: Index
+        },{
+            path: '/weekend',
+            name: 'weekend',
+            component: Weekend
+        },{
+            path: '/summervacation',
+            name: 'vacation',
+            component: SummerVacation
+        },{
+            path:'/seckill',
+            name:'seckill',
+            component:SecKill
+        },{
+
+            path: '/city/:id',
+            name: 'city',
+            component: City,
+            children: [
+                {
+                    path: 'bigCity',
+                    component: BigCity
+                },{
+                    path: 'smallCity',
+                    component: SmallCity
+                }
+            ]
         }
-      ]
-    },
-    {
-      path: '/summervacation',
-      name: 'vacation',
-      component: SummerVacation
-    }
-  ]
+    ]
 })

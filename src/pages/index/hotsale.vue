@@ -15,39 +15,10 @@
 
 <script>
 export default {
+	props:["itemsInfo"],
 	data () {
 		return {
-			itemsInfo: [{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
-				"title": "故宫",
-				"content": "东方宫殿建筑代表，世界宫殿建筑典范",
-				"price": "20"
-			},{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_140x140_e20be8e0.jpg",
-				"title": "颐和园",
-				"content": "保存完整的一座皇家行宫御苑",
-				"price": "65"
-			},{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_140x140_75f5d504.jpg",
-				"title": "八达岭长城",
-				"content": "不到长城非好汉",
-				"price": "39.9"
-			},{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_140x140_b05eb1df.jpg",
-				"title": "北京欢乐谷",
-				"content": "七大主题园区带你畅享北京欢乐谷",
-				"price": "29.5"
-			},{
-				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/201306/13/bdf22f69fab0ee4ec8d65eac.jpg_140x140_355f4fb6.jpg",
-				"title": "八达岭长城缆车",
-				"content": "巍峨雄伟尽收眼底",
-				"price": "155"
-			}]
+			
     	}
 	}
 }
@@ -55,6 +26,9 @@ export default {
 
 <style scoped>
 	@import '../../assets/css/common/border.css';
+	.hotsale-list{
+		background: #fff;
+	}
 	.hotsale-title {
 		background: #f5f5f5;
 		padding-left: .28rem;
@@ -104,6 +78,7 @@ export default {
 	.item-all {
 		line-height: .86rem;
 		text-align: center;
+		background: #fff;
 		font-size: .28rem;
 		color: #00b7d7;
 	}

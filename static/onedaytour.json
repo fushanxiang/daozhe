@@ -252,7 +252,7 @@
 				"title": "颐和园门票",
 				"content": "13750评论",
 				"price": "65",
-				"book": false,
+				"book": "",
 				"from": "北京海淀区"
 			},{
 				"id": "3",

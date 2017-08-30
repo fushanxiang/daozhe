@@ -1,10 +1,13 @@
+
 <template>
 	<header class="header">
 		<a class="header-left iconfont">&#xe600;</a>
-		<div class="header-title">
+		 <router-link to="/search">
+		 <div class="header-title">
 			<span class="iconfont icon-search"></span >
 			<span class="single-line">输入城市/景点/游玩主题</span>
 		</div>
+		</router-link>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
 				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
@@ -67,20 +70,20 @@ export default {
 	    border-radius: .06rem;
 	}
 	.single-line {
-		    display: inline-block;
-		    overflow: hidden;
-		    position: absolute;
-		    left: .3rem;
-		    top: 0;
-		    width: 3.6rem;
-		    white-space: nowrap;
-		    text-overflow: ellipsis;
-		    color: #e4e7ea;
+	    display: inline-block;
+	    overflow: hidden;
+	    position: absolute;
+	    left: .3rem;
+	    top: 0;
+	    width: 3.6rem;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #e4e7ea;
 	}
 	.icon-search {
-		    position: absolute;
-		    left: .2rem;
-		    color: #e4e7ea;
+	    position: absolute;
+	    left: .2rem;
+	    color: #e4e7ea;
 	}
 	.header-right{
 		position: absolute;

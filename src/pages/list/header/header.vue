@@ -8,7 +8,7 @@
             <span class="search-del iconfont" @click="handleSearchDel" v-show="this.searchDel">&#xe60d;</span>
             </span>
             <div class="header-right">
-            <router-link to="/">
+            <router-link to="/list">
             <span class="header-submit" @click="handlesearch" >搜索 </span>
             </router-link>
             </div>
@@ -93,6 +93,7 @@ export default {
             this.inputtext="";
         },
         handlesearch(){
+          this.$store.commit("showNear",false)
         for (var i = 0; i < this.historyarr.length; i++) {
             if (this.historyarr[i].historysearch==this.inputtext||(this.historyarr[i].historysearch=="北京"&&this.inputtext=="")) {
                 return this.historyarr.splice(0,1);
@@ -100,7 +101,8 @@ export default {
         }
         if (this.inputtext=="") {
             this.inputtext="北京";
-            this.historyarr.unshift({historysearch:this.inputtext});
+            var id=new Date().getTime();
+            this.historyarr.unshift({id:id,historysearch:this.inputtext});
             localStorage.history=JSON.stringify(this.historyarr);
         }else{   
         if (localStorage.history) {

@@ -25,7 +25,7 @@
                 </p>
             </div> 
             <modal-img @clickit="viewImg" v-if='showModal' 
-            :imgSrc="imgSrc" @scroll.prevent @touchmove.prevent :imgTitle='imgTitle'>
+            :imgSrc="imgSrc" @touchmove.prevent :imgTitle='imgTitle'>
             </modal-img>
         </div>
     </div>

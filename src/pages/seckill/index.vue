@@ -1,7 +1,6 @@
 <template>
     <div>
         <seckill-banner></seckill-banner>
-        
     </div>
 </template>
 

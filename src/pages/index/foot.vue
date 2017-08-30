@@ -87,6 +87,9 @@
 	.foot-title{
 		float: left;
 	    display: inline-block;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
 	    color: #9e9e9e;
 	    margin: .06rem 0 0 .1rem;
 	    border-bottom: 1px solid #acacac;
@@ -103,6 +106,9 @@
 	}
 	.order-item{
 		width:20%;
+		overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
 		float: left;
 		text-align: center;
 		color: #25a4bb;
@@ -117,6 +123,9 @@
 	.foot-three .item-type{
 		color: black;
 		width:48%;
+		overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
 		float: left;
 		font-size: .28rem;
 	}
@@ -130,6 +139,9 @@
 	}
 	.foot-four{
 		width: 100%;
+		overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
 		color: #9e9e9e;
 	    text-align: center;
 	    font-size: .28rem;

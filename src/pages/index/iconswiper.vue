@@ -93,6 +93,10 @@ export default {
 	}
 	.icon-title{
 		margin-top:.2rem;
+		width:100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		font-size: .28rem;
 		color:#212121;
 
@@ -111,9 +115,12 @@ export default {
     .position-directon{  
     	float: left;
     	width: 50%;
+    	line-height: .98rem;
     	font-size:.28rem;
     	color:#212121;
-    	line-height: .98rem;
+    	overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
     	text-align: center;
         box-sizing: border-box;
     	background-color: #fff; 
@@ -122,8 +129,8 @@ export default {
     	border-right: 1px solid #e0e0e0;
     }
     .position-left{
-    	font-size: .32rem;
     	margin-right: .05rem;
+    	font-size: .32rem;
     	color:#616161;
     }
     .position-right{

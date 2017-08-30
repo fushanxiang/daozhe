@@ -103,10 +103,11 @@ export default {
             this.historyarr=[];
         },
         handleinput(){
-          if (this.inputtext!=="") {
-
-          }
-          console.log(123)
+          if (this.inputtext=="") {
+                this.$store.commit("showNear",true);
+            }else if (this.inputtext!=="") {
+              console.log(123)
+          }  
         },
         handleSearchDel(){
             this.inputtext="";

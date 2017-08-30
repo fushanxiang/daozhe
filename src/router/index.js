@@ -5,8 +5,6 @@ import City from '@/pages/city/index'
 import ParkDetail from '@/pages/parkdetail/index'
 import Ticketdetail from '@/pages/ticketdetail/index'
 import Logined from '@/pages/parkdetail/logined'
-import BigCity from '@/pages/city/big_city'
-import SmallCity from '@/pages/city/small_city'
 import WaterPark from '@/pages/parkdetail/waterpark'
 import Discussall from '@/pages/parkdetail/discussall'
 import uaCheckout from '@/pages/parkdetail/uaCheckout'
@@ -57,16 +55,6 @@ export default new Router({
 		    	path: '/logined',
 		      name: 'logined',
 		      component: Logined
-		    }],
-		     
-		    children:[
-		      {
-		        path: 'bigCity',
-		        component: BigCity
-		      },
-		      {
-		        path: 'smallCity',
-		        component: SmallCity
-		      }
-		    ]
+		    }]
+
 })

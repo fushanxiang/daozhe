@@ -65,7 +65,8 @@
 	export default {
 	  	data () {
 		    return {
-		       show:false
+		       show:false,
+		       
 		    }
 	  	},
 	   	components: {
@@ -73,6 +74,7 @@
 //		    	"order":Order
 	    }
 	}
+
 </script>
 <style scoped>
 	.pd-border-top{

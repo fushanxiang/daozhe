@@ -1,5 +1,4 @@
  <template>
-
      <div class="header" style="position: fixed; width: 100%; top: 0px; left: 0px; display: inline-block; opacity: 1;">
      	<a role="left" class="header-left iconfont" @click="handleBackClick">&#xe600;</a>
      	<h1 role="title" class="header-title">太平洋海底世界</h1> 

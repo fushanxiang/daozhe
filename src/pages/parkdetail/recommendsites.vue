@@ -1,27 +1,24 @@
 <template>
-	<div class="mp-recommend-list">
+	<div class="recommend-list">
 		<slot></slot>
-		<a href="//touch.piao.qunar.com/touch/detail.htm?id=4281924223" mp-role="sightLink">
-			<div class="mp-recommend-item" v-for="item in recommendInfo" :key="item.id">
-				<img class="mp-recommend-img" :src="item.src" />
-				<div class="mp-recommend-info mp-border-bottom">
-					<div class="mp-recommend-sight">{{item.name}}
-						<span class="mp-recomment-sightstar">{{item.level}}</span>
+		<a href="javascript:;" role="sightLink">
+			<div class="recommend-item" v-for="item in recommendInfo" :key="item.id">
+				<img class="recommend-img" :src="item.src" />
+				<div class="recommend-info border-bottom">
+					<div class="recommend-sight">{{item.name}}
+						<span class="recomment-sightstar">{{item.level}}</span>
 					</div>
-					<div class="mp-recommend-price mp-price">¥<em class="mp-price-num">{{item.money}}</em>
-						<span class="mp-recommend-flag">起</span>
+					<div class="recommend-price price">¥<em class="price-num">{{item.money}}</em>
+						<span class="recommend-flag">起</span>
 					</div>
-
-					<div class="mp-recommend-comment">
+					<div class="recommend-comment">
 						<span class="mpf-starlevel">
-							<i class="mpf-starlevel-gain iconfont" data-score="4.44" style="width:98%" v-html="item.iconfont"></i>
-							
+							<i class="mpf-starlevel-gain iconfont" data-score="4.44" style="width:98%" v-html="item.iconfont"></i>							
 						</span>
-						<span class="mp-recommend-commentnum">{{item.commendNum}}</span>
+						<span class="recommend-commentnum">{{item.commendNum}}</span>
 					</div>
-
-					<div class="mp-recommend-position">
-						<span class="mp-recommend-subposition mp-border-left">{{item.subposition}}</span>
+					<div class="recommend-position">
+						<span class="recommend-subposition mp-border-left">{{item.subposition}}</span>
 					</div>
 				</div>
 			</div>
@@ -41,12 +38,12 @@
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
-	.mp-recommend-list {
+	.recommend-list {
 		overflow: hidden;
 		background: #fff;
 	}
 	
-	.mp-recommend-sight {
+	.recommend-sight {
 		position: absolute;
 		top: .2rem;
 		left: 0;
@@ -60,7 +57,7 @@
 		text-overflow: ellipsis;
 	}
 	
-	.mp-recommend-img {
+	.recommend-img {
 		margin: .2rem .2rem 0 .2rem;
 		width: 1.62rem;
 		height: 1.62rem;
@@ -68,28 +65,14 @@
 		background: url(//s.qunarzz.com/piao_topic/image/common/default/140x140.png) contain;
 	}
 	
-	.mp-recommend-info {
+	.recommend-info {
 		position: relative;
 		padding-top: .2rem;
 		margin-left: 2.02rem;
 		height: 1.8rem;
 	}
 	
-	.mp-border,
-	.mp-border-top,
-	.mp-border-right,
-	.mp-border-bottom,
-	.mp-border-left,
-	.mp-border-topbottom,
-	.mp-border-rightleft,
-	.mp-border-topleft,
-	.mp-border-rightbottom,
-	.mp-border-topright,
-	.mp-border-bottomleft {
-		position: relative;
-	}
-	
-	.mp-recommend-price {
+	.recommend-price {
 		position: absolute;
 		right: .2rem;
 		top: .2rem;
@@ -98,13 +81,13 @@
 		color: #ff9800;
 	}
 	
-	.mp-recommend-comment {
+	.recommend-comment {
 		position: absolute;
 		top: 1rem;
 		left: 0;
 	}
 	
-	.mp-recommend-position {
+	.recommend-position {
 		position: absolute;
 		bottom: .24rem;
 		left: 0;

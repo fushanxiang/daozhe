@@ -1,6 +1,6 @@
 <template>
 	<div class="recommend">
-		<h3 class="mp-recommend-title mp-border-bottom">看了该景点的人还看了</h3>
+		<h3 class="recommend-title border-bottom">看了该景点的人还看了</h3>
 	</div>
 </template>
 
@@ -8,7 +8,6 @@
 	export default {
 		data () {
 			return {
-
 			}
 		}
 	}
@@ -18,7 +17,7 @@
 	.recommend{
 		position: relative;
 	}
-	.mp-recommend-title {
+	.recommend-title {
 	    padding: 0 .2rem;
 	    height: .88rem;
 	    background: #fff;
@@ -27,7 +26,7 @@
 	    line-height: .88rem;
 	    text-indent: .2rem;
 	}
-	.mp-recommend-title::after {
+	.recommend-title::after {
 	    content: " ";
 	    position: absolute;
 	    top: .33rem;

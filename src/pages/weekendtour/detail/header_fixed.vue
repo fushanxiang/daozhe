@@ -1,6 +1,6 @@
 <template>
 	<div class="top-container" v-bind:style='{opacity: this.activeOpacity}'>
-		<router-link to="/weekend/index" class="back-icon iconfont">&#59031;</router-link>
+		<router-link to="/weekendtour/index" class="back-icon iconfont">&#59031;</router-link>
 		<h1 class="top-title">{{goodsInfo.title}}</h1>
 	</div>
 </template>

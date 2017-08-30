@@ -1,10 +1,5 @@
 <template>
-
-	
-
 	<div class="packages-box">
-
-	
 		<div class="packages">
 			<div class="packages-content">
 				<h3 class="title packages-title"><span class="word">套餐包括</span></h3>
@@ -12,12 +7,10 @@
 			        <p class="packages-des-content" v-html="goodsInfo.combo"></p>
 			    </div>
 			</div>
-			
 			<h3 class="title purchase-notes" v-on:click="toogleClick">
 				<span class="word">购买须知</span>
 				<span class="next-icon iconfont">&#58918;</span>
 			</h3>
-
 			<div class="Pop-ups" v-bind:class="[show ? 'block' : 'none' ]"> <!-- 购买须知弹窗 -->
 				<div class="box">
 					<div class="top">
@@ -42,15 +35,9 @@
 								<span class="item-text">入园保障</span>
 							</div>
 						</div>
-
 					</div>
-
-
 					<div class="middle">
 
-					
-
-							
 					</div>
 
 					<div class="bottom">
@@ -97,7 +84,7 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
+
 	@import "../../../assets/font/iconfont.css";
 
 	
@@ -115,8 +102,7 @@ export default {
 
 
 
-=======
->>>>>>> d025038699a5a513aaea0b29214993421ce96472
+
 	.block{
 		display: block;
 	}

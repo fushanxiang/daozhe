@@ -4,7 +4,7 @@
 		<ul class="chosen-list">
 			<li class="icon-item" v-for="item in goods" :key="item.id">
     			<div class="chosen-imgwrapper">
-	    			<router-link :to="'/weekend/detail/id='+item.id" class="back-btn iconfont">
+	    			<router-link :to="'/weekendtour/detail/id='+item.id" class="back-btn iconfont">
 	    				<img :src="item.src" class="chosen-img">
 	    			</router-link>
     			</div>

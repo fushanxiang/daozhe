@@ -1,24 +1,24 @@
 <template>
 	<div class="top-container">
-		<router-link :to="'/weekend/detail/id=' + goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
-		<h1 class="top-title">点评</h1>
+		<router-link :to="'/weekend/detail/id='+1" class="back-icon iconfont">&#59031;</router-link>
+		<h1 class="top-title">订单填写</h1>
+		<router-link to="#" class="login-btn">登录</router-link>
 	</div>
 </template>
 
 <script>
-export default {
-	data () {
-    	return {}
-     
-	},
-	props:["goodsInfo"]
+	export default {
+		data() {
+			return {
 
-}
+			}
+		}
+	}
 </script>
 
 <style scoped>
 	.top-container {
-		position: fixed;
+		position: relative;
 		top: 0;
 		left: 0;
 		z-index: 3;
@@ -42,8 +42,14 @@ export default {
 		font-size: .32rem;
 		line-height: .88rem;
 		text-align: center;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
+	}
+	.login-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		line-height: .88rem;
+		width: 1rem;
+		font-size: .28rem;
+		color: #fff;
 	}
 </style>

@@ -26,7 +26,7 @@
 				</div>
 
 				<div class="detail-enter">
-					<router-link  :to="'/weekend/slightmap/id=' + item.id" class="fl">
+					<router-link  :to="'/weekendtour/slightmap/id=' + item.id" class="fl">
 						<div class="sight">
 							<div class="item">
 								<span class="next-icon iconfont">&#xe614;</span>

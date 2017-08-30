@@ -15,7 +15,8 @@ export default {
         }
     },
     components:{
-        'seckill-banner':SeckillBanner
+        'seckill-banner':SeckillBanner,
+        
     }
 }
 </script>

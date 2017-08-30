@@ -76,7 +76,7 @@ export default {
                     name: "天津"
                 },{
                     id: 4,
-                    name: "天津"
+                    name: "重庆"
                 },{
                     id: 5,
                     name: "四川"
@@ -163,12 +163,12 @@ export default {
 
 <style scoped>
     .mp-menu-container{
-        height:0.56rem;
         position:absolute;
         top:6.5rem;
         right: .2rem;
-        min-width:0.56rem;
-        padding-right:0.46rem;
+        min-width:.56rem;
+        padding-right:.46rem;
+        height:.56rem;
         background: rgba(0,0,0,.5);
         border-radius: .56rem;
     }
@@ -199,24 +199,28 @@ export default {
         top:7rem;
         left:0;
         width:100%;
-        min-height:0.6rem;
-        padding:0.1rem 0 .2rem;
+        min-height:.6rem;
+        padding:.1rem 0 .2rem;
         background:rgba(0,0,0,.5);
     }
     .mp-menu-item{
         float:left;
         width:25%;
-        margin-top:0.1rem;  
+        margin-top:.1rem;  
     }
     .mp-menu-inner{
         display:block;
-        height:0.6rem;
-        margin:0 0.1rem;
+        height:.6rem;
+        margin:0 .1rem;
         background:#fff;
         color:#000;
-        font-size:0.24rem;
-        line-height:0.6rem;
+        font-size:.24rem;
+        line-height:.6rem;
         text-align:center;
-        border-radius:0.3rem;
+        border-radius:.3rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
     }
 </style>

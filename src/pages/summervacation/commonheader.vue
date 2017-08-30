@@ -24,12 +24,12 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.commonheader{
-		width:100%;
-		height:0.88rem;
-		background:#1ba9ba;
 		display:flex;
 		justify-content:space-between;
 		align-items:center;
+		width:100%;
+		height:0.88rem;
+		background:#1ba9ba;
 		color:#fff;
 	}
 	.header-left{
@@ -40,7 +40,6 @@ export default {
 		line-height:0.88rem;
 		text-align:center;
 		color:#fff;
-
 	}
 	.summer-title{
 		width:5.5rem;
@@ -51,10 +50,10 @@ export default {
 	.header-right{
 		display:flex;
 		flex-flow:column;
+		align-items:center;
 		width:0.88rem;
 		height:0.88rem;
 		color:#fff;
-		align-items:center;
 	}
 	.icon_scenic{
 		width:0.88rem;
@@ -62,7 +61,6 @@ export default {
 		font-size:0.4rem;
 		line-height:0.58rem;
 		text-align:center;
-	
 	}
 	.home{
 		width:0.88rem;
@@ -70,6 +68,5 @@ export default {
 		font-size:0.24rem;
 		text-align:center;
 		line-height:0.38rem;
-
 	}
 </style>

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="classify">
 	<div class="nav" :class='{"primary-position":primaryStyle}'>     
             <div class="filter">
                 <div class="all-categories select" ref="all" @click="searchclick">
@@ -129,6 +129,9 @@ export default {
 }
 </script>
 <style scoped>
+.classify{
+    height:30px;
+}
 .checked{
     background:#f1f1f1;
 }

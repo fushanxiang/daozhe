@@ -349,6 +349,7 @@ export default {
   }
   .hot-info{
     border-right: 1px dashed #ccc;
+    color: #333;
     float: left;
     line-height: .5rem;
     padding: 0 .4rem;

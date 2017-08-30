@@ -36,9 +36,74 @@
 							</div>
 						</div>
 					</div>
-					<div class="middle">
+				
 
-					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="orderdetail-content">
+
+		                <div class="content-head">
+		                    <div class="prdintro-item">
+		                        <div class="prdintro-icon">
+		                            <span class="prdintroicon iconfont">&#xe604;</span>随心退
+		                        </div>
+		                        <div class="prdintro-detail">
+		                            <div>
+		                              	90天内支持随时退款，经核实如未取票，可免费取消
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+
+		                <iscroll-view ref="scrollView" class="scroll-view"  @pullUp="pullUp" @pullDown="pullDown" :options="{mouseWheel: true}">
+		                    <div class="content-body">
+		                        <div class="prddetail-item">
+		                            <h5 class="prddetail-name">有效时间</h5>
+		                            <p class="prddetail-txt">游玩日期当天有效</p>
+		                        </div>
+		                        <div class="prddetail-item">
+		                            <h5 class="prddetail-name">预定时间</h5>
+		                            <p class="prddetail-txt">需要在游玩当天的21:59前预订；预订后2小时才能入园</p>
+		                        </div>
+		                        <div class="prddetail-item">
+		                            <h5 class="prddetail-name">入园信息</h5>
+		                            <p class="prddetail-txt">
+		                                【兑换凭证】<br>可以通过商家的确认短信,手机号,姓名,进行兑换<br>【商家确认短信发送时间】<br>下单后1分钟内发送入园短信<br>【入园方式】<br>凭兑换凭证换票<br>【换票地址】<br>长隆水上乐园景区门口自助取票机处输入短信中的电子票号和手机号<br>【入园地址】<br>长隆水上乐园景区门口<br>
+		                            </p>
+		                        </div>
+		                        <div class="prddetail-item">
+		                            <h5 class="prddetail-name">退款说明</h5>
+		                            <p class="prddetail-txt">
+		                            【关于改期】系统不支持改期，若需改期用户请提前一天前端取消订单后再次预定；游玩当天不退不改。<br>任何时间内，票一经验证或取票，均不可退改。</p>
+		                        </div>
+		                        <div class="prddetail-item">
+		                            <h5 class="prddetail-name">费用说明</h5>
+		                            <p class="prddetail-txt">
+		                                【费用包含】长隆水上成人票1张，景区一票通玩，无需自费(购买零食除外）<br>注：请勿携带食物入场。<br><br>【暑期促销】2017年8月25日-8月31日期间，购买水上乐园相关成人票（包含门票，套票，夜场票），每名购票成人可携带1名1.5米以下儿童免费入园（仅限水上乐园，其他园区不可携带，嘉宾票，教师和司机陪票，中小学生票，情侣票不享受此活动）<br><br>【换票方式】<br>方法一：景区门口自助取票机处输入短信中的电子票号和手机号；<br>方法二：景区门口有二维码提供用户扫码，扫码后是一个二维码门票的生成界面，用户输入取票凭证码以及手机号码，会生成门票二维码，凭门票二维码可以直接扫码入园。（生成入园二维码后，视同已经取票，无法再在自助取票机取票，任何时间内均无法退改）。
+		                            </p>
+		                        </div>
+		                        <div class="prddetail-item">
+		                            <h5 class="prddetail-name">使用说明</h5>
+		                            <p class="prddetail-txt">
+		                                【开放时间】09：30—22：00如有调整以现场为准；<br>【入园须知】最晚取票时间为当日闭园前2小时；<br>【票类说明】全票对象：指成人及身高1.5米以上儿童。<br>【关于改期】系统不支持改期，若需改期用户请提前一天前端取消订单后再次预定；游玩当天不可退改。<br>【温馨提示】<br>1、购票信息敬请注意保密，如因个人原因泄露订票信息而造成的损失，去哪儿网对此不承担任何责任；<br>2、若无法在自助取票机取票，或是取票数量不对，取票过程中遇到问题请及时咨询景区工作人员。<br>3、园区为户外项目，受天气等不可抗力因素影响较大，建议您出行前查看当地天气预报，由于天气原因、自然灾害、机械检修等原因而不能游玩全部的项目，去哪儿网将不作退款，并不负责补偿。
+		                            </p>
+		                        </div>
+		                    </div>
+		                </iscroll-view> 
+
+		            </div>
+			
+
+
+
 
 					<div class="bottom">
 						<div class="b-left">
@@ -58,6 +123,7 @@
 				<span class="word">周边好玩</span>
 				<span class="next-icon iconfont">&#58918;</span>
 			</h3>
+			
 		</div>
 	</div>
 </template>
@@ -73,10 +139,16 @@ export default {
 	methods:{
 		toogleClick:function(){
 			this.show = !this.show;
-		}
+		},
+		pullUp(){
+            console.log('pull up')
+        },
+        pullDown(){
+            console.log('pull down')
+        }
 	},
 	mounted () {
-	    
+	     this.$refs.scrollView.refresh()
 	},
 	props : ["goodsInfo"]
 		
@@ -87,18 +159,6 @@ export default {
 
 	@import "../../../assets/font/iconfont.css";
 
-	
-
-	.scroll-view{
-		touch-action: none;
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		padding: .2rem;
-		overflow: hidden;
-	}
 
 
 
@@ -167,7 +227,7 @@ export default {
 
 
 
-	/*泽林负责*/
+
 	.Pop-ups{
 		background:rgba(0,0,0,.5);
 		position: fixed;
@@ -331,5 +391,109 @@ export default {
 		bottom: 1rem;
 		left: 0;
     	height: 7.5rem;
+    	background: red;
 	}
+
+
+
+
+
+
+
+
+
+	/*滚动区域*/
+    .orderdetail-content{
+    	border-top: .01rem solid #e0e0e0;
+    } 
+    .content-head{
+        margin: 0 .2rem;
+        padding: .28rem 0;
+        background: #fff;
+        position: relative;
+        border-bottom: 1px solid #e0e0e0;
+    } 
+    .content-head:after{
+	    content: "";
+    	position: absolute;
+    	left: 0;
+    	bottom: 0;
+	    width: 100%;
+   		height: .01rem;
+   		transform: scaleY(.51);
+	    background: #e0e0e0;
+    }
+    .prdintro-item{
+        position: relative;
+        vertical-align: middle;
+        margin-bottom: 0;
+    }
+    .prdintro-icon{
+        float: left;
+        margin-right: .14rem;
+        margin-top: .04rem;
+        height: .24rem;
+        font-size: .24rem;
+        line-height: .24rem;
+        border: 0;
+        color: #666;
+    }
+    .prdintroicon{
+        margin-right: .08rem;
+        color: #1ba9ba;
+        font-family: 'mpiconfont';
+        speak: none;
+        font-size: .12rem;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;   
+    }
+    .prdintro-detail{
+        overflow: hidden;
+        color: #666;
+        line-height: .377rem;
+        font-size: .28rem;
+    } 
+    .scroll-view {      
+        touch-action: none;
+        position: fixed;
+        top: 185px;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    } 
+    .content-body{
+        margin: 0 .2rem;
+        padding: .2rem .15rem;
+        background: #fff;
+        position: relative;
+    }
+    .prddetail-item{
+        margin-bottom: .4rem;
+    }
+    .prddetail-name{
+        margin-bottom: .2rem;
+        color: #333;
+        font-size: .28rem;
+    }
+    .prddetail-txt{
+        color: #999;
+        font-size: .28rem;
+        line-height: .36rem;
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
 </style>

@@ -5,9 +5,9 @@ import store from './store'
 import fastclick from 'fastclick'
 import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
+import VueLazyload from 'vue-lazyload'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
-
 
 Vue.use(IScrollView,IScroll)
 

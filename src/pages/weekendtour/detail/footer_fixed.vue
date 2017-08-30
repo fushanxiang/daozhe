@@ -6,8 +6,11 @@
 				<span class="price" >{{goodsInfo.sellPrice}}</span>
 				<span class="original-price">{{goodsInfo.marketPrice}}</span>
 			</div>
+
 			<div class="right">
-				<a href="javascript:;" id="bookingBtn" class="ljyd">立即预订</a>
+				<router-link :to="'/order/id=' + goodsInfo.id">
+					<a href="javascript:;" id="bookingBtn" class="ljyd">立即预订</a>
+				</router-link>
 			</div>
 		</div>
 	</div>

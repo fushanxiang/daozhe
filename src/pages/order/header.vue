@@ -1,7 +1,7 @@
 <template>
 	<div class="order-info-outer">
 		<div class="order-info-main">
-			<h2 class="order-info-title">温都水城两馆通票（温泉养生馆+HI水空间）</h2>
+			<h2 class="order-info-title">{{goodsInfo.title}}</h2>
 			<ul class="order-info-taglist">
 				<li class="order-info-item">
 					<span class="item-icon iconfont">&#58919;</span>
@@ -13,7 +13,7 @@
 			<div class="order-info-price">
 				<span class="order-price">
 					&yen;
-					<span class="order-price-num">127</span>
+					<span class="order-price-num">{{goodsInfo.sellPrice}}</span>
 				</span>
 				<span class="order-role">起</span>
 				/张
@@ -29,7 +29,8 @@
 			return {
 
 			}
-		}
+		},
+		props:['goodsInfo']
 	}
 </script>
 

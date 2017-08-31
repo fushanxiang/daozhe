@@ -7,11 +7,11 @@
 				<div class="order-info-datacard">
 					<span class="datacart-item datacart-item-today" :class="selected1 ? 'datacart-item-selected' : ''" @click="handleDateSelect">
 						<em class="datacart-item-name datacart-item-today" :class="selected1 ? 'datacart-item-name-selected' : ''">今天</em>
-						<strong class="datecart-item-date datacart-item-today">8月29日</strong>
+						<strong class="datecart-item-date datacart-item-today">{{month}}月{{date}}日</strong>
 					</span>
 					<span class="datacart-item datacart-item-tomorrow" :class="selected2 ? 'datacart-item-selected' : ''" @click="handleDateSelect">
 						<em class="datacart-item-name datacart-item-tomorrow" :class="selected2 ? 'datacart-item-name-selected' : ''">明天</em>
-						<strong class="datecart-item-date datacart-item-tomorrow">8月30日</strong>
+						<strong class="datecart-item-date datacart-item-tomorrow">{{month}}月{{date > 31 ? 1 : date+1}}日</strong>
 					</span>
 					<span class="datacart-item">
 						<em class="datacart-item-name">其他日期</em>
@@ -38,17 +38,20 @@
 			return {
 				value: 1,
 				selected1: false,
-				selected2: false
+				selected2: false,
+				month: new Date().getMonth()+1,
+				date: new Date().getDate()
 			}
 		},
+		props:['goodsInfo'],
 		methods: {
 			handleAddBtnClick() {
 				this.value += 1;
-				this.$bus.emit('totalPriceChange', this.value*127)
+				this.$bus.emit('totalPriceChange', this.value)
 			},
 			handleMinusBtnClick() {
 				this.value > 1 ? this.value -= 1 : this.value = 1;
-				this.$bus.emit('totalPriceChange', this.value*127)
+				this.$bus.emit('totalPriceChange', this.value)
 			},
 			handleDateSelect(event) {
 				if(/datacart-item-today$/.test(event.target.className)) {

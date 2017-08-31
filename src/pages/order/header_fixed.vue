@@ -1,6 +1,6 @@
 <template>
 	<div class="top-container">
-		<router-link :to="'/weekendtour/detail/id='+1" class="back-icon iconfont">&#59031;</router-link>
+		<router-link :to="'/weekendtour/detail/id=' + goodsInfo.id" class="back-icon iconfont">&#59031;</router-link>
 		<h1 class="top-title">订单填写</h1>
 		<router-link to="#" class="login-btn">登录</router-link>
 	</div>
@@ -12,7 +12,8 @@
 			return {
 
 			}
-		}
+		},
+		props:['goodsInfo']
 	}
 </script>
 

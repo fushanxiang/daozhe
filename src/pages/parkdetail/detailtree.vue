@@ -48,20 +48,15 @@
 				</div>
 			</div>
 		</div>
-		<tree-item></tree-item>
-		<tree-item></tree-item>
-		<tree-item></tree-item>
-		<!--<transition name="slide-fade">
-			<div v-if="show">
-				<order></order>
-			</div>
-		</transition>	-->
+		<div v-if="show">
+			<order></order>
+		</div>
 	</div>
 </template>
 
 <script>
 	import TreeItem from './treeitem/treeitem.vue'
-//	import Order from './order.vue'
+	import Order from './order.vue'
 	export default {
 	  	data () {
 		    return {
@@ -70,8 +65,14 @@
 		    }
 	  	},
 	   	components: {
-	    	"tree-item":TreeItem
-//		    	"order":Order
+	    	"tree-item":TreeItem,
+		    "order":Order
+	    },
+	    methods:{
+	    	handleShowClick:function(){
+		       this.show=true
+	    		
+	    	}
 	    }
 	}
 

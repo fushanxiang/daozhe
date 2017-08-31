@@ -2,6 +2,7 @@
 
 	<div @mousewheel="test">
 		<swiper></swiper>
+		<Rate :length="5" :value="2" :disabled="true"></Rate>
 		<park-location></park-location>
 		<detail-tree></detail-tree>
 		<header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>
@@ -9,13 +10,13 @@
 		<recommend></recommend>
 		<recommend-sites :recommendInfo="recommendInfo"></recommend-sites>
 		<ua-pop :deltaY="deltaY"></ua-pop>
-		<order></order>
-		
+		<Rate :length="5"></Rate>
 	</div>
 
 </template>
 
 <script>
+	import Rate from 'vue-rate';
 	import Swiper from './swiper.vue'
 	import ParkLocation from './parkLocation.vue'
 	import DetailTree from './detailtree.vue'
@@ -24,7 +25,6 @@
 	import Recommend from './recommend.vue'
 	import RecommendSites from './recommendsites.vue'
 	import Uapop from './uapop.vue'
-	import Order from './order.vue'
 	export default {
 		
 		data() {
@@ -52,7 +52,7 @@
 			"header-fixed": HeaderFixed,
 			"discuss": Discuss,
 			"swiper": Swiper,
-			"order":Order
+			  Rate
 		},
 		mounted() {
 			var this_ = this;

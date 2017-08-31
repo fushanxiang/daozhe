@@ -10,7 +10,7 @@ import Discussall from '@/pages/parkdetail/discussall'
 import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
-
+import Map from '@/pages/parkdetail/map'
 Vue.use(Router)
 
 export default new Router({
@@ -55,6 +55,10 @@ export default new Router({
 		    	path: '/logined',
 		      name: 'logined',
 		      component: Logined
+		    },{
+		    	path: '/map',
+		      name: 'map',
+		      component: Map
 		    }]
 
 })

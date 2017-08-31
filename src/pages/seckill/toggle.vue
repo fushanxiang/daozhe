@@ -106,6 +106,9 @@ export default {
 	}
 	.toggle-item{
 		width: 25%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		float: left;
 		line-height: .8rem;
 		text-align: center;

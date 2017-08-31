@@ -157,12 +157,17 @@ export default {
 	}
 	.city-icon-none{
 		display: none;
-		width: 20%;
+		position: absolute;
+		top: 5%;
+		left: 5%;
+		margin-top: 
 	}
 	.city-inner{
 		display: inline-block;
+		position: relative;
 		width: 100%;
 		height: 100%;
+		line-height: .76rem;
 	}
 	.city-item {
 		position: relative;
@@ -192,7 +197,11 @@ export default {
 	}
 	.city-icon-info{
 		display: inline-block;
-		width: 50%;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		line-height: .76rem;
 	}
 	.city-expand {
@@ -219,6 +228,10 @@ export default {
 	.menu-inner {
 		display: block;
 	    margin: 0 .06rem;
+	    width: 100%;
+	    overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	    background-color: #fff;
 	    color: #282828;
 	    line-height: .5rem;

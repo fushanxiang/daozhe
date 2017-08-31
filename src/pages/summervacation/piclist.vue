@@ -165,14 +165,16 @@ export default {
 		background:#28a3e1;
 	}
 	.mp-img-container{
-		overflow:hidden;
-		width:100%;
+		width: 100%;
+		height: 0;
+		padding-bottom: 78.4%;
+		overflow: hidden;
 	}
 	.mp-topic-images{
 		width:100%;
 	}
 	.mp-caption{
-		overflow:hidden;
+		overflow: hidden;
 		min-height:.88rem;
 	}
 	.mp-topic-imga{

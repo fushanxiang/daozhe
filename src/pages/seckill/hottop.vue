@@ -69,11 +69,12 @@ export default {
 	}
 	.hot-content {
 		width: 100%;
-		height: 500px;
+		overflow: hidden;
 	}
 	.hot-list {
-		padding: 0.12rem;
-		padding-bottom: .2rem;
+		overflow: hidden;
+		margin: 0 .12rem;
+    	padding-bottom: .6rem;
 	}
 	.hot-item {
 		float: left;
@@ -81,7 +82,7 @@ export default {
 		margin: 0 1%;
 		margin-bottom: .16rem;
     	padding-bottom: .15rem;
-		background: #FFFFFF;
+		background: #FFF;
 	}
 	.hot-item-imgbox {
 		position: relative;
@@ -104,12 +105,21 @@ export default {
 	.scenic-name {
 		display: block;
     	color: #fff;
-   		font-size: .24rem;
+    	width: 80%;
+    	overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
     	line-height: .4rem;
+    	font-size: .24rem;
 	}
 	.scenic-title {
 		height: .72rem;
 		margin: .12rem .15rem 0;
+		width: 90%;
+		overflow: hidden;
+		display: -webkit-box; 
+		-webkit-line-clamp: 2; 
+		-webkit-box-orient: vertical;
 	    color: #222;
 	    font-size: .28rem;
 	    line-height: .36rem;

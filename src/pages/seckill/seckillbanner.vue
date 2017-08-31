@@ -143,6 +143,9 @@
 	.list-type{
 		float: left;
 		width: 25%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		line-height: .6rem;
 		text-align: center;
 	}
@@ -162,6 +165,10 @@
 	}
 	.activity{
 		background: linear-gradient(to bottom,#9003b7,#8e03ba);
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		line-height: .26rem;
 		padding: .1rem;
 		text-align: center;
@@ -199,8 +206,9 @@
 	.cheap-title{
     	width:94%;
     	overflow: hidden;
-    	line-clamp: 2;
-    	text-overflow: ellipsis;
+    	display: -webkit-box; 
+		-webkit-line-clamp: 2; 
+		-webkit-box-orient: vertical;
 		height: .72rem;
 		line-height: .36rem;
 	    color: #222;

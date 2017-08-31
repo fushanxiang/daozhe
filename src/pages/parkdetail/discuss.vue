@@ -22,12 +22,12 @@
 		</div>	
 		
 			<div class="discuss-photo">
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/64/9be292e6b135d802.jpg"/></div>		
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/36/b676102d4bcf0f02.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/91/4df3680362018a02.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/75/f86c97262c153802.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/e3/878c4ccd503aa802.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/f6/3baa272158ce0e02.jpg"/></div>
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/64/9be292e6b135d802.jpg_228x168_82d0bfa2.jpg"/></div></div>			
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/36/b676102d4bcf0f02.jpg_228x168_0ccb30e8.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/91/4df3680362018a02.jpg_228x168_821eaaf6.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/75/f86c97262c153802.jpg_228x168_1fffe1af.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/e3/878c4ccd503aa802.jpg_228x168_b91c50f2.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1708/f6/3baa272158ce0e02.jpg_228x168_1a578982.jpg"/></div></div>	
 			</div>
 		
 		<div class="space-small"></div>
@@ -49,12 +49,12 @@
 		</div>	
 		
 			<div class="discuss-photo">
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/cc/23bf15b074135102.jpg_228x168_438a8b4a.jpg"/></div>		
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/23/49888426e2025702.jpg_228x168_25c9be88.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/e8/bae69c631635e002.jpg_228x168_427eb91f.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/bb/3a16b3feae9ee02.jpg_228x168_5372c90a.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/cf/0ac9f56f8a2ef302.jpg_228x168_fea874ca.jpg"/></div>
-				<div class="discuss-img"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/ad/a357cc8f0d4a6a02.jpg_228x168_5cf9e316.jpg"/></div>
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/cc/23bf15b074135102.jpg_228x168_438a8b4a.jpg"/></div></div>		
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/23/49888426e2025702.jpg_228x168_25c9be88.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/e8/bae69c631635e002.jpg_228x168_427eb91f.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/bb/3a16b3feae9ee02.jpg_228x168_5372c90a.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/cf/0ac9f56f8a2ef302.jpg_228x168_fea874ca.jpg"/></div></div>	
+				<div class="discuss-img"><div class="discuss-imgs"><img class="imgs" src="http://img1.qunarzz.com/piao/fusion/1706/ad/a357cc8f0d4a6a02.jpg_228x168_5cf9e316.jpg"/></div></div>	
 			</div>
 		<router-link to="/discussall">
 			<div class="discuss-refresh mp-border-top">查看全部评论&nbsp;&nbsp;<span class="iconfont">&#xe62f;</span></div>
@@ -163,21 +163,23 @@ export default {
 	    color: #9e9e9e;
 	}
 	.discuss-photo {
-		box-sizing: border-box;
-		padding: .1rem;
-		height: 100%;
+		position: relative;
 		overflow: hidden;
-	}
-	.discuss-img {
 		box-sizing: border-box;
-		width: 33.3%;
-		height: 85px;
-		float: left;
 		padding: .045rem;
 	}
-	.discuss-img .imgs {
-		width: 100%;
-		height: 100%;		
+	
+	.discuss-img {
+		width: 33.3%;
+		float: left;
+		margin-bottom:.1rem ;
+	}
+	.discuss-imgs {
+		margin-left: .07rem;
+    	margin-right: .07rem;
+	}
+	.imgs {
+		width: 100%;	
 	}
 	.discuss-refresh {
 		width: 100%;

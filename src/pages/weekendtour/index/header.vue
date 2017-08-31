@@ -2,8 +2,10 @@
   <div class="header">
   		<a class="header-left iconfont">&#59031;</a>
   		<h1 class="header-title">
-  			<a class="header-city" href="###">{{$store.state.city}}</a>
+  		<router-link :to="{name:'city',params: {id:123}}">
+  			<span class="header-city" href="###">{{$store.state.city}}</span>
   			<span class="header-city-option"></span>
+  		</router-link>
   		</h1>
   </div>
 </template>

@@ -1,4 +1,4 @@
-{
+﻿{
 	"ret": true,
 	"china": [
 		["A", [{
@@ -1316,7 +1316,7 @@
 					"itemName": "xian",
 					"id": 1503535038130
 				}, {
-					"cityarea": "西���中沙群岛办事处",
+					"cityarea": "西沙群岛办事处",
 					"itemName": "xinan",
 					"id": 1503535037073
 				}, {

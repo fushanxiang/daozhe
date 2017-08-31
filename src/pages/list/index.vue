@@ -24,10 +24,10 @@ export default {
   },
   created(){
        this.$http.get('/static/productItems.json').then(response => {
-        var data=response.body.data;
-        this.hotSearchScen=data.hotSearchScen;
-        this.hotSearchArea=data.hotSearchArea;
-        this.content=data.content;
+        var data = response.body.data;
+        this.hotSearchScen = data.hotSearchScen;
+        this.hotSearchArea = data.hotSearchArea;
+        this.content = data.content;
       }, response => {
       });
   },

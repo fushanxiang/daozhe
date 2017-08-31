@@ -22,9 +22,11 @@ export default {
 				
 				pagination : '.swiper-pagination',
 			}
+
     	}
 	},
 	props:["imgsInfo"],
+
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide

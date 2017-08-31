@@ -8,6 +8,7 @@
 	    			<h1 class="icon-title">{{item.title}}</h1>
 	    		</li>
 	    	</ul>
+
 	    </swiper-slide>
 	    <div class="swiper-pagination"  slot="pagination"></div>
 	</swiper>
@@ -40,6 +41,7 @@ export default {
 				paginationClickable :true,
 				observeParents:true
 			}
+
     	}
 	},
 	props:["iconsInfo"],

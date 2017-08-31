@@ -9,7 +9,6 @@ import SecKill from '@/pages/seckill/index'
 
 
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {

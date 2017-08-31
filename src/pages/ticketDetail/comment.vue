@@ -23,13 +23,13 @@
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	
-	.comment{
+	.comment {
 		margin-bottom: .2rem;
 		background-color: #fff;
 		height: .8rem;
 		line-height: .8rem;
 	}
-	.comment-icon{
+	.comment-icon {
 	    position: relative;
 	    top: .08rem;
 	    display: inline-block;
@@ -40,11 +40,11 @@
 	    margin-right: .1rem;
 	    background-size: .4rem 3rem;
 	}
-	.starlevel{
+	.starlevel {
 		color:#00bcd4;
 	}
 	
-	.comments-total{
+	.comments-total {
 	    float: right;
 	    display: block;
 	    margin-bottom: .2rem;

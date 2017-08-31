@@ -114,36 +114,36 @@
 
 			},
 			data() {
-				return{
-                    flag : [false,false],
-                    showTicketHtml:"&#xe6a6;",
-                    showContentHtml:"&#xe6a6;",
-                }
-            },
-            methods:{
-                handleClick:function(num) {
-                    var temp =this.flag[num]
-                    this.flag.splice(num,1,!temp);             
-                    if(num == 0){                        
-                        this.showTicketHtml = (!temp ===true) ? "&#xe6a5;" : "&#xe6a6;"
-                    }
-                    if(num == 1){
-                        this.showContentHtml = (!temp ===true) ? "&#xe6a5;" : "&#xe6a6;"
-                    }
-                }
-            },
-            created(){
-
-            },
-            computed:{
-
+				return {
+                  flag : [false,false],
+                  showTicketHtml:"&#xe6a6;",
+                  showContentHtml:"&#xe6a6;",
+              }
+          },
+          methods: {
+            handleClick:function(num) {
+              var temp =this.flag[num]
+              this.flag.splice(num,1,!temp);             
+              if(num == 0){                        
+                this.showTicketHtml = (!temp ===true) ? "&#xe6a5;" : "&#xe6a6;"
+            }
+            if(num == 1){
+                this.showContentHtml = (!temp ===true) ? "&#xe6a5;" : "&#xe6a6;"
             }
         }
-    </script>
+    },
+    created() {
 
-    <style scoped>
-      @import "../../assets/font/iconfont.css";
-      .ticket-info {
+    },
+    computed: {
+
+    }
+}
+</script>
+
+<style scoped>
+    @import "../../assets/font/iconfont.css";
+    .ticket-info {
        position: relative;
    }
    .prddetail-group {
@@ -161,7 +161,7 @@
        text-indent: .15rem;
        padding: 0 .2rem;
    }
-   .prddetail-title::after{
+   .prddetail-title::after {
        content: " ";
        position: absolute;
        top: .32rem;
@@ -187,118 +187,118 @@
        font-size: .28rem;
    }
    .ticketcontent-titleicon {
-     width: .34rem;
-     height: .34rem;
-     position: relative;
-     margin-right: .26rem;
-     left: .2rem;
- }
- .ticketcontent-keyword {
-     font-weight: bold;
-     color: #212121;
- }
- .ticketcontent-notice {
-     margin: .2rem .2rem .06rem .72rem;
-     line-height: .44rem;
-     background: #fffaf2;
-     border-radius: .08rem;
-     color: #ff8300;
- }
- .ticketcontent-linetag img {
-     width:.25rem;
-     height:.25rem;
-     margin:.08rem .04rem;
-     vertical-align: top;
- }
- .ticketcontent-sepline {
-     margin: .2rem .20rem .06rem .72rem;
-     line-height: .44rem;
- }
+       width: .34rem;
+       height: .34rem;
+       position: relative;
+       margin-right: .26rem;
+       left: .2rem;
+   }
+   .ticketcontent-keyword {
+       font-weight: bold;
+       color: #212121;
+   }
+   .ticketcontent-notice {
+       margin: .2rem .2rem .06rem .72rem;
+       line-height: .44rem;
+       background: #fffaf2;
+       border-radius: .08rem;
+       color: #ff8300;
+   }
+   .ticketcontent-linetag img {
+       width:.25rem;
+       height:.25rem;
+       margin:.08rem .04rem;
+       vertical-align: top;
+   }
+   .ticketcontent-sepline {
+       margin: .2rem .20rem .06rem .72rem;
+       line-height: .44rem;
+   }
 
- .sightlist {
-     overflow: hidden;
-     overflow-x: auto;
-     -webkit-overflow-scrolling: touch;
-     white-space: nowrap;
- }
- .prddetail-content {
-     color: #9e9e9e;
-     font-size: .28rem;
-     line-height: .44rem;
-     overflow: hidden;
-     padding: .15rem 0;
-     margin: 0 .2rem;
- }
- .sightlist-item a {
-     color: #212121;
-     margin-right: .4rem;
- }
- .sightlist-item .iconfont {
-     color: #bdbdbd;
-     margin-right: .1rem;
- }   
- .ticketcontent-more,.supplier-more {
-     text-align: center;
- }
- .productlist-item {
-     overflow: hidden;
-     position: relative;
-     margin-bottom: .6rem;
- }
- .productprices-info{
-     overflow: hidden;
-     padding: .24rem 1.6rem .24rem 0;
- }
- .productprices-name{
-     overflow: hidden;
-     margin-bottom: .04rem;
-     color: #212121;
-     font-size: .3rem;
-     line-height: .42rem;
- }
- .productprices-supplier{
-     margin-bottom: .04rem;
-     color: #9e9e9e;
-     font-size: .24rem;
-     line-height: .34rem;
- }
- .linkarea{
-     position: absolute;
-     z-index: 2;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
- }
- .product-desctag{
+   .sightlist {
+       overflow: hidden;
+       overflow-x: auto;
+       -webkit-overflow-scrolling: touch;
+       white-space: nowrap;
+   }
+   .prddetail-content {
+       color: #9e9e9e;
+       font-size: .28rem;
+       line-height: .44rem;
+       overflow: hidden;
+       padding: .15rem 0;
+       margin: 0 .2rem;
+   }
+   .sightlist-item a {
+       color: #212121;
+       margin-right: .4rem;
+   }
+   .sightlist-item .iconfont {
+       color: #bdbdbd;
+       margin-right: .1rem;
+   }   
+   .ticketcontent-more,.supplier-more {
+       text-align: center;
+   }
+   .productlist-item {
+       overflow: hidden;
+       position: relative;
+       margin-bottom: .6rem;
+   }
+   .productprices-info {
+       overflow: hidden;
+       padding: .24rem 1.6rem .24rem 0;
+   }
+   .productprices-name {
+       overflow: hidden;
+       margin-bottom: .04rem;
+       color: #212121;
+       font-size: .3rem;
+       line-height: .42rem;
+   }
+   .productprices-supplier {
+       margin-bottom: .04rem;
+       color: #9e9e9e;
+       font-size: .24rem;
+       line-height: .34rem;
+   }
+   .linkarea {
+       position: absolute;
+       z-index: 2;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+   }
+   .product-desctag {
     margin:.2rem;
 }
-.product-desctag-icon{
+.product-desctag-icon {
     color:#ff9800;
     margin-right: .08rem;
     color: #00afc7;
     font-size: .24rem;
 }
-.product-desctag-invalid{
-   color:#ff9800;
+.product-desctag-invalid {
+ color:#ff9800;
 }
-.productprices-disandprice{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    color: #9e9e9e;
-    font-size: .22rem;
-    line-height: .3rem;
-    text-align: right;
+.productprices-disandprice {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #9e9e9e;
+  font-size: .22rem;
+  line-height: .3rem;
+  text-align: right;
 }
-.product-price{
-    color: #ff8300;
-    font-size: .18rem;
+.product-price {
+  color: #ff8300;
+  font-size: .18rem;
 }
-.price-num{
-    margin: 0 .04rem 0 .06rem;
-    font-size: .4rem;
+.price-num {
+  margin: 0 .04rem 0 .06rem;
+  font-size: .4rem;
 }
 </style>

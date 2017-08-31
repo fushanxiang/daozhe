@@ -38,8 +38,7 @@
 						</div>
 					</router-link>
 				</li>               
-			</ul>
-			
+			</ul>		
 
 		</div>
 		<div class="sale-bottom">
@@ -53,7 +52,6 @@
 <script>
 	export default {
 		mounted () {
-			let this_ = this;
 			let fiexdTop = document.querySelector(".sale-header");
 			window.addEventListener("scroll", function(){
 				if(window.scrollY>=45){         
@@ -73,7 +71,7 @@
 				imgsInfo:[]
 			}  
 		},
-		created(){
+		created() {
 			this.$http.get('./static/ticketSale.json').then( response =>{
 				var data = response.body.data;
 				this.iconsInfo = data.iconsInfo;
@@ -81,17 +79,8 @@
 			},response => {
 				console.log("ajax error")
 			})
-		},
-		computed:{
-
-		},
-		methods:{
-			
 		}
-
-
 	}
-
 
 </script>
 

@@ -7,19 +7,24 @@
 
 <script>
 	export default {
-		methods:{
-			handleBackClick:function(){
+		methods: {
+			handleBackClick:function() {
 				window.history.back();
-			}
-		},
-		mounted(){
-			document.addEventListener('scroll', function(){	
-				if(window.scrollY>=44){
+			},
+			DestroyStyle:function() {
+				if(window.scrollY>=44) {
 					document.querySelector('.topbar').style.opacity = '1'
-				}else{
+				} else {
 					document.querySelector('.topbar').style.opacity = '0'
 				}
-			})
+			}
+		},
+		mounted() {		
+			document.addEventListener('scroll', this.DestroyStyle)
+		},
+		beforeDestroy() {
+			document.removeEventListener('scroll',this.DestroyStyle)
+
 		}
 	}
 
@@ -27,7 +32,7 @@
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
-	.topbar{
+	.topbar {
 		position: fixed;
 		height: .88rem;
 		background: #00bcd4;
@@ -37,7 +42,7 @@
 		opacity: 0;
 		transition: 1.3s;
 	}
-	.top-back{
+	.top-back {
 		position: absolute;
 		font-size: .36rem;
 		color: #fff;
@@ -48,7 +53,7 @@
 		height: .88rem;
 		line-height: .88rem;
 	}
-	.top-title{
+	.top-title {
 		font-family: "微软雅黑";
 		margin: 0 1rem;
 		line-height: .88rem;

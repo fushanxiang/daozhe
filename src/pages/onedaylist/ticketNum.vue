@@ -82,7 +82,6 @@ Vue.use(IScrollView, IScroll)
 	  bottom: 10%;
 	  left: 0;
 	  right: 0;
-	  overflow: auto;
 	}
 	.ticket-list {
 		height: 45rem;

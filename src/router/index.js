@@ -18,7 +18,6 @@ import SecKill from '@/pages/seckill/index'
 
 
 Vue.use(Router)
-Vue.use(VueScroller)
 
 export default new Router({
   routes: [

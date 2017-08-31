@@ -7,10 +7,15 @@ import WeekendDetailInfo from '@/pages/weekendtour/detail_info/index'
 import WeekendComment from '@/pages/weekendtour/comment/index'
 import Slightmap from '@/pages/weekendtour/slightmap/index'
 import City from '@/pages/city/index'
-import BigCity from '@/pages/city/big_city'
 import SmallCity from '@/pages/city/small_city'
+import Order from '@/pages/order/form'
+import VueScroller from 'vue-scroller'
+import Productdetail from '@/pages/productdetail/index'
+import search from '@/search/search'
+import List from '@/pages/list/index'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
+
 
 Vue.use(Router)
 
@@ -29,19 +34,9 @@ export default new Router({
       name:'seckill',
       component:SecKill
     },{
-      path: '/city/:id',
+      path: '/city',
       name: 'city',
-      component: City,
-      children: [
-        {
-          path: 'bigCity',
-          component: BigCity
-        },
-        {
-          path: 'smallCity',
-          component: SmallCity
-        }
-      ] 
+      component: City
     },{
         path: '/weekendtour/index',
         name: 'weekendIndex',
@@ -59,9 +54,31 @@ export default new Router({
         name: 'weekendComment',
         component: WeekendComment
     },{
+        path: '/order/:id',
+        name: 'order',
+        component: Order
+    },{
         path: '/weekendtour/slightmap/:id',
         name: 'Slightmap',
         component: Slightmap
     }
   ]
+    },
+    {
+      path: '/productdetail',
+      name: 'productdetail',
+      component: Productdetail
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: List
+
+    },{
+      path: '/search',
+      name: 'search',
+      component: search
+
+    
+
 })

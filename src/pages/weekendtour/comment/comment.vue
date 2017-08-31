@@ -25,11 +25,9 @@
 <script>
 	export default {
 	  	data () {
-
 	    	return {
 	    		
 	   		}
-	     
 		},
 		props: ['comments','flag'],
 		methods: {

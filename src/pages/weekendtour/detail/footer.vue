@@ -41,54 +41,47 @@
 <script>
  
 export default {
-	
   	 data () {
-  	 	
         return {
-            show1 : false,
-            
+            show1 : false, 
         }
     },
     methods: {
         handleClick() {
             this.show1 = !this.show1;
-           
         }
     }
-     
 }
 	
 </script>
 
-
 <style scoped>
 	.nav1 {
-			position: relative;
-			width: 6.4rem;
-			height: 2.5rem;
-			padding: .2rem .2rem 0 .2rem;
-			margin: 0 auto;
-			overflow: hidden;
-			
-		}
-		.nav2 {
-			position: relative;
-			width: 6.4rem;
-			height: .7rem;
-			padding: .2rem .2rem 0 .2rem;
-			margin: 0 auto;
-			overflow: hidden;
-		}
-		#tag li {
-			float: left;
-			width: 1.5rem;
-			height: .6rem;
-			text-align: center;
-			line-height: .6rem;
-			color: #9e9e9e;
-		    font-size: 12px;
-		   
-		}	
+		position: relative;
+		width: 6.4rem;
+		height: 2.5rem;
+		padding: .2rem .2rem 0 .2rem;
+		margin: 0 auto;
+		overflow: hidden;
+		
+	}
+	.nav2 {
+		position: relative;
+		width: 6.4rem;
+		height: .7rem;
+		padding: .2rem .2rem 0 .2rem;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#tag li {
+		float: left;
+		width: 1.5rem;
+		height: .6rem;
+		text-align: center;
+		line-height: .6rem;
+		color: #9e9e9e;
+	    font-size: 12px;
+	}	
 	.footer {
 		width: 100%;
 		height: auto;
@@ -99,8 +92,6 @@ export default {
 		width: 100%;
 		height: .8rem;
 		text-align: center;
-
-
 	}
 	.footer-provider-line {
 		position: absolute;
@@ -109,7 +100,6 @@ export default {
 		background: #ddd;
 		width: 100%;
 		z-index: 0;
-		
 	}
 	.footer-provider-message {
 		position: absolute;
@@ -125,56 +115,54 @@ export default {
 	    line-height: .4rem;
 	    text-align: center;
 	    z-index: 2;
-		}
-		
-		
-		.footer .iconfont {
-			margin:3px 3px  0 5px;
-			font-size: 12px;
-		}
-		.footer-menu {
-			display: block;
-			height: .8rem;
-			border-bottom: .01rem solid #cacaca;
-		}
-		.footer-menu-center{
-			display: flex;
-			justify-content: center;
-		}
-		.footer-menu li {
-			box-sizing: border-bottom;
-			float: left;
-			padding: .2rem;
-			text-align: center;
-			line-height: .5rem;
-			color: #25a4bb;
-			font-size: .14rem;
-		}
-		.mobile-pc {
-			width: 100%;
-			height: .48rem;
-			padding-top: 10px;
-			text-align: center;
-		}
-		.mobile,
-		.PC {
-			display: inline-block;
-			margin: 0 .3rem;
-		}
-		.PC {
-			color: #25a4bb;
-		}
-		.fadeback {
-			color: #9e9e9e;
-		    text-align: center;
-		    font-size: 14px;
-		    padding: 0px 10px 1.2rem 10px;
-		}
-		.tag {
-			position: absolute;
-			bottom: 0.1rem;
-			right: .6rem;
-			background: #f3f3f3;
-		}
+	}	
+	.footer .iconfont {
+		margin:3px 3px  0 5px;
+		font-size: 12px;
+	}
+	.footer-menu {
+		display: block;
+		height: .8rem;
+		border-bottom: .01rem solid #cacaca;
+	}
+	.footer-menu-center{
+		display: flex;
+		justify-content: center;
+	}
+	.footer-menu li {
+		box-sizing: border-bottom;
+		float: left;
+		padding: .2rem;
+		text-align: center;
+		line-height: .5rem;
+		color: #25a4bb;
+		font-size: .28rem;
+	}
+	.mobile-pc {
+		width: 100%;
+		height: .48rem;
+		padding-top: 10px;
+		text-align: center;
+	}
+	.mobile,
+	.PC {
+		display: inline-block;
+		margin: 0 .3rem;
+	}
+	.PC {
+		color: #25a4bb;
+	}
+	.fadeback {
+		color: #9e9e9e;
+	    text-align: center;
+	    font-size: 14px;
+	    padding: 0px 10px 1.2rem 10px;
+	}
+	.tag {
+		position: absolute;
+		bottom: 0.1rem;
+		right: .6rem;
+		background: #f3f3f3;
+	}
 
 </style>

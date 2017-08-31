@@ -18,7 +18,6 @@ export default {
     	return {
     		goodsInfo : []
    		}
-     
 	},
 	created() {
 		this.$http.get('/static/weekend.json').then(response => {

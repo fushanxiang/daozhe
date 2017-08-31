@@ -40,21 +40,17 @@ export default {
 	},
 	methods: {
 	    refresh: function (done) {
-	    	var this_ = this;
-	    	setTimeout(function () {
-		        
+	    	setTimeout(() => {
 		        done();
 	    	}, 1500)
 	    },
 
 	    infinite: function (done) {
-	    	var this_ = this;
 	    	var length = this.goods.length;
-	    	setTimeout(function () {
-		        this_.$http.get('/static/weekend.json').then(response => {
-        	    	var data1 = response.body.data.goods;
-        	    	var data2 = data1.splice(length,2);
-        	    	this_.goods = this_.goods.concat(data2);
+	    	setTimeout(() => {
+		        this.$http.get('/static/weekend.json').then(response => {
+        	    	var data1 = response.body.data.goods.splice(length,2);
+        	    	this.goods = this.goods.concat(data1);
         	    }, response => {
         	    	console.log("ajax error");
         	    });

@@ -43,6 +43,7 @@ export default {
 				paginationClickable :true,
 				observeParents:true
 			}
+
     	}
 	},
 	props:["iconsInfo"],

@@ -1,12 +1,12 @@
 <template>
+
 	<div class="content-city">
+
 		<div class="cityarea-group">
 			<div class="cityarea-title">您的位置</div>
-			<div class="cityarea-content city-now" >
+			<div class="cityarea-content city-now">
 				<div class="cityitem-light">
-					<router-link to="/">
-						<p class="cityitem-name  cityitem-seleted ellipsis">{{$store.state.city}}</p>
-					</router-link>
+					<a href="###" class="cityitem-name cityitem-seleted ellipsis">澳门</a>
 				</div>
 			</div>
 		</div>
@@ -14,33 +14,23 @@
 			<div class="cityarea-title">热门城市</div>
 			<div class="cityarea-content city-now">
 				<div class="cityitem-light" v-for="item in cityclass">
-					<router-link to="/">
-						<p v-bind:id="item.id" @click="handleSelectedClick($event)" class="cityitem-name ellipsis">{{item.city}}</p>
-					</router-link>
+					<a href="###" class="cityitem-name ellipsis">{{item.city}}</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </template>
 <script>
+
 export default { 
 	
 	data () {
 		return {
-			foreign: false,
-			dataId:[]
+			foreign: false
     	}
 	},
 	props: ['countryChange', 'datas'],
-	methods: {
-		handleSelectedClick(event) {
-			var  event = event || window.event;
-			var SelectId = event.target.id;
-			this.$store.commit ("changeCity", {city: event.target.innerText});
-			localStorage.selectedCity = event.target.innerText;
-			this.dataId.push(SelectId);
-		}
-	},
 	computed: {
         cityclass: function() {
             return this.foreign? this.datas.hotAbroadCity: this.datas.hotChinaCity;
@@ -60,16 +50,21 @@ export default {
 </script>
 
 <style scoped>
-	.content-city {
+	.content-city{
 		background: #F5F5F5;
 	}
+	.cityarea-content {
+	    overflow: hidden;
+	    background: #fff;
+	}
 	.city-now {
-		overflow: hidden;
-	    padding: .04rem .5rem .26rem .2rem;
+	    padding-top: .04rem;
+	    padding-bottom: .26rem;
+	    padding-right: .5rem;
+	    padding-left: .2rem;
 	    border:0.01rem solid #C9CCCD;
 	    border-left: 0;
 	    border-right: 0;
-	    background: #fff;
 	}
 	.cityarea-title {
 	    line-height: .54rem;

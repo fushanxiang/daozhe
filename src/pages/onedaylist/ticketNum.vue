@@ -124,7 +124,7 @@ Vue.use(IScrollView, IScroll)
 		width: 1.6rem;
 		height: 1.6rem;
 	}
-	.ticket-list-today-san:after {
+	.ticket-list-today-san::after {
 		position: absolute;
 		top: .2rem;
 		left: 1.1rem;
@@ -146,7 +146,7 @@ Vue.use(IScrollView, IScroll)
 	    line-height: .24rem;
 	    z-index: 1;
 	}
-	.ticket-list-tomorrow-san:after {
+	.ticket-list-tomorrow-san::after {
 		position: absolute;
 		top: .2rem;
 		left: 1.1rem;

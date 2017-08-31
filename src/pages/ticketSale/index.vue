@@ -144,7 +144,7 @@
 	}
 	.list-item{
 		width:100%;  
-		height:4.4rem;  
+		height:4.6rem;  
 		overflow: hidden;  
 		position: relative;			
 	}
@@ -153,7 +153,7 @@
 		border-style: solid;
 		border-color: #fa8514 transparent #fa8514 #fa8514;
 		position: absolute;
-		bottom: 1.5rem;
+		bottom: 1.7rem;
 		left: 0;
 		width: 1.12rem;
 	}

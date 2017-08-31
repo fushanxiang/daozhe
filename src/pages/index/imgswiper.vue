@@ -21,9 +21,11 @@ export default {
 				paginationClickable :true,
 				observeParents:true
 			}
+
     	}
 	},
 	props:["imgsInfo"],
+
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide

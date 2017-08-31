@@ -4,7 +4,7 @@
 		<a class="header-left iconfont">&#xe600;</a>
 		<div class="header-title">
 			<span class="iconfont icon-search"></span >
-			<span class="single-line">输入城市/景点/游玩主题</span>
+			<span class="single-line">输入城市/电影/演出</span>
 		</div>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
@@ -43,7 +43,7 @@ export default {
 	    overflow: hidden;
 	    width: 100%;
 	    height: .88rem;
-	    background: #00bcd4;
+	    background: #369;
 	    text-align: center;
 	    color: #fff;
 	}

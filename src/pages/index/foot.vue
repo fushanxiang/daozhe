@@ -4,19 +4,19 @@
 			<li class="foot-li">
 				<a class='list-type' href="#">
 					<div class="iconfont">&#xe635;</div>
-					<span class="foot-title">机票</span>
+					<span class="foot-title">电影票</span>
 				</a>
 			</li>
 			<li class="foot-li">
 				<a class='list-type' href="#">
 					<div class="iconfont">&#xe609;</div>
-					<span class="foot-title">酒店</span>
+					<span class="foot-title">演出</span>
 				</a>
 			</li>
 			<li class="foot-li">
 				<a class='list-type' href="#">
 					<div class="iconfont">&#xe698;</div>
-					<span class="foot-title">公寓</span>
+					<span class="foot-title">剧场</span>
 				</a>
 			</li>
 			<li class="foot-li">
@@ -29,8 +29,8 @@
 		<ul class="foot-two">
 			<li class="order-item">登陆</li>
 			<li class="order-item">我的订单</li>
-			<li class="order-item">我的订单</li>
-			<li class="order-item">我的订单</li>
+			<li class="order-item">历史记录</li>
+			<li class="order-item">我的评价</li>
 			<li class="order-item">关于我们</li>
 		</ul>
 		<ul class="foot-three">

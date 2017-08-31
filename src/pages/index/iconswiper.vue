@@ -19,7 +19,7 @@
 			</div>
 			<div class="position-directon">
 			    <span class="position-right iconfont">&#xe629;</span>
-				九元门票
+				特价影票
 			</div>
 	    </div>
         <div class="sale"></div>
@@ -136,7 +136,7 @@ export default {
     	height: 1.4rem;
     	text-align: center;
     	border:1px solid #e0e0e0;
-    	background:#fff url(http://img1.qunarzz.com/piao/fusion/1601/29/30427c0e0658b5f7.png) center center no-repeat;
+    	background:#fff url(http://channel.wangpiao.com/WeChat/Content/images/banner/jjdy20170727.jpg) center center no-repeat;
     	background-size:auto 100%;
 
     }

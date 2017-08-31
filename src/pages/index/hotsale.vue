@@ -6,10 +6,10 @@
 				<img class="item-img" v-lazy='item.imgUrl'/>
 				<p class="item-title">{{item.title}}</p>
 				<p class="item-content">{{item.content}}</p>
-				<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">起</span></p>
+				<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">元</span></p>
 			</li>
 		</ul>
-		<p class="item-all">查看所有产品</p>
+		<p class="item-all">查看所有电影</p>
 	</div>
 </template>
 

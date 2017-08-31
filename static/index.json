@@ -3,7 +3,7 @@
 	"data": {
 		"imgsInfo": [{
 			"id": "1",
-			"imgUrl": "http://pic.spider.com.cn/pic/billpic/1499830241217.jpg",
+			"imgUrl": "http://pic.spider.com.cn/pic/billpic/1503318463217.jpg",
 			"link": "/detail"
 		},{
 			"id": "2",
@@ -17,44 +17,44 @@
 				"title":"电影"
 			},{
 				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"杂志"
 			},{
 				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"报纸"
 			},{
 				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/ea/8cb1dce519375d02.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"演出"
 			},{
 				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/c3/133460666f6f9202.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"创意演出"
 			},{
 				"id": "6",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/4c/cb6f790552dc3002.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"兑换专区"
 			},{
 				"id": "7",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/29/c16cd064d85d8502.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"热门专题"
 			},{
 				"id": "8",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"活动专区"
 			},{
 				"id": "9",
-				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"imgUrl": "https://img1.qunarzz.com/piao/fusion/1611/d1/1e49d9e4d7fca102.png",
 				"link": "/detail",
-				"title":"全部"
+				"title":"信息大全"
 			},{
 				"id": "10",
 				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
@@ -63,60 +63,60 @@
 			}],
 		"itemsInfo": [{
 				"id": "1",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
-				"title": "故宫",
-				"content": "东方宫殿建筑代表，世界宫殿建筑典范",
-				"price": "20"
+				"imgUrl": " https://static5.gewara.com/images/movie/201708/s4e782e55_15dcac3935a__7b81.jpg?w=150&h=200&r=c",
+				"title": "星际特工 : 千星之城",
+				"content": "主演：戴恩·德哈恩 卡拉·迪",
+				"price": "35"
 			},{
 				"id": "2",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_140x140_e20be8e0.jpg",
-				"title": "颐和园",
-				"content": "保存完整的一座皇家行宫御苑",
-				"price": "65"
+				"imgUrl": " https://static5.gewara.com/images/movie/201707/s63e467c4_15d1ad668b7__7fc6.jpg?w=150&h=200&r=c ",
+				"title": "战狼2",
+				"content": "主演：吴京 弗兰克·格里罗",
+				"price": "60"
 			},{
 				"id": "3",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_140x140_75f5d504.jpg",
-				"title": "八达岭长城",
-				"content": "不到长城非好汉",
-				"price": "39.9"
+				"imgUrl": "https://static5.gewara.com/images/movie/201707/s477d558e_15d635ef8a0__7a04.jpg?w=150&h=200&r=c",
+				"title": "敦刻尔克",
+				"content": "临绝境死地求生，渡险关分秒必争",
+				"price": "39"
 			},{
 				"id": "4",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_140x140_b05eb1df.jpg",
-				"title": "北京欢乐谷",
-				"content": "七大主题园区带你畅享北京欢乐谷",
+				"imgUrl": "https://static5.gewara.com/images/movie/201707/s_4eeae292_15d362df2c0__7efd.jpg?w=150&h=200&r=c",
+				"title": "赛车总动员3",
+				"content": "闪电麦昆不服输，人生赛场悟真谛",
 				"price": "29.5"
 			},{
 				"id": "5",
-				"imgUrl": "http://img1.qunarzz.com/sight/p0/201306/13/bdf22f69fab0ee4ec8d65eac.jpg_140x140_355f4fb6.jpg",
-				"title": "八达岭长城缆车",
-				"content": "巍峨雄伟尽收眼底",
-				"price": "155"
+				"imgUrl": "https://static5.gewara.com/images/movie/201707/s6e15a808_15d3ed22b0e__7ff1.jpg?w=150&h=200&r=c",
+				"title": "极盗车神",
+				"content": "车神邂逅女侍应，萌生退意陷麻烦",
+				"price": "55"
 			}],
 		"holidayInfo": [{
 					"id":"1",
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+					"imgUrl":"https://pic.maizuo.com/usr/movie/2ea684e4f1e646d97e2a1480eee27a38.jpg",
+					"title":"星际特工 : 千星之城",
+					"text":"157家影院上映 453262人购票"
 				},{
 					"id":"2",
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+					"imgUrl":"https://pic.maizuo.com/usr/movie/be39f03cbceee9575e58a5ff79bd8a54.jpg",
+					"title":"蜘蛛侠 : 英雄归来",
+					"text":"157家影院上映 325262人购票"
 				},{
 					"id":"3",
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+					"imgUrl":"https://pic.maizuo.com/usr/movie/78e154f9ece5fb70e7681e4ef0824fad.jpg",
+					"title":"极道车神",
+					"text":"127家影院上映 312562人购票"
 				},{
 					"id":"4",
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+					"imgUrl":"https://pic.maizuo.com/usr/movie/28120b5f668eba79464aa8bd9057a29d.jpg",
+					"title":"杀破狼 : 贪狼",
+					"text":"167家影院上映 512522人购票"
 				},{
 					"id":"5",
-					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
-					"title":"学生最爱的博物馆",
-					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+					"imgUrl":"https://pic.maizuo.com/usr/movie/d42493a42a634d94de9e003f64346fa2.jpg",
+					"title":"海边的曼彻斯特",
+					"text":"145家影院上映 312322人购票"
 				}]
 	}
 }

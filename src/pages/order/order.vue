@@ -2,7 +2,7 @@
 <template>
 	<div class="box">
 	<header class="header">
-		<a class="header-left iconfont">&#xe600;</a>
+		<a class="header-left iconfont" @click="back">&#xe600;</a>
 		<div class="header-title">
 		<div class="header-content">订单填写</div>
 			
@@ -57,7 +57,6 @@ export default {
 		this.$http.get('/static/onedaytour-details.json').then(response => {        	
             var data = response.body.data.index.headerTitle;          	
             this.headerTitle = data;
-            console.log(this.headerTitle)
         }, response => {
             console.log("ajax error");
         });
@@ -71,6 +70,12 @@ export default {
 			month:new Date().getMonth()+1,
 			day:new Date().getDate(),
     	}
+	},
+	methods:{
+		back(){
+			this.$router.go(-1);
+		}
+		
 	}
 	
 }

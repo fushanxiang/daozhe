@@ -75,7 +75,7 @@
   for (var i = this.currentWeek - 1; i >= 0; i--) {
    var d = new Date(str);
    d.setDate(d.getDate() - i);
-   console.log("y:" + d.getDate());
+   //console.log("y:" + d.getDate());
    this.days.push(d);
   }
   for (var i = 1; i <= 35 - this.currentWeek; i++) {

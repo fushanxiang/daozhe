@@ -100,7 +100,6 @@ export default {
           },
           methods:{
              loadmap(){
-              console.log(this.center);
               const map = new AMap.Map('large-map', {
                 zoom: 12,
                 center:this.center

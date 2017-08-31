@@ -153,7 +153,7 @@ export default {
         changeShow(){
              this.show=true;
             if(this.flag){
-                 location.href="http://localhost:8080/#/purchaseorder";
+                 this.$router.push('/purchaseorder');
             }
             else{
                alert("请填写完整信息");

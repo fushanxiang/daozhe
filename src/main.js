@@ -22,7 +22,7 @@ Vue.use(VueLazyload, {
 })
 
 AMap.initAMapApiLoader({
-  key: 'd585c6a0847fa0c75c6fd86348da2afc',
+  key: '9779c8a5734b06f01920b3a261a8f53f',
   plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
 });
 

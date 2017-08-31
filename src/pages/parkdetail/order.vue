@@ -1,43 +1,42 @@
 <template>
-	<div class="mask" v-show="mode">
-		<div id="page-category" class="mpw-dock mpw-dock-fadein" style="" >
-			<div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div>
-			<div class="mpw-dock-content" mp-role="dockContent">
-				<div class="mpf-control-outer">
-					<div class="mp-booking-info">
-						<h5 class="mpf-booking-title">太平洋海底世界成人票+海洋动物表演电子套票（文惠券产品）</h5>
-						<div class="mpw-dock-close iconfont" @click="handleClick">&#xe633;</div>
-						<p class="mpf-booking-price">
-							<span class="mpg-price">¥<em class="mpg-price-num" id="price">80</em></span>
-							<span id="price-text">/张</span>
-							<span class="mp-prdcard-gray mp-prdcard-marketprice mpf-booking-marketprice">票面价:¥<span>160</span></span>
-						</p>
-					</div>
-					<div class="mpf-booking-select" data-type="CALENDAR">
-						<h6 class="mpf-booking-note">价格日历</h6>
-						<div class="mpf-booking-datecard clrfix">
-							<span class="mpf-datecard mpf-datecard-disabled ">
-						        <em class="mpf-datecard-name">今天</em>
-						        <strong class="mpf-datecard-detail">8月28日</strong>
-						    </span>
-							<span class="mpf-datecard   mpf-datecard-actived">
-						        <em class="mpf-datecard-name">明天</em>
-						        <strong class="mpf-datecard-detail">8月29日</strong>
-						    </span>
-							<span class="mpf-datecard  ">
-						        <em class="mpf-datecard-name">后天</em>
-						        <strong class="mpf-datecard-detail">8月30日</strong>
-						    </span>
-							<span class="mpf-datecard  mpf-datecard-wait" id="alldate" readonly="true">
-						        <em class="mpf-datecard-name">其他日期</em>
-						    </span>
-						</div>
-					</div>
-					<div class="mpf-booking-light">需要在游玩前1天的23:30前预订</div>
-				</div>
-				<a class="mpf-booking-btn" href="#">立即预订</a>
-			</div>
+<div class="mask" v-show="mode">
+	<div id="page-category" class="mpw-dock mpw-dock-fadein"  :style="mode? 'display:block':'display:none'">
+        <div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div>
+        <div class="mpw-dock-content" mp-role="dockContent">
+        <div class="mpf-control-outer">
+        <div class="mp-booking-info">
+        <h5 class="mpf-booking-title">太平洋海底世界成人票+海洋动物表演电子套票（文惠券产品）</h5>
+        <div class="mpw-dock-close iconfont" @click="handleClick">&#xe633;</div>
+        <p class="mpf-booking-price">
+            <span class="mpg-price">¥<em class="mpg-price-num" id="price">80</em></span>
+            <span id="price-text">/张</span>
+            <span class="mp-prdcard-gray mp-prdcard-marketprice mpf-booking-marketprice">票面价:¥<span>160</span></span>
+        </p>
+    </div>
+    <div class="mpf-booking-select" data-type="CALENDAR">
+        <h6 class="mpf-booking-note">价格日历</h6>
+    <div class="mpf-booking-datecard clrfix">       
+    <span class="mpf-datecard mpf-datecard-disabled ">
+        <em class="mpf-datecard-name">今天</em>
+        <strong class="mpf-datecard-detail">8月28日</strong>
+    </span>
+    <span class="mpf-datecard   mpf-datecard-actived">
+        <em class="mpf-datecard-name">明天</em>
+        <strong class="mpf-datecard-detail">8月29日</strong>
+    </span>
+    <span class="mpf-datecard  ">
+        <em class="mpf-datecard-name">后天</em>
+        <strong class="mpf-datecard-detail">8月30日</strong>
+    </span>
+    <span class="mpf-datecard  mpf-datecard-wait" id="alldate" readonly="true">
+        <em class="mpf-datecard-name">其他日期</em>
+    </span>
+		</div></div>
+		    <div class="mpf-booking-light">需要在游玩前1天的23:30前预订</div>
 		</div>
+			<a  class="mpf-booking-btn" href="#">立即预订</a>
+		</div>
+	</div>
 	</div>
 </template>
 
@@ -48,13 +47,13 @@
 				mode: true
 			}
 		},
-		methods: {
-			handleClick() {
-				this.mode = false
-			}
-		}
-
-	}
+        methods:{
+            handleClick() {
+               this.mode = !this.mode
+            }
+        }
+		
+}
 </script>
 
 <style scoped>

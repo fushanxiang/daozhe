@@ -6,6 +6,7 @@
 		<ticket-notes></ticket-notes>
 		<scenic-area></scenic-area>
 		<header-fixed :scrollTop="scrollTop" :style="style"></header-fixed>
+		<commentaries></commentaries>
 		<recommend :recommendInfo="recommendInfo" :style="styleRec"></recommend>
 		<foot-fixed :style="styleObject"></foot-fixed>
 	</div>
@@ -18,6 +19,7 @@
 	import TicketNotes from './ticketnotes.vue'
 	import ScenicArea from './scenicarea.vue'
 	import FootFixed from './footfixed.vue'
+	import Commentaries from './commentaries.vue'
 	import HeaderFixed from '../parkdetail/headerfixed.vue'
 
 	export default {
@@ -62,6 +64,7 @@
 			"header-fixed": HeaderFixed,
 			"introduce": Introduce,
 			"recommend": Recommend,
+			"commentaries": Commentaries,
 			"foot-fixed": FootFixed,
 			"swiper": Swiper
 		},
@@ -76,10 +79,12 @@
 			}
 		}
 	}
+
 </script>
 
 <style scoped>
 	.main {
 		background: #f4f4f4;
 	}
+
 </style>

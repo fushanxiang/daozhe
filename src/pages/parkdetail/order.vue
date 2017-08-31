@@ -1,37 +1,42 @@
 <template>
-	<div class="mask" v-show="mode">
-		<div class="dock" :style="mode? 'display:block':'display:none'">
-	        <div class="control-outer">	        
-	        <h5 class="booking-title">太平洋海底世界成人票+海洋动物表演电子套票（文惠券产品）</h5>
-	        <div class="dock-close iconfont" @click="handleClick">&#xe633;</div>
-	        <p class="booking-price">
-	            <span class="price">¥<em class="price-num" id="price">80</em></span>
-	            <span id="price-text">/张</span>
-	            <span class="prdcard-gray prdcard-marketprice">票面价:¥<span>160</span></span>
-	        </p>
-	    <div class="booking-select">
-	        <h6 class="booking-note">价格日历</h6>
-	    <div class="booking-datecard">       
-	    <span class="datecard datecard-disabled ">
-	        <em class="datecard-name">今天</em>
-	        <strong class="datecard-detail">8月28日</strong>
-	    </span>
-	    <span class="datecard   datecard-actived">
-	        <em class="datecard-name">明天</em>
-	        <strong class="datecard-detail">8月29日</strong>
-	    </span>
-	    <span class="datecard  ">
-	        <em class="datecard-name">后天</em>
-	        <strong class="datecard-detail">8月30日</strong>
-	    </span>
-	    <span class="datecard  datecard-wait" id="alldate" readonly="true">
-	        <em class="datecard-name">其他日期</em>
-	    </span>
-			</div></div>
-			    <div class="booking-light">需要在游玩前1天的23:30前预订</div>
-			</div>
-				<a  class="booking-btn" href="#">立即预订</a>			
+<div class="mask" :style="mode? 'display:block':'display:none'" >
+	<div id="page-category" class="mpw-dock mpw-dock-fadein"  >
+        <div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div>
+        <div class="mpw-dock-content" mp-role="dockContent">
+        <div class="mpf-control-outer">
+        <div class="mp-booking-info">
+        <h5 class="mpf-booking-title">太平洋海底世界成人票+海洋动物表演电子套票（文惠券产品）</h5>
+        <div class="mpw-dock-close iconfont" @click="handleClick">&#xe633;</div>
+        <p class="mpf-booking-price">
+            <span class="mpg-price">¥<em class="mpg-price-num" id="price">80</em></span>
+            <span id="price-text">/张</span>
+            <span class="mp-prdcard-gray mp-prdcard-marketprice mpf-booking-marketprice">票面价:¥<span>160</span></span>
+        </p>
+    </div>
+    <div class="mpf-booking-select" data-type="CALENDAR">
+        <h6 class="mpf-booking-note">价格日历</h6>
+    <div class="mpf-booking-datecard clrfix">       
+    <span class="mpf-datecard mpf-datecard-disabled ">
+        <em class="mpf-datecard-name">今天</em>
+        <strong class="mpf-datecard-detail">8月28日</strong>
+    </span>
+    <span class="mpf-datecard   mpf-datecard-actived">
+        <em class="mpf-datecard-name">明天</em>
+        <strong class="mpf-datecard-detail">8月29日</strong>
+    </span>
+    <span class="mpf-datecard  ">
+        <em class="mpf-datecard-name">后天</em>
+        <strong class="mpf-datecard-detail">8月30日</strong>
+    </span>
+    <span class="mpf-datecard  mpf-datecard-wait" id="alldate" readonly="true">
+        <em class="mpf-datecard-name">其他日期</em>
+    </span>
+		</div></div>
+		    <div class="mpf-booking-light">需要在游玩前1天的23:30前预订</div>
 		</div>
+			<a  class="mpf-booking-btn" href="#">立即预订</a>
+		</div>
+	</div>
 	</div>
 </template>
 
@@ -39,7 +44,6 @@
 	export default {
 		data() {
 			return {
-//				modeshow:true
 				mode: true
 			}
 		},
@@ -47,8 +51,9 @@
             handleClick() {
                	this.mode = !this.mode;
             }
-        }		
-	}
+        }
+		
+}
 </script>
 
 <style scoped>
@@ -64,7 +69,7 @@
 		background: rgba(0,0,0,.7);
 	}
 	
-	.dock {
+	.mpw-dock {
 		position: absolute;
 		right: 0;
 		bottom: 0;
@@ -73,11 +78,11 @@
 		transition: transform .3s ease-out;
 	}
 	
-	.control-outer {
+	.mpf-control-outer {
 		margin: 0 .2rem;
 	}
 	
-	.booking-btn {
+	.mpf-booking-btn {
 		display: block;
 		width: 100%;
 		border: 0 none;
@@ -87,7 +92,7 @@
 		text-align: center;
 	}
 	
-	.dock-close {
+	.mpw-dock-close {
 		z-index: 2;
 		right: 0;
 		position: absolute;
@@ -100,7 +105,7 @@
 		text-align: center;
 	}
 	
-	.booking-title {
+	.mpf-booking-title {
 		margin-right: .6rem;
 		padding: .3rem 0 .1rem;
 		color: #212121;
@@ -108,53 +113,53 @@
 		line-height: .4rem;
 	}
 	
-	.booking-price {
+	.mpf-booking-price {
 		color: #9e9e9e;
 		font-size: .24rem;
 		line-height: .48rem;
 	}
 	
-	.booking-price .price {
+	.mpf-booking-price .mpg-price {
 		color: #ff9800;
 		margin-right: .06rem;
 	}
 	
-	.booking-price .price-num {
+	.mpf-booking-price .mpg-price-num {
 		margin-left: .06rem;
 		font-size: .36rem;
 	}
 	
-	.prdcard-marketprice {
+	.mp-prdcard-marketprice {
 		margin-left: .05rem;
 		text-decoration: line-through;
 	}
 	
-	.prdcard-gray {
+	.mp-prdcard-gray {
 		color: #9e9e9e;
 		font-size: .24rem;
 		margin-left: -.06rem;
 	}
 	
-	.booking-select {
+	.mpf-booking-select {
 		margin-top: .18rem;
 	}
 	
-	.booking-note {
+	.mpf-booking-note {
 		color: #333;
 		font-size: .26rem;
 		line-height: .65rem;
 	}
 	
-	.booking-datecard {
+	.mpf-booking-datecard {
 		overflow: hidden;
 		height: .86rem;
 	}
 	
-	.booking-datecard .datecard:first-child {
+	.mpf-booking-datecard .mpf-datecard:first-child {
 		margin-left: 0;
 	}
 	
-	.booking-datecard .datecard {
+	.mpf-booking-datecard .mpf-datecard {
 		box-sizing: border-box;
 		float: left;
 		width: 22.5%;
@@ -162,12 +167,12 @@
 		margin-left: 3.33%;
 	}
 	
-	.datecard-disabled {
+	.mpf-datecard-disabled {
 		border-color: #ececec;
 		background: #fff;
 	}
 	
-	.datecard {
+	.mpf-datecard {
 		display: inline-block;
 		min-width: 1.2rem;
 		min-height: .82rem;
@@ -177,34 +182,34 @@
 		border-radius: .1rem;
 	}
 	
-	.datecard-name {
+	.mpf-datecard-name {
 		padding-top: .08rem;
 		color: #212121;
 		font-size: .28rem;
 		line-height: .36rem;
 	}
 	
-	.datecard-detail {
+	.mpf-datecard-detail {
 		padding-bottom: .06rem;
 		color: #888;
 		font-size: .24rem;
 		line-height: .32rem;
 	}
 	
-	.datecard-name,
-	.datecard-detail {
+	.mpf-datecard-name,
+	.mpf-datecard-detail {
 		display: block;
 		width: 100%;
 	}
 	
-	.datecard-actived {
+	.mpf-datecard-actived {
 		position: relative;
 		border-color: #00bcd4;
 		color: #fff;
 		background: #00bcd4;
 	}
 	
-	.booking-light {
+	.mpf-booking-light {
 		padding: .14rem 0;
 		color: #ff8300;
 		font-size: .24rem;

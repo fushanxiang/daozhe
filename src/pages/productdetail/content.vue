@@ -16,10 +16,7 @@
 	</iscroll-view>
 </div>
 </template>
-
-
 <script>
-
 import ContentImperial from './content_imperial.vue'
 import ContentTemple from './content_temple.vue'
 import ContentSummer from './content_summer.vue'

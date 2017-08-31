@@ -65,7 +65,7 @@ export default {
     created() {
         this.$http.get('./static/categories.json').then(response => {
                  this.categories = response.body.data.categories;
-                 this.detail= response.body.data.categories[0].detail          
+                 this.detail = response.body.data.categories[0].detail          
             })
         var h = 44;
         window.onscroll = function(){
@@ -86,44 +86,44 @@ export default {
             this.i = index;
             this.$http.get('./static/categories.json').then(response => {
                 this.categories = response.body.data.categories;
-                this.detail= response.body.data.categories[this.i].detail;
+                this.detail = response.body.data.categories[this.i].detail;
             })
         },
         clickmask() {
-            this.$refs.mask.style.display ="none";
-            this.$refs.left.style.display ="none"; 
-            this.$refs.right.style.display ="none";
+            this.$refs.mask.style.display = "none";
+            this.$refs.left.style.display = "none"; 
+            this.$refs.right.style.display = "none";
             this.$refs.menu.style.display = "none";
-            this.flag=false;
-            this.Flag=false;
+            this.flag = false;
+            this.Flag = false;
         },
         searchclick() {
-            if (this.flag==false) {
-                this.$refs.left.style.display ="block"; 
-                this.$refs.right.style.display ="block";
+            if (this.flag == false) {
+                this.$refs.left.style.display = "block"; 
+                this.$refs.right.style.display = "block";
                 this.$refs.menu.style.display = "none";
-                this.$refs.mask.style.display ="block";
-                this.flag=true;
-                this.Flag=false;
+                this.$refs.mask.style.display = "block";
+                this.flag = true;
+                this.Flag = false;
             }else{
                 this.$refs.left.style.display ="none"; 
                 this.$refs.right.style.display ="none"; 
                 this.$refs.mask.style.display ="none";
-                this.flag=false;
+                this.flag = false;
             }
         },
         menuclick() {
-             if (this.Flag==false) {    
+             if (this.Flag == false) {    
                 this.$refs.menu.style.display = "block" ;
                 this.$refs.left.style.display ="none"; 
                 this.$refs.right.style.display ="none";
                 this.$refs.mask.style.display ="block";
-                this.Flag=true;
-                this.flag=false;
+                this.Flag = true;
+                this.flag = false;
             }else{
                 this.$refs.menu.style.display = "none"  
                 this.$refs.mask.style.display ="none";
-                this.Flag=false;
+                this.Flag = false;
             }
         }
     }

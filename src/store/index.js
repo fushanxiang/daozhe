@@ -26,7 +26,7 @@ export default new Vuex.Store({
 			state.searchHistory = ifshow;
 		},
 		suggestsearch:function(state,ifshow){
-			state.suggestsearch= ifshow;
+			state.suggestsearch = ifshow;
 		}
 	},
 	actions: {

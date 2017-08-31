@@ -6,7 +6,11 @@
  			<span class='tab-arrow-sign'></span>
  			<span class='tab-arrow-circle' @click="handleToggleClick"></span>
  			<ul class='tab-inner' v-show="show">
+<<<<<<< HEAD
  				<li v-for='(tab,key,index) in tabs' @click="addClassFun(index,tab)" :class="{item:true,tabSelected:tabChoosedIndex==index}":tabChoosedSight="tab.sight" >
+=======
+ 				<li  v-for = '(tab,key,index) in tabs' @click = "addClassFun(index,tab)"  :class = "{item:true,tabSelected: tabChoosedIndex == index}" :tabChoosedSight = "tab.sight" >
+>>>>>>> 55a37a65011c5f358bfe14a7a059dfc8575d7de0
  					{{tab.sight}}
  				</li>
  			</ul>

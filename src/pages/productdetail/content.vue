@@ -24,9 +24,12 @@ import ContentImperial from './content_imperial.vue'
 import ContentTemple from './content_temple.vue'
 import ContentSummer from './content_summer.vue'
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 55a37a65011c5f358bfe14a7a059dfc8575d7de0
 
 export default {
     mounted() {

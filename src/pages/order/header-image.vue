@@ -10,18 +10,17 @@
 		<div class="return-page iconfont" @click="handleReturnClick">&#xe624;</div>
         <img class="sights-img" @click="handleImgClick" src="http://img1.qunarzz.com/p/tts0/1705/fb/bc9bf7ef985f7702.jpg_280x200_a2b83d7c.jpg" />   	    		
 	</div>
-	<div class="background-img" v-show="show" >  
-	<div class="close-mask iconfont" @click="handleCloseClick">&#xe625;</div>
-	<swiper :options="swiperOption" >
-	    <swiper-slide v-for="item in swiperInfo" :key="item.id">
-	    	<div class="img-container" >
-	    		<img class="swiper-img" :src="item.src"/>
-	    	</div>
-	    	
-	    </swiper-slide>
-	     	
-	</swiper>		
-	</div> 	
+	<div class="mask" @click="handleCloseClick" v-show="show" @touchmove.prevent>
+	    <div class="background-img" v-show="show" >  	       
+	        <swiper :options="swiperOption" >
+	            <swiper-slide v-for="item in swiperInfo" :key="item.id">
+	    	        <div class="img-container" >
+	    		        <img class="swiper-img" :src="item.src"/>
+	    	        </div>	    	
+	            </swiper-slide>	     	
+	        </swiper>		
+	    </div> 	
+	</div>
 </div>
 </template>
 <script>	
@@ -82,7 +81,7 @@ export default {
 		width: 100%;
 		height: 0.8rem;
 		background: #14bbce;
-		z-index: 2;
+		z-index: 888;
 		font-size: 0.35rem;
 		text-align: center;
 		color: white;
@@ -119,14 +118,19 @@ export default {
 		overflow: hidden;
 		opacity: 0.3;
 	}
+	.mask{
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
 	.background-img{
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: rgba(0,0,0,.9);
-		z-index: 2;		
+		background: rgba(0,0,0,0.9);
+		z-index: 1000;		
 	}
 	.img-container{	
 		width: 100%;	
@@ -136,19 +140,5 @@ export default {
 		width:100%;
 		height: 3.7rem;		
 	}
-	.close-mask{
-		position: absolute;
-		top:93%;
-		left: 3%;
-		width: 0.77rem;
-		height: 0.77rem;
-		border-radius: 50%;
-		line-height: 0.78rem;
-		background: #5f666e;
-		text-align: center;	
-		color: white;
-		font-size: 0.32rem;
-		overflow: hidden;
-		opacity: 0.7;		
-	}	
+	
 </style>

@@ -91,11 +91,14 @@ export default {
       			this.$http.get('/static/onedaytour-details.json').then(response => {
       			     this.swiperInfo = response.body.data.swiperImg;
                
-                 console.log(response.body.data.swiperImg)
+                
                  this.headerTitle = response.body.data.index;
                 
-                this.tabInfo =JSON.parse(JSON.stringify(response.body.data.tab));
-                console.log(this.$data.tabInfo);
+                 this.tabInfo =JSON.parse(JSON.stringify(response.body.data.tab));
+                
+               
+
+
       			  }, response => {
       			    console.log("获取数据失败")
       			  });
@@ -111,8 +114,7 @@ export default {
 }
 </script>
 <style scoped>
-  @import '../../assets/css/base/reset.css';
-  // @import '../../assets/css/common/border.css';
+ 
   @import "../../assets/font/iconfont.css";
     .top-head{
         width: 100%;

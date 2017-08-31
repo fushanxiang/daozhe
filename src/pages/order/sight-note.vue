@@ -103,19 +103,21 @@
 		height: 1rem;
 	}
 	.present{
-		display: block;
-		width: 1.4rem;
-		height: 0.6rem;
-		border: 1px solid red;
-		font-size: 0.3rem;
-		float: left;
-		color: red;
-		text-align: center;
 		line-height: 0.6rem;
 		border-radius: 0.05rem;
 		margin-left: 0.2rem;
 		margin-top: 0.2rem;
+		display: block;
+		width: 1.4rem;
+		height: 0.6rem;
+		float: left;
 		overflow: hidden;
+		border: 1px solid red;
+		font-size: 0.3rem;
+		color: red;
+		text-align: center;
+		
+		
 	}
 	.cash{
 		float: left;

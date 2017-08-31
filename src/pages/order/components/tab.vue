@@ -10,7 +10,7 @@
            <tourdescription :instructions="tabInfo.instructions" :userComment="tabInfo.userComment"></tourdescription>           
 		 </div>
 	</div>
-</template>
+</template>.index.tabs
 <script>
  import tourcost from './tab-details/tourCost.vue'
  import tourinstrctor from './tab-details/tourInstrctor.vue'
@@ -102,19 +102,20 @@
         	height: .84rem;
         	font-size: .28rem;
         	background: #fff;
-        	z-index: 1000;
+        	z-index: 2;
         }
 
         .tab-fixed {
         	position: fixed;
-        	top: .88rem;
+        	top: .8rem;
         }
 
         .tab-fixed {
         	position: fixed;
         	left: 0;
         	right: 0;
-        	top: .88rem;
+        	top: .8rem;
+          z-index:888;
         }
 
         .tabs {
@@ -123,7 +124,7 @@
         	width: 30%;
         	height: .84rem;
         	line-height: .84rem;
-        	color: #616161;
+        	color: #616161
         }
 
         .active {

@@ -30,7 +30,6 @@
 <script>
 
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
 export default {
 	data () {
 		return {
@@ -106,7 +105,6 @@ export default {
     	border-top:1px solid #e0e0e0;
     	overflow: hidden;
     	margin-bottom: .24rem;
-
     }
     .position-directon{  
     	float: left;
@@ -138,6 +136,5 @@ export default {
     	border:1px solid #e0e0e0;
     	background:#fff url(http://img1.qunarzz.com/piao/fusion/1601/29/30427c0e0658b5f7.png) center center no-repeat;
     	background-size:auto 100%;
-
     }
 </style>

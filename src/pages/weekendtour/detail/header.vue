@@ -1,13 +1,33 @@
 <template>
 	<div class="header-container">
+		<div class="mask" v-if="show">
+		<div class="close" @click="handleClick">&#xe637;</div>
+			<swiper :options="swiperOption" class="swiper-box">
+			    <swiper-slide class="swiper-item">
+			    	<img :src="goodsInfo.src" class="swiper-img">
+			    </swiper-slide>
+			    <swiper-slide class="swiper-item">
+			    	<img :src="goodsInfo.src" class="swiper-img">
+			    </swiper-slide>
+			    <swiper-slide class="swiper-item">
+			    	<img :src="goodsInfo.src" class="swiper-img">
+			    </swiper-slide>
+			    
+			    <div class="swiper-pagination" slot="pagination"></div>
+			    
+		  	</swiper>
+		  	<div class="swiper-button-prev swiper-button "><span class="button iconfont">&#xe60b;</span></div>
+    		<div class="swiper-button-next swiper-button "><span class="button button-right iconfont">&#xe60b;</span></div>
+		 
+		</div>
 		<div class="img-container">
 			<router-link to="/weekendtour/index" class="back-btn iconfont">&#59031;</router-link>
-			<img :src="goodsInfo.src" class="header-img" />
+			<img :src="goodsInfo.src" @click="handleClick"class="header-img" />
 			<div class="show-images">
 				<span class="pic-iconh iconfont">&#59180;</span>
 				<span>1</span>
 				<span>/</span>
-				<span>{{goodsInfo.imgsSrc ? goodsInfo.imgsSrc.length : 0}}</span>
+				<span >{{goodsInfo.imgsSrc ? goodsInfo.imgsSrc.length : 0}}</span>
 			</div>
 		</div>
 		<div class="header-content">
@@ -36,18 +56,43 @@
 </template>
 
 <script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
 	data () {
 		return {
+				show: false,
+				swiperOption: {
+				direction : 'horizontal',
+				autoHeight: true,
+				paginationType: "fraction",
+				pagination : '.swiper-pagination',
+				paginationClickable :true,
+				observeParents:true,
+				prevButton:'.swiper-button-prev',
+				nextButton:'.swiper-button-next',
+			
+        	}
 			
 		}
 	},
-	props:["goodsInfo"]
+
+	props:["goodsInfo"],
+	methods: {
+		handleClick () {
+			this.show = !this.show;
+
+		}
+	},
+	components:{
+		"swiper": swiper,
+		"swiper-slide": swiperSlide
+	}
 }
 </script>
 
 <style scoped>
 	@import "../../../assets/font/iconfont.css";
+	@import '~swiper/dist/css/swiper.css';
 	.img-container {
 		position: relative;
 	}
@@ -149,4 +194,56 @@ export default {
 		height: .9rem;
 		color: #9e9e9e;
 	}
+	.mask {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		z-index: 30;
+	}
+	.swiper-box {
+	    width: 100%;
+	    height: 100%;
+	    margin: 0 auto;
+	}
+	
+	.swiper-img{
+		position: absolute;
+		width: 100%;
+		top: 4.8rem;
+	}
+	.swiper-button {
+		
+		background: transparent;
+		
+	}
+	.swiper-pagination {
+		color: white;
+	}
+	.button {
+		position: absolute;
+		top: 5rem;
+		font-size: .8rem;
+		color: white;
+	}
+	.button-right {
+		transform: rotateZ(180deg);
+		right: .07rem;
+	}
+	.close {
+		position: absolute;
+		font-size: .8rem;
+		color: white;
+		top: .4rem;
+		right: .4rem;
+		z-index: 20;
+	}
+	.swiper-pagination {
+		padding-bottom: .7rem;
+	}
+	
+		
+
 </style>

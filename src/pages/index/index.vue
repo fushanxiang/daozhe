@@ -8,7 +8,6 @@
         <foot></foot>
 	  </div>
 </template>
-
 <script>
 
 import IndexHeader from './header.vue'

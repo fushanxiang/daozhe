@@ -52,7 +52,7 @@
 			"header-fixed": HeaderFixed,
 			"discuss": Discuss,
 			"swiper": Swiper,
-			  Rate
+			 Rate
 		},
 		mounted() {
 			var this_ = this;

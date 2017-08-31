@@ -14,10 +14,10 @@
 				</span>
 			</div>
 			<div class="">
-				<p id="comment-content-p" v-bind:class="active?'down':'up'">
+				<p id="comment-content-p" v-bind:class="activea?'down':'up'">
 					亲子套票还是挺划算的，里面有几项是要求小孩子80斤才可以玩的，我家宝贝只有70斤，有几个项目没有玩，必须得说说，去玩自己备好一双拖鞋，大热天赤脚走地上不是一般的烫，水可以带进去，里面最便宜的水10元，一杯奶茶25元，饭68一份，不是一般的贵，但必须吃否则没有力气玩。总体还是很棒的一次游玩，一票通玩，建议把大型的项目全部玩了再去小的项目，因为时间原因还有几个项目要排队没有玩到，晚上还有表演可以看。很开心的一次体验
 				</p>
-				<div class="foldbtn iconfont js-foldbtn" v-on:click="handleClick">{{active?'&#xe62d;':'&#xe62e;'}}</div>
+				<div class="foldbtn iconfont js-foldbtn" v-on:click="handleClicka">{{activea?'&#xe62d;':'&#xe62e;'}}</div>
 			</div>
 		</div>	
 		
@@ -41,10 +41,10 @@
 				</span>
 			</div>
 			<div class="">
-				<p id="comment-content-p" v-bind:class="active?'down':'up'">
+				<p id="comment-content-p" v-bind:class="activeb?'down':'up'">
 					里面环境很棒。可惜姨妈来了不能去玩。老公只有带着孩子在小池里面玩。这里面真的是太完善了。各种大小型号的儿童漂浮衣（救身衣）一岁多的小朋友都有合适他穿的。大人们如果要玩大型的刺激的又快又方便。还是不要带小朋友来。自己来玩更尽兴！如果人多的时候去玩。建议还是购买VIP通到票。但是里面吃的挺贵的。不可以带吃的进去，如果有吃的话，必须先寄存。
 				</p>
-				<div class="foldbtn iconfont js-foldbtn" v-on:click="handleClick">{{active?'&#xe62d;':'&#xe62e;'}}</div>
+				<div class="foldbtn iconfont js-foldbtn" v-on:click="handleClickb">{{activeb?'&#xe62d;':'&#xe62e;'}}</div>
 			</div>
 		</div>	
 		
@@ -69,12 +69,17 @@ export default {
   
   	data () {
     	return {
-			active:true
+			activea:true,
+			activeb:true,
+			
     	}
   	},
   	methods: {
-		handleClick() {	
-			this.active=!this.active
+		handleClicka() {	
+			this.activea=!this.activea
+ 		},
+		handleClickb() {	
+			this.activeb=!this.activeb
  		}
 	}	
 }

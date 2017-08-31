@@ -1,7 +1,7 @@
 <template>
   <div>
 	    <header-index></header-index>
-      	<ticketnum :newslist="newslist"></ticketnum>
+      <ticketnum :newslist="newslist"></ticketnum>
 	    <scroll-index :dataInfo="listInfo"></scroll-index>
      	<oneday-tab></oneday-tab>
       
@@ -24,9 +24,10 @@ export default {
   },
   created() {
     this.$http.get('/static/onedaylist.json').then(response => {
-    var data = response.body.data;
-    this.listInfo = data.listInfo;
-    this.newslist = data.newslist;
+      var data = response.body.data;
+      this.listInfo = data.listInfo;
+      this.newslist = data.newslist;
+
     }, response => {
       console.log("ajax error")
     });

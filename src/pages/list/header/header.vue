@@ -174,11 +174,9 @@ export default {
           }   
       },
       handlehistory(e){
-          alert(e)
           this.$store.commit("showNear",false)
       },
       handlehotScen(e,v){
-          alert(e);
           for (var i = 0; i < this.historyarr.length; i++) {
           if (this.historyarr[i].historysearch == v) {
             this.historyarr.splice(0,1);

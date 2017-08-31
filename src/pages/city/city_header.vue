@@ -11,7 +11,7 @@
             <input type="text" value="输入城市名或拼音" class="city-keyword" 
             @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleInput">
             <div class="search-cities">
-                    <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
+                <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
             </div>
         </div>
         <city-area :change="cityChange" :datas="datas" v-show="show"></city-area>
@@ -132,6 +132,7 @@
                     this.$router.push('')
                     this.cities = [];
                     this.show = true;
+                    this.cities = [];
                 }
             }
         },
@@ -213,6 +214,21 @@
         width: 100%;
         padding-left: .2rem;
         border-bottom: 1px solid #dfe0e1;
+        font-size: .28rem;
+        color: #212121;
+    }
+    .search-cities {
+        position: absolute;
+        left: 0;
+        top: 1.68rem;
+        background: #fff;
+        width: 100%;
+    }
+    .search-city {
+        line-height: .76rem;
+        width: 100%;
+        padding-left: .2rem;
+        border-top: 1px solid #dfe0e1;
         font-size: .28rem;
         color: #212121;
     }

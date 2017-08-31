@@ -19,7 +19,7 @@ export default {
 				autoHeight: true,
 				paginationClickable :true,
 				observeParents:true,
-				paginationType: "fraction",
+				
 				pagination : '.swiper-pagination',
 			}
     	}

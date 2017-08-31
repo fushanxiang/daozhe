@@ -47,7 +47,6 @@ import Vue from 'vue'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 
-Vue.use(IScrollView, IScroll)
 export default {
     data () {
         return {

@@ -39,7 +39,7 @@ export default {
    methods: {
     handlefooter(){
        this.$store.commit("showNear",false);
-       this.$store.commit("jsonpshow",false);
+       this.$store.commit("suggestsearch",false);
     }
    }
 }

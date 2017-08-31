@@ -39,7 +39,6 @@ export default {
                 this.showModal = false;
             },
             handleClick(e){
-            	console.log(e)
                 this.showModal = true;
                 this.imgSrc = e.currentTarget.firstChild.firstChild.src;
                 this.imgTitle = e.currentTarget.lastChild.innerHTML;

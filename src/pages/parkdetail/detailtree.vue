@@ -1,27 +1,30 @@
 <template>
 	<div class="pd-ticket-main">
-		<div class="pd-ticket-group">
+		<div class="pd-ticket-group" v-for="item in qnrecommendinfo">
 			<h3 class="pd-ticket-type">
 				<span class="pd-ticketype-ticket"></span>
 				去哪儿推荐
 			</h3>
-			<div class="pd-ticketype-ticket-item2 pd-border-top">
+			<div class="pd-ticketype-ticket-item2 pd-border-top" >
 				<div class="pd-ticket-main2">
 					<div>
 						<span class="pd-ticket-onedayitem">启程旅游</span>
-						<h6 class="pd-ticket-title">【暑期特惠】广州长隆水上乐园亲子票1大1小</h6>
+						<h6 class="pd-ticket-title">{{item.ticketTitle}}</h6>
 						<p>
-							<span class="pd-ticket-desctag"><span class="iconfont pd-ticket-tagicon">&#xe64d;</span>18:00前可订今日</span><span class="pd-ticket-desctag"><span class="iconfont pd-ticket-tagicon"> &#xe627;</span> 条件退</span>
+							<span class="pd-ticket-desctag">
+							<span class="iconfont pd-ticket-tagicon">&#xe64d;</span>18:00前可订今日</span>
+							<span class="pd-ticket-desctag">
+							<span class="iconfont pd-ticket-tagicon"> &#xe627;</span> 条件退</span>
 						</p>
 					</div>
 				</div>
 				<div class="pd-ticket-side" >
 					<div>
 						<p class="pd-ticket-sale">
-							¥<em class="pd-price-num">262</em>
+							¥<em class="pd-price-num">{{item.priceNum}}</em>
 						</p>
 						<p class="pd-ticket-cost">
-							票面价:¥<em>280</em>
+							票面价:¥<em>{{item.ticketCost}}</em>
 						</p>
 						<p class="pd-ticket-btn" style="background:#00bcd4;">下载APP</p>
 					</div>
@@ -31,51 +34,48 @@
 				<div class="pd-ticket-main2">
 					<div>
 						<span class="pd-ticket-onedayitem">启程旅游</span>
-						<h6 class="pd-ticket-title">【暑期特惠】广州长隆水上乐园亲子票1大1小</h6>
+						<h6 class="pd-ticket-title">{{item.ticketTitle}}</h6>
 						<p><span class="pd-ticket-desctag"><span class="iconfont pd-ticket-tagicon">&#xe64d;</span>18:00前可订今日</span><span class="pd-ticket-desctag"><span class="iconfont pd-ticket-tagicon"> &#xe627;</span> 条件退</span></p>
 					</div>
 				</div>
 				<div class="pd-ticket-side" >
 					<div>
 						<p class="pd-ticket-sale">
-							¥<em class="pd-price-num">262</em>
+							¥<em class="pd-price-num">{{item.priceNum}}</em>
 						</p>
 						<p class="pd-ticket-cost">
-							票面价:¥<em>280</em>
+							票面价:¥<em>{{item.ticketCost}}</em>
 						</p>
-						<p class="pd-ticket-btn" @click="handleShowClick">预订</p>
+						<p class="pd-ticket-btn" @click="handleOrderClick" >预订</p>
+
 					</div>
 				</div>
 			</div>
 		</div>
-		<div v-if="show">
+		<div v-show="show">
 			<order></order>
 		</div>
 	</div>
 </template>
 
 <script>
-	import TreeItem from './treeitem/treeitem.vue'
 	import Order from './order.vue'
 	export default {
 	  	data () {
 		    return {
-		       show:false,
-		       
+		       show:false,		       
 		    }
-	  	},
-	   	components: {
-	    	"tree-item":TreeItem,
-		    "order":Order
-	    },
-	    methods:{
-	    	handleShowClick:function(){
-		       this.show=true
-	    		
-	    	}
-	    }
-	}
-
+		  },
+		props:["qnrecommendinfo"],	  
+		   	components:{
+		    	"order":Order
+		    },
+		    methods:{
+		    	handleOrderClick:function() {
+		  			this.$store.commit("changeIsPop");
+		  		}
+		    }
+		}
 </script>
 <style scoped>
 	.pd-border-top{

@@ -5,12 +5,11 @@
 			<h1 class="header-title" role="title">景点地图</h1>
 			<span class="header-right" role="right"></span>
 		</div>
-  		<div id="app">
-		    <h3 class="title">{{ msg }}</h3>
-		    <div class="amap-wrapper">
-		      	<el-amap :vid="'amap-vue'"></el-amap>
-		    </div>
-	  	</div>
+	  	<div class="amap-page-container">
+		    <el-amap vid="amap" :zoom="zoom" :center="center" class="amap-demo">
+		       	<el-amap-info-window v-for="window in windows" :position="window.position" :content="window.content" :visible="window.visible" :events="window.events"></el-amap-info-window>
+		    </el-amap>
+   		</div>
 	  	<div class="poi-card">
 		    <div class="poi-containner">
 		        <div class="poi-info">
@@ -24,7 +23,20 @@
 	export default {
 	  data () {
 	    return {
-	      msg: 'vue-amap向你问好！'
+	      zoom: 14,
+          center: [121.5273285, 31.21515044],
+          windows: [
+            {
+              position: [121.5273285, 31.21515044],
+              content: '长隆飞鸟乐园!',
+              visible: true,
+              events: {
+                close() {
+                  console.log('close infowindow');
+                }
+              }
+            }
+          ]
 	    }
 	  }
 	}
@@ -72,11 +84,9 @@
 		font-size: .32rem;
 		color: #fff;
 	}
-	
-	.amap-wrapper {
-		width: 500px;
-		height: 500px;
-	}
+	 .amap-demo {
+      	height: 500px;
+    }
 	.poi-card {
 	    position: absolute;
 	    bottom: 0;

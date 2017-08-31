@@ -5,7 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		"city": localStorage.selectedCity || "北京"
+		"city": localStorage.selectedCity || "北京",
+		"isPop":false
 	},
 	getters: {
 		"perfectCity": function(state) {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
 	mutations: {
 		changeCity: function(state, payload){
 			state.city = payload.city;
+		},
+		changeIsPop: function(state){
+			state.isPop = !state.isPop; 
 		}
 	},
 	actions: {

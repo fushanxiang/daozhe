@@ -5,7 +5,7 @@
              <li v-for="(item, index) in tabInfo.index.tabs" :class="{tabs:true, active: index==activeIndex}" @click="hadleTabItemClick(index)"
               :key="index + 'tab'">{{item.title}}</li>
             </ul>
-           <tourinstrctor :tourItinerary="tabInfo.tourItinerary"></tourinstrctor>
+           <tourinstrctor :tourItinerary="tabInfo.tourItinerary" @update="handleClick"></tourinstrctor>
            <tourcost :expenseExplanation="tabInfo.expenseExplanation"></tourcost>
            <tourdescription :instructions="tabInfo.instructions" :userComment="tabInfo.userComment"></tourdescription>           
 		 </div>
@@ -26,6 +26,8 @@
 				expenseElementOffsetTop: 0,
 				expenseElementOffsetHeight: 0,
 				haveGetOffset: false,
+        show:true
+       
  			}
  		},
  		  props: [
@@ -47,12 +49,16 @@
                		document.body.scrollTop = this.mainOffsetTop + this.instructionsElementOffsetTop - this.tabOffsetHeight - this.headerOffsetHeight;
                	}
                },
+               handleClick:function(){
+                this.$emit('updateShow');
+                
+
+               }
             },
             computed: {
             	tabFixed: function () {
             		return this.scrollTop > this.mainOffsetTop -42;
             	},
-
             	activeIndex: function () {
             		var index = 0;
             		var criticalValue_1 = this.mainOffsetTop + this.expenseElementOffsetTop - window.innerHeight / 2;
@@ -100,7 +106,7 @@
         	height: .84rem;
         	font-size: .28rem;
         	background: #fff;
-        	z-index: 1000;
+        	z-index: 10;
         }
 
        /*  .tab-fixed {

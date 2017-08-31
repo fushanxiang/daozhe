@@ -229,9 +229,9 @@ export default {
 	}
 
 	.taglist-second,.taglist{
-			width:100%;
-			float:left;
-			margin-top:14px;	
+		width:100%;
+		float:left;
+		margin-top:14px;	
 	}
 	.taglist-second li{
 		float:left;

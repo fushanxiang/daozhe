@@ -40,37 +40,61 @@
 		                   </div>
 		               </div>
 		           </a>
-		    <div class="amap-page-container" @click="handleClick">
-		     <el-amap vid="amap" :zoom="12" :center="tourItinerary.map.center" class="amap-demo" >
- 			   <!--  <el-amap-info-window v-for="(mapWindow, index) in tourItinerary.map.windows" :position="mapWindow.position" :content="mapWindow.content"
- 			      :visible="mapWindow.visible" :key="index + 'map'">
- 			    </el-amap-info-window>  -->
- 			  </el-amap>
+		    <div id="amap-page-container" @click="handleClick">
 		    </div>
+		  <div></div>
 	</div>
 </template>
 <script >
- /*   import Imap from './map.vue'*/
+/*import AMap from 'AMap';   //在页面中引入高德地图*/
 	export default{
 			data(){
 				return{
+					center:[],
+					windows:[],
+					infoWindow:new AMap.InfoWindow(),
+					show:false
 				}
 			},
 			props:["tourItinerary"],
+			beforeUpdate:function(){
+				this.center=this.tourItinerary.map.center;
+				this.windows=this.tourItinerary.map.windows;
+				this.loadmap();  
+			},
 			components:{
 				
 			},
 			methods:{
 				handleClick:function(){
-					
-				}
+					this.$emit('update');
+				},
+				loadmap(){
+				        const map = new AMap.Map('amap-page-container', {
+				          zoom: 12,
+				          zoomEnable:false,
+				          dragEnable: false,
+				          center:this.center
+				        });
+				        var lnglats=this.windows;
+				        var infoWindow = new AMap.InfoWindow();
+				        for(var i = 0, marker; i < lnglats.length; i++){
+				            marker=new AMap.Marker({
+				                position:lnglats[i],
+				                map:map
+				            });
+				            marker.content='我是第'+i+'个信息窗体的内容';
+				            marker.on('click', this.markerClick);
+				        }
+				        map.setFitView();
+				    }
+				  }
 			}
 
-		}
 </script>
 <style scoped>
      @import url("../../../../assets/css/order/order-tab.css");
-     .amap-page-container{
+     #amap-page-container{
           height: 3.5rem;
           padding: .2rem .2rem .1rem .2rem;
           overflow: hidden;

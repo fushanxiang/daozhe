@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Order from '@/pages/order/index'
 import Comment from '@/pages/order/comment'
-import map from '@/pages/order/detailsMap'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import BigCity from '@/pages/city/big_city'
@@ -28,17 +27,13 @@ export default new Router({
       path: '/purchaseorder',
       name: 'purchaseorder',
       component: Purchaseorder
-    },
-    {
-      path: "/order/comments",
-      name: 'comment',
-      component: Comment
-    },
-    {
-      path: '/order/detail',
-      name: 'detail',
-      component: map
-    },{
+      },
+      {
+        path: "/order/comments",
+        name: 'comment',
+        component: Comment
+      },
+      {
       path: '/weekend',
       name: 'weekend',
       component: Weekend

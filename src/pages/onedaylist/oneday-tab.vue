@@ -1,29 +1,27 @@
 <template>
-<div>
-
-	<div class="barrie" v-show="barrieShow" @click="handleClickBarrie"></div>
-	<div class="list-footer">
-		<ul class="typefilte" :style="{opacity:opacity}">
-			<li class="footer-icon" :class="followed==1 ? 'color':''"  @click.stop="handleClick(1)" >
-				<div class="iconfont">&#xe6ca;</div>
-				<div>{{valueA}}</div>
-			</li>
-			<li class="footer-icon" :class="followed==2 ? 'color':''"   @click.stop="handleClick(2)">
-				<div class="iconfont">&#xe605;</div>
-				<div>筛选</div>
-			</li>
-			<li class="footer-icon" :class="followed==3 ? 'color':''"   @click.stop="handleClick(3)">
-				<div class="iconfont">&#xe60e;</div>
-				<div>{{valueC}}</div>
-			</li>
-		</ul>
-	</div>
-	<div class="footer-container footer-container-color" v-show="show==1?true:false">
-		
+	<div>
+		<div class="barrie" v-show="barrieShow" @click="handleClickBarrie"></div>
+		<div class="list-footer">
+			<ul class="typefilte" :style="{opacity:opacity}">
+				<li class="footer-icon" :class="followed==1 ? 'color':''"  @click.stop="handleClick(1)" >
+					<div class="iconfont">&#xe6ca;</div>
+					<div>{{valueA}}</div>
+				</li>
+				<li class="footer-icon" :class="followed==2 ? 'color':''"   @click.stop="handleClick(2)">
+					<div class="iconfont">&#xe605;</div>
+					<div>筛选</div>
+				</li>
+				<li class="footer-icon" :class="followed==3 ? 'color':''"   @click.stop="handleClick(3)">
+					<div class="iconfont">&#xe60e;</div>
+					<div>{{valueC}}</div>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-container footer-container-color" v-show="show==1?true:false">
 		<div class="all-left">
 			<iscroll-view class="scroll-view" id="all-left">
 				<ul class="all-ul">
-					<li class="container-left-li" :class="allLeft==1 ? 'background':''" @click.stop="handleClickAll(1)">全部分类<span class="fr">256</span></li>
+					<li class="container-left-li" :class="allLeft==1 ? 'background':''"  @click.stop="handleClickAll(1)">全部分类<span class="fr">256</span></li>
 					<li class="container-left-li" :class="allLeft==2 ? 'background':''"  @click.stop="handleClickAll(2,'A')">一日游<span class="fr">220</span></li>
 					<li class="container-left-li" :class="allLeft==3 ? 'background':''"  @click.stop="handleClickAll(3,'B')">文化古迹<span class="fr">13</span></li>
 					<li class="container-left-li" :class="allLeft==4 ? 'background':''"  @click.stop="handleClickAll(4,'C')">自然风光<span class="fr">10</span></li>
@@ -32,11 +30,10 @@
 					<li class="container-left-li" :class="allLeft==7 ? 'background':''"  @click.stop="handleClickAll(7,'F')">水上玩乐<span class="fr">2</span></li>
 					<li class="container-left-li" :class="allLeft==8 ? 'background':''"  @click.stop="handleClickAll(8,'G')">交通<span class="fr">2</span></li>
 					<li class="container-left-li" :class="allLeft==9 ? 'background':''"  @click.stop="handleClickAll(9,'H')">游乐场<span class="fr">1</span></li>
-					<li class="container-left-li" :class="allLeft==10 ? 'background':''"  @click.stop="handleClickAll(10,'I')">餐饮<span class="fr">1</span></li>
+					<li class="container-left-li" :class="allLeft==10 ? 'background':''" @click.stop="handleClickAll(10,'I')">餐饮<span class="fr">1</span></li>
 				</ul>
 			</iscroll-view>
 		</div>
-
 		<div class="all-right">
 			<iscroll-view class="scroll-view" id="all-right">
 				<ul class="container-ul">
@@ -52,45 +49,43 @@
 				</ul>
 			</iscroll-view>
 		</div>
-	</div>
-	<div class="footer-container footer-container-color" v-show="show==2?true:false">
-		<div class="container-left">
-			<iscroll-view class="scroll-view" id="container-left">
-				<ul class="container-ul">
-					<li class="container-left-li" :class="containerLeft==1 ? 'background':''"  @click.stop="handleClickContainer(1,'A')">目的地</li>
-					<li class="container-left-li" :class="containerLeft==2 ? 'background':''"  @click.stop="handleClickContainer(2,'B')">出发地</li>
+		</div>
+		<div class="footer-container footer-container-color" v-show="show==2?true:false">
+			<div class="container-left">
+				<iscroll-view class="scroll-view" id="container-left">
+					<ul class="container-ul">
+						<li class="container-left-li" :class="containerLeft==1 ? 'background':''"  @click.stop="handleClickContainer(1,'A')">目的地</li>
+						<li class="container-left-li" :class="containerLeft==2 ? 'background':''"  @click.stop="handleClickContainer(2,'B')">出发地</li>
+					</ul>
+				</iscroll-view>
+			</div>
+			<div class="container-right">
+				<iscroll-view class="scroll-view" id="container-right">
+					<ul class="container-ul">
+						<li v-if= "type==='A'" class="container-right-li border-bottom" v-for="(itemA,index) in itemsA[0]" :class="itemsAcolor==index ? 'color':''" @click="handleClickItemA(index)">{{itemA}}</li>
+						<li v-if= "type==='B'" class="container-right-li border-bottom" v-for="(itemB,index) in itemsA[1]" :class="itemsBcolor==index ? 'color':''" @click="handleClickItemB(index)">{{itemB}}</li>
+		
+					</ul>
+				</iscroll-view>
+			</div>
+		</div>
+		<div class="footer-container" v-show="show==3?true:false">
+			<iscroll-view class="scroll-view" id="recommend">
+				<ul class="recommend">
+					<li class="recommend-item border-bottom" :class="recommend==1 ? 'color':''"  @click="handleClicka(1,'推荐排序')">推荐排序</li>
+					<li class="recommend-item border-bottom" :class="recommend==2 ? 'color':''"  @click="handleClicka(2,'销量最高')">销量最高</li>
+					<li class="recommend-item border-bottom" :class="recommend==3 ? 'color':''"  @click="handleClicka(3,'价格最高')">价格最高</li>					
+					<li class="recommend-item border-bottom" :class="recommend==4 ? 'color':''"  @click="handleClicka(4,'价格最低')">价格最低</li>
+					<li class="recommend-item border-bottom" :class="recommend==5 ? 'color':''"  @click="handleClicka(5,'热门评论')">热门评论</li>
+					<li class="recommend-item ":class="recommend==6 ? 'color':''"  @click="handleClicka(6,'本周最热')" >本周最热</li>
 				</ul>
 			</iscroll-view>
 		</div>
-		<div class="container-right">
-			<iscroll-view class="scroll-view" id="container-right">
-				<ul class="container-ul">
-					<li v-if= "type==='A'" class="container-right-li border-bottom" v-for="(itemA,index) in itemsA[0]" :class="itemsAcolor==index ? 'color':''" @click="handleClickItemA(index)">{{itemA}}</li>
-					<li v-if= "type==='B'" class="container-right-li border-bottom" v-for="(itemB,index) in itemsA[1]" :class="itemsBcolor==index ? 'color':''" @click="handleClickItemB(index)">{{itemB}}</li>
-	
-				</ul>
-			</iscroll-view>
-		</div>
-	</div>
-	<div class="footer-container" v-show="show==3?true:false">
-		<iscroll-view class="scroll-view" id="recommend">
-			<ul class="recommend">
-				<li class="recommend-item border-bottom" :class="recommend==1 ? 'color':''"  @click="handleClicka(1,'推荐排序')">推荐排序</li>
-				<li class="recommend-item border-bottom" :class="recommend==2 ? 'color':''"  @click="handleClicka(2,'销量最高')">销量最高</li>
-				<li class="recommend-item border-bottom" :class="recommend==3 ? 'color':''"  @click="handleClicka(3,'价格最高')">价格最高</li>					
-				<li class="recommend-item border-bottom" :class="recommend==4 ? 'color':''"  @click="handleClicka(4,'价格最低')">价格最低</li>
-				<li class="recommend-item border-bottom" :class="recommend==5 ? 'color':''"  @click="handleClicka(5,'热门评论')">热门评论</li>
-				<li class="recommend-item ":class="recommend==6 ? 'color':''"  @click="handleClicka(6,'本周最热')" >本周最热</li>
-			</ul>
-		</iscroll-view>
-	</div>
-</div>
-	
+	</div>	
 </template>
 
 <script>
 import IScroll from 'iscroll'
-
 export default {
 	data () {
 		return {
@@ -222,7 +217,7 @@ export default {
 	bottom: 0.75rem;
 	background: #fff;
 	height: 5.3rem;
-	z-index:92;
+	z-index: 92;
 }
 .recommend{
 	background: #fff;
@@ -275,7 +270,7 @@ export default {
 	height: 100%
 }
 .footer-container-color{
-	background:#f4f5f6;
+	background: #f4f5f6;
 }
 .container-left-li{
 	padding: .24rem .1rem;
@@ -285,10 +280,10 @@ export default {
     line-height: .4rem;
 }
 .container-right{
-	float:right;
-	width:70%;
-	height:100%;
-	background:#fff;
+	float: right;
+	width: 70%;
+	height: 100%;
+	background: #fff;
 }
 .container-right-li{
 	padding: .24rem .1rem;
@@ -298,18 +293,15 @@ export default {
     line-height: .4rem;
 }
 .all-left{
-	float:left;
-	width:40%;
-	height:100%
-}
-.footer-container-color{
-	background:#f4f5f6;
+	float: left;
+	width: 40%;
+	height: 100%
 }
 .all-right{
-	float:right;
-	width:60%;
-	height:100%;
-	background:#fff;
+	float: right;
+	width: 60%;
+	height: 100%;
+	background: #fff;
 }
 </style>
 

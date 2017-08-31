@@ -36,7 +36,6 @@ export default {
 	},
 	created() {
 		this.$http.get('/static/onedaytour.json').then(response => {
-			// console.log(response)
 			var data = response.body.data;
 			this.iconsInfo = data.iconsInfo;
 			this.imgsInfo = data.imgsInfo;

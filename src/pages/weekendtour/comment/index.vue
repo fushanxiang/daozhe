@@ -15,14 +15,13 @@ export default {
     	return {
     		id: "",
     		comments: [],
-    		flag: [],
-    		goodsInfo : []
+    		flag: []
    		}
 	},
 	created() {
 
 		this.$http.get('/static/weekend_comments.json').then(response => {
-			var comments = response.data.data.comments;
+			var comments = response.body.data.comments;
 			var id = this.$route.params.id.split("=")[1];
 			this.id = id;
 			for(var i in comments){
@@ -33,13 +32,6 @@ export default {
 			for(var j in this.comments.info){
 				this.flag.push('true');
 			}
-		}, response => {
-			console.log("ajax error");
-  		});
-
-		this.$http.get('/static/weekend.json').then(response => {
-			var data = response.body.data;
-			this.goodsInfo = data.goods[this.id];
 		}, response => {
 			console.log("ajax error");
   		});

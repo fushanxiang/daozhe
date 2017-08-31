@@ -1,5 +1,5 @@
 <template>
-	<scroller :on-refresh="refresh" :on-infinite="infinite">
+	<scroller :on-refresh="refresh" :on-infinite="infinite" ref="myscroller">
 		<div class="bg">
 			<index-herder></index-herder>
 			<index-category></index-category>
@@ -49,8 +49,9 @@ export default {
 	    	var length = this.goods.length;
 	    	setTimeout(() => {
 		        this.$http.get('/static/weekend.json').then(response => {
-        	    	var data1 = response.body.data.goods.splice(length,2);
-        	    	this.goods = this.goods.concat(data1);
+        	    	var newData = response.body.data.goods.splice(length,2);
+        	    	this.goods = this.goods.concat(newData);
+        	    	this.$refs.myscroller.finishInfinite(true);
         	    }, response => {
         	    	console.log("ajax error");
         	    });

@@ -43,37 +43,39 @@
 						<p class="pd-ticket-cost">
 							票面价:¥<em>280</em>
 						</p>
-						<p class="pd-ticket-btn" @click="show=true">预订</p>
+						<p class="pd-ticket-btn" @click="handleShowClick">预订</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<tree-item></tree-item>
-		<tree-item></tree-item>
-		<tree-item></tree-item>
-		<transition name="slide-fade">
-			<div v-if="show">
-				<order></order>
-			</div>
-		</transition>	
+		<div v-if="show">
+			<order></order>
+		</div>
 	</div>
 </template>
 
 <script>
 	import TreeItem from './treeitem/treeitem.vue'
 	import Order from './order.vue'
-	
 	export default {
-		  data () {
+	  	data () {
 		    return {
-		       show:false
+		       show:false,
+		       
 		    }
-		  },
-		   components:{
-		    	"tree-item":TreeItem,
-		    	"order":Order
-		    }
-		}
+	  	},
+	   	components: {
+	    	"tree-item":TreeItem,
+		    "order":Order
+	    },
+	    methods:{
+	    	handleShowClick:function(){
+		       this.show=true
+	    		
+	    	}
+	    }
+	}
+
 </script>
 <style scoped>
 	.pd-border-top{

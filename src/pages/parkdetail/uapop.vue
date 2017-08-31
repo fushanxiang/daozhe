@@ -1,7 +1,5 @@
-<template>
-	
-	<a class="mp-download" mp-role="appDownLeft" href="#" :style="this.deltaY?'display:none':'display:inline-block'" @click="downloadapp"></a>
-	
+<template>	
+	<a class="download" :style="this.deltaY?'display:none':'display:inline-block'" @click="downloadapp"></a>	
 </template>
 
 <script>
@@ -23,13 +21,12 @@
         			window.open("http://app.qunar.com/");
      		 	}
     		}			
-		}
-		
-}
+		}		
+	}
 </script>
 
 <style scoped>
-.mp-download {
+.download {
     display: none;
     position: fixed;
     top: 7.5rem;

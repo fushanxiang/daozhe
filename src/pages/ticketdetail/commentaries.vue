@@ -115,6 +115,7 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding: .1rem .4rem .02rem .2rem;
+		background: #fff;
 	}
 	
 	.border-top {
@@ -151,6 +152,7 @@
 		padding: .1rem;
 		height: 100%;
 		overflow: hidden;
+		background: #fff;
 	}
 	
 	.discuss-img {

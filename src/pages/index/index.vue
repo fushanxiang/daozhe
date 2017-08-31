@@ -21,6 +21,7 @@ import Foot from './foot.vue'
 export default {
   name: 'index',
   data () {
+    
     return {
       iconsInfo:[],
       imgsInfo:[],

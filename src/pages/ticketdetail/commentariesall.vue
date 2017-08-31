@@ -61,7 +61,7 @@
 			}, response => {
 				console.log("dfs");
 			});
-			console.log(this, this.$el)
+			//console.log(this, this.$el)
 		}
 	}
 </script>

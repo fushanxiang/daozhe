@@ -9,5 +9,8 @@ export default {}
 </script>
 
 <style>
-	@import './assets/css/base/reset.css'
+  
+  @import './assets/css/base/reset.css';
+/*   @import './assets/css/common/border.css'; */
 </style>
+

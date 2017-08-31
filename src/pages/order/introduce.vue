@@ -1,13 +1,10 @@
 <template>
-
-	
 	<div>
-	   	<div class="shadown" v-show="open"></div>
-
-
+	   	<div class="shadown" v-show="open" @touchmove.prevent></div>
         <transition name="bounce">
             <div v-if="show" id="page-2" class="mpw-dock mpw-dock-fadein" 
-                 >
+                 @touchmove.prevent>
+
                 <div class="mp-booking-info">
                     <h5 class="mp-booking-title">
                         <p class="mpg-ellipsis">
@@ -27,7 +24,10 @@
                         <span mp-role="cashBack"></span>
                     </p>
                 </div>
-                <div class="mpw-dock-content" mp-role="dockContent">
+
+
+                <div class="mpw-dock-content" mp-role="dockContent" @touchmove.prevent>
+
                     <div>
                         <div id="specifications-con" style="height: 417.6px; overflow: hidden;">
                             <div style="transition-property: transform; transform-origin: 0px 0px 0px; 
@@ -67,7 +67,11 @@
                             </div>
                         </div>
                         <a class="mp-booking-btn" id="mp-control-booking" href="javascript:;" 
+
                             data-click="t_preOrder" @click="show = !show">
+
+                            data-click="t_preOrder" @click="changeShow">
+
                                 立即预订
                         </a>
                     </div>
@@ -84,10 +88,10 @@
 				立即预订
 			</a>
   		</div>
-        
-  		<div v-show="otherdata" class="otherdata1">
-            <div class="close iconfont" @click="closeClick">&#xe620;</div>
-            <tell-calendar></tell-calendar>    
+
+  		<div  class="otherdata1" >
+            <tell-calendar @close="closeClick" v-show="otherdata"></tell-calendar>    
+
         </div>
        
 	</div>
@@ -122,17 +126,27 @@ export default {
             itemInfo:[],
             itemsInfo:[],
             show:false,
-            dateInd:""
+
+            dateInd:"",
+            flag:false
+
 	    }
   	},
   	methods:{
         handleDateClick(index){
-            this.dateInd = index
+
+            this.dateInd = index;
+            this.flag=true;
+
         },
 	    handleClick(){ 
             this.show = !this.show
 		    this.open=!this.open
-		    this.isActive=false
+
+		    this.isActive=false;
+            this.otherdata=false;
+            
+
     	},
 	    bottomClick(){
 	         this.open=!this.open
@@ -143,15 +157,33 @@ export default {
 	    	this.isActive=false
 	    },
         dataClick(){
+
          this.show=!this.show
+
          this.isActive=false,
          this.otherdata=true
 
         },
         closeClick(){
+
             this.open=false
 
             this.otherdata=false
+
+            this.otherdata=false;
+            this.flag=true;
+
+        },
+        changeShow(){
+             this.show=true;
+            if(this.flag){
+                 location.href="http://localhost:8080/#/purchaseorder";
+            }
+            else{
+               alert("请填写完整信息");
+            }
+           
+
         }
   	},
   	components:{
@@ -169,17 +201,16 @@ export default {
     background:#00bcd4 !important
 }
 .shadown {
-    position: absolute;
+    position: fixed;
     top:0;
     bottom:0;
     left: 0;
     right: 0;
     background: black;
     opacity: .5;
+
 }
-/* .mpw-dock-fadein {
-    transform: translateY(0);
-}*/
+
 .a {display: block;}
 .b {display: none;} 
 .bounce-enter-active {
@@ -195,6 +226,27 @@ export default {
    
   100% {
     transform: translateY(0);
+
+    z-index: 999;
+  }
+}
+
+.a {display: block;}
+.b {display: none;} 
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: translateY(800px);
+  }
+   
+  100% {
+    transform: translateY(0);
+
   }
 }
 @keyframes bounce-out {
@@ -208,7 +260,7 @@ export default {
 }  
 .mpw-dock {
     position: fixed;
-    z-index: 92;
+    z-index: 1000;
     right: 0;
     bottom: 0;
     left: 0;
@@ -380,6 +432,9 @@ address, cite, dfn, em, i, optgroup, var {
     clear: both;
 }
 .mp-booking-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     display: block;
     width: 100%;
     border: 0 none;
@@ -387,6 +442,7 @@ address, cite, dfn, em, i, optgroup, var {
     color: #fff;
     font: normal .36rem/1rem Arial,"Microsoft Yahei","Helvetica Neue",Helvetica,sans-serif;
     text-align: center;
+    height: 50px;
 }
 .mpw-dock-close {
     z-index: 2;
@@ -423,19 +479,11 @@ address, cite, dfn, em, i, optgroup, var {
 .mp-booking-note {
   margin-top:-0.1rem;
 }
-.mp-booking-btn {
-  width: 375px;
-  height: 50px;
-  margin-top:-0.5rem;
-  background:#ff9800;
-}
+
+
+
 .mpw-dock-close {
   margin-top:0.3rem;
-}
-.mp-booking-btn {
-  position: fixed;
-  bottom: 0;
-  right: 0;
 }
 .mp-booking-btn a {
   color: #fff;
@@ -466,10 +514,11 @@ address, cite, dfn, em, i, optgroup, var {
     height: 298px;
 }
 .otherdata1{
-    position: absolute;
-    z-index: 100;
-    
-
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    bottom: 50px;
+    height: 390px;
 }
 .close {
     position: absolute;

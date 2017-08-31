@@ -1,9 +1,20 @@
+
 {
     "ret": true,
-    "data": {
+    "data":{
         "index": {
             "headerTitle": "[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游"
         },
+        "swiperImg":[{
+        	"src":"http://img0.imgtn.bdimg.com/it/u=680036873,124146097&fm=26&gp=0.jpg"
+        },{
+        	"src":"http://img1.imgtn.bdimg.com/it/u=720172448,1930149107&fm=26&gp=0.jpg"
+        },{
+        	"src":"http://img1.imgtn.bdimg.com/it/u=195861986,1768510367&fm=26&gp=0.jpg"
+        },{
+        	"src":"http://img4.imgtn.bdimg.com/it/u=747038940,4162159520&fm=26&gp=0.jpg"
+        }],
+
         "tab": {
             "index": {
                 "tabs": [
@@ -23,29 +34,26 @@
                 "map": {
                     "isBigMapOpen": false,
                     "zoom": 11,
-                    "center": [
-                        116.3958138,
-                        39.9109056
-                    ],
-                    "windows": [
-                        {
-                            "position": [
-                                116.3958138,
-                                39.9109056
-                            ],
-                            "content": "天安门",
-                            "visible": true
-                        }
-                    ]
-                },
+
+
+                    "center": [116.368904,39.923423],
+                    "windows":[
+                        [116.368904,39.923423],[116.382122,39.921176],
+                        [116.387271,39.922501],[116.398258,39.914600]
+                        ]
+                },               
                 "routesum": [
                     {
-                        "icon": "&#xe601;",
+                        "icon": "&#xe74e;",
+
                         "item": "交通",
                         "info": "汽车往返"
                     },
                     {
-                        "icon": "&#xe614;",
+
+
+                        "icon": "&#xe68a;",
+
                         "item": "用餐",
                         "info": "包含餐食"
                     }
@@ -64,7 +72,9 @@
                 "timeLine": [
                     {
                         "time": "7:30",
-                        "icon": "&#xe65b;",
+
+                        "icon": "&#xe64e;",
+
                         "title": "集合地点",
                         "url": "#",
                         "content": "北京市东城区人民英雄纪念碑(天安门广场人民英雄纪念碑的北侧（导游举橘红色“旭冉假期”导游旗）集合)"
@@ -99,7 +109,9 @@
                     },
                     {
                         "time": "16:30",
-                        "icon": "&#xe606;",
+
+                        "icon": "&#xe64d;",
+
                         "title": "返程",
                         "url": "",
                         "content": "行程结束后将您送回【鸟巢·水立方】自由活动和散团"
@@ -349,17 +361,18 @@
                 "item": [
                     {
                         "title": "今天",
-                        "date": "08月31日"
+
+                        "date": "07月12日"
                     },
                     {
                         "title": "明天",
-                        "date": "09月01日"
+                        "date": "07月13日"
                     },
                     {
                         "title": "后天",
-                        "date": "09月02日"
+                        "date": "07月14日"
                     }
-                   
+
                 ],
                 "other": {
                     "title": "人群",

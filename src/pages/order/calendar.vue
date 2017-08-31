@@ -1,5 +1,7 @@
 <template>
-   <div id="calendar" v-show="open">
+
+   <div id="calendar" @touchmove.prevent>
+
  <!-- 年份 月份 -->
  <div class="month">
    
@@ -70,7 +72,7 @@
    this.currentWeek = 7;
   }
   var str = this.formatDate(this.currentYear , this.currentMonth, this.currentDay);
-  console.log("today:" + str + "," + this.currentWeek);
+  //console.log("today:" + str + "," + this.currentWeek);
   this.days.length = 0;
   // 今天是周日，放在第一行第7个位置，前面6个
   for (var i = this.currentWeek - 1; i >= 0; i--) {
@@ -86,7 +88,12 @@
   }
   },
   pick: function(date) {
+
   alert(this.formatDate( date.getFullYear() , date.getMonth() + 1, date.getDate()));
+
+  //alert(this.formatDate( date.getFullYear() , date.getMonth() + 1, date.getDate()));
+    this.$emit("close");
+
   
   },
   pickPre: function(year, month) {
@@ -115,15 +122,15 @@
   if(d<10) d = "0" + d;
   return y+"-"+m+"-"+d
   },
- } 
+}
  };
 </script>
 <style scoped>  
-  #calendar{
+   #calendar{
   width:80%;
   margin: 0 auto;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.12);
-  }
+  } 
   .month {
   width: 100%;
   background: #00B8EC;
@@ -225,8 +232,11 @@
   }
   #calendar {
   	width: 100%;
-    margin-top:3.75rem; 
+
     background:#fff; 
+    position: fixed;
+    z-index: 99999;
+
   }
   .month {
      background:#ccc; 

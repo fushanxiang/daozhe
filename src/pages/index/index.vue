@@ -1,12 +1,12 @@
 <template>
     <div class="main-content">
-  		<index-header></index-header>
-  		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
+    		<index-header></index-header>
+    		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
         <icon-swiper :iconsInfo="iconsInfo"></icon-swiper>
         <hot-sale :itemsInfo="itemsInfo"></hot-sale>
         <holiday :holidayInfo="holidayInfo"></holiday>
         <foot></foot>
-	</div>
+	 </div>
 </template>
 
 <script>

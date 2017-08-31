@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import modalImg from './modal.vue';
+import modalImg from '../components/modal.vue';
 export default {
    methods:{
             viewImg(){

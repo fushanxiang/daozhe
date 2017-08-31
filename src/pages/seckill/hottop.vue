@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<div v-for="item in hot" :key="item.id" :class="item.class">
+		<div v-for="item in hot" ref='hottop' :id="'anchor-'+item.id" :key="item.id" :class="item.class" class="hot">
 			<div class="city-hot">
-	 			<div class="city-hot-title">
+	 			<div id="city-hot-title" class="city-hot-title">
 	 				<img class="hot-title-img" v-lazy='item.titleImg' />
 	 			</div>
 	 			<div class="hot-content">
@@ -69,7 +69,7 @@ export default {
 	}
 	.hot-content {
 		width: 100%;
-		height: 475px;
+		height: 500px;
 	}
 	.hot-list {
 		padding: 0.12rem;
@@ -77,8 +77,8 @@ export default {
 	}
 	.hot-item {
 		float: left;
-		width: 3.42rem;
-		margin: 0 .08rem;
+		width: 48%;
+		margin: 0 1%;
 		margin-bottom: .16rem;
     	padding-bottom: .15rem;
 		background: #FFFFFF;

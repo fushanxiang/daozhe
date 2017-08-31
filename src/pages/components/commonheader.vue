@@ -6,11 +6,8 @@
 			<span class="icon_scenic iconfont">&#xe63e;</span>
 			<span class="home">首页</span>
 		</div>
-	</header>
-	
+	</header>	
 </template>
-
-
 <script>
 export default {
 	data () {
@@ -43,6 +40,9 @@ export default {
 	.summer-title{
 		width:5.5rem;
 		height:0.88rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		text-align:center;
 		line-height:0.88rem;
 	}
@@ -64,6 +64,9 @@ export default {
 	.home{
 		width:0.88rem;
 		height:0.38rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		font-size:0.24rem;
 		text-align:center;
 		line-height:0.38rem;

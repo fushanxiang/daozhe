@@ -5,7 +5,7 @@
 			 	<li class="sumselect-category" v-for="item in selectInfo">
 			 	    <div class="sumselect-frame">
 			 	   	    <div class="sumselect-img">
-			 			    <img  :src="item.imgeUrl">
+			 			    <img  v-lazy="item.imgeUrl">
 			 			    <span>北京</span>
 				 		</div>
 				 		<div class="sumselect-word">

@@ -10,7 +10,7 @@
 			<ul class="ticket">
 				<li class="mp-product-item" v-for="item in piclistInfo" :key="item.id">
 					<div class="mp-product-show">
-						<img class="mp-topic-img" :src="item.imagesUrl">
+						<img class="mp-topic-img" v-lazy="item.imagesUrl">
 						<span class="mp-product-flag">
 							<em class="mp-product-tag">{{item.ticket}}</em>
 						</span>

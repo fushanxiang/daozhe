@@ -8,13 +8,19 @@
 				<img src="http://s.qunarzz.com/piao_topic/image/touch/custom/2017/2343grab08/anchor.jpg" class="list-img">
 			</div>
 			<ul class="list-info">
-				<li class="list-type"><a href='#' class="type-choice active">1元秒</a></li>
-				<li class="list-type"><a href='#' class="type-choice">热门TOP</a></li>
-				<li class="list-type"><a href='#' class="type-choice">玩水</a></li>
-				<li class="list-type"><a href='#' class="type-choice">一日游</a></li>
+				<li class="list-type">
+					<a href="javascript:void(0)" @click="goAnchor('#anchor')" class="type-choice active">1元秒</a></li>
+				<li class="list-type" @click="handleClickA">
+					<a a href="javascript:void(0)"  class="type-choice" >热门TOP</a></li>
+				<li class="list-type" @click="handleClickB">
+					<a href="javascript:void(0)" class="type-choice">玩水</a>
+				</li>
+				<li class="list-type" @click="handleClickC">
+					<a href="javascript:void(0)" class="type-choice">一日游</a>
+				</li>
 			</ul>
 		</div>
-			<div class="seckill-img">
+			<div class="seckill-img" id="anchor">
 				<img src="//s.qunarzz.com/piao_topic/image/touch/custom/2017/2343grab08/caption_0.jpg" class="ad-img">
 				<p class="activity">8.24-9.10，每天10点准时开抢！</p> 
 			</div>
@@ -44,6 +50,22 @@
 <script>
 	export default{
 		name:'banner',
+		methods: {
+		    goAnchor(selector) {
+		    	console.log(selector)
+		        var anchor = this.$el.querySelector(selector)
+		        document.body.scrollTop = anchor.offsetTop
+		    },
+		    handleClickA(){
+		    	this.$emit('changeA')
+		    },
+		    handleClickB(){
+		    	this.$emit('changeB')
+		    },
+		    handleClickC(){
+		    	this.$emit('changeC')
+		    }
+		},
 		data(){
 			return {
 				cheapInfo:[{
@@ -146,7 +168,7 @@
 		color: #fff;
 	}
 	.cheap-activity{
-		height:3.8rem;
+		height:4rem;
 		margin-top: .4rem;
 		box-sizing: border-box;
 		overflow-x: auto;
@@ -161,10 +183,10 @@
 	}
 	.cheap-activity-item{
 		float:left;
-		width:13.5%;
+		width:14.2%;
 		height: 90%;
 		background: #fff;
-		margin: .14rem;
+		margin: .2rem;
 	}
 	.cheap-img{
 		height:0;

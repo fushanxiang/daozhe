@@ -52,7 +52,6 @@
                 this.styleObj = {
                     textAlign: "center"
                 }
-                // this.cities = [];
             },
             handleFocus(e) {
                 e.target.value = "";

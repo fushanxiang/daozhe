@@ -22,19 +22,13 @@
         },
         watch: {
             letterChange: function(value) {
-                if(value==='china') {
-                    this.foreign = false;
-                }
-                if(value==='abroad') {
-                    this.foreign = true;
-                }
+                this.foreign = value==='china'? false: true;
             }
         },
         methods: {
             handleLetterClick(event) {
                 var el = event.currentTarget;
                 var getWord=el.innerHTML;
-                // alert(getWord);
                 this.$emit("getWord",getWord);
             },
             touchmoveword(ev) {

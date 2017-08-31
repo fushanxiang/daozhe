@@ -49,12 +49,7 @@ export default {
     },
 	watch: {
 		countryChange: function(value) {
-            if(value==='china') {
-                this.foreign = false;
-            }
-            if(value==='abroad') {
-                this.foreign = true;
-            }
+			this.foreign = value==='china'? false: true;
 		}
 	}
 }

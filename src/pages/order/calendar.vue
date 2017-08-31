@@ -1,7 +1,8 @@
 <template>
-   <div id="calendar">
+   <div id="calendar" v-show="open">
  <!-- 年份 月份 -->
  <div class="month">
+   
  <ul>
   <li class="arrow" @click="pickPre(currentYear,currentMonth)">❮</li>
   <li class="year-month" @click="pickYear(currentYear,currentMonth)">
@@ -44,7 +45,8 @@
 			  currentMonth: 1,
 			  currentYear: 1970,
 			  currentWeek: 1,
-			  days: []
+			  days: [],
+        open:true
 	 	}
 	 
 	 },
@@ -52,6 +54,7 @@
   this.initData(null);
  },
  methods: {
+ 
   initData: function(cur) {
   var date;
   if (cur) {
@@ -84,6 +87,7 @@
   },
   pick: function(date) {
   alert(this.formatDate( date.getFullYear() , date.getMonth() + 1, date.getDate()));
+  
   },
   pickPre: function(year, month) {
   // setDate(0); 上月最后一天
@@ -219,10 +223,25 @@
   .days li:hover {
   background: #e1e1e1;
   }
-  #calendar{
+  #calendar {
   	width: 100%;
-    margin-top:2rem; 
-  	
+    margin-top:3.75rem; 
+    background:#fff; 
+  }
+  .month {
+     background:#ccc; 
+     
 
   }
+  .weekdays {
+     background:#ccc; 
+     
+  }
+  .arrow {
+    color: black;
+  }
+ 
+ 
+
+  
 </style>

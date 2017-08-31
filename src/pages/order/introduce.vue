@@ -1,56 +1,211 @@
 <template>
+
+	
 	<div>
-	   <div id="page-2" class="mpw-dock mpw-dock-fadein" v-bind:class="isActive?'a':'b'"><div class="mp-booking-info">
-    <h5 class="mp-booking-title"><p class="mpg-ellipsis">【赠送珍宝馆】天安门＋故宫＋八达岭长城＋鸟巢·水立方一日游</p></h5>
-    <p class="mp-booking-price">
-        <span class="mpg-price">¥<em class="mpg-price-num" id="spucategory-price">228</em></span>
-        <span id="spucategory-price-text">起/份</span>
-        <span class="mp-prdcard-gray mp-prdcard-marketprice">票面价:¥<span mp-role="highMarketPrice">268</span></span>
-        <span mp-role="cashBack"></span>
-    </p>
-</div><div class="mpw-dock-content" mp-role="dockContent"><div><div id="specifications-con" style="height: 417.6px; overflow: hidden;"><div style="transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) translateZ(0px);"><div class="mp-booking-calendar mpf-border-top"><h6 class="mp-booking-note">日期选择</h6><div class="mp-booking-datecard clrfix" mp-role="calendarList"><span class="mpf-datecard mpf-datecard-disabled"><em class="mpf-datecard-name">今天</em><strong class="mpf-datecard-detail">08月26日</strong></span><span class="mpf-datecard"><em class="mpf-datecard-name">明天</em><strong class="mpf-datecard-detail">08月27日</strong></span><span class="mpf-datecard"><em class="mpf-datecard-name">后天</em><strong class="mpf-datecard-detail">08月28日</strong></span><span class="mpf-datecard mpf-datecard-wait" readonly="true"><em class="mpf-datecard-name"  @click="dateClick">其他日期</em><strong class="mpf-datecard-detail"></strong></span></div></div><div class="mp-booking-select mpf-border-top"><h6 class="mp-booking-note">人群</h6><div class="mp-booking-textcard clrfix" mp-role="textList"><span class="mpf-play-date mpf-play-date-active">成人</span><span class="mpf-play-date">儿童</span></div></div><div class="mp-booking-select mpf-border-top"><h6 class="mp-booking-note">发车时间</h6><div class="mp-booking-textcard clrfix" mp-role="textList"><span class="mpf-play-date mpf-play-date-active">07:30</span></div></div><div class="mp-booking-select mpf-border-top"><h6 class="mp-booking-note">用餐</h6><div class="mp-booking-textcard clrfix" mp-role="textList"><span class="mpf-play-date mpf-play-date-active">含餐</span></div></div><div class="mp-booking-select mpf-border-top"><h6 class="mp-booking-note">服务语言</h6><div class="mp-booking-textcard clrfix" mp-role="textList"><span class="mpf-play-date mpf-play-date-active">中文</span></div></div></div><div style="position: absolute; z-index: 100; width: 7px; bottom: 2px; top: 2px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 0;"><div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.9); box-sizing: border-box; width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 232px) translateZ(0px); height: 298px;"></div></div></div><a class="mp-booking-btn" id="mp-control-booking" href="javascript:;" data-click="t_preOrder">立即预订</a></div></div><div class="mpg-iconfont mpw-dock-close iconfont" mp-role="closeButton " @click="handleClick">&#xe620;</div></div>
-  <div class="mp-booking-btn" id="mp-control-booking">
-        <a href="javascript:;" mp-role="booking-link" data-teamtype="" data-click="t_goumai" @click="bottomClick">立即预订</a>
-  </div>
-  <div v-bind:class="isActive?'a':'b'">
-      <tell-calendar></tell-calendar>
-  </div>
+	   	<div class="shadown" v-show="open"></div>
+
+
+        <transition name="bounce">
+            <div v-if="show" id="page-2" class="mpw-dock mpw-dock-fadein" 
+                 >
+                <div class="mp-booking-info">
+                    <h5 class="mp-booking-title">
+                        <p class="mpg-ellipsis">
+                            {{header.text}}
+                        </p>
+                    </h5>
+                    <p class="mp-booking-price">
+                        <span class="mpg-price">¥
+                            <em class="mpg-price-num" id="spucategory-price"> 
+                                {{header.money}}
+                            </em>
+                        </span>
+                        <span id="spucategory-price-text">{{header.version}}</span>
+                        <span class="mp-prdcard-gray mp-prdcard-marketprice">票面价:¥
+                            <span mp-role="highMarketPrice">{{header.moneys}}</span>
+                        </span>
+                        <span mp-role="cashBack"></span>
+                    </p>
+                </div>
+                <div class="mpw-dock-content" mp-role="dockContent">
+                    <div>
+                        <div id="specifications-con" style="height: 417.6px; overflow: hidden;">
+                            <div style="transition-property: transform; transform-origin: 0px 0px 0px; 
+                                transform: translate(0px, 0px) translateZ(0px);">
+                                <div class="mp-booking-calendar mpf-border-top">
+                                    <h6 class="mp-booking-note">日期选择</h6>
+                                    <div class="mp-booking-datecard clrfix" mp-role="calendarList" >
+                                        <span class="mpf-datecard mpf-datecard-disabled" 
+                                            v-for="(item,index) in itemInfo" :class="{'date-active': dateInd == index}" @click="handleDateClick(index)">
+                                            <em class="mpf-datecard-name">{{item.title}}</em>
+                                            <strong class="mpf-datecard-detail">{{item.date}}</strong>
+                                        </span>
+                                        <span class="mpf-datecard mpf-datecard-disabled"  @click="dataClick">
+                                            <em class="mpf-datecard-name" >其他日期</em>
+                                            <strong class="mpf-datecard-detail"></strong>
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="mp-booking-select mpf-border-top">
+                                    <h6 class="mp-booking-note">人群</h6>
+                                    <div class="mp-booking-textcard clrfix" mp-role="textList">
+                                        <span class="mpf-play-date mpf-play-date-active">成人</span>
+                                        <span class="mpf-play-date">儿童</span>
+                                    </div>
+                                </div>
+                                <div class="mp-booking-select mpf-border-top" v-for="item in itemsInfo">
+                                    <h6 class="mp-booking-note">{{item.content}}</h6>
+                                    <div class="mp-booking-textcard clrfix" mp-role="textList">
+                                        <span class="mpf-play-date mpf-play-date-active">{{item.time}}</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="mp-location" >
+                                <div class="mp-location-tap" ></div>
+                            </div>
+                        </div>
+                        <a class="mp-booking-btn" id="mp-control-booking" href="javascript:;" 
+                            data-click="t_preOrder" @click="show = !show">
+                                立即预订
+                        </a>
+                    </div>
+                </div>
+                <div class="mpg-iconfont mpw-dock-close iconfont" mp-role="closeButton " 
+                    @click="handleClick" ref="adsf">
+                    &#xe620;
+                </div>
+            </div>
+        </transition>
+		<div class="mp-booking-btn" id="mp-control-booking" @click="bottomClick">
+			<a href="javascript:;" mp-role="booking-link" data-teamtype="" data-click="t_goumai" 
+				>
+				立即预订
+			</a>
+  		</div>
+        
+  		<div v-show="otherdata" class="otherdata1">
+            <div class="close iconfont" @click="closeClick">&#xe620;</div>
+            <tell-calendar></tell-calendar>    
+        </div>
+       
 	</div>
+	
 </template>
+
+
+
 <script>
+	
 import Calendar from "./calendar.vue"
 export default {
-  name: 'index',
-  data () {
-    return {
-      isActive:false
-    }
-  },
-  methods:{
-    handleClick(){
-    
-      this.isActive=false
-    },
-    bottomClick(){
-        this.isActive=true
-    },
-    dateClick(){
-      
-    this.isActive=false
-    }
-  },
-  components:{
-    "tell-calendar": Calendar
+    name: 'index',
+    created() {
+            this.$http.get( '/static/onedaytour-details.json' ).then( response => {
+                 var data = response.body.data.bookingTicket;
+                 this.header = data.header;
+                 this.itemInfo = data.content.item;
+                 this.itemsInfo = data.content.items;
+            }, response => {
+                console.log( "error" )
+            });
+
+        },
+
+  	data () {
+	    return {
+			isActive:false,
+			open:false,
+            otherdata:false,  
+            header:{ },
+            itemInfo:[],
+            itemsInfo:[],
+            show:false,
+            dateInd:""
+	    }
+  	},
+  	methods:{
+        handleDateClick(index){
+            this.dateInd = index
+        },
+	    handleClick(){ 
+            this.show = !this.show
+		    this.open=!this.open
+		    this.isActive=false
+    	},
+	    bottomClick(){
+	         this.open=!this.open
+            this.show = !this.show
+	       //console.log(this.$refs.adsf)
+	    },
+	    dateClick(){
+	    	this.isActive=false
+	    },
+        dataClick(){
+         this.show=!this.show
+         this.isActive=false,
+         this.otherdata=true
+
+        },
+        closeClick(){
+            this.open=false
+
+            this.otherdata=false
+        }
+  	},
+  	components:{
+	    "tell-calendar": Calendar
+	}
+
+}
+
+</script>
+
+
+
+<style scoped>
+.date-active {
+    background:#00bcd4 !important
+}
+.shadown {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: .5;
+}
+/* .mpw-dock-fadein {
+    transform: translateY(0);
+}*/
+.a {display: block;}
+.b {display: none;} 
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: translateY(800px);
+  }
+   
+  100% {
+    transform: translateY(0);
   }
 }
-</script>
-<style scoped>
-
- .mpw-dock-fadein {
+@keyframes bounce-out {
+  0% {
     transform: translateY(0);
-}
-.a{display: block;}
-.b{display: none;}  
+  }
+   
+  100% {
+    transform: translateY(800px);
+  }
+}  
 .mpw-dock {
     position: fixed;
     z-index: 92;
@@ -65,7 +220,6 @@ export default {
 .mp-booking-info {
     padding: 0 .2rem;
 }
-
 .mp-booking-title {
     margin-right: .6rem;
     padding: .3rem 0 .1rem 0;
@@ -75,14 +229,12 @@ export default {
 h1, h2, h3, h4, h5, h6, b, strong {
     font-weight: normal;
 }
-
 .mpg-ellipsis {
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 .mp-booking-price {
     color: #9e9e9e;
     font-size: .24rem;
@@ -128,18 +280,15 @@ element.style {
     margin-left: 0;
 }
 .mp-booking-datecard .mpf-datecard {
-   
     box-sizing: border-box;
     float: left;
     width: 22.5%;
     height: .86rem;
     overflow: hidden;
 }
-
 .mpf-datecard-disabled {
     background: #fff;
 }
-
 .mpf-datecard {
     display: inline-block;
     min-width: 1.2rem;
@@ -148,7 +297,6 @@ element.style {
     text-align: center;
     border-radius: .1rem;
 }
-
 .mp-booking-textcard {
     margin-top: -.15rem;
 }
@@ -159,7 +307,6 @@ element.style {
     color: #fff;
     overflow: hidden;
 }
-
 .mpf-play-date {
     display: inline-block;
     float: left;
@@ -193,12 +340,10 @@ address, cite, dfn, em, i, optgroup, var {
     font-size: .24rem;
     line-height: .32rem;
 }
-
 .mpf-datecard-name, .mpf-datecard-detail {
     display: block;
     width: 100%;
 }
-
 .mp-booking-datecard .mpf-datecard {
     box-sizing: border-box;
     float: left;
@@ -207,7 +352,6 @@ address, cite, dfn, em, i, optgroup, var {
     margin-left: 3.33%;
     overflow: hidden;
 }
-
 .mpf-datecard {
     display: inline-block;
     min-width: 1.2rem;
@@ -215,8 +359,6 @@ address, cite, dfn, em, i, optgroup, var {
     border: .02rem solid #bdbdbd;
     background: #fff;
     text-align: center;
-   
- 
     border-radius: .1rem;
 }
 .mp-booking-datecard .mpf-datecard {
@@ -227,7 +369,6 @@ address, cite, dfn, em, i, optgroup, var {
     margin-left: 3.33%;
     overflow: hidden;
 }
-
 .mpf-datecard-wait .mpf-datecard-name {
     line-height: .6rem;
 }
@@ -251,7 +392,6 @@ address, cite, dfn, em, i, optgroup, var {
     z-index: 2;
     right: 0;
 }
-
 .mpw-dock-close, .mpw-dock-back {
     position: absolute;
     top: 0;
@@ -271,34 +411,70 @@ address, cite, dfn, em, i, optgroup, var {
     text-transform: none;
     -webkit-font-smoothing: antialiased;
 }
-.mp-booking-price{
+.mp-booking-price {
   margin-top:-0.35rem;
 }
-.mp-booking-calendar{
+.mp-booking-calendar {
   margin-top:-0.2rem;
 }
-
-.mp-booking-textcard{
+.mp-booking-textcard {
   margin-top:-0.1rem;
 }
-.mp-booking-note{
+.mp-booking-note {
   margin-top:-0.1rem;
 }
-.mp-booking-btn{
+.mp-booking-btn {
   width: 375px;
   height: 50px;
   margin-top:-0.5rem;
   background:#ff9800;
 }
- .mpw-dock-close{
+.mpw-dock-close {
   margin-top:0.3rem;
- }
- .mp-booking-btn{
+}
+.mp-booking-btn {
   position: fixed;
   bottom: 0;
   right: 0;
- }
- .mp-booking-btn a{
+}
+.mp-booking-btn a {
   color: #fff;
- }
+}
+.mp-location{
+    position: absolute; 
+    z-index: 100; 
+    width: 7px; bottom: 2px; 
+    top: 2px; right: 1px; 
+    pointer-events: none; 
+    transition-property: opacity; 
+    transition-duration: 350ms; 
+    overflow: hidden; 
+    opacity: 0;
+}
+.mp-location-tap{
+    position: absolute; 
+    z-index: 100; 
+    background: padding-box padding-box rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.9); 
+    box-sizing: border-box;
+    width: 100%; 
+    border-radius: 3px; 
+    pointer-events: none; 
+    transition-property: transform; 
+    transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); 
+    transform: translate(0px, 232px) translateZ(0px); 
+    height: 298px;
+}
+.otherdata1{
+    position: absolute;
+    z-index: 100;
+    
+
+}
+.close {
+    position: absolute;
+    right:2rem;
+    top:4rem;
+    font-size:0.5rem;
+  }
 </style>

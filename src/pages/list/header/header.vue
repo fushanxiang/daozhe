@@ -13,7 +13,7 @@
             </router-link>
             </div>
         </header>
-        <div class="search-near-box" v-show="this.$store.state.searchNear">
+        <div class="search-near-box" v-show="this.$store.state.searchnear">
             <div class="search-history"  v-show="this.$store.state.searchHistory">
                 <h1 class="search-history-title">搜索历史<span class="history-del iconfont" @click="handledel">&#xe7ac; 清除</span></h1>
                 <div class="search-history-info">
@@ -49,9 +49,9 @@
             <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
             </div>
         </div>
-        <ul class="jsonpbox" v-show="this.$store.state.suggestsearch">
+        <ul class="suggestbox" v-show="this.$store.state.suggestsearch">
          <h1 class="search-history-title">搜索建议<span class="history-change"> 关闭</span></h1>
-          <li v-for="(value,$index) in myData" class="jsonpinfo">{{value}}</li>
+          <li v-for="(value,$index) in myData" class="suggestinfo">{{value}}</li>
         </ul>
     </div>
 </template>
@@ -378,13 +378,13 @@ export default {
     width: 25%;
     text-align: center;
   }
-  .jsonpbox{
+  .suggestbox{
     background: #fff;
     position: absolute;
     width: 100%;
     z-index: 10;
   }
-  .jsonpinfo{
+  .suggestinfo{
     padding: .2rem;
     border-bottom: 1px solid #eee;
   }

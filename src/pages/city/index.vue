@@ -1,57 +1,38 @@
 <template>
     <div>
-        <div>{{$route.params.id}}</div>
-        <div>{{$route.query.name}}</div>
-        <router-link to="/city/shanghai">link</router-link>
-        <button @click="handleClick">跳转</button>
-        <router-view></router-view>
-  
-    <bottom-introduce></bottom-introduce>
+        <city-header :datas="datas"></city-header>
     </div>
-</template>
+</template> 
 
 <script>
-import Introduce from '../order/introduce.vue'
-
-export default {
-    data () {
-        return {
-            
-        }
-    },
-    methods: {
-        handleClick() {
-            this.$router.go(-1)
+   import cityHeader from './city_header.vue';
+    export default {
+        data () {
+            return {
+                datas: {
+                    chinaCity: [],
+                    abroadCity: [],
+                    hotChinaCity: [],
+                    hotAbroadCity: []
+                }
+            } 
         },
-        bottomClick(){
-            alert(6);
-        }
-    },
-    components:{
-        "bottom-introduce":Introduce
+        components: {
+          "city-header": cityHeader
+        },
+        created() {
+            this.$http.get('/static/city_select.json').then(response => {
+                var res = response.body;
+                this.datas.chinaCity = res.china;
+                this.datas.abroadCity = res.abroad;
+                this.datas.hotChinaCity = res.hotcity;
+                this.datas.hotAbroadCity = res.hotcityAbroad;
+            }, response => {
+                console.log("ajax error");
+            });
+        },
     }
-}
 </script>
 
-
 <style scoped>
-.mp-fixbooking-btn {
-    overflow: hidden;
-    height: .98rem;
-    background: #ff9800;
-    color: #fff;
-    font-size: .4rem;
-    text-align: center;
-    line-height: 0.98rem;
-
-}
-.mpg-flexbox-item{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-}
-.mpg-flexbox-item a{
-    color: #fff;
-}
 </style>

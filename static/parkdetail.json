@@ -72,11 +72,12 @@
 					"subposition":"广州·广州长隆旅游度假区"
 			}],
 
-		"qnrecommendinfo":[{
-			"ticketTitle":"【暑期特惠】广州长隆水上乐园亲子票1大1小",
-			"priceNum":"262",
-			"ticketCost":"280"
-		}],
+	"qnrecommendinfo":[{
+					"ticketTitle":"【暑期特惠】广州长隆水上乐园亲子票1大1小",
+					"priceNum":"262",
+					"ticketCost":"280"
+			}],
+
 		"ticketinfo":[{
 			"id":"1",
 			"title":"促销票",
@@ -124,99 +125,5 @@
 			"ticketTitle":"【暑期特惠】广州长隆水上乐园亲子票1大1小",
 			"priceNum":"262",
 			"priceCost":"280"
-		}],
-
-
-
-
-	"promogroup":[{
-					"title":"[开学促销]水上乐园双人票",
-					"price":"168",
-					"id":1,
-					"ticketsfrom":[{
-									"bigtitle":"去哪儿直销",
-									"smalltitle":"【开学促销】长隆水上乐园双人票（日夜场通玩）",
-									"newprice":"190",
-									"oldprice":"560",
-									"id":1
-
-					},{
-									"bigtitle":"广州金马国旅",
-									"smalltitle":"【自动出票 立刻发码】广州长隆水上乐园双人票",
-									"newprice":"183",
-									"oldprice":"560",
-									"id":2
-					}]
-	},{
-					"title":"[开学促销]水上乐园大中小学生双人票",
-					"price":"155",
-					"id":2,
-					"ticketsfrom":[{
-									"bigtitle":"去哪儿直销",
-									"smalltitle":"[开学促销]水上乐园大中小学生双人票",
-									"newprice":"155",
-									"oldprice":"160",
-									"id":1
-
-					},{
-									"bigtitle":"蓝精灵",
-									"smalltitle":"【限时特惠】广州长隆水上乐园大中小学生双人票(需学生证验票入园,9.1-10.8)",
-									"newprice":"155",
-									"oldprice":"160",
-									"id":2
-					}]
-	},{
-					"title":"[开学促销]水上乐园夜场双人票",
-					"price":"130",
-					"id":3,
-					"ticketsfrom":[{
-									"bigtitle":"去哪儿直销",
-									"smalltitle":"【开学促销】水上乐园夜场双人特惠全票",
-									"newprice":"155",
-									"oldprice":"160",
-									"id":1
-
-					},{
-									"bigtitle":"蓝精灵",
-									"smalltitle":"【限时特惠】广州长隆水上乐园夜场双人票(9.1-10.8)",
-									"newprice":"155",
-									"oldprice":"160",
-									"id":2
-					}]
-	},{
-					"title":"[暑期特惠]水上乐园亲子套票（1大1小）",
-					"price":"207",
-					"id":4,
-					"ticketsfrom":[{
-									"bigtitle":"去哪儿直销",
-									"smalltitle":"【开学促销】水上乐园夜场双人特惠全票",
-									"newprice":"155",
-									"oldprice":"160",
-									"id":1
-
-					},{
-									"bigtitle":"广州金马国旅",
-									"smalltitle":"【自动出票】长隆水上乐园学生票（适用于18岁以下人）8月",
-									"newprice":"155",
-									"oldprice":"160",
-									"id":2
-					}]
-	},{
-					"title":"[开学促销]水上乐园大中小学生双人票",
-					"price":"268",
-					"id":5,"ticketsfrom":[{
-									"bigtitle":"启程旅游",
-									"smalltitle":"【暑期特惠】广州长隆水上乐园亲子票1大1小",
-									"newprice":"280",
-									"oldprice":"280",
-									"id":1
-
-					},{
-									"bigtitle":"诚信之旅",
-									"smalltitle":"[暑期特惠]长隆水上乐园亲子套票（1大1小）",
-									"newprice":"268",
-									"oldprice":"500",
-									"id":2
-					}]
-	}]
+		}]
 }

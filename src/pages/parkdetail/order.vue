@@ -1,6 +1,9 @@
 <template>
-	<div id="page-category" class="mpw-dock mpw-dock-fadein" style=""  v-show="mode"><div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div><div class="mpw-dock-content" mp-role="dockContent"><div class="mpf-control-outer">
-    <div class="mp-booking-info">
+	<div id="page-category" class="mpw-dock mpw-dock-fadein"  :style="mode? 'display:block':'display:none'">
+        <div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div>
+        <div class="mpw-dock-content" mp-role="dockContent">
+        <div class="mpf-control-outer">
+        <div class="mp-booking-info">
         <h5 class="mpf-booking-title">太平洋海底世界成人票+海洋动物表演电子套票（文惠券产品）</h5>
         <div class="mpw-dock-close iconfont" @click="handleClick">&#xe633;</div>
         <p class="mpf-booking-price">
@@ -44,7 +47,7 @@
 		},
         methods:{
             handleClick() {
-               this.mode=false
+               this.mode = !this.mode
             }
         }
 		

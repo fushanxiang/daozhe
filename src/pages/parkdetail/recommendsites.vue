@@ -2,6 +2,7 @@
 	<div class="recommend-list">
 		<slot></slot>
 		<a href="javascript:;" role="sightLink">
+		<router-link :to="{name:'ticketdetail'}">
 			<div class="recommend-item" v-for="item in recommendInfo" :key="item.id">
 				<img class="recommend-img" :src="item.src" />
 				<div class="recommend-info border-bottom">
@@ -22,6 +23,7 @@
 					</div>
 				</div>
 			</div>
+		</router-link>
 		</a>
 	</div>
 </template>

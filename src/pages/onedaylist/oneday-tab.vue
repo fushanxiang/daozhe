@@ -89,10 +89,8 @@
 </template>
 
 <script>
-import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
-import Vue from 'vue'
-Vue.use(IScrollView, IScroll)
+
 export default {
 	data () {
 		return {

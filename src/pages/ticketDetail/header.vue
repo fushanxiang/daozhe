@@ -14,8 +14,10 @@
 			DestroyStyle:function() {
 				if(window.scrollY>=44) {
 					document.querySelector('.topbar').style.opacity = '1'
+					document.querySelector('.topbar').style.display = 'block'
 				} else {
 					document.querySelector('.topbar').style.opacity = '0'
+					document.querySelector('.topbar').style.display = 'none'
 				}
 			}
 		},

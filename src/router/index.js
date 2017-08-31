@@ -12,6 +12,9 @@ import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
 import Map from '@/pages/parkdetail/map'
+import Productdetail from '@/pages/productdetail/index'
+import search from '@/search/search'
+import List from '@/pages/list/index'
 Vue.use(Router)
 
 export default new Router({
@@ -64,6 +67,21 @@ export default new Router({
 		    	path: '/map',
 		      name: 'map',
 		      component: Map
+		    }, {
+		      path: '/productdetail',
+		      name: 'productdetail',
+		      component: Productdetail
+		    },
+		    {
+		      path: '/list',
+		      name: 'list',
+		      component: List
+
+		    },{
+		      path: '/search',
+		      name: 'search',
+		      component: search
+
 		    }]
 
 })

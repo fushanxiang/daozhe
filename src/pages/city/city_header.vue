@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroud-color">
+    <div class="backgroud-color" ref="outer">
         <div class="city-header-area">
             <router-link to="/">
                 <span class="iconfont city-header-goback">&#xe624;</span>
@@ -11,7 +11,7 @@
             <input type="text" value="输入城市名或拼音" class="city-keyword" 
             @focus="handleFocus" @blur="handleBlur" :style="styleObj" @input="handleInput">
             <div class="search-cities">
-                    <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
+                <div v-for="city in cities" class="search-city" @click="selectCity">{{city}}</div>
             </div>
         </div>
         <city-area :change="cityChange" :datas="datas" v-show="show"></city-area>
@@ -64,6 +64,8 @@
             },
             handleChina() {
                 this.cityChange = 'china';
+                this.cities = [];
+                this.show = true;
                 this.colorChina = {
                     "color": "#00afc7",
                     "background": "#fff"
@@ -72,10 +74,16 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
                 this.country = true;
+                this.show = true;
+                this.cities = [];
             },
             handleAbroad() {
                 this.cityChange = 'abroad';
+                this.cities = [];
+                this.show = true;
                 this.colorAbroad = {
                     "color": "#00afc7",
                     "background": "#fff"
@@ -84,7 +92,12 @@
                     "color": "#fff",
                     "background": "#00afc7"
                 }
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+                
                 this.country = false;
+                this.show = true;
+                this.cities = [];
             },
             handleInput(ev) {
                 var e = ev || window.event,
@@ -99,7 +112,6 @@
                                 allSearchCities.push(item.cityarea);                          
                             }
                         })
-
                 }
                 if(allSearchCities.length === 0) {
                     allSearchCities = ['无搜索匹配城市'];
@@ -118,20 +130,23 @@
                     localStorage.selectedCity = e.target.innerText;
                     this.$router.push('/')
                 }else {
-                    this.$router.push('');
+                    this.$router.push('')
+                    this.cities = [];
                     this.show = true;
                     this.cities = [];
-                } 
+                }
             }
+        },
+        mounted() {
+            this.$refs.outer.style.height = window.innerHeight * 0.02 - 0.88 + 'rem';
         }
     }
 </script>
 
 <style scoped>
     @import "../../assets/font/iconfont.css";
-    .backgroud-color{
-        height: 10.46rem;
-        background: #F5F5F5;
+    .backgroud-color {
+        background: #f5f5f5;
     }
     .city-header-area {
         width: 100%;
@@ -162,7 +177,7 @@
     .city-china {
         border-radius: 3px 0 0 3px;
         float: left;
-        margin-left: 8%;
+        margin-left: 10%;
         margin-top: .14rem;
         background: #fff;
         color: #00afc7;
@@ -183,8 +198,10 @@
         display: block;
         width: 100%;
         line-height: .3rem;
-        padding: .16rem 0 .16rem .1rem;
+        padding: .16rem 0 .16rem .2rem;
         border-radius: .1rem;
+        border: none;
+        color: #777;
     }
     .search-cities {
         width: 100%;
@@ -198,6 +215,21 @@
         width: 100%;
         padding-left: .2rem;
         border-bottom: 1px solid #dfe0e1;
+        font-size: .28rem;
+        color: #212121;
+    }
+    .search-cities {
+        position: absolute;
+        left: 0;
+        top: 1.68rem;
+        background: #fff;
+        width: 100%;
+    }
+    .search-city {
+        line-height: .76rem;
+        width: 100%;
+        padding-left: .2rem;
+        border-top: 1px solid #dfe0e1;
         font-size: .28rem;
         color: #212121;
     }

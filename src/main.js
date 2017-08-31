@@ -6,7 +6,9 @@ import fastclick from 'fastclick'
 import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
 import VueLazyload from 'vue-lazyload'
+import VueScroller from 'vue-scroller'
 
+Vue.use(VueScroller)
 Vue.use(BaiduMap, {
   /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */
   ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'

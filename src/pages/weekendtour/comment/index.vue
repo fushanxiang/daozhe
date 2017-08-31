@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<header-fixed :goodsInfo="goodsInfo"></header-fixed>
-		<comment :goodsInfo="goodsInfo" :comments="comments" :id="id" ></comment>
+		<header-fixed :id="id"></header-fixed>
+		<comment :comments="comments" :flag="flag" ></comment>
 	</div>
 </template>
 
@@ -13,34 +13,36 @@ import Comment from './comment.vue'
 export default {
   	data () {
     	return {
-    		goodsInfo : [],
+    		id: "",
     		comments: [],
-    		id: ""
+    		flag: [],
+    		goodsInfo : []
    		}
-     
 	},
 	created() {
-	   	
 
-		/*this.$http.get('/static/weekend_comment.json').then(response => {
+		this.$http.get('/static/weekend_comments.json').then(response => {
 			var comments = response.data.data.comments;
-			console.log(comments)
 			var id = this.$route.params.id.split("=")[1];
 			this.id = id;
-			this.comments = comments;
-			
-			//console.log(this.id);
-			//console.log(this.comments);
+			for(var i in comments){
+				if(comments[i].id == this.id){
+					this.comments = comments[i];
+				}
+			}
+			for(var j in this.comments.info){
+				this.flag.push('true');
+			}
 		}, response => {
 			console.log("ajax error");
-  		});*/
+  		});
 
-  		this.$http.get('/static/weekend.json').then(response => {
-	    	var data = response.body.data;
-	    	this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
-	    }, response => {
-	    	console.log("ajax error");
-	    });
+		this.$http.get('/static/weekend.json').then(response => {
+			var data = response.body.data;
+			this.goodsInfo = data.goods[this.id];
+		}, response => {
+			console.log("ajax error");
+  		});
 
 	},
 	components: {
@@ -51,8 +53,5 @@ export default {
 </script>
 
 <style scoped>
-	body,html {
-		overflow: hidden;
-		background: #f1f1f1 !important;
-	}
+
 </style>

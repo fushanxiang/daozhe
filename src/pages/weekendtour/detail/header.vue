@@ -1,7 +1,7 @@
 <template>
 	<div class="header-container">
 		<div class="mask" v-if="show">
-		<div class="close" @click="handleClick">&#xe637;</div>
+		<div class="close iconfont" @click="handleClick">&#58935;</div>
 			<swiper :options="swiperOption" class="swiper-box">
 			    <swiper-slide class="swiper-item">
 			    	<img :src="goodsInfo.src" class="swiper-img">
@@ -12,9 +12,7 @@
 			    <swiper-slide class="swiper-item">
 			    	<img :src="goodsInfo.src" class="swiper-img">
 			    </swiper-slide>
-			    
-			    <div class="swiper-pagination" slot="pagination"></div>
-			    
+			    <div class="swiper-pagination" slot="pagination"></div>  
 		  	</swiper>
 		  	<div class="swiper-button-prev swiper-button "><span class="button iconfont">&#xe60b;</span></div>
     		<div class="swiper-button-next swiper-button "><span class="button button-right iconfont">&#xe60b;</span></div>
@@ -234,7 +232,7 @@ export default {
 	}
 	.close {
 		position: absolute;
-		font-size: .8rem;
+		font-size: .6rem;
 		color: white;
 		top: .4rem;
 		right: .4rem;

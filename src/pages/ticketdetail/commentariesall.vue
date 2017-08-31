@@ -9,7 +9,7 @@
 		</div>
 
 		<div id="conent">
-			<div class="container-comment border-top" v-for="recommendInfo in recommendInfos">
+			<div class="container-comment border-top" v-for="(recommendInfo,i) in recommendInfos">
 				<div class="container-comment-stardate">
 					<span class="container-comment-date">
 						{{recommendInfo.name}}
@@ -19,10 +19,10 @@
 					</span>
 				</div>
 				<div class="">
-					<p id="comment-content-p" v-bind:class="active?'down':'up'">
+					<p class="comment-content-p down">
 						{{recommendInfo.text}}
 					</p>
-					<div class="foldbtn iconfont js-foldbtn" @click="handleClick">{{active?'&#xe62d;':''}}</div>
+					<div class="foldbtn iconfont js-foldbtn " @click="handleClick(i)">{{'&#xe62d;'}}</div>
 				</div>
 
 				<div class="discuss-photo">
@@ -45,13 +45,13 @@
 	export default {
 		data() {
 			return {
-				active: true,
-				recommendInfos: []
+				recommendInfos: [],
 			}
 		},
 		methods: {
-			handleClick() {
-
+			handleClick: function(i) {
+				this.$el.children.conent.children[i].children[1].children[1].innerText = '';
+				this.$el.children.conent.children[i].children[1].children[0].className = 'comment-content-p'
 			}
 		},
 		created() {
@@ -61,6 +61,7 @@
 			}, response => {
 				console.log("dfs");
 			});
+			console.log(this, this.$el)
 		}
 	}
 </script>
@@ -149,7 +150,7 @@
 		float: right;
 	}
 	
-	#comment-content-p {
+	.comment-content-p {
 		color: #999;
 		font-size: .28rem;
 		line-height: .4rem;

@@ -20,7 +20,7 @@ Vue.use(VueLazyload, {
 	try: 1 
 	})
 
-new Vue({
+var vm = new Vue({
   el: '#app',
   router,
   store,

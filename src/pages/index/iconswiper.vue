@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<div>
 		<swiper :options="swiperOption" > 
 			<swiper-slide v-for="page in pages" :key='page.key'>
@@ -21,6 +22,26 @@
 					<span class="position-right iconfont">&#xe629;</span>
 					九元门票
 				</div>
+=======
+<div>
+	<swiper :options="swiperOption" > 
+	    <swiper-slide v-for="page in pages" :key='page.key'>
+	    	<ul class="icon-list">
+	    		<li class="icon-item" v-for="item in page" :key='item.id'>
+	    			<img class="icon-img" :src="item.imgUrl" />
+	    			<h1 class="icon-title">{{item.title}}</h1>
+	    		</li>
+	    	</ul>
+
+	    </swiper-slide>
+	    <div class="swiper-pagination"  slot="pagination"></div>
+	</swiper>
+	<div class="position-sale">
+	    <div class="position">
+	    	<div class="position-directon">
+	    	    <span class="position-left iconfont">&#xe615;</span>
+			    定位失败
+>>>>>>> origin/master
 			</div>
 			<router-link :to="{name:'ticketSale'}">	    	
 				<div class="sale"></div>
@@ -33,6 +54,7 @@
 
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
+<<<<<<< HEAD
 	export default {
 		data () {
 			return {
@@ -42,6 +64,31 @@
 					pagination : '.swiper-pagination',
 					paginationClickable :true,
 					observeParents:true
+=======
+export default {
+	data () {
+		return {
+			swiperOption: {
+				direction : 'horizontal',
+				autoHeight: true,
+				pagination : '.swiper-pagination',
+				paginationClickable :true,
+				observeParents:true
+			}
+
+    	}
+	},
+	props:["iconsInfo"],
+	methods: {
+	},
+	computed: {
+		pages: function() {
+			const pages = [];
+			for (var i = 0; i < this.iconsInfo.length; i++) {
+				let page = Math.floor(i/8);
+				if (!pages[page]) {
+					pages[page] = [];
+>>>>>>> origin/master
 				}
 			}
 		},

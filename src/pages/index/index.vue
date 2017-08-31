@@ -1,7 +1,7 @@
 <template>
   <div class="index">
 	<index-top :itemshotcity="hotCity"></index-top>
-  	<img-topic :imgsInfo="products"></img-topic>
+  	<img-topic :imgsInfo="products" :itemshotcity="hotCity"></img-topic>
   	<list-lvyou :lvyou="lvyou"></list-lvyou>
   </div>
 </template>
@@ -22,11 +22,12 @@ export default {
   created(){
   	/*console.log(123)
   	console.log(this.$http)*/
-	  this.$http.get('/static/index.json').then(response => {
+	  this.$http.get('/static/admissionticket.json').then(response => {
 	    //console.log(response.body.data.hotCity)
 	    var data = response.body.data;
 	    this.hotCity = data.hotCity;
-	    this.products = data.products.北京;
+	    this.products = data.products;
+      //console.log(this.products)
 	    this.lvyou = data.lvyou;
 	    }, response => {
 	      console.log("ajax error");

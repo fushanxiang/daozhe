@@ -1,15 +1,15 @@
 <template>
 	<div>
 		<ul class="listMain">
-			<li v-for="item in lvyou">
+			<li class="liAggregate" v-for="item in lvyou">
 				<p class="imgsUrl"><img :src="item.imgslist" alt="" width="90%" height="100%" /></p>
 				<p class="itemsName">{{item.name}}</p>
 				<p class="itemsPrice">
 					<span>￥{{item.marketPrice}}</span>
-					<span class="yuanjia">{{item.delayPayMinutes}}</span>
+					<span class="originalprice">{{item.delayPayMinutes}}</span>
 				</p>
-				<p class="qianggoulist">
-					<span class="qianggou">立即抢购</span>
+				<p class="panicbuying">
+					<span class="purchase">立即抢购</span>
 				</p>
 			</li>
 		</ul>
@@ -27,57 +27,62 @@ export default {
 </script>
 <style scoped>
 	.listMain{
-		margin: 0 0 0 5%;
+		margin: 0 0 0 2%;
 		overflow: hidden;
 	}
 	.imgsUrl{
+		margin-top: .2rem;
 		width:100%;
-		height: 16.4vh;
-		margin-top: 15px;
 	}
-	li{
+	.liAggregate{
 		float: left;
 		width: 50%;
 	}
 	.itemsName{
+		margin: 0 5.5% 0 0;
+		padding: 5% 3% 0;
 		background:#fff;
 		font-size: 0.28rem;
 		height: 5.6vh;
-		margin: 0 10% 0 0;
-		padding-top: 5%;
-		padding-left: 10px;
-
+		width: 84%;
 	}
 	.itemsPrice{
-		font-size: 0.365rem;
+		margin: 0 5.5% 0 0;
+		font-size: 20px;
 		height: 5.9vh;
-		background:#fff;
-		margin: 0 10% 0 0;
+		width: 90%;
+		background:#fff;	
 	}
 	.itemsPrice span:first-child{
-		color: #f00;
 		margin-left: 10px;
+		line-height: 8vh;
+		color: #f95d4e;
 	}
-	.yuanjia{
+	.originalprice{
 		text-decoration: line-through;
 		line-height: 5.9vh;
 		font-size: 12px;
+		color: #999999;
 	}
-	.qianggoulist{
-		height: 50px;
+	.panicbuying{
+		margin: 0 5.5% 0 0;
+		width: 90%;
+		height: .65rem;
 		background: #fff;
-		margin: 0 10% 0 0;
+		
 	}
-	.qianggou{
-		display: block;
-		margin-left:3%;
-		line-height: 5.6vh;
+	 .purchase{
+	 	display: block;
+		margin-left:2.5%;
+		font-size: .3rem;
+		line-height: 4.7vh;
 		text-align: center;
 		background: #fd3422;
 		border-radius: .2rem;
-		width: 85%;
-		height: 5.6vh;
-	}
+		width: 95%;
+		height: .6rem;
+		color: #fff;
+	} 
 	.listmore{
 		border-radius: 10px;
 		text-align: center;

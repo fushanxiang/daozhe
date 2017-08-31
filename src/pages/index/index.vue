@@ -29,6 +29,7 @@ export default {
   },
   created() {
     this.$http.get('/static/index.json').then(response => {
+    
       var data = response.body.data;
       this.iconsInfo = data.iconsInfo;
       this.imgsInfo = data.imgsInfo;
@@ -37,6 +38,7 @@ export default {
     }, response => {
       console.log("ajax error");
     });
+
   },
   components:{
   	"index-header": IndexHeader,

@@ -5,7 +5,7 @@
 				<ul class="ticket-list" id="ticket-list" >
 					<li class="ticket-list-item" v-for="(news, index) in newslist" :key="index">
 						<div class="ticket-list-img">
-	  					<img class="ticket-list-img-left" :src="news.ticketImg">
+	  						<img class="ticket-list-img-left" :src="news.ticketImg">
 	  					<div class="ticket-list-tomorrow-san" v-if="news.font == true">
 	  						<span class="ticket-list-tomorrow">可定明日</span>
 	  					</div>
@@ -56,15 +56,40 @@ Vue.use(IScrollView, IScroll)
 	
 	methods: {
 		 log (iscroll) {
-          console.log(iscroll)
-         }, 
+		 }, 
          load (iscroll) {
-         	
-        },
-     	
-        refresh (iscroll) {
-        	
-        }
+         	iscroll.refresh()
+         	this.newslist.push({
+                "id":"60",
+                "ticketImg":"//img1.qunarzz.com/p/tts9/1707/39/426a13e7cc066202.jpg_110x110_89e7700a.jpg",
+                "title":"【超值亲子游】北京海洋馆+动物园+熊猫馆自助纯玩一日游",
+                "font":true,
+                "stock":"",
+                "newPrice":"160",
+                "sold":36,
+                "oldPrice":"268" 
+                },
+                {
+                "id":"61",
+                "ticketImg":"//img1.qunarzz.com/p/tts0/1608/92/230d3471b8bc4a02.jpg_110x110_2c67d52a.jpg",
+                "title":"北京故宫套票（含颐和园半日游+海碗居炸酱面）",
+                "font":true,
+                "stock":true,
+                "newPrice":"198",
+                "sold":206,
+                "oldPrice":"268" 
+                },
+                {
+                "id":"62",
+                "ticketImg":"//img1.qunarzz.com/p/tts0/1703/b6/e4c9c0d6d528ed02.jpg_110x110_318cfeb8.jpg",
+                "title":"【赠金殿国际餐厅午餐】八达岭长城+颐和园+清华北大一日游",
+                "font": false,
+                "newPrice":"150",
+                "sold":206,
+                "oldPrice":"388" 
+                })
+         },
+         refresh (iscroll) {}
 		
 	}
 	
@@ -72,25 +97,17 @@ Vue.use(IScrollView, IScroll)
 
 </script>
 <style scoped>
-	::-webkit-scrollbar {
-		width: 2px;
-	}
-	::-webkit-scrollbar-thumb {
-		border-radius: 6px;    
-		background: rgba(0,0,0,0.1);    
-	}
 	.scroll-view {
 	  touch-action: none;
-	  position: fixed;
+	  position: absolute;
 	  top: 15%;
-	  bottom: 10%;
+	  bottom: -1rem;
 	  left: 0;
 	  right: 0;
 	  overflow: hidden;
 	}
 	.ticket-list {
-		height: 45rem;
-		width:100%;
+		width: 100%;
 	}
 	.ticket-list-item {
 		width: 100%;
@@ -107,7 +124,7 @@ Vue.use(IScrollView, IScroll)
 		width: 1.6rem;
 		height: 1.6rem;
 	}
-	.ticket-list-today-san:after {
+	.ticket-list-today-san::after {
 		position: absolute;
 		top: .2rem;
 		left: 1.1rem;
@@ -129,7 +146,7 @@ Vue.use(IScrollView, IScroll)
 	    line-height: .24rem;
 	    z-index: 1;
 	}
-	.ticket-list-tomorrow-san:after {
+	.ticket-list-tomorrow-san::after {
 		position: absolute;
 		top: .2rem;
 		left: 1.1rem;
@@ -156,7 +173,7 @@ Vue.use(IScrollView, IScroll)
 		overflow: hidden;
 		padding: .2rem .2rem .2rem 0;
 	    height: 1.6rem;
-	    border-bottom:1px solid #ccc;
+	    border-bottom: 1px solid #ccc;
 	}
 	.ticket-list-title {
 		display: -webkit-box;
@@ -196,7 +213,7 @@ Vue.use(IScrollView, IScroll)
 		height: 0.2rem;	
 	}
 	.ticket-list-new-price {
-		color:#ff8300;
+		color: #ff8300;
 	}
 	.ticket-list-price span{
 		float: right;

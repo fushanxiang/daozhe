@@ -21,14 +21,11 @@
 </template>
 
 <script>
-
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 import Vue from 'vue'
 
-
 Vue.use(IScrollView, IScroll)
-
 export default {
   name: 'index',
   data () {
@@ -84,7 +81,7 @@ export default {
       } 
     },
 
-    setNewScroll( scrollX = true, scrollY = false){
+    setNewScroll( scrollX = true, scrollY = false) {
       if(this.scroll) {
         this.scroll.destroy();
         this.scroll = null;

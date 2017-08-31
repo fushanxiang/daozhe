@@ -29,11 +29,17 @@
 		},
 		created() {
 			this.$http.get('/static/weekend.json').then(response => {
-				var data = response.body.data;
-				this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
-			}, response => {
-				console.log("ajax error");
-	  		});
+			var id = this.$route.params.id.split("=")[1];
+			this.id = id;
+			var data = response.body.data;
+			for(var i in data.goods){
+				if(data.goods[i].id == this.id){
+					this.goodsInfo = data.goods[i];
+				}
+			}
+		}, response => {
+			console.log("ajax error");
+  		});
 		}
 	}
 </script>

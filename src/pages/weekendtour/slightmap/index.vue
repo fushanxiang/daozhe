@@ -21,8 +21,14 @@ export default {
 	},
 	created() {
 		this.$http.get('/static/weekend.json').then(response => {
+			var id = this.$route.params.id.split("=")[1];
+			this.id = id;
 			var data = response.body.data;
-			this.goodsInfo = data.goods[this.$route.params.id.split("=")[1]-1];
+			for(var i in data.goods){
+				if(data.goods[i].id == this.id){
+					this.goodsInfo = data.goods[i];
+				}
+			}
 		}, response => {
 			console.log("ajax error");
   		});

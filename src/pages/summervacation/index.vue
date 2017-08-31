@@ -32,10 +32,10 @@ export default {
                 oToggle = document.getElementById("toggle"),
                 oToggleImg =document.getElementById("sumselect-img"),
                 oToggleH=oToggleImg.offsetTop;
+                console.log(scrollTop)
                 console.log(oToggleH)
                 if(scrollTop>=oToggleH) {
-                    oToggle.className="toggle-fixed";
-                    
+                    oToggle.className="toggle-fixed";     
                 }else{
                         oToggle.className="toggle";
                     }

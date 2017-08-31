@@ -8,7 +8,7 @@
             <li class="mp-menu-item" v-for="item in choosecityInfo" :key="item.id">
                 <span class="mp-menu-inner" ref="inner" @click="cityClick">{{item.name}}</span>
             </li>
-         </ul>
+        </ul>
     </div>
 </template>
 

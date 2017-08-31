@@ -1,5 +1,5 @@
 <template>
-    <div class="swiper-box" >
+    <div class="swiper-box" @touchmove.prevent>
         <div class="slide-closebutton iconfont" @click="handleCloseMaskClick" >&#xe620;</div>
         <swiper class="topimg-data" :options="swiperOption" ref="mySwiper">
             <swiper-slide class="swiper-imgbox" v-for="(item,index) in propsimglist" :key="'imgswiper' + index">
@@ -48,6 +48,7 @@
 <style scoped>
 @import '~swiper/dist/css/swiper.css';
 @import "../../assets/font/iconfont.css";
+
     .swiper-box {
         width: 100%;
         position: fixed;

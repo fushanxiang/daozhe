@@ -33,18 +33,15 @@
             </div>
             <router-link :to="{name:'comment'}">
                 <div class="more border-top">
-                  查看更多评论<span class="iconfont prddetail-arrow">&#xe62d;</span>
+                 	 查看更多评论		<span class="iconfont prddetail-arrow">&#xe62d;</span>
                 </div>
-            </router-link>
-            
+            </router-link>           
         </div>
     </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style scoped>
@@ -63,7 +60,6 @@ export default {
         line-height: .84rem;
         text-indent: .16rem;
     }
-    
     .prddetail-title::after {
         content: " ";
         position: absolute;
@@ -89,7 +85,7 @@ export default {
     .comments-item:first-child {
         border-bottom:1px dashed #616161; 
     }
-     .starlevel-gain{
+    .starlevel-gain {
          color: #00bcd4;
      }
     .starlevel {
@@ -103,47 +99,44 @@ export default {
         margin-left: .2rem;
         color: #616161;
     }
-    
-
-.comments-text.ellipsis2 {
-    -webkit-line-clamp: 4;
-}
-
-.comments-text {
-    font-size: .28rem;
-    line-height: .4rem;
-    margin: .1rem 0;
-}
-.ellipsis2, .ellipsis2 {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-}
-.comments-imgs {
-    overflow: hidden;
-    overflow-x: auto;font-size: 0;
-    white-space: nowrap;
-}
-.comments-img {
-    width: 1.6rem;
-    height: 1.6rem;
-}
-.comments-img:not(:first-child) {
-    margin-left: .2rem;
-}
-.more {
-    height: .8rem;
-    color: #616161;
-    font-size: .28rem;
-    line-height: .8rem;
-    text-align: center;
-}
-.prddetail-arrow{
-    color: #9e9e9e;
-    font-size: .2rem;
-    margin-left: .08rem;
-}
+    .comments-text.ellipsis2 {
+        -webkit-line-clamp: 4;
+    }
+    .comments-text {
+        font-size: .28rem;
+        line-height: .4rem;
+        margin: .1rem 0;
+    }
+    .ellipsis2 {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+    .comments-imgs {
+        overflow: hidden;
+        overflow-x: auto;font-size: 0;
+        white-space: nowrap;
+    }
+    .comments-img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .comments-img:not(:first-child) {
+        margin-left: .2rem;
+    }
+    .more {
+        height: .8rem;
+        color: #616161;
+        font-size: .28rem;
+        line-height: .8rem;
+        text-align: center;
+    }
+    .prddetail-arrow {
+        color: #9e9e9e;
+        font-size: .2rem;
+        margin-left: .08rem;
+    }
 
 
     

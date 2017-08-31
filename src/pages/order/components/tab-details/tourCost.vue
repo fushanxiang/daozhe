@@ -8,7 +8,7 @@
                       <div class="mp-border mp-structure-list">
                          <div class="mp-structure-item mp-border-top" v-for="items in item.list">
                            <h4 class="mp-structure-title mp-border-right">{{items.title}}</h4>
-                            <p class="mp-structure-desc">{{items.content}}</p>
+                            <p class="mp-structure-desc" v-html="items.content"></p>
                         </div>
                      </div>
                   </div>

@@ -107,14 +107,14 @@ export default {
 		position: absolute;
 		top:3%;
 		left: 3%;
-		width: 0.77rem;
-		height: 0.77rem;
+		width: 0.7rem;
+		height: 0.7rem;
 		border-radius: 50%;
 		line-height: 0.78rem;
 		background: #5f666e;
 		text-align: center;	
 		color: white;
-		font-size: 0.52rem;
+		font-size: 0.4rem;
 		overflow: hidden;
 		opacity: 0.3;
 	}

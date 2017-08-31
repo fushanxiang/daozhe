@@ -91,7 +91,7 @@
 }
 .mp-timeline-nodeicon {
     position: absolute;
-    z-index: 2;
+    /*z-index: 2;*/
     top: 2px;
     left: .2rem;
     color: #00afc7;
@@ -128,8 +128,17 @@ a {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+}
+.mp-prddetail-route::after{
+   content: "";
+   position: absolute;
+   bottom: -.4rem;
+   left: .04rem;
+   width: 1px;
+   height: 100%;
+   margin-left: .3rem;
+   border-radius: 3px;
+   background-color: rgba(217,217,217,0.7);
 }
 
 .mp-prddetail-group {

@@ -5,7 +5,7 @@
              <li v-for="(item, index) in tabInfo.index.tabs" :class="{tabs:true, active: index==activeIndex}" @click="hadleTabItemClick(index)"
               :key="index + 'tab'">{{item.title}}</li>
             </ul>
-           <tourinstrctor :tourItinerary="tabInfo.tourItinerary"></tourinstrctor>
+           <tourinstrctor :tourItinerary="tabInfo.tourItinerary" @update="handleClick"></tourinstrctor>
            <tourcost :expenseExplanation="tabInfo.expenseExplanation"></tourcost>
            <tourdescription :instructions="tabInfo.instructions" :userComment="tabInfo.userComment"></tourdescription>           
 		 </div>
@@ -26,6 +26,8 @@
 				expenseElementOffsetTop: 0,
 				expenseElementOffsetHeight: 0,
 				haveGetOffset: false,
+        show:true
+       
  			}
  		},
  		  props: [
@@ -47,12 +49,16 @@
                		document.body.scrollTop = this.mainOffsetTop + this.instructionsElementOffsetTop - this.tabOffsetHeight - this.headerOffsetHeight;
                	}
                },
+               handleClick:function(){
+                	this.$emit('updateShow');
+                
+
+               }
             },
             computed: {
             	tabFixed: function () {
-            		return this.scrollTop > this.mainOffsetTop - this.headerOffsetHeight;
+            		return this.scrollTop > this.mainOffsetTop -42;
             	},
-
             	activeIndex: function () {
             		var index = 0;
             		var criticalValue_1 = this.mainOffsetTop + this.expenseElementOffsetTop - window.innerHeight / 2;
@@ -71,14 +77,13 @@
             	if (!this.haveGetOffset) {
             		var tabMainElement = document.querySelectorAll('.tab-main');
             		var tabElement = document.querySelectorAll('.tab');
-            	//var headerElement = document.querySelectorAll('.header');
+            	  var headerElement = document.querySelectorAll('.fix');
             		var expenseElement = document.querySelectorAll('#tourCost');
             		var instructionsElement = document.querySelectorAll('#tourDescription');
             		this.mainOffsetTop = tabMainElement[0].offsetTop;
             		this.tabOffsetHeight = tabElement[0].offsetHeight;
-                console.log(this.tabOffsetHeight);
-            	 //this.headerOffsetHeight = headerElement[0].offsetHeight;
-            		this.headerOffsetHeight=0;
+            	  //this.headerOffsetHeight = headerElement[0].offsetHeight;
+                this.headerOffsetHeight=40;
                 this.expenseElementOffsetTop = expenseElement[0].offsetTop;
             		this.expenseElementOffsetHeight = expenseElement[0].offsetHeight;
             		this.instructionsElementOffsetTop = instructionsElement[0].offsetTop;
@@ -90,11 +95,9 @@
 <style scoped>
         .tab-main {
         	position: relative;
-        	margin-top: .2rem;
         	padding: 0 .2rem;
         }
         .tab {
-        	/* position: absolute; */
         	left: 0;
         	right: 0;
         	top: 0;
@@ -107,15 +110,12 @@
 
         .tab-fixed {
         	position: fixed;
-        	top: .8rem;
-        }
-
-        .tab-fixed {
-        	position: fixed;
         	left: 0;
         	right: 0;
         	top: .8rem;
-          z-index:888;
+            z-index:888;
+            padding: 0 .2rem;
+
         }
 
         .tabs {
@@ -125,6 +125,9 @@
         	height: .84rem;
         	line-height: .84rem;
         	color: #616161
+        }
+        .fix{
+          z-index: 99999
         }
 
         .active {

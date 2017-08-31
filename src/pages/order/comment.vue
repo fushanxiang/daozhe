@@ -3,19 +3,16 @@
   		<div class="comment-header"> 			
 	  		<a  @click="handleGobackClick" class="header-return iconfont">&#xe600;</a>
 	  		点评
-  		</div>
-		
+  		</div>		
 		<div class="comment-con-info" id="box">
 			<ul class="comment-ulcon" v-for="(list, index) in lists" :key="index + '_comment_list'">
-		  		<li class="comment-list border-top" v-for="(item,liindex) in list">
-		  			
+		  		<li class="comment-list" v-for="(item,liindex) in list">
 		  			<div class="comment-list-head">
 			  			<span class="comment-star iconfont">
 			  				&#xe730;&#xe730;&#xe730;&#xe730;
 			  			</span>
 			  			<span v-html="item.time" class="comment-time">{{item.time}}</span>
 		  			</div>
-		  			
 		  			<div class="comment-descr">
 			  			<p :class="{isactive:showtext===index*10+liindex}" class="comment-text">
 			  				{{item.txt}}
@@ -26,39 +23,32 @@
 				  			</span>
 			  			</div>
 		  			</div>
-		  			
 		  			<div class="comment-imgbox" >
-		  				<img class="comment-img" 
-			  				v-for="(itemimg, imgindex) in item.img" 
-			  				:src="itemimg" 
-			  				@click="handleOpenImg(imgindex,index*10+liindex)" 
-		  				/>
-		  				<comment-img 
+						<img-comment 
 			  				v-if="showimg===index*10+liindex" 
 			  				@closeimgbox="handleCloseImg" 
 			  				:imgindex="imgindex"
 			  				:propsimglist="item.img">
-		  				</comment-img>
-		  			</div>
-		  			
+						</img-comment>							
+						<img class="comment-img" v-for="(itemimg, imgindex) in item.img" 
+						:src="itemimg" @click="handleOpenImg(imgindex,index*10+liindex)" /> 						
+		  		</div>		  			
 		  		</li>
 		  		<li>
 			  		<div v-if="count===index" class="comment-addmore"  @click="handleAddMore">查看更多</div>
 			  		<div v-if="count>index" class="comment-addmore" >没有更多了</div>
 			  	</li>
 	  		</ul>
-
-		</div>		
- 
+		</div>		 
   	</div>	
 </template>
 
 <script>
 
-	import commentimg from "./commentimg"
+	import ImgComment from "./imgcomment.vue"
 
 	export default {
-	    created: function() {
+	    created() {
 	        this.$http.get( '/static/commentweekend.json' ).then( response => {
 	            this.commentlistInfo = response.body.data.indexInfo;            
 	        }, response => {
@@ -75,7 +65,7 @@
 		    }
 	    },
 	    components: {
-		  	"comment-img": commentimg
+		  	"img-comment": ImgComment
 		}, 
 	  	computed: {
 	        lists: function() {
@@ -111,13 +101,14 @@
 	    		this.imgindex = imgindex;
 	    	},
 	    	handleCloseImg:function(){
-	    		 this.showimg = ""
+	    		this.showimg = ""
 	    	}	
 	    } 
 	}
 </script>
 
 <style scoped>
+
 @import "../../assets/font/iconfont.css";
 	#box .isactive {
 		display: block;
@@ -129,8 +120,7 @@
 	}
 	.comment-header {
 		position: relative;
-		
-	    line-height:.88rem;
+		line-height:.88rem;
 	    background: #00bcd4;
 	    text-align: center;
 	}
@@ -138,7 +128,6 @@
 		float: left;
 		margin-left: .1rem;
 		color:white;
-		
 	}
 	.comment-header-con {
 		width: 100%;
@@ -165,7 +154,7 @@
 		color: #212121;
     	font-size: .28em;
     	padding: 0 .2rem .25rem .55rem ;
-    	font-family: Arial,"Microsoft Yahei","Helvetica Neue",Helvetica,sans-serif;
+    	font-family: Arial;
 	}
 	.comment-list-head {
 		display: flex;
@@ -211,8 +200,6 @@
 	.comment-img {
 		width: 1.05rem;
 	    height: 1.05rem;
-	    -webkit-border-radius: .06rem;
-	    -moz-border-radius: .06rem;
 	    border-radius: .06rem;
 	    position: relative;
 	    float: left;

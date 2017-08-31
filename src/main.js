@@ -6,17 +6,17 @@ import fastclick from 'fastclick'
 import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
 import VueLazyload from 'vue-lazyload'
+import VueScroller from 'vue-scroller'
 import VueBus from 'vue-bus'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 import Alert from 'vue-alert-component'
 
 Vue.use(IScrollView,IScroll)
-
+Vue.use(VueScroller)
 Vue.use(BaiduMap, {
 	ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'
 })
-
 Vue.use(vueResource)
 Vue.use(IScrollView, IScroll)
 Vue.use(Alert)

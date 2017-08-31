@@ -47,6 +47,7 @@
 							票面价:¥<em>{{item.ticketCost}}</em>
 						</p>
 						<p class="pd-ticket-btn" @click="handleOrderClick" >预订</p>
+
 					</div>
 				</div>
 			</div>
@@ -61,9 +62,8 @@
 
 <script>
 	import Order from './order.vue'
-	
 	export default {
-		  data () {
+	  	data () {
 		    return {
 		       show:false,		       
 		    }

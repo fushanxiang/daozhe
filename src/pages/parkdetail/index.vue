@@ -2,6 +2,7 @@
 
 	<div @mousewheel="test">
 		<swiper></swiper>
+		<Rate :length="5" :value="2" :disabled="true"></Rate>
 		<park-location></park-location>
 		<detail-tree :qnrecommendinfo="qnrecommendinfo"></detail-tree>
 		<tree-item :ticketinfo="ticketinfo"></tree-item>
@@ -12,11 +13,13 @@
 		<ua-pop :deltaY="deltaY"></ua-pop>
 		<foot></foot>
 		<order v-show="$store.state.isPop"></order>
+		<Rate :length="5"></Rate>
 	</div>
 
 </template>
 
 <script>
+	import Rate from 'vue-rate';
 	import Swiper from './swiper.vue'
 	import ParkLocation from './parkLocation.vue'
 	import DetailTree from './detailtree.vue'
@@ -64,7 +67,8 @@
 			"swiper": Swiper,
 			"foot": Foot,
 			"tree-item":TreeItem,
-			"order": Order
+			"order": Order,
+			  Rate
 		},
 		mounted() {
 			var this_ = this;

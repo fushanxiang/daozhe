@@ -1,4 +1,5 @@
 <template>
+<div class="mask" v-show="mode">
 	<div id="page-category" class="mpw-dock mpw-dock-fadein"  :style="mode? 'display:block':'display:none'">
         <div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div>
         <div class="mpw-dock-content" mp-role="dockContent">
@@ -36,14 +37,15 @@
 			<a  class="mpf-booking-btn" href="#">立即预订</a>
 		</div>
 	</div>
+	</div>
 </template>
 
 <script>
 	export default {
-		data () {
+		data() {
 			return {
-                mode:true
-			}		
+				mode: true
+			}
 		},
         methods:{
             handleClick() {
@@ -55,137 +57,162 @@
 </script>
 
 <style scoped>
-    @import "../../assets/font/iconfont.css";
+	@import "../../assets/font/iconfont.css";
+	
+	.mask {
+		position: fixed;
+		z-index: 92;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.7);
+	}
+	
 	.mpw-dock {
-    position: fixed;
-    z-index: 92;
-    right: 0;
-    bottom: 0; 
-    width: 100%;
-    background: #fff;
-    transition: transform .3s ease-out;
-}
-.mpf-control-outer {
-    margin: 0 .2rem;
-}
-.mpf-booking-btn {
-    display: block;
-    width: 100%;
-    border: 0 none;
-    background: #ff9800;
-    color: #fff;
-    font: normal .36rem/1rem Arial,"Microsoft Yahei","Helvetica Neue",Helvetica,sans-serif;
-    text-align: center;
-}
-.mpw-dock-close {
-    z-index: 2;
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: .88rem;
-    height: 1rem;
-    color: #9e9e9e;
-    font-size: .4rem;
-    line-height: 1rem;
-    text-align: center;
-}
-.mpf-booking-title {
-    margin-right: .6rem;
-    padding: .3rem 0 .1rem;
-    color: #212121;
-    font-size: .34rem;
-    line-height: .4rem;
-}
-.mpf-booking-price {
-    color: #9e9e9e;
-    font-size: .24rem;
-    line-height: .48rem;
-}
-.mpf-booking-price .mpg-price {
-    color: #ff9800;
-    margin-right: .06rem;
-}
-.mpf-booking-price .mpg-price-num {
-    margin-left: .06rem;
-    font-size: .36rem;
-}
-.mp-prdcard-marketprice {
-    margin-left: .05rem;
-    text-decoration: line-through;
-}
-
-.mp-prdcard-gray {
-    color: #9e9e9e;
-    font-size: .24rem;
-    margin-left: -.06rem;
-}
-.mpf-booking-select {
-    margin-top: .18rem;
-}
-
-.mpf-booking-note {
-    color: #333;
-    font-size: .26rem;
-    line-height: .65rem;
-}
-.mpf-booking-datecard {
-    overflow: hidden;
-    height: .86rem;
-}
-.mpf-booking-datecard .mpf-datecard:first-child {
-    margin-left: 0;
-}
-
-.mpf-booking-datecard .mpf-datecard {
-    box-sizing: border-box;
-    float: left;
-    width: 22.5%;
-    height: .86rem;
-    margin-left: 3.33%;
-}
-
-.mpf-datecard-disabled {
-    border-color: #ececec;
-    background: #fff;
-}
-
-.mpf-datecard {
-    display: inline-block;
-    min-width: 1.2rem;
-    min-height: .82rem;
-    border: .02rem solid #bdbdbd;
-    background: #fff;
-    text-align: center;
-    border-radius: .1rem;
-}
-
-.mpf-datecard-name {
-    padding-top: .08rem;
-    color: #212121;
-    font-size: .28rem;
-    line-height: .36rem;
-}
-.mpf-datecard-detail {
-    padding-bottom: .06rem;
-    color: #888;
-    font-size: .24rem;
-    line-height: .32rem;
-}
-.mpf-datecard-name, .mpf-datecard-detail {
-    display: block;
-    width: 100%;
-}
-.mpf-datecard-actived {
-    position: relative;
-    border-color: #00bcd4;
-    color: #fff;
-    background: #00bcd4;
-}
-
-.mpf-booking-light {
-    padding: .14rem 0;
-    color: #ff8300;
-    font-size: .24rem;
-    line-height: .36rem;
-}
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		background: #FFF;
+		transition: transform .3s ease-out;
+	}
+	
+	.mpf-control-outer {
+		margin: 0 .2rem;
+	}
+	
+	.mpf-booking-btn {
+		display: block;
+		width: 100%;
+		border: 0 none;
+		background: #ff9800;
+		color: #fff;
+		font: normal .36rem/1rem Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
+		text-align: center;
+	}
+	
+	.mpw-dock-close {
+		z-index: 2;
+		right: 0;
+		position: absolute;
+		top: 0;
+		width: .88rem;
+		height: 1rem;
+		color: #9e9e9e;
+		font-size: .4rem;
+		line-height: 1rem;
+		text-align: center;
+	}
+	
+	.mpf-booking-title {
+		margin-right: .6rem;
+		padding: .3rem 0 .1rem;
+		color: #212121;
+		font-size: .34rem;
+		line-height: .4rem;
+	}
+	
+	.mpf-booking-price {
+		color: #9e9e9e;
+		font-size: .24rem;
+		line-height: .48rem;
+	}
+	
+	.mpf-booking-price .mpg-price {
+		color: #ff9800;
+		margin-right: .06rem;
+	}
+	
+	.mpf-booking-price .mpg-price-num {
+		margin-left: .06rem;
+		font-size: .36rem;
+	}
+	
+	.mp-prdcard-marketprice {
+		margin-left: .05rem;
+		text-decoration: line-through;
+	}
+	
+	.mp-prdcard-gray {
+		color: #9e9e9e;
+		font-size: .24rem;
+		margin-left: -.06rem;
+	}
+	
+	.mpf-booking-select {
+		margin-top: .18rem;
+	}
+	
+	.mpf-booking-note {
+		color: #333;
+		font-size: .26rem;
+		line-height: .65rem;
+	}
+	
+	.mpf-booking-datecard {
+		overflow: hidden;
+		height: .86rem;
+	}
+	
+	.mpf-booking-datecard .mpf-datecard:first-child {
+		margin-left: 0;
+	}
+	
+	.mpf-booking-datecard .mpf-datecard {
+		box-sizing: border-box;
+		float: left;
+		width: 22.5%;
+		height: .86rem;
+		margin-left: 3.33%;
+	}
+	
+	.mpf-datecard-disabled {
+		border-color: #ececec;
+		background: #fff;
+	}
+	
+	.mpf-datecard {
+		display: inline-block;
+		min-width: 1.2rem;
+		min-height: .82rem;
+		border: .02rem solid #bdbdbd;
+		background: #fff;
+		text-align: center;
+		border-radius: .1rem;
+	}
+	
+	.mpf-datecard-name {
+		padding-top: .08rem;
+		color: #212121;
+		font-size: .28rem;
+		line-height: .36rem;
+	}
+	
+	.mpf-datecard-detail {
+		padding-bottom: .06rem;
+		color: #888;
+		font-size: .24rem;
+		line-height: .32rem;
+	}
+	
+	.mpf-datecard-name,
+	.mpf-datecard-detail {
+		display: block;
+		width: 100%;
+	}
+	
+	.mpf-datecard-actived {
+		position: relative;
+		border-color: #00bcd4;
+		color: #fff;
+		background: #00bcd4;
+	}
+	
+	.mpf-booking-light {
+		padding: .14rem 0;
+		color: #ff8300;
+		font-size: .24rem;
+		line-height: .36rem;
+	}
 </style>

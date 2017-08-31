@@ -244,8 +244,6 @@
 		float: right;
 	}
 	
-	.container-comment-date {}
-	
 	#comment-content-p {
 		word-break: break-all;
 		word-wrap: break-word;

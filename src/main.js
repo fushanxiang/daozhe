@@ -8,12 +8,8 @@ import VueLazyload from 'vue-lazyload'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 import Alert from 'vue-alert-component'
-<<<<<<< HEAD
 
-=======
->>>>>>> 55a37a65011c5f358bfe14a7a059dfc8575d7de0
 
-// 整个页面使用fastclick避免300毫秒延迟问题
 fastclick.attach(document.body);
 
 Vue.config.productionTip = false
@@ -25,13 +21,7 @@ Vue.use(VueLazyload, {
 })
 Vue.use(vueResource)
 Vue.use(IScrollView, IScroll)
-<<<<<<< HEAD
 Vue.use(Alert)
-
-=======
-Vue.use(Alert);
->>>>>>> 55a37a65011c5f358bfe14a7a059dfc8575d7de0
-
 new Vue({
   el: '#app',
   router,

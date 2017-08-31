@@ -144,7 +144,7 @@
 	}
 	.list-item{
 		width:100%;  
-		height:4.2rem;  
+		height:4.4rem;  
 		overflow: hidden;  
 		position: relative;			
 	}
@@ -153,7 +153,7 @@
 		border-style: solid;
 		border-color: #fa8514 transparent #fa8514 #fa8514;
 		position: absolute;
-		bottom: 1.8rem;
+		bottom: 1.5rem;
 		left: 0;
 		width: 1.12rem;
 	}
@@ -169,7 +169,7 @@
 	}
 	.list-item .sale-img{
 		width:100%;
-		height:2.3rem;
+		height:3.1rem;
 		display: block;
 		background-image: url(//s.qunarzz.com/piao_topic/image/common/default/640x266.jpg);
 	}

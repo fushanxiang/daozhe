@@ -3,11 +3,12 @@
 		<a class="header-left iconfont" @click="handleClick">&#xe600;</a>
 		<div class="header-title">
 			<span class="iconfont icon-search">&#xe60a;</span>
-			<span class="single-line">景点/目的地/主题</span>
+			<span class="single-line">一日游</span>
 		</div>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
-				<span class="nav-city">北京<span class="downarrow"></span></span>
+				<span class="nav-city">北京<span class="downarrow"></span>
+			</span>
 			</router-link>
 		</div>
 	</header>
@@ -30,7 +31,7 @@ export default {
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.header {
-		position: fixed;
+		position: relative;
 	    overflow: hidden;
 	    top: 0;
 	    left: 0;

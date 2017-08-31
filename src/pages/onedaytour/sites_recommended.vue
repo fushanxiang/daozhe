@@ -8,7 +8,7 @@
 	    		<li class="sites-item" v-for="item in sitesImgsInfo" :key="item.id">
 	    			<div class="sites-inner">
 			    		<div class="img-content">
-			    				<img class="sites-img" :src="item.imgUrl" />
+			    				<img class="sites-img" v-lazy="item.imgUrl" />
 			    		</div>
 		    			<span class="img-title">{{item.title}}</span>
 		    			<p class="sitea-route">有<span class="sites-path">{{item.num}}</span>条路线</p>

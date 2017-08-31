@@ -8,7 +8,7 @@
 		</div>
 		<ul class="hotroutes-list">
 			<li class="hotroutes-item border-bottom" v-for="item in hotRouterInfo" :key="item.id">
-				<img class="item-img" :src="item.imgUrl"/>
+				<img class="item-img" v-lazy="item.imgUrl"/>
 				<span class="item-tomorrow" v-if="item.book == true">
 					<span class="tomorrow">可订明日</span>
 				</span>

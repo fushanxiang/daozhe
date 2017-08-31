@@ -5,12 +5,9 @@ import store from './store'
 import fastclick from 'fastclick'
 import vueResource from 'vue-resource'
 import VueLazyload from 'vue-lazyload'
-
-
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
-
-
+import Alert from 'vue-alert-component'
 
 // 整个页面使用fastclick避免300毫秒延迟问题
 fastclick.attach(document.body);
@@ -24,6 +21,7 @@ Vue.use(VueLazyload, {
 })
 Vue.use(vueResource)
 Vue.use(IScrollView, IScroll)
+Vue.use(Alert);
 
 new Vue({
   el: '#app',

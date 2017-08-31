@@ -1,11 +1,11 @@
 <template>
 <div>
 	<div class="tab-box">
- 		<div class = 'tab'>
- 			<b class = 'tab-name' @click="handleToggleClick">{{tabChoosedSight}}</b>
- 			<span class = 'tab-arrow-sign'></span>
- 			<span class = 'tab-arrow-circle' @click = "handleToggleClick"></span>
- 			<ul class = 'tab-inner' v-show="show">
+ 		<div class='tab'>
+ 			<b class='tab-name' @click="handleToggleClick">{{tabChoosedSight}}</b>
+ 			<span class='tab-arrow-sign'></span>
+ 			<span class='tab-arrow-circle' @click="handleToggleClick"></span>
+ 			<ul class='tab-inner' v-show="show">
  				<li  v-for = '(tab,key,index) in tabs' @click = "addClassFun(index,tab)"  :class = "{item:true,tabSelected: tabChoosedIndex == index}" :tabChoosedSight = "tab.sight" >
  					{{tab.sight}}
  				</li>

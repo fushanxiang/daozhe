@@ -24,14 +24,6 @@ import ContentImperial from './content_imperial.vue'
 import ContentTemple from './content_temple.vue'
 import ContentSummer from './content_summer.vue'
 
-import Vue from 'vue'
-import IScroll from 'iscroll'
-import IScrollView from 'vue-iscroll-view'
-import Alert from 'vue-alert-component'
-
-Vue.use(Alert);
-Vue.use(IScrollView, IScroll);
-
 
 export default {
     mounted() {

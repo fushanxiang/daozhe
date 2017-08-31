@@ -6,7 +6,7 @@
 				<span class="price-title">产品价格</span>
 				<em class="price-symbol">
 					&yen;
-					<em class="price-num" >{{totalPrice}}</em>
+					<em class="price-num" >{{totalPrice ? totalPrice : goodsInfo.sellPrice}}</em>
 					<span class="arrows-icon iconfont" v-if="!show">&#59045;</span>
 					<span class="arrows-icon iconfont" v-if="show">&#xe6a6;</span>
 				</em>
@@ -43,9 +43,6 @@
 				this.show = !this.show;
 			}
 		}
-
-			
-		
 	}
 </script>
 

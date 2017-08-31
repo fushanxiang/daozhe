@@ -70,133 +70,133 @@ export default {
         }
     },
     props:["dataScen", "dataArea"],
-        created(){
-          if (localStorage.history == undefined) {
-                this.$store.commit("searchHistory",false);
-            }else {
-                this.$store.commit("searchHistory",true);
-                this.historyarr = JSON.parse(localStorage.history);
-            } 
-          },
-        updated(){
-        if (this.inputtext !== "") {
-            this.$store.commit("showNear",false)
-            this.searchDel = true;
-        }else {
-            this.searchDel = false;
-        }
-    },
-    methods: {
-        routerBack() {
-            this.$router.go(-1);
-        },
-        handlefocus(){
-            if (this.inputtext =="") {
-                this.$store.commit("showNear",true);
-            }
-            if (localStorage.history == undefined) {
-                this.$store.commit("searchHistory",false);
-            }else {
-                this.$store.commit("searchHistory",true);
-                this.historyarr = JSON.parse(localStorage.history);
-            } 
-        },
-        handledel(){
-            this.$store.commit("searchHistory",false);
-            localStorage.removeItem('history');
-            this.historyarr = [];
-        },
-        handleinput(){
-          if (this.inputtext =="") {
-                this.$store.commit("showNear",true);
-            }else if (this.inputtext !== "") {
-                this.$store.commit("showNear",false);
-                this.$store.commit("suggestsearch",true);
-                this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",{
-                params: {
-                    wd: this.inputtext
-                },
-                jsonp: 'cb'
-            }).then((res) => {
-                this.myData = res.body.s
-            },(res) => {
-                console.log(res.status)
-            })
-            }  
-        },
-        handleSearchDel(){
-            this.inputtext = "";
-            this.$store.commit("suggestsearch",false);
-        },
-        handlesearch(){
-          this.$store.commit("showNear",false)
-        for (var i = 0; i < this.historyarr.length; i++) {
-            if (this.historyarr[i].historysearch == this.inputtext||(this.historyarr[i].historysearch == "北京"&&this.inputtext == "")) {
-                return this.historyarr.splice(0,1);
-            }
-        }
-        if (this.inputtext == "") {
-            this.inputtext = "北京";
-            var id = new Date().getTime();
-            this.historyarr.unshift({id:id,historysearch:this.inputtext});
-            localStorage.history=JSON.stringify(this.historyarr);
-        }else {   
-        if (localStorage.history) {
-            var id = new Date().getTime();
-            this.historyarr=JSON.parse(localStorage.history);
-            this.historyarr.unshift({id:id,historysearch:this.inputtext});
-            localStorage.history=JSON.stringify(this.historyarr);
-        }else {
-            var id = new Date().getTime();
-            this.historyarr = [];
-            this.historyarr.unshift({id:id,historysearch:this.inputtext});
-            localStorage.history = JSON.stringify(this.historyarr);
-            }   
+      created(){
+        if (localStorage.history == undefined) {
+              this.$store.commit("searchHistory",false);
+          }else {
+              this.$store.commit("searchHistory",true);
+              this.historyarr = JSON.parse(localStorage.history);
           } 
         },
-        handleHotChange(){
-            this.index++;
-            this.areaindex++;
-            var topvalue = -1.6*this.index
-            this.sentop = topvalue+"rem";
-            this.areatop = this.areaindex*-.8+"rem";
-            if (this.index == 4) {
-                this.areaindex = 0;
-                this.areatop = 0+"rem";
-            }else if (this.index == 5) {
-                this.sentop = 0+"rem";
-                this.index = 0;
-                this.areatop = 0+"rem";
-            }   
-        },
-        handlehistory(e){
-            alert(e)
+      updated(){
+      if (this.inputtext !== "") {
+          this.$store.commit("showNear",false)
+          this.searchDel = true;
+      }else {
+          this.searchDel = false;
+      }
+  },
+  methods: {
+      routerBack() {
+          this.$router.go(-1);
+      },
+      handlefocus(){
+          if (this.inputtext =="") {
+              this.$store.commit("showNear",true);
+          }
+          if (localStorage.history == undefined) {
+              this.$store.commit("searchHistory",false);
+          }else {
+              this.$store.commit("searchHistory",true);
+              this.historyarr = JSON.parse(localStorage.history);
+          } 
+      },
+      handledel(){
+          this.$store.commit("searchHistory",false);
+          localStorage.removeItem('history');
+          this.historyarr = [];
+      },
+      handleinput(){
+        if (this.inputtext =="") {
+              this.$store.commit("showNear",true);
+          }else if (this.inputtext !== "") {
+              this.$store.commit("showNear",false);
+              this.$store.commit("suggestsearch",true);
+              this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",{
+              params: {
+                  wd: this.inputtext
+              },
+              jsonp: 'cb'
+          }).then((res) => {
+              this.myData = res.body.s
+          },(res) => {
+              console.log(res.status)
+          })
+          }  
+      },
+      handleSearchDel(){
+          this.inputtext = "";
+          this.$store.commit("suggestsearch",false);
+      },
+      handlesearch(){
+        this.$store.commit("showNear",false)
+      for (var i = 0; i < this.historyarr.length; i++) {
+          if (this.historyarr[i].historysearch == this.inputtext||(this.historyarr[i].historysearch == "北京"&&this.inputtext == "")) {
+              return this.historyarr.splice(0,1);
+          }
+      }
+      if (this.inputtext == "") {
+          this.inputtext = "北京";
+          var id = new Date().getTime();
+          this.historyarr.unshift({id:id,historysearch:this.inputtext});
+          localStorage.history=JSON.stringify(this.historyarr);
+      }else {   
+      if (localStorage.history) {
+          var id = new Date().getTime();
+          this.historyarr=JSON.parse(localStorage.history);
+          this.historyarr.unshift({id:id,historysearch:this.inputtext});
+          localStorage.history=JSON.stringify(this.historyarr);
+      }else {
+          var id = new Date().getTime();
+          this.historyarr = [];
+          this.historyarr.unshift({id:id,historysearch:this.inputtext});
+          localStorage.history = JSON.stringify(this.historyarr);
+          }   
+        } 
+      },
+      handleHotChange(){
+          this.index++;
+          this.areaindex++;
+          var topvalue = -1.6*this.index
+          this.sentop = topvalue+"rem";
+          this.areatop = this.areaindex*-.8+"rem";
+          if (this.index == 4) {
+              this.areaindex = 0;
+              this.areatop = 0+"rem";
+          }else if (this.index == 5) {
+              this.sentop = 0+"rem";
+              this.index = 0;
+              this.areatop = 0+"rem";
+          }   
+      },
+      handlehistory(e){
+          alert(e)
+          this.$store.commit("showNear",false)
+      },
+      handlehotScen(e,v){
+          alert(e);
+          for (var i = 0; i < this.historyarr.length; i++) {
+          if (this.historyarr[i].historysearch == v) {
+            this.historyarr.splice(0,1);
             this.$store.commit("showNear",false)
-        },
-        handlehotScen(e,v){
-            alert(e);
-            for (var i = 0; i < this.historyarr.length; i++) {
-            if (this.historyarr[i].historysearch == v) {
-              this.historyarr.splice(0,1);
-              this.$store.commit("showNear",false)
-                return this.historyarr
-            }
-        }
-            this.historyarr.unshift({id:e,historysearch:v});
-            localStorage.history = JSON.stringify(this.historyarr);
-            this.$store.commit("showNear",false)
-        },
-        handlehotArea(e,v){
-            alert(e);
-            this.$store.commit("showNear",false)
-        },
-        handlehotSearchNear(){
-            alert("周边景点");
-        },
-        handlebox(){
-          alert("sss")
-        }
-    }
+              return this.historyarr
+          }
+      }
+          this.historyarr.unshift({id:e,historysearch:v});
+          localStorage.history = JSON.stringify(this.historyarr);
+          this.$store.commit("showNear",false)
+      },
+      handlehotArea(e,v){
+          alert(e);
+          this.$store.commit("showNear",false)
+      },
+      handlehotSearchNear(){
+          alert("周边景点");
+      },
+      handlebox(){
+        alert("sss")
+      }
+  }
 }
 </script>
 <style scoped>

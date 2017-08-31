@@ -1,5 +1,5 @@
 <template>
-	<div class = "header-box">
+	<div class="header-box">
 		<header class="header">
 			<a class="header-left iconfont">&#xe600;</a>
 			<div class="header-title">
@@ -12,8 +12,8 @@
 				</span>
 			</div>
 		</header>
-		<div class = 'banner-box'>
-			<img class = 'banner' src="//img1.qunarzz.com/piao/fusion/1707/10/fdbb01bcdb3b0802.jpg" alt="banner">
+		<div class='banner-box'>
+			<img class='banner' src="//img1.qunarzz.com/piao/fusion/1707/10/fdbb01bcdb3b0802.jpg" alt="banner">
 		</div>
 	</div>
 </template>

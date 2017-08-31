@@ -1,5 +1,5 @@
 <template>
-	<div class = 'b-box'>
+	<div class='b-box'>
      <index-header></index-header>
      <index-tab></index-tab>   
   </div>

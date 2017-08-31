@@ -1,16 +1,16 @@
 <template>
-<div class="bg"  ref = "box" >
-   <iscroll-view  class = "scroll-view" @pullUp = "pullUp" @pullDown = "pullDown" @scrollStart = "log" ref="iscroll":scrollerStyle = "{color: 'red'}"  :options = "{preventDefault: false}" >
-			<div class = "content">
-				<div class = "tab-list">
-					<div class = "caption">
-						<div class = 'inner'>
-							<h2 class = 'hot-sale-area'>热销区</h2>
+<div class="bg"  ref="box" >
+   <iscroll-view  class="scroll-view" @pullUp="pullUp" @pullDown="pullDown" @scrollStart="log" ref="iscroll":scrollerStyle="{color:'red'}"  :options="{preventDefault: false}" >
+			<div class="content">
+				<div class="tab-list">
+					<div class="caption">
+						<div class='inner'>
+							<h2 class='hot-sale-area'>热销区</h2>
 						</div>
 					</div>
-				    <content-imperial v-if = "showImperial" @getLength = "handleGetLength" >{{getContend}}</content-imperial>
-					<content-temple v-if ="showTemple" @getLength = "handleGetLength">{{getContend}}</content-temple>
-					<content-summer v-if = "showSummer" @getLength = "handleGetLength">{{getContend}}</content-summer>	
+				    <content-imperial v-if="showImperial" @getLength="handleGetLength">{{getContend}}</content-imperial>
+					<content-temple v-if="showTemple" @getLength="handleGetLength">{{getContend}}</content-temple>
+					<content-summer v-if="showSummer" @getLength= "handleGetLength">{{getContend}}</content-summer>	
 				</div>	
 			</div>
 	</iscroll-view>
@@ -24,13 +24,8 @@ import ContentImperial from './content_imperial.vue'
 import ContentTemple from './content_temple.vue'
 import ContentSummer from './content_summer.vue'
 
-import Vue from 'vue'
-import IScroll from 'iscroll'
-import IScrollView from 'vue-iscroll-view'
-import Alert from 'vue-alert-component'
 
-Vue.use(Alert);
-Vue.use(IScrollView, IScroll);
+
 
 
 export default {
@@ -59,10 +54,8 @@ export default {
     			this.showImperial = true;
     		}else if(this.tabChoosedIndex == 1){
     			this.showTemple = true;
-    			//this.scrollToTop();
     		}else if(this.tabChoosedIndex == 2){
-    			this.showSummer = true;
-    			//this.scrollToTop();
+    			this.showSummer = true;;
     		}
     	}
     },
@@ -93,7 +86,7 @@ export default {
 					for(var i = 0 ; i< this.itemsInfoLatter.length ; i ++ ){
 						this.itemsInfo.push(this.itemsInfoLatter[i]);
 					}
-					setTimeout(()=>{
+					setTimeout(() => {
 						this.scroll.refresh();
 					},1000)
 				},response => {

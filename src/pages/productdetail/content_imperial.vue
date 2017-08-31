@@ -1,23 +1,23 @@
 <template>
-	<ul class = 'container'>
-		<li class = 'item' v-for="item in itemsInfo" :key="item.id">
-			<a class = "item-link" href="###">
-				<div class = 'item-show'>
-					<img class = "loading" v-lazy="item.imgSrc"  alt="">
-					<span class = 'item-name'>
-						<span class = 'name-inner'>{{item.sightName}}</span>
+	<ul class='container'>
+		<li class='item' v-for="item in itemsInfo" :key="item.id">
+			<a class="item-link" href="###">
+				<div class='item-show'>
+					<img class="loading" v-lazy="item.imgSrc"  alt="">
+					<span class='item-name'>
+						<span class='name-inner'>{{item.sightName}}</span>
 					</span>
 				</div>
-				<div class = 'item-info'>
-					<h4 class = 'item-name'>{{item.itemName}}</h4>
-					<p class = 'item-intro'>{{item.itemIntro}}</p>
-					<div class = 'item-do'>
-						<span class = 'order-btn'>预定</span>
+				<div class='item-info'>
+					<h4 class='item-name'>{{item.itemName}}</h4>
+					<p class='item-intro'>{{item.itemIntro}}</p>
+					<div class='item-do'>
+						<span class='order-btn'>预定</span>
 					</div>
-					<div class = 'item-lure'>
-					    <span class = 'item-price'>&yen;</span>
-					    <em class = 'now-price-num'>{{item.nowPrice}}</em>
-						<span class = 'item-cost'>票面价¥<em class = 'cost-num'>{{item.prePrice}}</em></span>
+					<div class='item-lure'>
+					    <span class='item-price'>&yen;</span>
+					    <em class='now-price-num'>{{item.nowPrice}}</em>
+						<span class='item-cost'>票面价¥<em class='cost-num'>{{item.prePrice}}</em></span>
 					</div>
 				</div>
 			</a>

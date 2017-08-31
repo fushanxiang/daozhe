@@ -46,12 +46,16 @@
             </div>
             </div>
             <div class="search-near-box-info">
-            <div class="search-near" @click="handlehotSearchNear">搜索身边的景点</div>
+            <router-link to="/">
+            <div class="search-near">搜索身边的景点</div>
+            </router-link>
             </div>
         </div>
         <ul class="suggestbox" v-show="this.$store.state.suggestsearch">
-         <h1 class="search-history-title">搜索建议<span class="history-change"> 关闭</span></h1>
-          <li v-for="(value,$index) in myData" class="suggestinfo">{{value}}</li>
+         <h1 class="search-history-title">搜索建议<span class="suggestclose" @click="handelSuggestClose"> 关闭</span></h1>
+         <router-link to="/">
+          <li v-for="(value,$index) in myData" class="suggestinfo"  @click="handleSuggestInfo">{{value}}</li>
+          </router-link>
         </ul>
     </div>
 </template>
@@ -187,14 +191,16 @@ export default {
           this.$store.commit("showNear",false)
       },
       handlehotArea(e,v){
-          alert(e);
           this.$store.commit("showNear",false)
-      },
-      handlehotSearchNear(){
-          alert("周边景点");
       },
       handlebox(){
         alert("sss")
+      },
+      handelSuggestClose(){
+        this.$store.commit("suggestsearch",false);
+      },
+      handleSuggestInfo(){
+        this.$store.commit("suggestsearch",false);
       }
   }
 }
@@ -311,7 +317,7 @@ export default {
     font-size: 0.2rem;
     border-bottom: 1px solid #ccc;
   }
-  .history-del,.history-change{
+  .history-del,.history-change,.suggestclose{
     float: right;
     color: #00bcd4;
     font-size: 0.2rem;
@@ -320,12 +326,13 @@ export default {
     background: #fff;
     border:1px solid #bbb;
     color: #333;
-    height: .2rem;
-    padding: 0.1rem 0.12rem;
+    height: .25rem;
+    padding: .12rem .12rem .15rem;
     text-align: center;
     float:left;
-    margin: .3rem .2rem .2rem 0 ;
+    margin: .2rem .2rem .2rem 0 ;
     overflow: hidden;
+    border-radius: .1rem;
   }
   .hot-search-scenicz{
     border-bottom: 1px solid #ccc;
@@ -387,5 +394,6 @@ export default {
   .suggestinfo{
     padding: .2rem;
     border-bottom: 1px solid #eee;
+    color: #333;
   }
 </style>

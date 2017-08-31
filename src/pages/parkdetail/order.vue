@@ -1,6 +1,7 @@
 <template>
-<div class="mask" v-show="mode">
-	<div id="page-category" class="mpw-dock mpw-dock-fadein"  :style="mode? 'display:block':'display:none'">
+<div class="mask" :style="mode? 'display:block':'display:none'" >
+	<!--<div class="mask" v-show="modeshow">-->
+	<div id="page-category" class="mpw-dock mpw-dock-fadein"  >
         <div class="mpw-dock-header mpf-border-bottom mpf-border-top"></div>
         <div class="mpw-dock-content" mp-role="dockContent">
         <div class="mpf-control-outer">
@@ -44,12 +45,13 @@
 	export default {
 		data() {
 			return {
+//				modeshow:true
 				mode: true
 			}
 		},
         methods:{
             handleClick() {
-               this.mode = !this.mode
+               	this.mode = !this.mode;
             }
         }
 		

@@ -52,11 +52,9 @@
 				</div>
 			</div>
 		</div>
-		<transition name="slide-fade">
-			<div v-if="show">
-				<order></order>
-			</div>
-		</transition>	
+		<div v-show="show">
+			<order></order>
+		</div>
 	</div>
 </template>
 
@@ -68,13 +66,13 @@
 		       show:false,		       
 		    }
 		  },
-		  props:["qnrecommendinfo"],	  
-		   components:{
+		props:["qnrecommendinfo"],	  
+		   	components:{
 		    	"order":Order
 		    },
 		    methods:{
 		    	handleOrderClick:function() {
-		  		this.$store.commit("changeIsPop");
+		  			this.$store.commit("changeIsPop");
 		  		}
 		    }
 		}

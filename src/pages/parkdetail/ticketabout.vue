@@ -26,7 +26,7 @@
 			}		
 		},
         components:{
-        "ticket-detail": ticketdetail       
+        	"ticket-detail": ticketdetail       
         },
         methods:{
             handleClick() {

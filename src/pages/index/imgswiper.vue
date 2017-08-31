@@ -17,13 +17,16 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
-				pagination : '.swiper-pagination',
 				paginationClickable :true,
-				observeParents:true
+				observeParents:true,
+				
+				pagination : '.swiper-pagination',
 			}
+
     	}
 	},
 	props:["imgsInfo"],
+
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide

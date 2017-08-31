@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import ticketabout from '../ticketabout.vue'
+  	import ticketabout from '../ticketabout.vue'
 export default {  
 	  data () {
 		    return {		      

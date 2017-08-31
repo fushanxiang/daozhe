@@ -39,12 +39,13 @@
 	export default {
 		data() {
 			return {
+//				modeshow:true
 				mode: true
 			}
 		},
         methods:{
             handleClick() {
-               this.mode = !this.mode
+               	this.mode = !this.mode;
             }
         }		
 	}

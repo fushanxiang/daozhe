@@ -25,8 +25,7 @@
 			document.addEventListener('scroll', this.DestroyStyle)
 		},
 		beforeDestroy() {
-			document.removeEventListener('scroll',this.DestroyStyle)
-
+			document.removeEventListener('scroll',this.DestroyStyle) 
 		}
 	}
 

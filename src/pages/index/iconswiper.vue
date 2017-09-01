@@ -23,7 +23,7 @@
 					<span class="position-right iconfont">&#xe629;</span>
 					九元门票
 				</div>
-				<router-link :to="{name:'ticketdetailsale'}">	    	
+				<router-link :to="{name:'ticketSale'}">	    	
 					<div class="sale"></div>
 				</router-link>
 			</div>
@@ -150,6 +150,5 @@
 		border:1px solid #e0e0e0;
 		background:#fff url(http://img1.qunarzz.com/piao/fusion/1601/29/30427c0e0658b5f7.png) center center no-repeat;
 		background-size:auto 100%;
-
 	}
 </style>

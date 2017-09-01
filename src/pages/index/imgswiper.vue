@@ -12,7 +12,7 @@
 </template>
 <script>
 
-	import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
 	data () {
@@ -20,9 +20,10 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
-				pagination : '.swiper-pagination',
 				paginationClickable :true,
-				observeParents:true
+				observeParents:true,
+				
+				pagination : '.swiper-pagination',
 			}
 
     	}

@@ -23,7 +23,7 @@
 					<span class="position-right iconfont">&#xe629;</span>
 					九元门票
 				</div>
-				<router-link :to="{name:'ticketSale'}">	    	
+				<router-link :to="{name:'ticketsale'}">	    	
 					<div class="sale"></div>
 				</router-link>
 			</div>
@@ -32,7 +32,6 @@
 </template>
 
 <script>
-
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 	export default {
 		data () {
@@ -44,7 +43,6 @@
 					paginationClickable :true,
 					observeParents:true
 				}
-
 			}
 		},
 		props:["iconsInfo"],
@@ -102,7 +100,6 @@
 		text-overflow: ellipsis;
 		font-size: .28rem;
 		color:#212121;
-
 	}
 	.position-sale{
 		overflow: hidden;

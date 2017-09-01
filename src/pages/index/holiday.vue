@@ -29,7 +29,6 @@
 		props:["holidayInfo"],
 		data () {
 			return {
-
 	    	}
 		}
 	}
@@ -62,7 +61,6 @@
 	    height: 100%;
 	}
 	.product-item-img {
-
 		overflow: hidden;
 	    height: 0;
 	    padding-bottom: 37.4375%;

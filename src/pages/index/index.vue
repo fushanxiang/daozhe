@@ -8,7 +8,6 @@
 		<foot></foot>
 	</div>
 </template>
-
 <script>
 	import IndexHeader from './header.vue'
 	import ImgSwiper from './imgswiper.vue'
@@ -16,6 +15,8 @@
 	import HotSale from './hotsale.vue'
 	import Holiday from './holiday'
 	import Foot from './foot.vue'
+
+
 	export default {
 		name: 'index',
 		data () {
@@ -28,7 +29,7 @@
 		},
 		created() {
 			this.$http.get('/static/index.json').then(response => {
-
+				
 				var data = response.body.data;
 				this.iconsInfo = data.iconsInfo;
 				this.imgsInfo = data.imgsInfo;

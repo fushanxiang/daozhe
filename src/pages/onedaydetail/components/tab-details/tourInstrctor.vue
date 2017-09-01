@@ -92,7 +92,7 @@
 
 </script>
 <style scoped>
-     @import url("../../../../assets/css/order/order-tab.css");
+     @import url("../../../../assets/css/onedaydetail/order-tab.css");
      #amap-page-container{
           height: 3.5rem;
           padding: .2rem .2rem .1rem .2rem;

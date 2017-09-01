@@ -14,7 +14,7 @@ import AMap from 'vue-amap'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 Vue.use(IScrollView, IScroll)
-Vue.use(VueResource);
+
 Vue.use(VueAwesomeSwiper);
 Vue.use(vueEventCalendar, {locale: 'en'}) 
 // 整个页面使用fastclick避免300毫秒延迟问题
@@ -22,7 +22,6 @@ import Alert from 'vue-alert-component'
 
 fastclick.attach(document.body);
 
-Vue.use(vueResource);
 Vue.use(AMap);
 
 Vue.config.productionTip = false;

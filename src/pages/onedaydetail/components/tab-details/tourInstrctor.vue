@@ -46,7 +46,6 @@
 	</div>
 </template>
 <script >
-/*import AMap from 'AMap';   //在页面中引入高德地图*/
 	export default{
 			data(){
 				return{

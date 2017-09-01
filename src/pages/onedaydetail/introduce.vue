@@ -420,20 +420,9 @@ address, cite, dfn, em, i, optgroup, var {
 .mp-booking-note {
   margin-top:-0.1rem;
 }
-/* .mp-booking-btn {
-  width: 375px;
-  height: 50px;
-  margin-top:-0.5rem;
-  background:#ff9800;
-} */
 .mpw-dock-close {
   margin-top:0.3rem;
 }
-/* .mp-booking-btn {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-} */
 .mp-booking-btn a {
   color: #fff;
 }

@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Order from '@/pages/order/index'
-import Comment from '@/pages/order/comment'
+import Onedaydetail from '@/pages/onedaydetail/index'
+import Comment from '@/pages/onedaydetail/comment'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
-import Purchaseorder from '@/pages/order/purchaseorder'
+import Purchaseorder from '@/pages/onedaydetail/purchaseorder'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
-import Introduce from '@/pages/order/introduce'
+import Introduce from '@/pages/onedaydetail/introduce'
 import Productdetail from '@/pages/productdetail/index'
 import search from '@/search/search'
 import List from '@/pages/list/index'
@@ -23,9 +23,9 @@ export default new Router({
        component: Index
      },  
       {
-        path: '/order',
+        path: '/onedaydetail',
         name: 'order',
-        component: Order
+        component: Onedaydetail
       },
       {
       path: '/purchaseorder',
@@ -33,7 +33,7 @@ export default new Router({
       component: Purchaseorder
       },
       {
-        path: "/order/comments",
+        path: "/onedaydetail/comments",
         name: 'comment',
         component: Comment
       },

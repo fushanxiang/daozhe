@@ -11,7 +11,7 @@
 
 <script>
 import onedayTab from './oneday-tab.vue'
-import Header from '../index/header.vue'
+import Header from '../onedaylist/header.vue'
 import Scroll from './onedayscroll.vue'
 import Ticketnum from './ticketNum.vue'
 

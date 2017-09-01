@@ -204,21 +204,6 @@
         color: #777;
     }
     .search-cities {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 1.68rem;
-        background: #fff;
-    }
-    .search-city {
-        line-height: .76rem;
-        width: 100%;
-        padding-left: .2rem;
-        border-bottom: 1px solid #dfe0e1;
-        font-size: .28rem;
-        color: #212121;
-    }
-    .search-cities {
         position: absolute;
         left: 0;
         top: 1.68rem;

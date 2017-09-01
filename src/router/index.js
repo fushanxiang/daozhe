@@ -19,67 +19,9 @@ import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
 import Map from '@/pages/parkdetail/map'
-import Productdetail from '@/pages/productdetail/index'
-import search from '@/search/search'
-import List from '@/pages/list/index'
 Vue.use(Router)
-
 export default new Router({
-  routes: [
-     {
-       path: '/',
-       name: 'index',
-       component: Index
-     },  
-      {
-        path: '/order',
-        name: 'order',
-        component: Order
-      },
-      {
-      path: '/purchaseorder',
-      name: 'purchaseorder',
-      component: Purchaseorder
-      },
-      {
-        path: "/order/comments",
-        name: 'comment',
-        component: Comment
-      },
-      {
-      path: '/weekend',
-      name: 'weekend',
-      component: Weekend
-    },{
-      path:'/seckill',
-      name:'seckill',
-      component:SecKill
-    },{
-      path: '/city',
-      name: 'city',
-      component: City,
-    },
-    {
-      path: '/introduce',
-      name: 'introduce',
-      component: Introduce
-    },
-    {
-      path: '/productdetail',
-      name: 'productdetail',
-      component: Productdetail
-    },
-    {
-      path: '/list',
-      name: 'list',
-      component: List
-
-    },{
-      path: '/search',
-      name: 'search',
-      component: search
-=======
-	  routes: [
+  	  routes: [
 		    {
 		      path: '/',
 		      name: 'index',
@@ -137,16 +79,35 @@ export default new Router({
 		      path: '/list',
 		      name: 'list',
 		      component: List
->>>>>>> origin/master
-
 		    },{
 		      path: '/search',
 		      name: 'search',
 		      component: search
-
-<<<<<<< HEAD
-=======
-		    }]
-
->>>>>>> origin/master
+		    },
+		      {
+		        path: '/order',
+		        name: 'order',
+		        component: Order
+		      },
+		      {
+		      path: '/purchaseorder',
+		      name: 'purchaseorder',
+		      component: Purchaseorder
+		      },
+		      {
+		        path: "/order/comments",
+		        name: 'comment',
+		        component: Comment
+		      },
+		    {
+		      path: '/introduce',
+		      name: 'introduce',
+		      component: Introduce
+		    },
+		    {
+		      path: '/productdetail',
+		      name: 'productdetail',
+		      component: Productdetail
+		    },
+		    ]
 })

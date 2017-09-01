@@ -2,8 +2,8 @@
 	<div class="chosen">
 		<h2 class="hot-top"><span class="hot-title">周末精选</span></h2>
 		<ul class="hot-list">
-			<li class="hot-item"><img src="../../../assets/images/item1.jpg" class="hot-img"></li>
-			<li class="hot-item"><img src="../../../assets/images/item2.jpg" class="hot-img"></li>
+			<li class="hot-item"><img src="http://img1.qunarzz.com/piao/fusion/1708/fe/8e9fb9b5f4ec402.jpg_640x200_7830ed65.jpg" class="hot-img"></li>
+			<li class="hot-item"><img src="http://img1.qunarzz.com/piao/fusion/1708/e2/596aa2193fe1ae02.jpg_640x200_c63c7bb9.jpg" class="hot-img"></li>
 		</ul>
 	</div>
 </template>

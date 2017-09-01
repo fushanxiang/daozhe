@@ -131,7 +131,7 @@
 		width: 100%;
 		height: 0;
 		padding-bottom: 58.7%;
-		background: url("../../../assets/images/loading_camel.gif") center center no-repeat;
+		background: url("http://simg3.qunarzz.com/piao/images/loading_camel.gif") center center no-repeat;
 	}
 	.attractions-img-title{
 		position: absolute;

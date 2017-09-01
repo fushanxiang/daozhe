@@ -92,7 +92,7 @@
 		width: 100%;
 		height: 0;
 		padding-bottom: 43.75%; /*高和宽的比*/
-		background: url("../../../assets/images/loading_camel.gif") center center no-repeat;
+		background: url("http://simg3.qunarzz.com/piao/images/loading_camel.gif") center center no-repeat;
 	}
 	.chosen-list{
 		

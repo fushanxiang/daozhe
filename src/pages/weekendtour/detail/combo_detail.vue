@@ -23,7 +23,7 @@
 
 						<div class="Pop-headdetail">
 							<div class="item1">
-								<img src="../../../assets/images/qunar.png" class="qunar">
+								<span class="qunar"></span>
 								<span class="item-text">去哪儿直销</span>
 							</div>
 							<div class="item2">
@@ -36,17 +36,6 @@
 							</div>
 						</div>
 					</div>
-				
-
-
-
-
-
-
-
-
-
-
 
 					<div class="orderdetail-content">
 
@@ -101,10 +90,6 @@
 
 		            </div>
 			
-
-
-
-
 					<div class="bottom">
 						<div class="b-left">
 							<span class="Online-Payment">在线支付</span>
@@ -223,10 +208,6 @@ export default {
 	    line-height: .48rem;
 	    color: #616161;
 	}
-
-
-
-
 
 	.Pop-ups{
 		background:rgba(0,0,0,.5);
@@ -365,9 +346,12 @@ export default {
 	    -webkit-font-smoothing: antialiased;
 	}
 	.qunar{
+		display: block;
 		width: .32rem;
    	 	height: .32rem;
  	    border-radius: .06rem;
+ 	    background-image: url("data:image/png;base64,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");
+ 	    background-size: .32rem .32rem;
 	}
 	.item-text{
 	    display: inline-block;
@@ -394,15 +378,6 @@ export default {
     	height: 7.5rem;
     	background: red;
 	}
-
-
-
-
-
-
-
-
-
 	/*滚动区域*/
     .orderdetail-content{
     	border-top: .01rem solid #e0e0e0;
@@ -485,16 +460,4 @@ export default {
         font-size: .28rem;
         line-height: .36rem;
     } 
-
-
-
-
-
-
-
-
-
-
-
-
 </style>

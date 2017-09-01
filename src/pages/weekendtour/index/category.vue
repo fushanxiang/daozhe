@@ -3,25 +3,25 @@
 		<div class="category-container">
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../../assets/images/top1.png" class="category-img">
+					<img src="http://img1.qunarzz.com/piao/fusion/1511/ac/cea9a29c2524c4f7.png" alt="周边度假" class="category-img">
 					<p class="category-item-title">周边度假</p>
 				</a>
 			</div>
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../../assets/images/top2.png" class="category-img">
+					<img src="http://img1.qunarzz.com/piao/fusion/1511/bd/49ec5e1d94c677f7.png" alt="城市好玩" class="category-img">
 					<p class="category-item-title">城市好玩</p>
 				</a>
 			</div>
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../../assets/images/top3.png" class="category-img">
+					<img src="http://img1.qunarzz.com/piao/fusion/1603/69/aafef9983dcd6ef7.png" alt="踏青赏花" class="category-img">
 					<p class="category-item-title">踏青赏花</p>
 				</a>
 			</div>
 			<div class="category-item">
 				<a href="javascript:;">
-					<img src="../../../assets/images/top4.png" class="category-img">
+					<img src="http://img1.qunarzz.com/piao/fusion/1603/88/3690c3682c3e8bf7.png" alt="周末活动" class="category-img">
 					<p class="category-item-title">周末活动</p>
 				</a>
 			</div>

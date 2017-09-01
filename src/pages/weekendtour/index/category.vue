@@ -62,7 +62,7 @@ export default {
 	}
 	.category-img {
 		width: 56.25%;
-		height: .9rem;
+		min-height: .9rem;
 	}
 	.category-item-title {
 		margin-top: .16rem;

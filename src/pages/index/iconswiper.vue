@@ -16,12 +16,14 @@
 	<div class="position-sale">
 	    <div class="position">
 	    	<div class="position-directon">
-	    	    <span class="position-left iconfont">&#xe615;</span>
-			    定位失败
+	    		<router-link to="Tourism" class="position-color">
+	    	   		<span class="position-left iconfont">&#xe615;</span>
+			    	定位失败
+			    </router-link>
 			</div>
 			<div class="position-directon">
-				<router-link to="tourism" class="position-color">
-			   		<span class="position-right iconfont">&#xe629;</span>
+				<router-link to="TicketSale" class="position-color">
+			    	<span class="position-right iconfont">&#xe629;</span>
 					九元门票
 				</router-link>
 			</div>

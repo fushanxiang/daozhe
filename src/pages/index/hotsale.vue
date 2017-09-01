@@ -11,7 +11,7 @@
 				</li>
 			</router-link>
 		</ul>
-		<p class="item-all">查看所有产品</p>
+		<p class="item-all" >查看所有产品</p>
 	</div>
 </template>
 
@@ -22,6 +22,10 @@ export default {
 		return {
 			
     	}
+	},
+	props:["itemsInfo"],
+	methods:{
+		
 	}
 }
 </script>

@@ -12,7 +12,7 @@
 		</div>
 		<ul class="listMain">
 			<li class="liAggregate" v-for="item in imgsInfo['beijing']">
-				<router-link :to="{name:'Particulars',params:{id:item.priceId}}">
+				<router-link :to="{name:'ticketDetail',params:{id:item.priceId}}">
 					<p class="imgsUrl"><img :src="item.sightImgUrl" alt="" width="95%" height="100%"></p>
 					<p  class="itemsName">{{item.productName}}</p>
 					<p class="itemsPrice">

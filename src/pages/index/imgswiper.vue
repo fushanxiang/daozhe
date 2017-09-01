@@ -12,7 +12,6 @@
 </template>
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
 export default {
 	data () {
 		return {
@@ -42,7 +41,7 @@ export default {
 		background: #eee;
 		overflow: hidden;
 		width: 100%;
-		padding-bottom: 31.25%;
+		padding-bottom: 31.4%;
 		height: 0;
 	}
 	.swiper-img {

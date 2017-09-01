@@ -28,10 +28,11 @@ import OnedayList from '@/pages/onedaylist/index'
 import SummerVacation from'@/pages/summervacation/index'
 import Tourism from './../pages/topictickets/index.vue'
 import Particulars from './../pages/topictickets/particulars.vue'
+import TicketSale from '@/pages/ticketSale/index'
+import TicketDetail from '@/pages/ticketDetail/index'
 
 
 Vue.use(Router)
-
 export default new Router({
 	routes: [
 	    {
@@ -141,5 +142,13 @@ export default new Router({
 	    	path: '/Particulars/:id',
      		name: 'Particulars',
       		component: Particulars
-	    }]
+	    },{
+		path: '/ticketSale',
+		name: 'ticketSale',
+		component: TicketSale
+	},{
+		path: '/ticketDetail/:id',
+		name: 'ticketDetail',
+		component: TicketDetail
+	}]
 })

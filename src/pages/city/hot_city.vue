@@ -39,6 +39,7 @@ export default {
 			this.$store.commit ("changeCity", {city: event.target.innerText});
 			localStorage.selectedCity = event.target.innerText;
 			this.dataId.push(SelectId);
+			window.history.back()
 		}
 	},
 	computed: {

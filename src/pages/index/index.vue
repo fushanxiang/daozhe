@@ -9,7 +9,6 @@
 	 </div>
 </template>
 <script>
-
 import IndexHeader from './header.vue'
 import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
@@ -21,7 +20,6 @@ import Foot from './foot.vue'
 export default {
   name: 'index',
   data () {
-    
     return {
       iconsInfo:[],
       imgsInfo:[],

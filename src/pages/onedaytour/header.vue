@@ -1,50 +1,46 @@
 <template>
-	<div class="header">
-		<a class="header-left iconfont">&#xe600;</a>
-		 <router-link to="/search">
-			 <div class="header-title">
-				<span class="iconfont icon-search">&#xe6a4;</span >
-				<span class="single-line">输入城市/景点/游玩主题</span>
+	<header class="header">
+		<a class="header-left iconfont" @click="handleClick">&#xe600;</a>
+		<router-link :to="{name:'search'}">
+			<div class="header-title">
+				<span class="iconfont icon-search">&#xe60a;</span>
+				<span class="single-line">景点/目的地/主题</span>
 			</div>
 		</router-link>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
-				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
-				</span>
+				<span class="nav-city">北京<span class="downarrow"></span></span>
 			</router-link>
 		</div>
-	</div>
-	
+	</header>
 </template>
 
 <script>
 export default {
-	mounted(){
-	},
-	data () {
-		return {
-    	}
+	data() {
+		return {}
 	},
 	methods: {
-		changeCity: function() {
-			this.$store.dispatch("fiveSecondsChangeCity",{
-				city:"云南"
-			});
-		}
-	}
+        handleClick() {
+            this.$router.go(-1)
+        }
+    }
 }
 </script>
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
 	.header {
-		position: relative;
+		position: fixed;
 	    overflow: hidden;
+	    top: 0;
+	    left: 0;
 	    width: 100%;
 	    height: .88rem;
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
+	    z-index: 99;
 	}
 	.header-left {
 		float: left;
@@ -61,7 +57,7 @@ export default {
 	.header-title {
 	    position: relative;
 	    height: .6rem;
-	    margin: .14rem 1.32rem .14rem .8rem;
+	    margin: .14rem 1.16rem .14rem .8rem;
 	    background: #fff;
 	    line-height: .6rem;
 	    border-radius: .06rem;
@@ -70,46 +66,44 @@ export default {
 	    display: inline-block;
 	    overflow: hidden;
 	    position: absolute;
-	    left: .3rem;
+	    left: .6rem;
 	    top: 0;
-	    width: 3.6rem;
+	    width: 3.8rem;
+	    text-align: left;
 	    white-space: nowrap;
 	    text-overflow: ellipsis;
-	    color: #e4e7ea;
+	    color: #d5d5d5;
 	}
 	.icon-search {
 	    position: absolute;
-	    left: .2rem;
-	    color: #e4e7ea;
+	    left: .1rem;
+	    color: #d5d5d5;
+	}
+	.icon-search::before{
+		content: '';
 	}
 	.header-right{
 		position: absolute;
 		top: 0;
 		right: 0;
-		margin-right: .02rem;
+		margin-right: .1rem;
 		line-height: .88rem;
-		width: 1.28rem;
+		width: 1rem;
 		text-align: center;
 	}
 	.nav-city {
-		margin-left: -0.01rem;
-		display: inline-block;
-		width:.9rem;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		color:#fff;
+		margin-left: -0.04rem;
+		color: #fff;
 	}
 	.downarrow {
-		position: absolute;
-		top: 50%;
-		right: 0.08rem;
-		margin-top: -.26rem;
+		position: relative;
+		top: -0.03rem;
+		left: 0.04rem;
 		display: inline-block;
 	    width: 0;
 	    height: 0;
-	    border-left: 0.12rem solid transparent;
-	    border-right: 0.12rem solid transparent;
-	    border-top: 0.12rem solid #FFFFFF;
+	    border-left: 0.11rem solid transparent;
+	    border-right: 0.11rem solid transparent;
+	    border-top: 0.11rem solid #FFFFFF;
 	}
 </style>

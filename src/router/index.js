@@ -23,6 +23,8 @@ import Map from '@/pages/parkdetail/map'
 import Productdetail from '@/pages/productdetail/index'
 import search from '@/search/search'
 import List from '@/pages/list/index'
+import Onedaytour from '@/pages/onedaytour/index'
+import OnedayList from '@/pages/onedaylist/index'
 import SummerVacation from'@/pages/summervacation/index'
 
 
@@ -91,7 +93,14 @@ export default new Router({
 	      path: '/list',
 	      name: 'list',
 	      component: List
-
+		},{
+		  path: '/onedaytour',
+		  name: 'onedaytour',
+		  component: Onedaytour
+   	    },{
+     	  path: '/onedaylist',
+          name: 'onedaylist',
+          component: OnedayList
 	    },{
 	      path: '/search',
 	      name: 'search',

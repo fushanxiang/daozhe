@@ -1,8 +1,12 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
 import fastclick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import vueEventCalendar from 'vue-event-calendar'
 import iscroll from 'vue-scroll'
 import vueResource from 'vue-resource'
 import BaiduMap from 'vue-baidu-map'
@@ -12,8 +16,11 @@ import VueBus from 'vue-bus'
 import AMap from 'vue-amap'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
+Vue.use(IScrollView, IScroll)
+Vue.use(VueAwesomeSwiper);
+Vue.use(vueEventCalendar, {locale: 'en'}) 
+// 整个页面使用fastclick避免300毫秒延迟问题
 import Alert from 'vue-alert-component'
-
 Vue.use(IScrollView,IScroll)
 Vue.use(VueScroller)
 Vue.use(BaiduMap, {
@@ -24,10 +31,8 @@ Vue.use(IScrollView, IScroll)
 Vue.use(Alert)
 Vue.use(VueBus)
 Vue.use(AMap)
-
 fastclick.attach(document.body);
 Vue.config.productionTip = false;
-
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
 Vue.use(VueLazyload, {

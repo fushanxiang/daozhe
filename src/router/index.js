@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Onedaydetail from '@/pages/onedaydetail/index'
+import Comment from '@/pages/onedaydetail/comment'
 import Index from '@/pages/index/index'
 import WeekendIndex from '@/pages/weekendtour/index/index'
 import WeekendDetail from '@/pages/weekendtour/detail/index'
@@ -7,6 +9,11 @@ import WeekendDetailInfo from '@/pages/weekendtour/detail_info/index'
 import WeekendComment from '@/pages/weekendtour/comment/index'
 import Slightmap from '@/pages/weekendtour/slightmap/index'
 import City from '@/pages/city/index'
+import Purchaseorder from '@/pages/onedaydetail/purchaseorder'
+import Introduce from '@/pages/onedaydetail/introduce'
+import Productdetail from '@/pages/productdetail/index'
+import search from '@/search/search'
+import List from '@/pages/list/index'
 import SmallCity from '@/pages/city/small_city'
 import Order from '@/pages/order/form'
 import VueScroller from 'vue-scroller'
@@ -20,16 +27,10 @@ import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
 import Map from '@/pages/parkdetail/map'
-import Productdetail from '@/pages/productdetail/index'
-import search from '@/search/search'
-import List from '@/pages/list/index'
 import Onedaytour from '@/pages/onedaytour/index'
 import OnedayList from '@/pages/onedaylist/index'
 import SummerVacation from'@/pages/summervacation/index'
-
-
 Vue.use(Router)
-
 export default new Router({
 	routes: [
 	    {
@@ -129,5 +130,27 @@ export default new Router({
 	        path: '/weekendtour/slightmap/:id',
 	        name: 'Slightmap',
 	        component: Slightmap
-	    }]
+	    },{
+        path: '/onedaydetail',
+        name: 'onedaydetail',
+        component: Onedaydetail
+      },{
+        path: '/purchaseorder',
+        name: 'purchaseorder',
+        component: Purchaseorder
+      },{
+        path: "/onedaydetail/comments",
+        name: 'comment',
+        component: Comment
+      },{
+        path: '/introduce',
+        name: 'introduce',
+        component: Introduce
+      }, 
+      {
+       path: '/purchaseorder',
+       name: 'purchaseorder',
+       component: Purchaseorder
+      }
+      ]
 })

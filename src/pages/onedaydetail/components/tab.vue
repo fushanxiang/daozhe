@@ -27,13 +27,11 @@
 				expenseElementOffsetHeight: 0,
 				haveGetOffset: false,
         show:true
-       
  			}
  		},
  		  props: [
  		  	"scrollTop", "tabInfo"
  		  ],
- 		
  		components:{
             tourcost:tourcost,
             tourinstrctor:tourinstrctor,
@@ -51,8 +49,6 @@
                },
                handleClick:function(){
                 	this.$emit('updateShow');
-                
-
                }
             },
             computed: {
@@ -93,105 +89,104 @@
  }
 </script>
 <style scoped>
-        .tab-main {
-        	position: relative;
-        	padding: 0 .2rem;
-        }
-        .tab {
-        	left: 0;
-        	right: 0;
-        	top: 0;
-        	display: flex;
-        	height: .84rem;
-        	font-size: .28rem;
-        	background: #fff;
-        	z-index: 2;
-        }
+    .tab-main {
+    	position: relative;
+    	padding: 0 .2rem;
+    }
+    .tab {
+    	left: 0;
+    	right: 0;
+    	top: 0;
+    	display: flex;
+    	height: .84rem;
+    	font-size: .28rem;
+    	background: #fff;
+    	z-index: 2;
+    }
+    .tab-fixed {
+    	position: fixed;
+    	left: 0;
+    	right: 0;
+    	top: .8rem;
+        z-index:888;
+        padding: 0 .2rem;
 
-        .tab-fixed {
-        	position: fixed;
-        	left: 0;
-        	right: 0;
-        	top: .8rem;
-            z-index:888;
-            padding: 0 .2rem;
+    }
 
-        }
+    .tabs {
+    	flex: 1;
+    	text-align: center;
+    	width: 30%;
+    	height: .84rem;
+    	line-height: .84rem;
+    	color: #616161
+    }
+    .fix{
+      z-index: 99999
+    }
 
-        .tabs {
-        	flex: 1;
-        	text-align: center;
-        	width: 30%;
-        	height: .84rem;
-        	line-height: .84rem;
-        	color: #616161
-        }
-        .fix{
-          z-index: 99999
-        }
-
-        .active {
-        	box-sizing: border-box;
-        	color: #00afc7;
-        	border-bottom: .04rem solid #00afc7;
-        }
-        .scroll-view {
-          touch-action: none;
-          position: fixed;
-          top: 216px;
-          bottom: 0px;
-          left: 0;
-          right: 0;
-          overflow: hidden;
-          padding: 0 .2rem;
-        }
-        #tour{
-        	background: #fff;
-        }
-
-    	.mp-tab-group {
-    	    min-height: .6rem;
-    	}
-    	.mp-prddetail-group {
-    	    margin-top: .2rem;
-    	    padding: .01rem 0;
-    	    background-color: #fff;
-    	}
-    	.mp-tab {
-        overflow: hidden;
-        margin-bottom: -.2rem;
-        background-color: #fff;
-        }
-    	.mpg-flexbox{
-           display: flex;
-           width: 100%;
-    	}
-    	.mp-tab-item {
-    	    display: block;
-    	    height: .4rem;
-    	    padding: .2rem 0;
-    	    color: #616161;
-    	    font-size: .28rem;
-    	    line-height: .4rem;
-    	    text-align: center;
-    	}
-    	.mpg-flexbox-item, .mpg-flexbox-layout {
-    	    flex: 1;
-    	}
-    	.mp-tab-item.mp-tab-active {
-    	    position: relative;
-    	    border-bottom: .04rem solid #00afc7;
-    	    color: #00afc7;
-    	}
+    .active {
+    	box-sizing: border-box;
+    	color: #00afc7;
+    	border-bottom: .04rem solid #00afc7;
+    }
     .scroll-view {
       touch-action: none;
       position: fixed;
       top: 216px;
-      bottom: 100px;
+      bottom: 0px;
       left: 0;
       right: 0;
       overflow: hidden;
       padding: 0 .2rem;
+    }
+    #tour{
+    	background: #fff;
+    }
+
+	.mp-tab-group {
+	    min-height: .6rem;
+	}
+	.mp-prddetail-group {
+	    margin-top: .2rem;
+	    padding: .01rem 0;
+	    background-color: #fff;
+	}
+	.mp-tab {
+        overflow: hidden;
+        margin-bottom: -.2rem;
+        background-color: #fff;
+    }
+	.mpg-flexbox{
+       display: flex;
+       width: 100%;
+	}
+	.mp-tab-item {
+	    display: block;
+	    height: .4rem;
+	    padding: .2rem 0;
+	    color: #616161;
+	    font-size: .28rem;
+	    line-height: .4rem;
+	    text-align: center;
+	}
+	.mpg-flexbox-item, .mpg-flexbox-layout {
+	    flex: 1;
+	}
+	.mp-tab-item.mp-tab-active {
+	    position: relative;
+	    border-bottom: .04rem solid #00afc7;
+	    color: #00afc7;
+	}
+    .scroll-view {
+        touch-action: none;
+        position: fixed;
+        top: 216px;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        padding: 0 .2rem;
     }
     .iconfont{
     	color: #616161;

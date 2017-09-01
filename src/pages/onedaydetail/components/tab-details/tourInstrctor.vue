@@ -47,58 +47,58 @@
 </template>
 <script >
 export default{
-		data(){
-			return{
-				center:[],
-				windows:[],
-				infoWindow:new AMap.InfoWindow(),
-				show:false
-			}
-		},
-		props:["tourItinerary"],
-		beforeUpdate:function(){
-			this.center=this.tourItinerary.map.center;
-			this.windows=this.tourItinerary.map.windows;
-			this.loadmap();  
-		},
-		methods:{
-			handleClick:function(){
-				this.$emit('update');
-			},
-			loadmap(){
-		        const map = new AMap.Map('amap-page-container', {
-		          zoom: 12,
-		          zoomEnable:false,
-		          dragEnable: false,
-		          center:this.center
-		        });
-		        var lnglats=this.windows;
-		        var infoWindow = new AMap.InfoWindow();
-		        for(var i = 0, marker; i < lnglats.length; i++){
-		            marker=new AMap.Marker({
-		                position:lnglats[i],
-		                map:map
-		            });
-		            marker.content='我是第'+i+'个信息窗体的内容';
-		            marker.on('click', this.markerClick);
-		        }
-		        map.setFitView();
-		    }
+	data(){
+		return{
+			center:[],
+			windows:[],
+			infoWindow:new AMap.InfoWindow(),
+			show:false
 		}
+	},
+	props:["tourItinerary"],
+	beforeUpdate:function(){
+		this.center=this.tourItinerary.map.center;
+		this.windows=this.tourItinerary.map.windows;
+		this.loadmap();  
+	},
+	methods:{
+		handleClick:function(){
+			this.$emit('update');
+		},
+		loadmap(){
+	        const map = new AMap.Map('amap-page-container', {
+	          zoom: 12,
+	          zoomEnable:false,
+	          dragEnable: false,
+	          center:this.center
+	        });
+	        var lnglats=this.windows;
+	        var infoWindow = new AMap.InfoWindow();
+	        for(var i = 0, marker; i < lnglats.length; i++){
+	            marker=new AMap.Marker({
+	                position:lnglats[i],
+	                map:map
+	            });
+	            marker.content='我是第'+i+'个信息窗体的内容';
+	            marker.on('click', this.markerClick);
+	        }
+	        map.setFitView();
+	    }
 	}
+}
 </script>
 <style scoped>
 	@import url("../../../../assets/css/onedaydetail/order-tab.css");
 	#amap-page-container{
-	  height: 3.5rem;
-	  padding: .2rem .2rem .1rem .2rem;
-	  overflow: hidden;
-	  margin-bottom: .2rem;
+		height: 3.5rem;
+		padding: .2rem .2rem .1rem .2rem;
+		overflow: hidden;
+		margin-bottom: .2rem;
 	}
 	.amap-demo {
-	height: 150px;
+		height: 150px;
 	}
 	.amap-Info-content {
-			z-index: 2;
+		z-index: 2;
 	}
 </style>

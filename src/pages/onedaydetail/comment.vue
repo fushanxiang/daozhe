@@ -44,7 +44,6 @@
 </template>
 
 <script>
-
 	import ImgComment from "./imgcomment.vue"
 
 	export default {

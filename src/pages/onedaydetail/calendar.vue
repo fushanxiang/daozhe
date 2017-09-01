@@ -114,123 +114,107 @@ export default{
 };
 </script>
 <style scoped>  
-  #calendar {
-      width:80%;
-      margin: 0 auto;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.12);
-    }
-     
+    #calendar {
+        width:80%;
+        margin: 0 auto;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.12);
+    } 
     .month {
-      width: 100%;
-    background: #00B8EC;
+        width: 100%;
+        background: #00B8EC;
     }
       
   .month ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: space-between;
-    }
-      
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    } 
     .year-month {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
-   
     .year-month:hover {
-      background: rgba(150, 2, 12, 0.1);
+        background: rgba(150, 2, 12, 0.1);
     }
-   
     .choose-year {
-    padding-left: 20px;
-      padding-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-   
     .choose-month {
-      text-align: center;
-      font-size: .5rem;
+        text-align: center;
+        font-size: .5rem;
     }
-   
     .arrow {
-      padding: 30px;
+        padding: 30px;
     }
-   
     .arrow:hover {
-      background: rgba(100, 2, 12, 0.1);
+        background: rgba(100, 2, 12, 0.1);
     }
-   
     .month ul li {
-      color: white;
-      font-size: 20px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
     }
-   
     .weekdays {
-      margin: 0;
-      padding: 10px 0;
-      background-color: #00B8EC;
-      display: flex;
-      flex-wrap: wrap;
-      color: #FFFFFF;
-      justify-content: space-around;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #00B8EC;
+        display: flex;
+        flex-wrap: wrap;
+        color: #FFFFFF;
+        justify-content: space-around;
     }
-   
     .weekdays li {
-      display: inline-block;
-      width: 13.6%;
-      text-align: center;
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
     }
-   
     .days {
-      padding: 0;
-      background: #FFFFFF;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+        padding: 0;
+        background: #FFFFFF;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
-   
     .days li {
-      list-style-type: none;
-      display: inline-block;
-      width: 14.2%;
-      text-align: center;
-      padding-bottom: 15px;
-      padding-top: 15px;
-      font-size: .5rem;
-      color: #000;
+        list-style-type: none;
+        display: inline-block;
+        width: 14.2%;
+        text-align: center;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        font-size: .5rem;
+        color: #000;
     }
-   
     .days li .active {
-      padding: 6px 10px;
-      border-radius: 50%;
-      background: #00B8EC;
-      color: #fff;
+        padding: 6px 10px;
+        border-radius: 50%;
+        background: #00B8EC;
+        color: #fff;
     }
-   
     .days li .other-month {
-      padding: 5px;
-      color: gainsboro;
+        padding: 5px;
+        color: gainsboro;
     }
-   
     .days li:hover {
-      background: #e1e1e1;
+        background: #e1e1e1;
     }
     #calendar {
-      width: 100%;
-      background:#fff; 
-      position: fixed;
-      z-index: 99999;
+        width: 100%;
+        background:#fff; 
+        position: fixed;
+        z-index: 99999;
     }
     .month {
-      background:#ccc; 
+        background:#ccc; 
     }
     .weekdays {
-      background:#ccc; 
-     
+        background:#ccc; 
     }
     .arrow {
       color: black;

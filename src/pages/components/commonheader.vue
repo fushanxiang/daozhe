@@ -2,12 +2,12 @@
 	<header class="commonheader">
 		<span class="header-left iconfont">&#xe600;</span>
 		<h1 class="summer-title">{{message}}</h1>
-		<div class="header-right">
-			<span class="icon_scenic iconfont">&#xe63e;</span>
-			 <router-link to="/">
+		<router-link to="/">
+			<div class="header-right">
+				<span class="icon_scenic iconfont">&#xe63e;</span>
 				<span class="home">首页</span>
-			</router-link>
-		</div>
+			</div>
+		</router-link>
 	</header>	
 </template>
 <script>

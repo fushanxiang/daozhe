@@ -28,8 +28,7 @@ export default {
             offset:['','', '','']
         }
     },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
+    created(){
         this.$http.get('/static/seckill.json').then(response => {
             var data = response.body.data;
             this.hot = data.hot;
@@ -39,7 +38,7 @@ export default {
         }, response => {
           console.log("ajax error");
         });
-      },
+    },
     updated(){
         this.offset[0] = document.getElementById('anchor').offsetTop;
         this.offset[1] = document.getElementsByClassName('hot')[0].offsetTop;
@@ -58,9 +57,6 @@ export default {
             document.body.scrollTop = this.offset[3]
         }
     }, 
-    destroyed(){
-        window.removeEventListener("scroll", this.handleScroll)
-    },  
     components:{
         'seckill-banner':SeckillBanner,
         'toggle':Toggle,

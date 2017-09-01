@@ -1,5 +1,5 @@
 <template>
-	<div @scroll="handleScroll()">
+	<div @scroll="handleScroll">
 		<transition name='fade'>
 			<ul class="toggle" v-show='show'>
 				<li class="toggle-item" v-for='item in itemInfo' ref='itemlist' v-on:click="handleClick" :key='item.id'>
@@ -12,7 +12,7 @@
 <script>
 export default {
 	props:["offset"],
-	created() {
+	mounted() {
         window.addEventListener('scroll', this.handleScroll);
     },
 	data () {
@@ -33,10 +33,12 @@ export default {
 			show:false
     	}
 	},
+	
 	methods:{
 		handleClick(e){
-			const items = this.$refs.itemlist;
+			let items = this.$refs.itemlist;
 			let num = items.indexOf(e.target)
+			console.log(items)
 			for (var i = 0; i < items.length; i++) {
 					items[i].style.background = '#af16ff';
 					items[i].style.color = '#fff';
@@ -45,14 +47,12 @@ export default {
 				items[num].style.color = '#af16ff';
 			document.body.scrollTop = this.offset[num];
 		},
-		destroyed(){
-        	window.removeEventListener("scroll", this.handleScroll)
-    	},
 		handleScroll(){	
 		 	let scrollT =  document.body.scrollTop;
 			if(scrollT > this.offset[0]){
 				this.show = true;
-				const items = this.$refs.itemlist;
+				let items = this.$refs.itemlist;
+				console.log(items)
 				if(this.offset[0] <= scrollT&&scrollT < this.offset[1]){
 					for (var i = 0; i < items.length; i++) {
 					items[i].style.background = '#af16ff';
@@ -88,7 +88,10 @@ export default {
 			}else{
 				this.show = false;
 			}			
-		 }
+		 },
+		 beforeDestory(){
+        window.removeEventListener("scroll", this.handleScroll)
+    }
 	}
 }
 </script>

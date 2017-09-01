@@ -1,7 +1,7 @@
 <template>
     <div class="city-aside">
         <div class="city-aside-set"> 
-            <div class="city-aside-set-character" @touchmove="touchmoveword" v-for="(item, index) of cityclass" v-on:click="handleLetterClick">{{item[0]}}</div>
+            <div class="city-aside-set-character" @touchmove="touchmoveword" v-for="(item, index) in cityclass" v-on:click="handleLetterClick">{{item[0]}}</div>
         </div>
     </div>
 </template> 

@@ -32,7 +32,7 @@ export default {
         });
     },
 
-    destroyed(){
+    beforeDestory(){
         window.removeEventListener("scroll", this.handleScroll)
     },
 

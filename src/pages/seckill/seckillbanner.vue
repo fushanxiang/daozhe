@@ -53,7 +53,6 @@
 		props:["cheapInfo"],
 		methods: {
 		    goAnchor(selector) {
-		    	console.log(selector)
 		        var anchor = this.$el.querySelector(selector)
 		        document.body.scrollTop = anchor.offsetTop
 		    },

@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-	/* @import '../../assets/css/common/border.css'; */
+    @import '../../assets/css/common/border.css';
 	.hotsale-list{
 		background: #fff;
 	}

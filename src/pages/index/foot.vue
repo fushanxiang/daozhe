@@ -4,31 +4,22 @@
 			<li class="list-item">
 				<a class='item-type' href="#">
 					<div class="iconfont">&#xe635;</div>
-<<<<<<< HEAD
 					<span class="foot-title">电影票</span>
-=======
-					<span class="footer-title">机票</span>
->>>>>>> origin/master
+
 				</a>
 			</li>
 			<li class="list-item">
 				<a class='item-type' href="#">
 					<div class="iconfont">&#xe609;</div>
-<<<<<<< HEAD
 					<span class="foot-title">演出</span>
-=======
-					<span class="footer-title">酒店</span>
->>>>>>> origin/master
+
 				</a>
 			</li>
 			<li class="list-item">
 				<a class='item-type' href="#">
 					<div class="iconfont">&#xe698;</div>
-<<<<<<< HEAD
 					<span class="foot-title">剧场</span>
-=======
-					<span class="footer-title">公寓</span>
->>>>>>> origin/master
+
 				</a>
 			</li>
 			<li class="list-item">
@@ -38,21 +29,12 @@
 				</a>
 			</li>
 		</ul>
-<<<<<<< HEAD
 		<ul class="foot-two">
 			<li class="order-item">登陆</li>
 			<li class="order-item">我的订单</li>
 			<li class="order-item">历史记录</li>
 			<li class="order-item">我的评价</li>
 			<li class="order-item">关于我们</li>
-=======
-		<ul class="footer-logon">
-			<li class="logon-item">登陆</li>
-			<li class="logon-item">我的订单</li>
-			<li class="logon-item">我的订单</li>
-			<li class="logon-item">我的订单</li>
-			<li class="logon-item">关于我们</li>
->>>>>>> origin/master
 		</ul>
 		<ul class="footer-version">
 			<li class="touch version-type">触屏版</li>

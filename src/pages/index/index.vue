@@ -49,7 +49,7 @@
 		}
 	}
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 	.main-content{
 		background: #f5f5f5;
@@ -71,4 +71,5 @@
 	a {
 		color: #42b983;
 	}
+
 </style>

@@ -4,7 +4,9 @@
 		<h1 class="summer-title">{{message}}</h1>
 		<div class="header-right">
 			<span class="icon_scenic iconfont">&#xe63e;</span>
-			<span class="home">首页</span>
+			 <router-link to="/">
+				<span class="home">首页</span>
+			</router-link>
 		</div>
 	</header>	
 </template>

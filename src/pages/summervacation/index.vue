@@ -2,10 +2,10 @@
 	<div>
     	<common-header message="暑假大放价"></common-header>
     	<div @scroll="handleScroll">       
-        	<pic-list></pic-list>
-        	<choose-city></choose-city>
+        	<pic-list :piclistInfo="piclistInfo"></pic-list>
+        	<choose-city :choosecityInfo="choosecityInfo"></choose-city>
             <toggle></toggle>
-            <summerselect></summerselect>
+            <summerselect :selectInfo="selectInfo"></summerselect>
     	</div>
     </div>
 </template>
@@ -22,6 +22,14 @@ export default {
 
     created() {
         window.addEventListener('scroll', this.handleScroll);
+        this.$http.get('/static/summer_vacation.json').then(response => {
+            var data = response.body.data;
+            this.piclistInfo = data.piclistInfo;
+            this.selectInfo = data.selectInfo;
+            this.choosecityInfo = data.choosecityInfo;
+        }, response => {
+          console.log("ajax error");
+        });
     },
 
     destroyed(){
@@ -54,6 +62,9 @@ export default {
 
     data () {
         return {
+            piclistInfo:[],
+            selectInfo:[],
+            choosecityInfo:[]
         }  
     }
      

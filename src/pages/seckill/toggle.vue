@@ -66,7 +66,7 @@ export default {
 					items[1].style.background = '#ffee30';
 					items[1].style.color = '#af16ff';
 				}
-			if(this.offset[2] <= scrollT&&scrollT < this.offset[3]){
+			if(this.offset[2] <= scrollT&&scrollT < this.offset[3]-100){
 				for (var i = 0; i < items.length; i++) {
 					items[i].style.background = '#af16ff';
 					items[i].style.color = '#fff';
@@ -74,7 +74,7 @@ export default {
 				items[2].style.background = '#ffee30';
 				items[2].style.color = '#af16ff';
 			}
-			if(this.offset[3] <= scrollT ){
+			if(this.offset[3]-100 <= scrollT ){
 				for (var i = 0; i < items.length; i++) {
 					items[i].style.background = '#af16ff';
 					items[i].style.color = '#fff';

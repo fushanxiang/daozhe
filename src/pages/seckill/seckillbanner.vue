@@ -50,6 +50,7 @@
 <script>
 	export default{
 		name:'banner',
+		props:["cheapInfo"],
 		methods: {
 		    goAnchor(selector) {
 		    	console.log(selector)
@@ -68,43 +69,7 @@
 		},
 		data(){
 			return {
-				cheapInfo:[{
-					"id":"0",
-					"img":"//img1.qunarzz.com/sight/p0/1412/54/bd1854520fc67767e8df8c8f89c547eb.water.jpg_292x181_a33a23df.jpg",
-					"title":"【限量大促】仙女湖水上嘉年华门票",
-					"nowprice":"1",
-					"oldprice":"60"
-				},{
-					"id":"1",
-					"img":"//img1.qunarzz.com/sight/p0/1609/31/3116c0c6deaaf099a3.img.jpg_292x181_5ca214ab.jpg",
-					"title":"【限量大促】仙女湖水上嘉年华门票",
-					"nowprice":"1",
-					"oldprice":"60"
-				},{
-					"id":"2",
-					"img":"//img1.qunarzz.com/sight/p0/1706/45/45d5fb9688e2420ba3.img.jpg_292x181_e3f8d833.jpg",
-					"title":"【限量大促】仙女湖水上嘉年华门票",
-					"nowprice":"1",
-					"oldprice":"60"
-				},{
-					"id":"3",
-					"img":"//img1.qunarzz.com/sight/p0/1706/45/45d5fb9688e2420ba3.img.jpg_292x181_e3f8d833.jpg",
-					"title":"【限量大促】仙女湖水上嘉年华门票",
-					"nowprice":"1",
-					"oldprice":"60"
-				},{
-					"id":"4",
-					"img":"//img1.qunarzz.com/sight/p0/1607/10/10df450f178aef96b4.img.jpg_292x181_44ee5d0e.jpg",
-					"title":"【限量大促】仙女湖水上haahhaha嘉年华门票",
-					"nowprice":"1",
-					"oldprice":"60"
-				},{
-					"id":"5",
-					"img":"//img1.qunarzz.com/sight/p0/201401/27/0310113c1bb74fe6bf3c4a0fad7059c1.jpg_292x181_7873583f.jpg",
-					"title":"【限量大促】仙女湖水上嘉年华门票",
-					"nowprice":"1",
-					"oldprice":"60"
-				}]
+				
 			}
 		}
 	}

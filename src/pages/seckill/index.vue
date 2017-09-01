@@ -2,7 +2,7 @@
     <div>
         <div class="main">
             <common-header message="1元秒杀！门票绝对低价！"></common-header>
-            <seckill-banner @changeA='changePositionA' @changeB='changePositionB' @changeC='changePositionC'></seckill-banner>
+            <seckill-banner :cheapInfo="cheapInfo" @changeA='changePositionA' @changeB='changePositionB' @changeC='changePositionC'></seckill-banner>
             <toggle :offset="offset"></toggle>
             <city-list></city-list>
             <hot-top :hot="hot"></hot-top>
@@ -24,6 +24,7 @@ export default {
             hot:[],
             topic:[],
             tour:[],
+            cheapInfo:[],
             offset:['','', '','']
         }
     },
@@ -34,6 +35,7 @@ export default {
             this.hot = data.hot;
             this.topic = data.topic;
             this.tour = data.tour;
+            this.cheapInfo = data.cheapInfo;
         }, response => {
           console.log("ajax error");
         });

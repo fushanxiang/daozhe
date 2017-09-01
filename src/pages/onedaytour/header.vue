@@ -1,17 +1,18 @@
 <template>
 	<header class="header">
 		<a class="header-left iconfont" @click="handleClick">&#xe600;</a>
-		<div class="header-title">
-			<span class="iconfont icon-search">&#xe60a;</span>
-			<span class="single-line">景点/目的地/主题</span>
-		</div>
+		<router-link :to="{name:'search'}">
+			<div class="header-title">
+				<span class="iconfont icon-search">&#xe60a;</span>
+				<span class="single-line">景点/目的地/主题</span>
+			</div>
+		</router-link>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
 				<span class="nav-city">北京<span class="downarrow"></span></span>
 			</router-link>
 		</div>
 	</header>
-	
 </template>
 
 <script>

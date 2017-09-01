@@ -26,6 +26,8 @@ import List from '@/pages/list/index'
 import Onedaytour from '@/pages/onedaytour/index'
 import OnedayList from '@/pages/onedaylist/index'
 import SummerVacation from'@/pages/summervacation/index'
+import Tourism from './../pages/topictickets/index.vue'
+import Particulars from './../pages/topictickets/particulars.vue'
 
 
 Vue.use(Router)
@@ -129,5 +131,15 @@ export default new Router({
 	        path: '/weekendtour/slightmap/:id',
 	        name: 'Slightmap',
 	        component: Slightmap
+	    },
+	    {
+	   		path: '/tourism',
+	        name: 'tourism',
+	        component: Tourism	
+	    },
+	    {
+	    	path: '/Particulars/:id',
+     		name: 'Particulars',
+      		component: Particulars
 	    }]
 })

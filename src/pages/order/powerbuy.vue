@@ -10,7 +10,6 @@
 					<button class="plus" @click="handleClickCut">-</button>
 				</div>
 			</div>
-
 			</div>
 
 			<div class="tourist">
@@ -40,9 +39,7 @@
 			</div>
 
 			</div>
-				
-				
-
+			
 			<div class="addmsg" v-for="item in touristInfo">
 			<div class="test">
 			<div class="kill"></div>
@@ -56,9 +53,6 @@
 					<div class="iconfont">&#xe606;</div>
 				</div>								
 			</div>	
-				
-		
-			
 			<div class="identity">
 				<div class="identitycard">
 				身份证&gt
@@ -74,7 +68,7 @@
 				<div class="footerleft">
 					产品价格&yen<span class="price"  @price>{{price}}</span>
 				</div>
-				<div class="footerright">
+				<div class="footerright" @click="handleGo">
 					提交订单
 				</div>
 				</div>					
@@ -92,9 +86,7 @@ export default {
 				number:1,
 				touristInfo:[]
     	}
-	},
-	
-	
+	},	
 	methods:{
 		handleClickPlus:function(){
 			this.number++;
@@ -108,18 +100,16 @@ export default {
 			if(this.number<=1){
 				this.number=1
 			}
-			this.price=187*this.number;
-			this.touristInfo.pop({
+				this.price=187*this.number;
+				this.touristInfo.pop({
 				"tourist":"游客"
 			})
 		},
-	
-
-	handleChange(){
-	
+	    handleChange(){},
+		handleGo() {
+			confirm('请填写信息')
 		}
 	},
-
 }
 </script>
 

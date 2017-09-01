@@ -33,18 +33,15 @@
             </div>
             <router-link :to="{name:'comment'}">
                 <div class="more border-top">
-                  查看更多评论<span class="iconfont prddetail-arrow">&#xe62d;</span>
+                 	 查看更多评论		<span class="iconfont prddetail-arrow">&#xe62d;</span>
                 </div>
-            </router-link>
-            
+            </router-link>           
         </div>
     </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style scoped>

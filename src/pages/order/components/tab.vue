@@ -10,7 +10,7 @@
            <tourdescription :instructions="tabInfo.instructions" :userComment="tabInfo.userComment"></tourdescription>           
 		 </div>
 	</div>
-</template>
+</template>.index.tabs
 <script>
  import tourcost from './tab-details/tourCost.vue'
  import tourinstrctor from './tab-details/tourInstrctor.vue'
@@ -50,7 +50,7 @@
                	}
                },
                handleClick:function(){
-                this.$emit('updateShow');
+                	this.$emit('updateShow');
                 
 
                }
@@ -98,7 +98,6 @@
         	padding: 0 .2rem;
         }
         .tab {
-        	/* position: absolute; */
         	left: 0;
         	right: 0;
         	top: 0;
@@ -106,20 +105,17 @@
         	height: .84rem;
         	font-size: .28rem;
         	background: #fff;
-        	z-index: 10;
+        	z-index: 2;
         }
-
-       /*  .tab-fixed {
-         position: fixed;
-         top: .88rem;
-       } */
 
         .tab-fixed {
         	position: fixed;
         	left: 0;
         	right: 0;
         	top: .8rem;
-          padding: 0 .2rem;
+            z-index:888;
+            padding: 0 .2rem;
+
         }
 
         .tabs {
@@ -128,7 +124,7 @@
         	width: 30%;
         	height: .84rem;
         	line-height: .84rem;
-        	color: #616161;
+        	color: #616161
         }
         .fix{
           z-index: 99999

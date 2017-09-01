@@ -3,8 +3,7 @@
   		<div class="comment-header"> 			
 	  		<a  @click="handleGobackClick" class="header-return iconfont">&#xe600;</a>
 	  		点评
-  		</div>
-		
+  		</div>		
 		<div class="comment-con-info" id="box">
 			<ul class="comment-ulcon" v-for="(list, index) in lists" :key="index + '_comment_list'">
 		  		<li class="comment-list" v-for="(item,liindex) in list">
@@ -30,23 +29,17 @@
 			  				@closeimgbox="handleCloseImg" 
 			  				:imgindex="imgindex"
 			  				:propsimglist="item.img">
-
-						</img-comment>
-							
+						</img-comment>							
 						<img class="comment-img" v-for="(itemimg, imgindex) in item.img" 
-						:src="itemimg" @click="handleOpenImg(imgindex,index*10+liindex)" /> 
-						
-		  			</div>
-		  			
+						:src="itemimg" @click="handleOpenImg(imgindex,index*10+liindex)" /> 						
+		  		</div>		  			
 		  		</li>
 		  		<li>
 			  		<div v-if="count===index" class="comment-addmore"  @click="handleAddMore">查看更多</div>
 			  		<div v-if="count>index" class="comment-addmore" >没有更多了</div>
 			  	</li>
 	  		</ul>
-
-		</div>		
- 
+		</div>		 
   	</div>	
 </template>
 

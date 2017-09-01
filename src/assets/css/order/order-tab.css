@@ -91,7 +91,7 @@
 }
 .mp-timeline-nodeicon {
     position: absolute;
-    z-index: 2;
+    /*z-index: 2;*/
     top: 2px;
     left: .2rem;
     color: #00afc7;

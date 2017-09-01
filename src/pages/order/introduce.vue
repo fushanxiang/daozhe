@@ -71,8 +71,8 @@
                             data-click="t_preOrder" @click="show = !show">
 
                             data-click="t_preOrder" @click="changeShow">
+                                     立即预订
 
-                                立即预订
                         </a>
                     </div>
                 </div>
@@ -92,16 +92,12 @@
   		<div  class="otherdata1" >
             <tell-calendar @close="closeClick" v-show="otherdata"></tell-calendar>    
 
-        </div>
-       
-	</div>
-	
+       </div>      
+	</div>	
+
 </template>
 
-
-
-<script>
-	
+<script>	
 import Calendar from "./calendar.vue"
 export default {
     name: 'index',
@@ -114,9 +110,7 @@ export default {
             }, response => {
                 console.log( "error" )
             });
-
         },
-
   	data () {
 	    return {
 			isActive:false,
@@ -177,7 +171,7 @@ export default {
         changeShow(){
              this.show=true;
             if(this.flag){
-                 location.href="http://localhost:8080/#/purchaseorder";
+                 this.$router.push("/purchaseorder")
             }
             else{
                alert("请填写完整信息");
@@ -189,13 +183,8 @@ export default {
   	components:{
 	    "tell-calendar": Calendar
 	}
-
 }
-
 </script>
-
-
-
 <style scoped>
 .date-active {
     background:#00bcd4 !important
@@ -211,25 +200,6 @@ export default {
 
 }
 
-.a {display: block;}
-.b {display: none;} 
-.bounce-enter-active {
-  animation: bounce-in .5s;
-}
-.bounce-leave-active {
-  animation: bounce-out .5s;
-}
-@keyframes bounce-in {
-  0% {
-    transform: translateY(800px);
-  }
-   
-  100% {
-    transform: translateY(0);
-
-    z-index: 999;
-  }
-}
 
 .a {display: block;}
 .b {display: none;} 

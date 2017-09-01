@@ -85,6 +85,7 @@ export default {
                  this.tabInfo =JSON.parse(JSON.stringify(response.body.data.tab));
                  this.center=this.tabInfo.tourItinerary.map.center;
                  this.loadmap();     //加载地图和相关组件
+
       			  }, response => {
       			    console.log("获取数据失败")
       			  });
@@ -99,8 +100,7 @@ export default {
               
           },
           methods:{
-             loadmap(){
-              console.log(this.center);
+             loadmap(){              
               const map = new AMap.Map('large-map', {
                 zoom: 12,
                 center:this.center
@@ -120,6 +120,7 @@ export default {
 }
 </script>
 <style scoped>
+
 
     @import '../../assets/css/base/reset.css';
     @import "../../assets/font/iconfont.css";

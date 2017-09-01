@@ -1,8 +1,7 @@
 <template>
 	<div class="box">
 		<order ></order>
-		<powerbuy></powerbuy>
-   
+		<powerbuy></powerbuy>   
 	</div>
 </template>
 
@@ -11,13 +10,10 @@
 import Powerbuy from './powerbuy.vue'
 import Order from './order.vue'
 
-
 export default {
   name: 'purchaseorder',
   data () {
-    return {
-    }
-     
+    return {}    
   },
   components:{
   	"order": Order,

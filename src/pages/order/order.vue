@@ -2,7 +2,7 @@
 <template>
 	<div class="box">
 	<header class="header">
-		<a class="header-left iconfont">&#xe600;</a>
+		<a class="header-left iconfont" @click="handleGoBack">&#xe600;</a>
 		<div class="header-title">
 		<div class="header-content">订单填写</div>
 			
@@ -11,42 +11,30 @@
 			登录
 		</div>
 	</header>
-
 	<div class="address">
 	<div class="address-left">
 	<span class="text-font" >
 		{{headerTitle}}
 	</span>
-
 		<ul class="taglist">
 			<li class="taglist-childfirst"><span class="iconfont small">&#xe64d;</span>{{year}}-{{month}}-{{day}}</li>
 			<li class="taglist-childsecond"><span class="iconfont small">&#xe604;</span>条件退</li>
 			
 		</ul>
-
 		<ul  class="taglist-second">
 			<li><span class="iconfont small">&#xe604;</span>儿童</li>
 			<li><span class="iconfont small">&#xe604;</span>成人</li>
 			<li><span class="iconfont small">&#xe604;</span>7:30</li>
 		</ul>
-	</div>
-	
+	</div>	
 	<div class="address-right">
 		<div class="ticket">
 			<span class="num">/张</span><span class="ticket-num">&yen187</span><br/>
 			<span class="ticket-back">退票须知</span>
-		</div>
-		
+		</div>		
 	</div>
-
-	</div>
-
-	</div>
-	
-	
-
-
-	
+</div>
+</div>
 </template>
 
 <script>
@@ -57,24 +45,24 @@ export default {
 		this.$http.get('/static/onedaytour-details.json').then(response => {        	
             var data = response.body.data.index.headerTitle;          	
             this.headerTitle = data;
-            console.log(this.headerTitle)
         }, response => {
             console.log("ajax error");
         });
-
 	},
 	data () {
-
 		return {
 			headerTitle:"",
 			year:new Date().getFullYear(),
 			month:new Date().getMonth()+1,
 			day:new Date().getDate(),
     	}
-	}
-	
+	},
+	methods:{
+		handleGoBack() {
+			history.go(-1);
+		}
+	}	
 }
-
 
 </script>
 

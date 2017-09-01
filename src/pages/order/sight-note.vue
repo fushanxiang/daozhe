@@ -24,9 +24,7 @@
 <script>
 	export default {
 		data() {
-			return {
-				
-			}
+			return {}
 		},
 		props:["headerTitle"]
 	}
@@ -47,7 +45,7 @@
 		left: 0;
 		z-index: 1;
 		width: 100%;
-		height: 3.5rem;
+		height: 3.8rem;
 		background: white;
 		box-sizing: border-box;
 		border: 1px solid white;
@@ -103,19 +101,19 @@
 		height: 1rem;
 	}
 	.present{
-		display: block;
-		width: 1.4rem;
-		height: 0.6rem;
-		border: 1px solid red;
-		font-size: 0.3rem;
-		float: left;
-		color: red;
-		text-align: center;
 		line-height: 0.6rem;
 		border-radius: 0.05rem;
 		margin-left: 0.2rem;
 		margin-top: 0.2rem;
+		display: block;
+		width: 1.4rem;
+		height: 0.6rem;
+		float: left;
 		overflow: hidden;
+		border: 1px solid red;
+		font-size: 0.3rem;
+		color: red;
+		text-align: center;
 	}
 	.cash{
 		float: left;

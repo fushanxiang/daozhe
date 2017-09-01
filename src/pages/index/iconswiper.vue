@@ -96,6 +96,10 @@ export default {
 	}
 	.icon-title{
 		margin-top:.2rem;
+		width:100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		font-size: .28rem;
 		color:#212121;
 
@@ -114,6 +118,12 @@ export default {
     .position-directon{  
     	float: left;
     	width: 50%;
+    	line-height: .98rem;
+    	font-size:.28rem;
+    	color:#212121;
+    	overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
     	font-size:.28rem;
     	color:#212121;
     	line-height: .98rem;

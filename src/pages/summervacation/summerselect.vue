@@ -5,7 +5,7 @@
 			 	<li class="sumselect-category" v-for="item in selectInfo">
 			 	    <div class="sumselect-frame">
 			 	   	    <div class="sumselect-img">
-			 			    <img  :src="item.imgeUrl">
+			 			    <img  v-lazy="item.imgeUrl">
 			 			    <span>北京</span>
 				 		</div>
 				 		<div class="sumselect-word">
@@ -30,77 +30,14 @@
 	
 	export default {
 		name: 'summerselect',
-
+		props:["selectInfo"],
 		components: {
            
 		},
 
 		data() {
 			return {
-				selectInfo: [{
-					"id": 1,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的客户管理卡哈啦哈啦时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-				},{
-					"id": 2,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				},{
-					"id": 3,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				},{
-					"id": 4,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				},{
-					"id": 5,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				},{
-					"id": 6,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事激发撒上了飞机阿里卷发多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				},{
-					"id": 7,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				},{
-					"id": 8,
-					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
-					"link": "/detail",
-					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
-					"redPrice":"¥35",
-					"grayPrice":"票面价¥40"
-
-				}]
+				
 			}
 		}
 	}

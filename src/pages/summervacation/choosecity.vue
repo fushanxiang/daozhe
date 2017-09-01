@@ -15,11 +15,10 @@
 <script>
 
 export default {
-    mounted(){
+    updated(){
         if(!localStorage.cityStyleText){
             try{
-                localStorage.cityStyleText= '北京'
-
+                localStorage.cityStyleText = '北京'
             } catch(e){} 
         }
         this.$refs.current.innerHTML=localStorage.cityStyleText;
@@ -61,101 +60,10 @@ export default {
 
         }   
     },
+    props:["choosecityInfo"],
     data(){
         return {
-            isShow:false,
-
-            choosecityInfo:[{
-                    id: 1,
-                    name: "北京"
-                },{
-                    id: 2,
-                    name: "上海"
-                },{
-                    id: 3,
-                    name: "天津"
-                },{
-                    id: 4,
-                    name: "天津"
-                },{
-                    id: 5,
-                    name: "四川"
-                },{
-                    id: 6,
-                    name: "广东"
-                },{
-                    id: 7,
-                    name: "浙江"
-                },{
-                    id: 8,
-                    name: "山东"
-                },{
-                    id: 9,
-                    name: "江苏"
-                },{
-                    id: 10,
-                    name: "海南"
-                },{
-                    id: 11,
-                    name: "广西"
-                },{
-                    id: 12,
-                    name: "河北"
-                },{
-                    id: 13,
-                    name: "吉林"
-                },{
-                    id: 14,
-                    name: "陕西"
-                },{
-                    id: 15,
-                    name: "福建"
-                },{
-                    id: 16,
-                    name: "内蒙古"
-                },{
-                    id: 17,
-                    name: "山西"
-                },{
-                    id: 18,
-                    name: "甘肃"
-                },{
-                    id: 19,
-                    name: "湖北"
-                },{
-                    id: 20,
-                    name: "江西"
-                },{
-                    id: 21,
-                    name: "贵州"
-                },{
-                    id: 22,
-                    name: "安徽"
-                },{
-                    id: 23,
-                    name: "云南"
-                },{
-                    id: 24,
-                    name: "辽宁"
-                },{
-                    id: 25,
-                    name: "黑龙江"
-                },{
-                    id: 26,
-                    name: "湖南"
-                },{
-                    id: 27,
-                    name: "河南"
-                },{
-                    id: 28,
-                    name: "宁夏"
-                },{
-                    id: 29,
-                    name: "西藏"
-                },{
-                    id: 30,
-                    name: "新疆"
-            }]
+            isShow:false 
         }
     }
 }
@@ -163,12 +71,12 @@ export default {
 
 <style scoped>
     .mp-menu-container{
-        height:0.56rem;
         position:absolute;
         top:6.5rem;
         right: .2rem;
-        min-width:0.56rem;
-        padding-right:0.46rem;
+        min-width:.56rem;
+        padding-right:.46rem;
+        height:.56rem;
         background: rgba(0,0,0,.5);
         border-radius: .56rem;
     }
@@ -199,24 +107,28 @@ export default {
         top:7rem;
         left:0;
         width:100%;
-        min-height:0.6rem;
-        padding:0.1rem 0 .2rem;
+        min-height:.6rem;
+        padding:.1rem 0 .2rem;
         background:rgba(0,0,0,.5);
     }
     .mp-menu-item{
         float:left;
         width:25%;
-        margin-top:0.1rem;  
+        margin-top:.1rem;  
     }
     .mp-menu-inner{
         display:block;
-        height:0.6rem;
-        margin:0 0.1rem;
+        height:.6rem;
+        margin:0 .1rem;
         background:#fff;
         color:#000;
-        font-size:0.24rem;
-        line-height:0.6rem;
+        font-size:.24rem;
+        line-height:.6rem;
         text-align:center;
-        border-radius:0.3rem;
+        border-radius:.3rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
     }
 </style>

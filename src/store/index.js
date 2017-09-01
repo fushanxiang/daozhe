@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
 		"city": localStorage.selectedCity || "北京",
+		"isPop":false,
 		"searchnear":true,
 		"searchHistory":true,
 		"suggestsearch":false
@@ -18,6 +19,9 @@ export default new Vuex.Store({
 	mutations: {
 		changeCity: function(state, payload){
 			state.city = payload.city;
+		},
+		changeIsPop: function(state){
+			state.isPop = !state.isPop; 
 		},
 		showNear:function(state,ifshow){
 			state.searchnear = ifshow;

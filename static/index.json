@@ -1,0 +1,125 @@
+{
+	"ret": true,
+
+	"data": {
+		"imgsInfo": [{
+			"id": "1",
+			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1708/2a/f848fc9f80eace02.jpg_640x200_a3238bf3.jpg",
+			"link": "/detail"
+		},{
+			"id": "2",
+			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1707/90/2ab6fd356529aa02.jpg_640x200_5a7251a0.jpg",
+			"link": "/detail"
+		}],
+		"iconsInfo": [{
+				"id": "1",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "2",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "3",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "4",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "5",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "6",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "7",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "8",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "9",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+			},{
+				"id": "10",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+				"link": "/detail",
+				"title":"全部"
+
+			}],
+		"itemsInfo": [{
+				"id": "1",
+				"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
+				"title": "故宫",
+				"content": "东方宫殿建筑代表，世界宫殿建筑典范",
+				"price": "20"
+			},{
+				"id": "2",
+				"imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_140x140_e20be8e0.jpg",
+				"title": "颐和园",
+				"content": "保存完整的一座皇家行宫御苑",
+				"price": "65"
+			},{
+				"id": "3",
+				"imgUrl": "http://img1.qunarzz.com/sight/p0/1604/1b/1b6778deafaf208f90.img.jpg_140x140_75f5d504.jpg",
+				"title": "八达岭长城",
+				"content": "不到长城非好汉",
+				"price": "39.9"
+			},{
+				"id": "4",
+				"imgUrl": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_140x140_b05eb1df.jpg",
+				"title": "北京欢乐谷",
+				"content": "七大主题园区带你畅享北京欢乐谷",
+				"price": "29.5"
+			},{
+				"id": "5",
+				"imgUrl": "http://img1.qunarzz.com/sight/p0/201306/13/bdf22f69fab0ee4ec8d65eac.jpg_140x140_355f4fb6.jpg",
+				"title": "八达岭长城缆车",
+				"content": "巍峨雄伟尽收眼底",
+				"price": "155"
+			}],
+		"holidayInfo": [{
+					"id":"1",
+					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+					"title":"学生最爱的博物馆",
+					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+				},{
+					"id":"2",
+					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+					"title":"学生最爱的博物馆",
+					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+				},{
+					"id":"3",
+					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+					"title":"学生最爱的博物馆",
+					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+				},{
+					"id":"4",
+					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+					"title":"学生最爱的博物馆",
+					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+				},{
+					"id":"5",
+					"imgUrl":"http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+					"title":"学生最爱的博物馆",
+					"text":"周末干嘛？北京很多博物馆已经免费开放啦"
+				}]
+
+	}
+}

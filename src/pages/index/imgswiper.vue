@@ -1,23 +1,16 @@
 <template>
 	<swiper :options="swiperOption" >
-	    <swiper-slide>
-	    	<div class="img-container">
-	    		<img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1708/2a/f848fc9f80eace02.jpg_640x200_a3238bf3.jpg" />
-	    	</div>
+	    <swiper-slide v-for="item in imgsInfo" :key="item.id">
+	        <router-link to="/seckill">
+		    	<div class="img-container">
+		    		<img class="swiper-img" :src="item.imgUrl" />
+		    	</div>
+	    	</router-link>
 	    </swiper-slide>
-	    <swiper-slide>
-	    	<div class="img-container">
-	    		<img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1707/90/2ab6fd356529aa02.jpg_640x200_5a7251a0.jpg" />
-	    	</div>
-	    </swiper-slide>
-	    
 	    <div class="swiper-pagination"  slot="pagination"></div>
-	
 	</swiper>
 </template>
-
 <script>
-
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
@@ -26,12 +19,16 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
-				pagination : '.swiper-pagination',
 				paginationClickable :true,
-				observeParents:true
+				observeParents:true,
+				
+				pagination : '.swiper-pagination',
 			}
+
     	}
 	},
+	props:["imgsInfo"],
+
 	components:{
 		"swiper": swiper,
 		"swiper-slide": swiperSlide

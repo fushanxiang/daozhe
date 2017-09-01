@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import Index from '@/pages/index/index'
 import City from '@/pages/city/index'
 import TicketSale from '@/pages/ticketSale/index'
-import TicketDetail from '@/pages/ticketDetail/index'
-import Weekend from '@/pages/weekend/index'
+import Ticketdetailsale from '@/pages/ticketdetailsale/index'
 import SecKill from '@/pages/seckill/index'
 import Productdetail from '@/pages/productdetail/index'
 import search from '@/search/search'
@@ -17,11 +16,7 @@ import Discussall from '@/pages/parkdetail/discussall'
 import Commentariesall from '@/pages/ticketdetail/commentariesall'
 import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
-import SecKill from '@/pages/seckill/index'
 import Map from '@/pages/parkdetail/map'
-import Productdetail from '@/pages/productdetail/index'
-import search from '@/search/search'
-import List from '@/pages/list/index'
 import SummerVacation from'@/pages/summervacation/index'
 
 Vue.use(Router)
@@ -48,9 +43,9 @@ export default new Router({
 		name: 'ticketSale',
 		component: TicketSale
 	},{
-		path: '/ticketDetail/:id',
-		name: 'ticketDetail',
-		component: TicketDetail
+		path: '/ticketdetailsale/:id',
+		name: 'ticketdetailsale',
+		component: Ticketdetailsale
 	},{
 		path: '/productdetail',
 		name: 'productdetail',
@@ -99,20 +94,5 @@ export default new Router({
 		path: '/map',
 		name: 'map',
 		component: Map
-	}, {
-		path: '/productdetail',
-		name: 'productdetail',
-		component: Productdetail
-	},
-	{
-		path: '/list',
-		name: 'list',
-		component: List
-
-	},{
-		path: '/search',
-		name: 'search',
-		component: search
-
 	}]
 })

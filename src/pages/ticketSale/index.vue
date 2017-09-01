@@ -24,7 +24,7 @@
 			
 			<ul class="sale-list">
 				<li class="list-item" v-for="list in imgsInfo" :key="list.id">
-					<router-link :to="{name:'ticketDetail',params:{id:list.id}}">
+					<router-link :to="{name:'ticketdetailsale',params:{id:list.id}}">
 						<span class="hot-sale">
 							<i>热卖中</i>
 						</span>

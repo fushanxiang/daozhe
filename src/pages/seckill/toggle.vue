@@ -45,6 +45,9 @@ export default {
 				items[num].style.color = '#af16ff';
 			document.body.scrollTop = this.offset[num];
 		},
+		destroyed(){
+        	window.removeEventListener("scroll", this.handleScroll)
+    	},
 		handleScroll(){	
 		 	let scrollT =  document.body.scrollTop;
 			if(scrollT > this.offset[0]){

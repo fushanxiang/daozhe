@@ -58,7 +58,7 @@ export default {
             document.body.scrollTop = this.offset[3]
         }
     }, 
-    beforeDestroye(){
+    destroyed(){
         window.removeEventListener("scroll", this.handleScroll)
     },  
     components:{

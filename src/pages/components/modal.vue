@@ -9,14 +9,15 @@
     </transition>
 </template>
 <script>
-export default {
-    props: ['imgSrc','imgTitle'],
-    methods: {
-        bigImg() {
-            this.$emit('clickit')
+    export default {
+        props: ['imgSrc','imgTitle'],
+        methods: {
+            bigImg() {
+                this.$emit('clickit')
+            }
         }
     }
-}
+
 </script>
 <style scoped>
 /*动画*/

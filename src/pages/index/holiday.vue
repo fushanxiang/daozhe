@@ -1,19 +1,6 @@
 <template>
 	<div class="holiday-trip">
 		<h2 class="ht-modtitle">周末去哪儿</h2>
-<<<<<<< HEAD
-		<div class="ht-product-item">
-			<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
-				<div class="product-item-img">
-					<img v-lazy="item.imgUrl" class="img-info">
-				</div>
-				<div class="product-item-text">
-					<p class="product-name">{{item.title}}</p>
-					<p class="product-descript">{{item.text}}</p>
-				</div>
-			</a>
-		</div>
-=======
 		
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
@@ -28,22 +15,22 @@
 					</router-link>
 				</a>
 			</div>
->>>>>>> origin/master
 		<div class="price-info">
 			<span class="type-icon iconfont">&#xe6ed;</span>
 			<span class="type">票面价</span>
 			<span class="type-info">是指通过景区指定窗口售卖的纸质门票上标注的价格</span>
 		</div>
 	</div>
+	
 </template>
 
 <script>
 	export default {
-		
+		props:["holidayInfo"],
 		data () {
-			return {}
-		},
-		props:["holidayInfo"]
+			return {
+	    	}
+		}
 	}
 </script>
 

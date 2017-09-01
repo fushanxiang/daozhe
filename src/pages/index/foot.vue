@@ -30,11 +30,11 @@
 			</li>
 		</ul>
 		<ul class="foot-two">
-			<li class="order-item">登陆</li>
-			<li class="order-item">我的订单</li>
-			<li class="order-item">历史记录</li>
-			<li class="order-item">我的评价</li>
-			<li class="order-item">关于我们</li>
+			<li class="logon-item">登陆</li>
+			<li class="logon-item">我的订单</li>
+			<li class="logon-item">历史记录</li>
+			<li class="logon-item">我的评价</li>
+			<li class="logon-item">关于我们</li>
 		</ul>
 		<ul class="footer-version">
 			<li class="touch version-type">触屏版</li>

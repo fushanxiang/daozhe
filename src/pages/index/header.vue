@@ -2,17 +2,11 @@
 	<div class="header">
 		<a class="header-left iconfont">&#xe600;</a>
 		 <router-link to="/search">
-<<<<<<< HEAD
 		 <div class="header-title">
 			<span class="iconfont icon-search"></span >
 			<span class="single-line">输入城市/电影/演出</span>
 		</div>
-=======
-			 <div class="header-title">
-				<span class="iconfont icon-search">&#xe6a4;</span >
-				<span class="single-line">输入城市/景点/游玩主题</span>
-			</div>
->>>>>>> origin/master
+
 		</router-link>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">

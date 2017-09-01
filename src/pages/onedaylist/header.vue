@@ -28,11 +28,12 @@ export default {
         	this.show = true;
         	if(this.$refs.input.value == ""){
         		this.show = false
+        		this.$router.push({name: 'search'});
         	}
         },
         handleDelete() {
         	this.show = false;
-        	this.$refs.input.value = ''	
+        	this.$refs.input.value = ''	;
         }
     }
 }

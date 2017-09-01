@@ -9,7 +9,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import vueEventCalendar from 'vue-event-calendar'
 import iscroll from 'vue-scroll'
 import vueResource from 'vue-resource'
+import BaiduMap from 'vue-baidu-map'
 import VueLazyload from 'vue-lazyload'
+import VueScroller from 'vue-scroller'
+import VueBus from 'vue-bus'
 import AMap from 'vue-amap'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
@@ -20,10 +23,19 @@ Vue.use(vueEventCalendar, {locale: 'en'})
 // 整个页面使用fastclick避免300毫秒延迟问题
 import Alert from 'vue-alert-component'
 
-fastclick.attach(document.body);
+Vue.use(IScrollView,IScroll)
+Vue.use(VueScroller)
+Vue.use(BaiduMap, {
+	ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'
+})
+Vue.use(vueResource)
+Vue.use(IScrollView, IScroll)
+Vue.use(Alert)
+Vue.use(VueBus)
+Vue.use(AMap)
 
-Vue.use(vueResource);
-Vue.use(AMap);
+fastclick.attach(document.body);
+Vue.config.productionTip = false;
 
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
@@ -38,9 +50,6 @@ AMap.initAMapApiLoader({
   plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
 });
 
-Vue.use(vueResource)
-Vue.use(IScrollView, IScroll)
-Vue.use(Alert)
 new Vue({
 	el: '#app',
 	router,
@@ -51,4 +60,7 @@ new Vue({
 	},
 	render: h => h(App)
 })
+
+
+var bus = new Vue()
 

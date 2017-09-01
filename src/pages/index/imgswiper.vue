@@ -20,8 +20,8 @@ export default {
 				direction : 'horizontal',
 				autoHeight: true,
 				paginationClickable :true,
-				observeParents:true,		
-				pagination : '.swiper-pagination',
+				observeParents:true,
+				pagination : '.swiper-pagination'
 			}
 
     	}

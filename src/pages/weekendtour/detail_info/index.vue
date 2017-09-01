@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 import HeaderFixed from './header_fixed.vue'
 import DetailInfo from './detail_info.vue'
 
@@ -15,7 +14,6 @@ export default {
     	return {
     		goodsInfo : []
    		}
-     
 	},
 	created() {
 		this.$http.get('/static/weekendtour.json').then(response => {
@@ -33,5 +31,5 @@ export default {
 </script>
 
 <style scoped>
-	
+
 </style>

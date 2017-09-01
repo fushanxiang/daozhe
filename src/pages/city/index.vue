@@ -6,7 +6,6 @@
 
 <script>
    import cityHeader from './city_header.vue';
-
     export default {
         data () {
             return {
@@ -32,10 +31,8 @@
                 console.log("ajax error");
             });
         },
-
     }
 </script>
 
 <style scoped>
-
 </style>

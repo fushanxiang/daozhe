@@ -3,7 +3,7 @@
 		<div class="ticketnum" ref="ticketnum" >
 			<iscroll-view class="scroll-view" :options="{preventDefault: false}" @scrollStart="log" @pullUp="load" @pullDown="refresh">
 				<ul class="ticket-list" id="ticket-list" >
-					<router-link :to="{name:'order'}">
+					<router-link :to="{name:'onedaydetail'}">
 						<li class="ticket-list-item" v-for="(news, index) in newslist" :key="index">
 							<div class="ticket-list-img">
 		  						<img class="ticket-list-img-left" :src="news.ticketImg" />

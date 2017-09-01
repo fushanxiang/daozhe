@@ -31,7 +31,6 @@ export default {
             } 
         }
     },
-    props:['timestamp'],
     methods:{
         openByDrop(e){
             this.calendar3.show=true;
@@ -46,9 +45,6 @@ export default {
                 },false);
             },1000)
         }
-    },
-    mounted() {
-        console.log(this.timestamp);
     }
 }
 </script>

@@ -46,7 +46,6 @@
 	</div>
 </template>
 <script >
-/*import AMap from 'AMap';   //在页面中引入高德地图*/
 	export default{
 			data(){
 				return{
@@ -93,7 +92,7 @@
 
 </script>
 <style scoped>
-     @import url("../../../../assets/css/order/order-tab.css");
+     @import url("../../../../assets/css/onedaydetail/order-tab.css");
      #amap-page-container{
           height: 3.5rem;
           padding: .2rem .2rem .1rem .2rem;

@@ -17,12 +17,10 @@ import AMap from 'vue-amap'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
 Vue.use(IScrollView, IScroll)
-Vue.use(VueResource);
 Vue.use(VueAwesomeSwiper);
 Vue.use(vueEventCalendar, {locale: 'en'}) 
 // 整个页面使用fastclick避免300毫秒延迟问题
 import Alert from 'vue-alert-component'
-
 Vue.use(IScrollView,IScroll)
 Vue.use(VueScroller)
 Vue.use(BaiduMap, {
@@ -33,10 +31,8 @@ Vue.use(IScrollView, IScroll)
 Vue.use(Alert)
 Vue.use(VueBus)
 Vue.use(AMap)
-
 fastclick.attach(document.body);
 Vue.config.productionTip = false;
-
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
 Vue.use(VueLazyload, {

@@ -27,7 +27,7 @@ import sightNote from './sight-note.vue'
 import TitleComment from './titlecomments.vue'
 import OtherComment from './othercomment.vue'
 import Tab from './components/tab.vue'
-import Introduce from '@/pages/order/introduce'
+import Introduce from '@/pages/onedaydetail/introduce'
 export default {
   name: 'index',
   		data(){
@@ -122,7 +122,7 @@ export default {
 <style scoped>
 
 
-    @import '../../assets/css/base/reset.css';
+    @import '../../assets/css/common/border.css';
     @import "../../assets/font/iconfont.css";
      .slide-fade-enter-active {
        transition: all .4s ease;

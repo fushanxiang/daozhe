@@ -105,7 +105,7 @@
                     searchCities = this.country? this.datas.chinaCity:this.datas.abroadCity,
                     allSearchCities = [];
                 for (var i = 0; i < searchCities.length; i++) {
-                    var getCities = searchCities[i][1];
+                    var getCities = searchCities[i][1];                  
                         getCities.filter(function (item) {
                             if(item.itemName.toLowerCase().indexOf(searchWord) !== -1 || item.cityarea.indexOf(searchCharacter) !== -1) {
                                 allSearchCities.push(item.cityarea);                          

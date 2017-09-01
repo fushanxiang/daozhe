@@ -1,22 +1,27 @@
 <template>
-	<header class="header">
+	<div class="header">
 		<a class="header-left iconfont">&#xe600;</a>
-		<div class="header-title">
-			<span class="iconfont icon-search"></span >
-			<span class="single-line">输入城市/景点/游玩主题</span>
-		</div>
+		 <router-link to="/search">
+			 <div class="header-title">
+				<span class="iconfont icon-search">&#xe6a4;</span >
+				<span class="single-line">输入城市/景点/游玩主题</span>
+			</div>
+		</router-link>
 		<div class="header-right">
 			<router-link :to="{name:'city',params: {id:123}}">
 				<span class="nav-city">{{$store.getters.perfectCity}}<span class="downarrow"></span>
-			</span>
+				</span>
 			</router-link>
 		</div>
-	</header>
+	</div>
 	
 </template>
 
 <script>
 export default {
+	mounted(){
+
+	},
 	data () {
 		return {
 
@@ -24,9 +29,6 @@ export default {
 	},
 	methods: {
 		changeCity: function() {
-			// this.$store.commit("changeCity", {
-			// 	city: "西安"
-			// });
 			this.$store.dispatch("fiveSecondsChangeCity",{
 				city:"云南"
 			});
@@ -86,19 +88,25 @@ export default {
 		position: absolute;
 		top: 0;
 		right: 0;
-		margin-right: .04rem;
+		margin-right: .02rem;
 		line-height: .88rem;
 		width: 1.28rem;
 		text-align: center;
 	}
 	.nav-city {
-		margin-left: -0.04rem;
+		margin-left: -0.01rem;
+		display: inline-block;
+		width:.9rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		color:#fff;
 	}
 	.downarrow {
-		position: relative;
-		top: -0.05rem;
-		left: 0.03rem;
+		position: absolute;
+		top: 50%;
+		right: 0.08rem;
+		margin-top: -.26rem;
 		display: inline-block;
 	    width: 0;
 	    height: 0;

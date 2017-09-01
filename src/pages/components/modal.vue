@@ -54,6 +54,9 @@ export default {
 .content{
     width:60%;
     height:26%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-align: center;
     position: absolute;
     left: 20%;

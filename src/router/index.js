@@ -27,118 +27,130 @@ import uaCheckout from '@/pages/parkdetail/uaCheckout'
 import Weekend from '@/pages/weekend/index'
 import SecKill from '@/pages/seckill/index'
 import Map from '@/pages/parkdetail/map'
+import Onedaytour from '@/pages/onedaytour/index'
+import OnedayList from '@/pages/onedaylist/index'
 import SummerVacation from'@/pages/summervacation/index'
 Vue.use(Router)
 export default new Router({
-
-  routes: [    
-      {
+	routes: [
+	    {
+	      path: '/',
+	      name: 'index',
+	      component: Index
+	    },{
+	      path: '/weekend',
+	      name: 'weekend',
+	      component: Weekend
+	    },{
+	      path:'/seckill',
+	      name:'seckill',
+	      component:SecKill
+	    },{
+	      path: '/city',
+	      name: 'city',
+	      component: City
+	    },{
+	      path: '/summervacation',
+	      name: 'summervacation',
+	      component: SummerVacation
+	    },{
+	      path: '/parkdetail',
+	      name: 'parkdetail',
+	      component: ParkDetail
+	    },{
+	      path: '/ticketdetail',
+	      name: 'ticketdetail',
+	      component: Ticketdetail
+	    },{
+	      path: '/uacheckout',
+	      name: 'uacheckout',
+	      component: uaCheckout
+	    },{
+	      path: '/discussall',
+	      name: 'discussall',
+	      component: Discussall
+	    },{
+	      path: '/commentariesall',
+	      name: 'commentariesall',
+	      component: Commentariesall
+	    },{
+	      path: '/waterpark',
+	      name: 'waterpark',
+	      component: WaterPark
+	    },{
+	    	path: '/logined',
+	      name: 'logined',
+	      component: Logined
+	    },{
+	    	path: '/map',
+	      name: 'map',
+	      component: Map
+	    }, {
+	      path: '/productdetail',
+	      name: 'productdetail',
+	      component: Productdetail
+	    },
+	    {
+	      path: '/list',
+	      name: 'list',
+	      component: List
+		},{
+		  path: '/onedaytour',
+		  name: 'onedaytour',
+		  component: Onedaytour
+   	    },{
+     	  path: '/onedaylist',
+          name: 'onedaylist',
+          component: OnedayList
+	    },{
+	      path: '/search',
+	      name: 'search',
+	      component: search
+	    },{
+	        path: '/weekendtour/index',
+	        name: 'weekendIndex',
+	        component: WeekendIndex
+	    },{
+	        path: '/weekendtour/detail/:id',
+	        name: 'weekendDetail',
+	        component: WeekendDetail
+	    },{
+	        path: '/weekendtour/detail_info/:id',
+	        name: 'weekendDetailInfo',
+	        component: WeekendDetailInfo
+	    },{
+	        path: '/weekendtour/comment/:id',
+	        name: 'weekendComment',
+	        component: WeekendComment
+	    },{
+	        path: '/order/:id',
+	        name: 'order',
+	        component: Order
+	    },{
+	        path: '/weekendtour/slightmap/:id',
+	        name: 'Slightmap',
+	        component: Slightmap
+	    },{
         path: '/onedaydetail',
         name: 'onedaydetail',
         component: Onedaydetail
-      },
-      {
-      path: '/purchaseorder',
-      name: 'purchaseorder',
-      component: Purchaseorder
+      },{
+        path: '/purchaseorder',
+        name: 'purchaseorder',
+        component: Purchaseorder
       },{
         path: "/onedaydetail/comments",
         name: 'comment',
         component: Comment
       },{
-      path: '/introduce',
-      name: 'introduce',
-      component: Introduce
-     },{
-      path: '/',
-      name: 'index',
-      component: Index
-    },{
-      path: '/weekend',
-      name: 'weekend',
-      component: Weekend
-    },{
-      path:'/seckill',
-      name:'seckill',
-      component:SecKill
-    },{
-      path: '/city',
-      name: 'city',
-      component: City
-    },{
-      path: '/summervacation',
-      name: 'summervacation',
-      component: SummerVacation
-    },{
-      path: '/parkdetail',
-      name: 'parkdetail',
-      component: ParkDetail
-    },{
-      path: '/ticketdetail',
-      name: 'ticketdetail',
-      component: Ticketdetail
-    },{
-      path: '/uacheckout',
-      name: 'uacheckout',
-      component: uaCheckout
-    },{
-      path: '/discussall',
-      name: 'discussall',
-      component: Discussall
-    },{
-      path: '/commentariesall',
-      name: 'commentariesall',
-      component: Commentariesall
-    },{
-      path: '/waterpark',
-      name: 'waterpark',
-      component: WaterPark
-    },{
-    	path: '/logined',
-      name: 'logined',
-      component: Logined
-    },{
-    	path: '/map',
-      name: 'map',
-      component: Map
-    }, {
-      path: '/productdetail',
-      name: 'productdetail',
-      component: Productdetail
-    },
-    {
-      path: '/list',
-      name: 'list',
-      component: List
-    },{
-      path: '/search',
-      name: 'search',
-      component: search
-    },
-	  {
+        path: '/introduce',
+        name: 'introduce',
+        component: Introduce
+      }, 
+      {
        path: '/purchaseorder',
        name: 'purchaseorder',
        component: Purchaseorder
-    },{
-        path: '/weekendtour/index',
-        name: 'weekendIndex',
-        component: WeekendIndex
-    },{
-        path: '/weekendtour/detail/:id',
-        name: 'weekendDetail',
-        component: WeekendDetail
-    },{
-        path: '/weekendtour/detail_info/:id',
-        name: 'weekendDetailInfo',
-        component: WeekendDetailInfo
-    },{
-        path: '/weekendtour/comment/:id',
-        name: 'weekendComment',
-        component: WeekendComment
-    },
-    {
-        path: '/weekendtour/slightmap/:id',
-        name: 'Slightmap',
-        component: Slightmap
-    }]
+      }
+      ]
 })

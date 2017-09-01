@@ -25,7 +25,7 @@
 				<span class="pic-iconh iconfont">&#59180;</span>
 				<span>1</span>
 				<span>/</span>
-				<span >{{goodsInfo.imgsSrc ? goodsInfo.imgsSrc.length : 0}}</span>
+				<span >{{goodsInfo.imgsSrc ? goodsInfo.imgsSrc.length : 3}}</span>
 			</div>
 		</div>
 		<div class="header-content">

@@ -4,6 +4,7 @@
 		"goods" : [{
 			"id" : 1,
 			"src": "//img1.qunarzz.com/sight/p0/1510/b7/b79708f2d0cd318d90.water.jpg_640x280_4737534e.jpg",
+			"imgsSrc":"'//img1.qunarzz.com/sight/p0/1510/b7/b79708f2d0cd318d90.water.jpg_640x280_4737534e.jpg','//img1.qunarzz.com/sight/p0/1510/b7/b79708f2d0cd318d90.water.jpg_640x280_4737534e.jpg','//img1.qunarzz.com/sight/p0/1510/b7/b79708f2d0cd318d90.water.jpg_640x280_4737534e.jpg'",
 			"title" : "超值热卖 来自地下三千米的温暖【温都水城两馆周末成人票】",
 			"address": "昌平区·温都水城",
 			"sellPrice" : 127,

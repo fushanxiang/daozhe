@@ -30,7 +30,7 @@ export default {
   name: 'index',
   data () {
     return {
-      isActive: false,
+      isActive:false,
       isChose:false,
       itemActive:[],
       listWidth:0,  
@@ -98,7 +98,7 @@ export default {
     transform: rotate(180deg);
   }
   .content .txtActive{
-    border-color:#28a9b9;
+    border-color: #28a9b9;
     color: #28a9b9;
   }
   .content .show{
@@ -109,7 +109,7 @@ export default {
     margin-right: 0;
     width: 100%;
     height: auto;
-    z-index:6;
+    z-index: 6;
   }
   .content .lists{
     height:auto;
@@ -164,7 +164,7 @@ export default {
     max-height: 6rem;
     padding: .08rem .12rem;
     background: #e5e7e8;
-    z-index:6;
+    z-index: 6;
   }
   .listInner {
      height:.68rem;
@@ -192,7 +192,7 @@ export default {
     border:1px solid #fff;
   }
   .scroll-view {
-    touch-action:none;
+    touch-action: none;
     overflow: hidden; 
   }
   .mask {

@@ -3,48 +3,43 @@
 		<div class="ticketnum" ref="ticketnum" >
 			<iscroll-view class="scroll-view" :options="{preventDefault: false}" @scrollStart="log" @pullUp="load" @pullDown="refresh">
 				<ul class="ticket-list" id="ticket-list" >
-					<li class="ticket-list-item" v-for="(news, index) in newslist" :key="index">
-						<div class="ticket-list-img">
-	  						<img class="ticket-list-img-left" :src="news.ticketImg">
-	  					<div class="ticket-list-tomorrow-san" v-if="news.font == true">
-	  						<span class="ticket-list-tomorrow">可定明日</span>
-	  					</div>
-	  					<div class="ticket-list-today-san" v-else="news.font == false">
-	  						<span class="ticket-list-today">可定今日</span>
-	  					</div>
-	  					
-	  				</div>
-	  				<div class="ticket-list-productinfo">
-	  					<h4 class="ticket-list-title">{{news.title}}</h4>
-	  					<div class="ticket-list-taglist">
-	  						<span class="ticket-list-taglist-item">北京出发|</span>
-	  						<span>无自费|</span>
-	  						<span>无购物</span>
-	  						<span class="ticket-list-taglist-stock" v-if="news.stock == true">赠券</span>
-	  					</div>
-	  					<p class="ticket-list-price">
-	  					    <span>起</span>	
-	  						<span class="ticket-list-new-price">&yen;{{news.newPrice}}</span>
-	  					</p>
-	  					<div class="ticket-list-text">
-	  						<span class="ticket-list-sold">已售{{news.sold}}</span>
-	  						<span class="ticket-list-face">票面价:</span>
-	  						<span class="ticket-list-marketprice">&yen;{{news.oldPrice}}</span>	
-	  					</div>
-	  				</div>
-					</li>
+					<router-link :to="{name:'order'}">
+						<li class="ticket-list-item" v-for="(news, index) in newslist" :key="index">
+							<div class="ticket-list-img">
+		  						<img class="ticket-list-img-left" :src="news.ticketImg" />
+		  						<div class="ticket-list-tomorrow-san" v-if="news.font == true">
+		  							<span class="ticket-list-tomorrow">可定明日</span>
+		  						</div>
+		  						<div class="ticket-list-today-san" v-else="news.font == false">
+		  							<span class="ticket-list-today">可定今日</span>
+		  						</div>
+		  					</div>
+		  					<div class="ticket-list-productinfo">
+			  					<h4 class="ticket-list-title">{{news.title}}</h4>
+			  					<div class="ticket-list-taglist">
+			  						<span class="ticket-list-taglist-item">北京出发|</span>
+			  						<span>无自费|</span>
+			  						<span>无购物</span>
+			  						<span class="ticket-list-taglist-stock" v-if="news.stock == true">赠券</span>
+			  					</div>
+			  					<p class="ticket-list-price">
+			  					    <span>起</span>	
+			  						<span class="ticket-list-new-price">&yen;{{news.newPrice}}</span>
+			  					</p>
+			  					<div class="ticket-list-text">
+			  						<span class="ticket-list-sold">已售{{news.sold}}</span>
+			  						<span class="ticket-list-face">票面价:</span>
+			  						<span class="ticket-list-marketprice">&yen;{{news.oldPrice}}</span>	
+			  					</div>
+		  					</div>
+						</li>
+					</router-link> 
 				</ul>
 			</iscroll-view>
 		</div>
 	</div>	
 </template>
 <script>
-
-import IScrollView from 'vue-iscroll-view'
-import Vue from "vue"
-import IScroll from 'iscroll'
-Vue.use(IScrollView, IScroll)
-
  export default{
 	data(){
 		return{ 
@@ -89,10 +84,8 @@ Vue.use(IScrollView, IScroll)
                 "oldPrice":"388" 
                 })
          },
-         refresh (iscroll) {}
-		
+         refresh (iscroll) {}		
 	}
-	
  }
 
 </script>
@@ -183,7 +176,7 @@ Vue.use(IScrollView, IScroll)
 	    -webkit-box-orient: vertical;
 		line-height: .36rem;
     	font-size: .3rem;
-    	
+    	color: #212121;
 	}
 	.ticket-list-taglist {
 		float: left;
@@ -193,6 +186,7 @@ Vue.use(IScrollView, IScroll)
 	    padding-top: .08rem;
 	    line-height: .24rem;
 	    font-size: 1px;
+	    color: #212121;
 	}
 	.ticket-list-taglist-item {
 		color: #00bcd4;
@@ -211,6 +205,7 @@ Vue.use(IScrollView, IScroll)
 		clear: both;
 		width: 100%;
 		height: 0.2rem;	
+		color: #212121;
 	}
 	.ticket-list-new-price {
 		color: #ff8300;

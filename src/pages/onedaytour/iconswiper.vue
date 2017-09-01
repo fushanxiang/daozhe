@@ -22,8 +22,8 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
-				paginationClickable :true,
-				observeParents:true
+				paginationClickable: true,
+				observeParents: true
 			}
     	}
 	},

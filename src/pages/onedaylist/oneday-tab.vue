@@ -88,7 +88,6 @@
 
 <script>
 import IScroll from 'iscroll'
-
 export default {
 	data () {
 		return {
@@ -220,7 +219,7 @@ export default {
 	bottom: 0.75rem;
 	background: #fff;
 	height: 5.3rem;
-	z-index:92;
+	z-index: 92;
 }
 .recommend{
 	background: #fff;
@@ -251,6 +250,7 @@ export default {
 	right: 0;
 	opacity: 0.3;
 	background: rgba(0,0,0,0.45);
+	z-index: 90;
 }
 .scroll-view{
   touch-action: none;
@@ -270,10 +270,10 @@ export default {
 .container-left{
 	float: left;
 	width: 30%;
-	height: 100%
+	height: 100%;
 }
 .footer-container-color{
-	background:#f4f5f6;
+	background: #f4f5f6;
 }
 .container-left-li{
 	padding: .24rem .1rem;
@@ -283,10 +283,10 @@ export default {
     line-height: .4rem;
 }
 .container-right{
-	float:right;
-	width:70%;
-	height:100%;
-	background:#fff;
+	float: right;
+	width: 70%;
+	height: 100%;
+	background: #fff;
 }
 .container-right-li{
 	padding: .24rem .1rem;
@@ -296,18 +296,15 @@ export default {
     line-height: .4rem;
 }
 .all-left{
-	float:left;
-	width:40%;
-	height:100%
-}
-.footer-container-color{
-	background:#f4f5f6;
+	float: left;
+	width: 40%;
+	height: 100%;
 }
 .all-right{
-	float:right;
-	width:60%;
-	height:100%;
-	background:#fff;
+	float: right;
+	width: 60%;
+	height: 100%;
+	background: #fff;
 }
 </style>
 

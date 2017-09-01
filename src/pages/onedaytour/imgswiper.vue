@@ -17,12 +17,12 @@ export default {
 	data() {
 		return {
 			swiperOption: {
-				direction : 'horizontal',
+				direction: 'horizontal',
 				autoHeight: true,
 				autoplay: 3000,
 				loop: true,
-				pagination : '.swiper-pagination',
-				paginationClickable :true,
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
 				observeParents:true
 			}
 		}
@@ -50,6 +50,6 @@ export default {
 		background: #eee;
 	}
 	.swiper-img {
-		width:100%;
+		width: 100%;
 	}
 </style>

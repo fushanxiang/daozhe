@@ -20,11 +20,9 @@
 <script>
 export default {
 	mounted(){
-
 	},
 	data () {
 		return {
-
     	}
 	},
 	methods: {
@@ -47,7 +45,6 @@ export default {
 	    background: #00bcd4;
 	    text-align: center;
 	    color: #fff;
-	    z-index: 999;
 	}
 	.header-left {
 		float: left;
@@ -84,9 +81,6 @@ export default {
 	    position: absolute;
 	    left: .2rem;
 	    color: #e4e7ea;
-	}
-	.icon-search::before{
-		content: '';
 	}
 	.header-right{
 		position: absolute;

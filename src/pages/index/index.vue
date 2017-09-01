@@ -8,7 +8,6 @@
         <foot></foot>
 	 </div>
 </template>
-
 <script>
 import IndexHeader from './header.vue'
 import ImgSwiper from './imgswiper.vue'
@@ -16,6 +15,7 @@ import IconSwiper from './iconswiper.vue'
 import HotSale from './hotsale.vue'
 import Holiday from './holiday'
 import Foot from './foot.vue'
+
 
 export default {
   name: 'index',

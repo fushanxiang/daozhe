@@ -32,7 +32,6 @@
 <script>
 
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
 export default {
 	data () {
 		return {
@@ -113,7 +112,6 @@ export default {
     	border-top:1px solid #e0e0e0;
     	overflow: hidden;
     	margin-bottom: .24rem;
-
     }
     .position-directon{  
     	float: left;
@@ -151,6 +149,5 @@ export default {
     	border:1px solid #e0e0e0;
     	background:#fff url(http://channel.wangpiao.com/WeChat/Content/images/banner/jjdy20170727.jpg) center center no-repeat;
     	background-size:auto 100%;
-
     }
 </style>

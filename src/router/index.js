@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Particulars from './../pages/topictickets/particulars.vue'
-import topictickets from './../pages/topictickets/index.vue'
 import Index from '@/pages/index/index'
 import WeekendIndex from '@/pages/weekendtour/index/index'
 import WeekendDetail from '@/pages/weekendtour/detail/index'
@@ -131,16 +129,5 @@ export default new Router({
 	        path: '/weekendtour/slightmap/:id',
 	        name: 'Slightmap',
 	        component: Slightmap
-	    }, {
-		      path: '/Particulars/:id',
-		      name: 'Particulars',
-		      component: Particulars
-		    },
-		    {
-		      path: '/topictickets',
-		      name: 'topictickets',
-		      component: topictickets
-		    }
-	    ]
-
+	    }]
 })

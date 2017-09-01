@@ -1,6 +1,6 @@
 
 @font-face {font-family: "iconfont";
-
+<<<<<<< HEAD
 
   src: url('iconfont.eot?t=1503903213234'); /* IE9*/
   src: url('iconfont.eot?t=1503903213234#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -24,6 +24,7 @@
   url('iconfont.ttf?t=1504186196525') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
   url('iconfont.svg?t=1504186196525#iconfont') format('svg'); /* iOS 4.1- */
 
+}
 
 .iconfont {
   font-family:"iconfont" !important;

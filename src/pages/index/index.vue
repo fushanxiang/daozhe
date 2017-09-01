@@ -1,5 +1,4 @@
 <template>
-
     <div class="main-content">
     		<index-header></index-header>
     		<img-swiper :imgsInfo="imgsInfo"></img-swiper>
@@ -8,7 +7,6 @@
         <holiday :holidayInfo="holidayInfo"></holiday>
         <foot></foot>
 	 </div>
-
 </template>
 <script>
 import IndexHeader from './header.vue'
@@ -17,11 +15,12 @@ import IconSwiper from './iconswiper.vue'
 import HotSale from './hotsale.vue'
 import Holiday from './holiday'
 import Foot from './foot.vue'
+
+
 export default {
   name: 'index',
   data () {
     return {
-
       iconsInfo:[],
       imgsInfo:[],
       itemsInfo:[],
@@ -48,13 +47,11 @@ export default {
     "hot-sale": HotSale,
     "holiday":Holiday,
     "foot": Foot
-
   }
 }
 </script>
 
 <style scoped>
-
 
 .main-content{
     background: #f5f5f5;
@@ -76,5 +73,4 @@ li {
 a {
     color: #42b983;
 }
-
 </style>

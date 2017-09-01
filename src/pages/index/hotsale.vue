@@ -2,12 +2,14 @@
 	<div>
 		<h3 class="hotsale-title">热销推荐</h3>
 		<ul class="hotsale-list">
-			<li class="hotsale-item border-bottom" v-for="item in itemsInfo" :key="item.id">
-				<img class="item-img" v-lazy='item.imgUrl'/>
-				<p class="item-title">{{item.title}}</p>
-				<p class="item-content">{{item.content}}</p>
-				<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">起</span></p>
-			</li>
+			<router-link :to="{name:'parkdetail'}">
+				<li class="hotsale-item border-bottom" v-for="item in itemsInfo" :key="item.id">
+					<img class="item-img" v-lazy='item.imgUrl'/>
+					<p class="item-title">{{item.title}}</p>
+					<p class="item-content">{{item.content}}</p>
+					<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">起</span></p>
+				</li>
+			</router-link>
 		</ul>
 		<p class="item-all">查看所有产品</p>
 	</div>
@@ -25,14 +27,19 @@ export default {
 </script>
 
 <style scoped>
-	 @import '../../assets/css/common/border.css';
+	@import '../../assets/css/common/border.css';
 	.hotsale-list{
 		background: #fff;
 	}
 	.hotsale-title {
+		display: inline-block;
+		width:60%;
 		background: #f5f5f5;
 		padding-left: .28rem;
 		line-height: .8rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		font-size: .28rem;
 		color: #212121;
 	}
@@ -50,6 +57,10 @@ export default {
 		width: 1.4rem;
 	}
 	.item-title {
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		margin-top: .04rem;
 		font-size: .3rem;
 		color: #212121;
@@ -76,6 +87,9 @@ export default {
 		color: #9e9e9e;
 	}
 	.item-all {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		line-height: .86rem;
 		text-align: center;
 		background: #fff;

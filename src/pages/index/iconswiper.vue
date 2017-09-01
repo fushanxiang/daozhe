@@ -1,20 +1,15 @@
-
 <template>
 <div>
 	<swiper :options="swiperOption" > 
 	    <swiper-slide v-for="page in pages" :key='page.key'>
-	    	<ul class="icon-list">
-	    		<li class="icon-item" v-for="item in page" :key='item.id'>
-	    			<img class="icon-img" :src="item.imgUrl" />
-
-	    			<div class="keywords" :title="item.title">{{item.title}}</div>
-	    			
-
-	    			<h1 class="icon-title">{{item.title}}</h1>
-
-	    		</li>
-	    	</ul>
-
+	        <router-link to="/summervacation">
+		    	<ul class="icon-list">
+		    		<li class="icon-item" v-for="item in page" :key='item.id'>
+		    			<img class="icon-img" :src="item.imgUrl" />
+		    			<h1 class="icon-title">{{item.title}}</h1>
+		    		</li>
+		    	</ul>
+	    	</router-link>
 	    </swiper-slide>
 	    <div class="swiper-pagination"  slot="pagination"></div>
 	</swiper>
@@ -35,7 +30,9 @@
 </template>
 
 <script>
+
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
 export default {
 	data () {
 		return {
@@ -46,11 +43,12 @@ export default {
 				paginationClickable :true,
 				observeParents:true
 			}
+			
     	}
 	},
 	props:["iconsInfo"],
-	
-	
+	methods: {
+	},
 	computed: {
 		pages: function() {
 			const pages = [];
@@ -96,21 +94,12 @@ export default {
 		height: .66rem;
 		margin: 0 auto;
 	}
-.keywords {
-    margin-top: .2rem;
-    color: #212121;
-    font-size: .28rem;
-   text-align: center;
-}
-.icon-list{
-	overflow: hidden;
-	width: 100%;
-	padding-bottom: 48%;
-	height:0;
-	background: #eee;
-}
 	.icon-title{
 		margin-top:.2rem;
+		width:100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		font-size: .28rem;
 		color:#212121;
 	}
@@ -127,11 +116,17 @@ export default {
     .position-directon{  
     	float: left;
     	width: 50%;
+    	line-height: .98rem;
+    	font-size:.28rem;
+    	color:#212121;
+    	overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
     	font-size:.28rem;
     	color:#212121;
     	line-height: .98rem;
     	text-align: center;
-        box-sizing: border-box; 
+        box-sizing: border-box;
     	background-color: #fff; 
     }
     .position-directon:nth-child(1){
@@ -144,7 +139,6 @@ export default {
     }
     .position-right{
     	font-size: .32rem;
-    	
     	margin-right: .05rem;
     	color:#616161;
     }

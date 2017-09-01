@@ -4,7 +4,6 @@
 			<img class="toggle-img" src="//s.qunarzz.com/piao_topic/image/touch/custom/2016/1772travel10/170710/caption2.jpg">
 		</div>
 		<div id="toggle" class="toggle">
-
 			<ul class="toggle-list">
 				<li class="toggle-item one">玩发达啊法分类</li>
 				<li class="toggle-item two">冲浪漂流</li>
@@ -46,13 +45,13 @@
 		padding-top:0;
 	}
 	.sumselect-play{
-	overflow: hidden;
-    min-height: .88rem;
+		overflow: hidden;
+	    min-height: .88rem;
 	}
 	.sumselect-play .toggle-img{
-    width: 100%;
-    vertical-align: top;
-}
+	    width: 100%;
+	    vertical-align: top;
+	}
 	.toggle-fixed{
 		z-index: 10;
 		padding-top:.2rem;

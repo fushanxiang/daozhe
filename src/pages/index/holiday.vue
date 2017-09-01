@@ -25,11 +25,12 @@
 
 <script>
 	export default {
-		props:["holidayInfo"],
+		
 		data () {
 			return {
 	    	}
-		}
+		},
+		props:["holidayInfo"]
 	}
 </script>
 

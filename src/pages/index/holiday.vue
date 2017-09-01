@@ -1,20 +1,6 @@
 <template>
 	<div class="holiday-trip">
-		<h2 class="ht-modtitle">周末去哪儿</h2>
-<<<<<<< HEAD
-		<div class="ht-product-item">
-			<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
-				<div class="product-item-img">
-					<img v-lazy="item.imgUrl" class="img-info">
-				</div>
-				<div class="product-item-text">
-					<p class="product-name">{{item.title}}</p>
-					<p class="product-descript">{{item.text}}</p>
-				</div>
-			</a>
-		</div>
-=======
-		
+		<h2 class="ht-modtitle">周末去哪儿</h2>		
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
 				    <router-link to="/weekend">
@@ -28,7 +14,6 @@
 					</router-link>
 				</a>
 			</div>
->>>>>>> origin/master
 		<div class="price-info">
 			<span class="type-icon iconfont">&#xe6ed;</span>
 			<span class="type">票面价</span>

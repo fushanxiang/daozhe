@@ -1,3 +1,4 @@
+
 <template class="box">
 	<div class="comments-box">
 		<ul class="comments-list" v-on:click="handleClick">

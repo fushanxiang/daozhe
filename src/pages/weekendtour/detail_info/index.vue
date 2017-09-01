@@ -1,3 +1,4 @@
+
 <template>
 	<div>
 		<header-fixed :goodsInfo="goodsInfo"></header-fixed>
@@ -34,4 +35,5 @@ export default {
 
 <style scoped>
 	
+
 </style>

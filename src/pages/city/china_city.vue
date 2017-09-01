@@ -41,9 +41,11 @@
             change: function(value) {
                 if(value==='china') {
                     this.foreign = false;
+                    document.body.scrollTop = 0;
                 }
                 if(value==='abroad') {
                     this.foreign = true;
+                    document.body.scrollTop = 0;
                 }
             }
         },

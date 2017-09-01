@@ -2,12 +2,16 @@
 	<div>
 		<h3 class="hotsale-title">热销推荐</h3>
 		<ul class="hotsale-list">
-			<li class="hotsale-item border-bottom" v-for="item in itemsInfo" :key="item.id">
-				<img class="item-img" v-lazy='item.imgUrl'/>
-				<p class="item-title">{{item.title}}</p>
-				<p class="item-content">{{item.content}}</p>
-				<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">元</span></p>
-			</li>
+
+			<router-link :to="{name:'parkdetail'}">
+				<li class="hotsale-item border-bottom" v-for="item in itemsInfo" :key="item.id">
+					<img class="item-img" v-lazy='item.imgUrl'/>
+					<p class="item-title">{{item.title}}</p>
+					<p class="item-content">{{item.content}}</p>
+					<p class="item-price"><span class="price-yuan">&yen;</span>{{item.price}}<span class="price-font">起</span></p>
+				</li>
+			</router-link>
+
 		</ul>
 		<p class="item-all">查看所有电影</p>
 	</div>

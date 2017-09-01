@@ -20,7 +20,7 @@ export default {
 	},
 	created() {
 
-		this.$http.get('/static/weekend_comments.json').then(response => {
+		this.$http.get('/static/weekendtour_comments.json').then(response => {
 			var comments = response.body.data.comments;
 			var id = this.$route.params.id.split("=")[1];
 			this.id = id;

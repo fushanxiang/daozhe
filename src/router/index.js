@@ -23,6 +23,9 @@ import Map from '@/pages/parkdetail/map'
 import Productdetail from '@/pages/productdetail/index'
 import search from '@/search/search'
 import List from '@/pages/list/index'
+import SummerVacation from'@/pages/summervacation/index'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -40,9 +43,13 @@ export default new Router({
 	      name:'seckill',
 	      component:SecKill
 	    },{
-	      path: '/city/:id',
+	      path: '/city',
 	      name: 'city',
 	      component: City
+	    },{
+	      path: '/summervacation',
+	      name: 'summervacation',
+	      component: SummerVacation
 	    },{
 	      path: '/parkdetail',
 	      name: 'parkdetail',
@@ -89,7 +96,6 @@ export default new Router({
 	      path: '/search',
 	      name: 'search',
 	      component: search
-
 	    },{
 	        path: '/weekendtour/index',
 	        name: 'weekendIndex',

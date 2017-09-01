@@ -25,7 +25,7 @@ export default {
      
 	},
 	created() {
-	    this.$http.get('/static/weekend.json').then(response => {
+	    this.$http.get('/static/weekendtour.json').then(response => {
 	    	var data = response.body.data;
 	    	this.goods = data.goods.splice(0,2);
 	    }, response => {
@@ -48,7 +48,7 @@ export default {
 	    infinite: function (done) {
 	    	var length = this.goods.length;
 	    	setTimeout(() => {
-		        this.$http.get('/static/weekend.json').then(response => {
+		        this.$http.get('/static/weekendtour.json').then(response => {
         	    	var newData = response.body.data.goods.splice(length,2);
         	    	this.goods = this.goods.concat(newData);
         	    	this.$refs.myscroller.finishInfinite(true);

@@ -27,7 +27,7 @@ export default {
    		}
 	},
 	created() {
-  		this.$http.get('/static/weekend.json').then(response => {
+  		this.$http.get('/static/weekendtour.json').then(response => {
 			var id = this.$route.params.id.split("=")[1];
 			this.id = id;
 			var data = response.body.data;

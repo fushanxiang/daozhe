@@ -32,12 +32,5 @@ export default new Vuex.Store({
 		suggestsearch:function(state,ifshow){
 			state.suggestsearch = ifshow;
 		}
-	},
-	actions: {
-		fiveSecondsChangeCity: function(context, payload) {
-			setTimeout(() => {
-				context.commit("changeCity",{city: payload.city})
-			},5000);
-		}
 	}
 })

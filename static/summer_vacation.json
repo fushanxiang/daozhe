@@ -1,0 +1,262 @@
+{
+	"ret": true,
+	"data": {
+		"piclistInfo":[{
+				"id":1,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1706/61/61cbf3401445d0fca3.img.jpg_600x276_f10389c3.jpg",
+				"link":"/detail",
+				"title":"十渡爱琴海薰衣草庄园",
+				"text":"【活动票】爱琴海薰衣草庄园成人特惠票(下午场)",
+				"ticket":"特惠票",
+				"price":"9.9",
+				"numprice":"35",
+				"backmoney":"",
+				"back":""
+				
+			},{
+				"id":2,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"再返￥",
+				"backmoney":"1"
+			},{
+				"id":3,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			},{
+				"id":4,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			},{
+				"id":5,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			},{
+				"id":6,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			},{
+				"id":7,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			},{
+				"id":8,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			},{
+				"id":9,
+				"imagesUrl":"http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_600x276_279d00ac.jpg",
+				"link":"/detail",
+				"title":"北京欢乐谷",
+				"text":"北京欢乐谷夜场-七夕成人票",
+				"ticket":"促销票",
+				"price":"29.9",
+				"numprice":"100",
+				"back":"",
+				"backmoney":""
+			}],
+		"selectInfo": [{
+					"id": 1,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的客户管理卡哈啦哈啦时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+				},{
+					"id": 2,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				},{
+					"id": 3,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				},{
+					"id": 4,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				},{
+					"id": 5,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				},{
+					"id": 6,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事激发撒上了飞机阿里卷发多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				},{
+					"id": 7,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				},{
+					"id": 8,
+					"imgeUrl":"https://imgs.qunarzz.com/sight/p0/1603/ad/ad84d5339c3a34f390.water.jpg_292x180_81727aaa.jpg",
+					"link": "/detail",
+					"title":"十度聚龙湾的时光都是根深蒂固树大根深地方割发代首歌功颂德上的根深蒂固发生的故事多玻璃栈道成人票（含大门票)",
+					"redPrice":"¥35",
+					"grayPrice":"票面价¥40"
+
+				}],
+		"choosecityInfo":[{
+                    "id": 1,
+                    "name": "北京"
+                },{
+                    "id": 2,
+                    "name": "上海"
+                },{
+                    "id": 3,
+                    "name": "天津"
+                },{
+                    "id": 4,
+                    "name": "重庆"
+                },{
+                    "id": 5,
+                    "name": "四川"
+                },{
+                    "id": 6,
+                    "name": "广东"
+                },{
+                    "id": 7,
+                    "name": "浙江"
+                },{
+                    "id": 8,
+                    "name": "山东"
+                },{
+                    "id": 9,
+                    "name": "江苏"
+                },{
+                    "id": 10,
+                    "name": "海南"
+                },{
+                    "id": 11,
+                    "name": "广西"
+                },{
+                    "id": 12,
+                    "name": "河北"
+                },{
+                    "id": 13,
+                    "name": "吉林"
+                },{
+                    "id": 14,
+                    "name": "陕西"
+                },{
+                    "id": 15,
+                    "name": "福建"
+                },{
+                    "id": 16,
+                    "name": "内蒙古"
+                },{
+                    "id": 17,
+                    "name": "山西"
+                },{
+                    "id": 18,
+                    "name": "甘肃"
+                },{
+                    "id": 19,
+                    "name": "湖北"
+                },{
+                    "id": 20,
+                    "name": "江西"
+                },{
+                    "id": 21,
+                    "name": "贵州"
+                },{
+                    "id": 22,
+                    "name": "安徽"
+                },{
+                    "id": 23,
+                    "name": "云南"
+                },{
+                    "id": 24,
+                    "name": "辽宁"
+                },{
+                    "id": 25,
+                    "name": "黑龙江"
+                },{
+                    "id": 26,
+                    "name": "湖南"
+                },{
+                    "id": 27,
+                    "name": "河南"
+                },{
+                    "id": 28,
+                    "name": "宁夏"
+                },{
+                    "id": 29,
+                    "name": "西藏"
+                },{
+                    "id": 30,
+                    "name": "新疆"
+            }]
+		
+	}
+}

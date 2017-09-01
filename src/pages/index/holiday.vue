@@ -4,13 +4,15 @@
 		
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
-					<div class="product-item-img" >
-						<img v-lazy="item.imgUrl" class="img-info">
-					</div>
-					<div class="product-item-text" >
-						<p class="product-name">{{item.title}}</p>
-						<p class="product-descript">{{item.text}}</p>
-					</div>
+				    <router-link to="/weekend">
+						<div class="product-item-img" >
+							<img v-lazy="item.imgUrl" class="img-info">
+						</div>
+						<div class="product-item-text" >
+							<p class="product-name">{{item.title}}</p>
+							<p class="product-descript">{{item.text}}</p>
+						</div>
+					</router-link>
 				</a>
 			</div>
 		<div class="price-info">
@@ -35,19 +37,16 @@
 
 <style scoped>
 	@import "../../assets/font/iconfont.css";
-	body {
-	    font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
-	    color: #333;
-	    font-size: .28em;
-	    line-height: 1;
-	}
 	a {
 		text-decoration: none;
 		color: #000;
 	}
 	.ht-modtitle {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	    height: .8rem;
-	    padding-left: .26rem;
+	    padding: 0 .26rem;
 	    line-height: .8rem;
 	    color: #212121;
 	}
@@ -78,16 +77,16 @@
 	}
 	.product-item-text .product-name {
 	    overflow: hidden;
-	    padding-right: 1.4rem;
-	    color: #212121;
-	    font-size: .28rem;
-	    line-height: .48rem;
 	    white-space: nowrap;
 	    text-overflow: ellipsis;
+	    padding-right: 0.2rem;
+	    color: #212121;
+	    font-size: .28rem;
+	    line-height: .48rem; 
 	}
 	.product-item-text .product-descript {
 		overflow: hidden;
-	    padding-right: 1.4rem;
+	    padding-right: 0.2rem;
 	    color: #616161;
 	    font-size: .24rem;
 	    line-height: .42rem;
@@ -101,9 +100,14 @@
 		font-weight: bold;
 	}
 	.price-info{
-		background: #fff;
+		height: .54rem;
 		line-height: .32rem;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
 		color: #616161;
+		background: #fff;
 		padding:.14rem .1rem; 
 		font-size: .24rem;
 	}

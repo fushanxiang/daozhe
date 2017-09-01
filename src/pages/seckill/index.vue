@@ -28,7 +28,7 @@ export default {
             offset:['','', '','']
         }
     },
-    created() {
+    mounted() {
         window.addEventListener('scroll', this.handleScroll);
         this.$http.get('/static/seckill.json').then(response => {
             var data = response.body.data;
@@ -58,7 +58,7 @@ export default {
             document.body.scrollTop = this.offset[3]
         }
     }, 
-    destroyed(){
+    beforeDestroye(){
         window.removeEventListener("scroll", this.handleScroll)
     },  
     components:{

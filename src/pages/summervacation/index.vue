@@ -20,7 +20,7 @@ import Toggle from './toggle.vue'
 export default {
     name: 'index',
 
-    created() {
+    mounted() {
         window.addEventListener('scroll', this.handleScroll);
         this.$http.get('/static/summer_vacation.json').then(response => {
             var data = response.body.data;

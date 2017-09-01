@@ -13,7 +13,6 @@
 import IndexHeader from './header.vue'
 import ImgSwiper from './imgswiper.vue'
 import IconSwiper from './iconswiper.vue'
-import Location from './location.vue'
 import HotSale from './hotsale.vue'
 import Holiday from './holiday'
 import Foot from './foot.vue'
@@ -47,7 +46,6 @@ export default {
   	"index-header": IndexHeader,
     "img-swiper": ImgSwiper,
     "icon-swiper": IconSwiper,
-    "index-location": Location,
     "hot-sale": HotSale,
     "holiday":Holiday,
     "foot": Foot

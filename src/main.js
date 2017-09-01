@@ -33,13 +33,6 @@ Vue.use(vueResource)
 Vue.use(IScrollView, IScroll)
 Vue.use(Alert)
 new Vue({
-<<<<<<< HEAD
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App },
-=======
 	el: '#app',
 	router,
 	store,
@@ -48,6 +41,5 @@ new Vue({
 		App
 	},
 	render: h => h(App)
->>>>>>> origin/master
 })
 

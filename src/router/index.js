@@ -16,55 +16,8 @@ import Map from '@/pages/parkdetail/map'
 import Productdetail from '@/pages/productdetail/index'
 import search from '@/search/search'
 import List from '@/pages/list/index'
-<<<<<<< HEAD
-import Weekend from '@/pages/weekend/index'
-import SecKill from '@/pages/seckill/index'
 import Onedaytour from '@/pages/onedaytour/index'
 import OnedayList from '@/pages/onedaylist/index'
-Vue.use(Router)
-
-export default new Router({      
-  routes: [
-    {
-        path: '/',
-        name: 'index',
-        component: Index
-    },{
-        path: '/onedaytour',
-        name: 'onedaytour',
-        component: Onedaytour
-    },{
-      path: '/onedaylist',
-      name: 'onedaylist',
-      component: OnedayList
-    },{
-      path: '/weekend',
-      name: 'weekend',
-      component: Weekend
-    },{
-      path:'/seckill',
-      name:'seckill',
-      component:SecKill
-    },{
-      path: '/city',
-      name: 'city',
-      component: City,
-    },
-    {
-      path: '/productdetail',
-      name: 'productdetail',
-      component: Productdetail
-    },
-    {
-      path: '/list',
-      name: 'list',
-      component: List
-
-    },{
-      path: '/search',
-      name: 'search',
-      component: search
-=======
 Vue.use(Router)
 
 export default new Router({
@@ -126,13 +79,20 @@ export default new Router({
 		      path: '/list',
 		      name: 'list',
 		      component: List
->>>>>>> origin/master
 
 		    },{
 		      path: '/search',
 		      name: 'search',
 		      component: search
 
-		    }]
+		    },{
+		      path: '/onedaytour',
+		      name: 'onedaytour',
+		      component: Onedaytour
+   			 },{
+     		  path: '/onedaylist',
+              name: 'onedaylist',
+              component: OnedayList
+         }]
 
 })

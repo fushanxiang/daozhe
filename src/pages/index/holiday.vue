@@ -1,6 +1,11 @@
 <template>
 	<div class="holiday-trip">
+<<<<<<< HEAD
 		<h2 class="ht-modtitle">周末去哪儿</h2>		
+=======
+		<h2 class="ht-modtitle">周末去哪儿</h2>
+		
+>>>>>>> 164cb465f6eae30b60dbf7fda94232a487e7bd10
 			<div class="ht-product-item">
 				<a href="#" class="ht-fulllink" v-for="item in holidayInfo" :key="item.id">
 				    <router-link to="/weekend">
@@ -20,15 +25,16 @@
 			<span class="type-info">是指通过景区指定窗口售卖的纸质门票上标注的价格</span>
 		</div>
 	</div>
+	
 </template>
 
 <script>
 	export default {
-		
+		props:["holidayInfo"],
 		data () {
-			return {}
-		},
-		props:["holidayInfo"]
+			return {
+	    	}
+		}
 	}
 </script>
 

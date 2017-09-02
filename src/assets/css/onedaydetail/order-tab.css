@@ -1,0 +1,325 @@
+.mp-routesum-outter {
+    padding: .24rem 0;
+}
+.mp-routesum-item {
+    position: relative;
+    zoom: 1;
+    overflow: hidden;
+    margin-bottom: .2rem;
+}
+.mp-routesum-title {
+    position: absolute;
+    width: 1.2rem;
+    color: #212121;
+}
+.mp-routesum-icon {
+    color: #919191;
+    margin-right: .1rem;
+}
+.mp-routesum-content {
+    padding-left: 1.2rem;
+    line-height: .36rem;
+    color: #616161;
+}
+.mp-card-content {
+    padding: .24rem 0 .3rem 0;
+    border-bottom: 1px dashed #dadada;
+}
+.mp-card-desc {
+    color: #616161;
+    font-size: .28rem;
+    line-height: .44rem;
+    max-height: 1.32rem;
+    overflow: hidden;
+}
+.mp-route-headtext {
+    color: #616161;
+    font-size: .4rem;
+    margin: .3rem 0 0 .2rem;
+}
+
+.mp-summary-head {
+    margin-top: .1rem;
+}
+.mp-summary-title {
+    color: #616161;
+    font-size: .4rem;
+}
+.mp-routesum-inner {
+    background-color: #f5f5f5;
+    border-radius: .1rem;
+    padding: .2rem;
+}
+.mp-card-content {
+    padding: .24rem 0 .3rem 0;
+    border-bottom: 1px dashed #dadada;
+}
+.mp-timeline {
+    padding: .2rem;
+}
+.mp-prddetail-content {
+    padding: 0 .24rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .4rem;
+}
+.mp-prddetail-routeitem:not(:last-child) {
+    padding-bottom: .14rem;
+}
+.mp-prddetail-routeitem {
+    overflow: hidden;
+    min-height: 1%;
+}
+.mp-prddetail-date {
+    color: #212121;
+}
+.mp-prddetail-date {
+    overflow: hidden;
+    float: left;
+    width: .72rem;
+    height: .44rem;
+    white-space: nowrap;
+}
+.mp-dark-dash {
+    position: relative;
+}
+.mp-prddetail-route {
+    margin-left: .76rem;
+    padding-left: .7rem;
+    font-size: .28rem;
+    padding-bottom: .1rem;
+}
+.mp-timeline-nodeicon {
+    position: absolute;
+    /*z-index: 2;*/
+    top: 2px;
+    left: .2rem;
+    color: #00afc7;
+    font-size: .28rem;
+}
+a {
+    color: #00afc7;
+    text-decoration: none;
+}
+.mp-card-moreoutter {
+    padding: 0 .2rem;
+}
+.mp-card-more {
+    height: .8rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .8rem;
+    text-align: center;
+    margin-top: .1rem;
+    border-top: 1px dashed #dadada;
+    border-bottom: 1px solid #ccc;
+}
+
+.mp-card-more .mp-iconfont {
+    margin-left: .1rem;
+    color: #9e9e9e;
+    font-size: .24rem;
+}
+.mp-iconfont {
+    font-family: 'mpiconfont';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+.mp-prddetail-route::after{
+   content: "";
+   position: absolute;
+   bottom: -.4rem;
+   left: .04rem;
+   width: 1px;
+   height: 100%;
+   margin-left: .3rem;
+   border-radius: 3px;
+   background-color: rgba(217,217,217,0.7);
+}
+
+.mp-prddetail-group {
+    margin-top: .2rem;
+    padding: .01rem 0;
+    background-color: #fff;
+}
+.mp-prddetail-title {
+    overflow: hidden;
+    position: relative;
+    height: .84rem;
+    padding: 0 .2rem;
+    color: #212121;
+    font-size: .32rem;
+    line-height: .84rem;
+    text-indent: .16rem;
+}
+.mp-prddetail-content {
+    overflow: hidden;
+    padding: 0 .24rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .4rem;
+}
+.mp-prddetail-subtitle {
+    padding: .24rem 0 .1rem;
+    color: #ff8300;
+    font-size: .3rem;
+    line-height: .42rem;
+}
+.mp-border, .mp-border-top, .mp-border-right, .mp-border-bottom, .mp-border-left, .mp-border-topbottom, .mp-border-rightleft, .mp-border-topleft, .mp-border-rightbottom, .mp-border-topright, .mp-border-bottomleft {
+    position: relative;
+}
+.mp-prddetail-subtitle {
+    padding: .24rem 0 .1rem;
+    color: #ff8300;
+    font-size: .3rem;
+    line-height: .42rem;
+}
+.mp-structure-item {
+    overflow: hidden;
+    position: relative;
+    color: #212121;
+    background: #f5f5f5;
+    font-size: .28rem;
+    line-height: .4rem;
+}
+.mp-structure-title {
+    position: absolute;
+    top: 50%;
+    padding: .2rem 0;
+    width: 1.8rem;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.mp-structure-desc {
+    margin-left: 1.8rem;
+    padding: .2rem;
+    background: #fff;
+    color: #616161;
+}
+.mp-prddetail-content .mp-prddetail-desc:last-child {
+    padding-bottom: .2rem;
+}
+.mp-prddetail-title {
+    overflow: hidden;
+    position: relative;
+    height: .84rem;
+    padding: 0 .2rem;
+    color: #212121;
+    font-size: .32rem;
+    line-height: .84rem;
+    text-indent: .16rem;
+}
+.mp-prddetail-content {
+    overflow: hidden;
+    padding: 0 .24rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .4rem;
+}
+.mp-prddetail-desc {
+    color: #616161;
+    word-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
+}
+.mp-prddetail-more {
+    position: relative;
+    padding: .24rem 0 .3rem;
+    height: .4rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .4rem;
+    text-align: center;
+}
+.mp-prddetail-more {
+    position: relative;
+    padding: .24rem 0 .3rem;
+    height: .4rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .4rem;
+    text-align: center;
+}
+mp-prddetail-arrow, .mp-prddetail-arrowup {
+    color: #9e9e9e;
+    font-size: .2rem;
+    margin-left: .08rem;
+}
+.mp-prddetail-group {
+    margin-top: .2rem;
+    padding: .01rem 0;
+    background-color: #fff;
+}
+.mp-comments-item {
+    padding: .2rem 0 !important;
+}
+.mp-comments-item {
+    color: #616161;
+    padding: .2rem 0;
+    border-bottom: 1px dashed #ccc;
+}
+.mpf-starlevel {
+    display: inline-block;
+    position: relative;
+    width: 1.4rem;
+    height: .28rem;
+}
+.mpf-starlevel-gain {
+    letter-spacing: .06rem;
+}
+.mpf-starlevel-total {
+    color: #e0e0e0;
+    letter-spacing: .06rem;
+}
+.mp-comments-date {
+    float: right;
+    margin-left: .2rem;
+    color: #616161;
+}
+.mp-comments-text.mp-ellipsis2 {
+    -webkit-line-clamp: 4;
+}
+.mp-comments-text {
+    font-size: .28rem;
+    line-height: .4rem;
+    margin: .1rem 0;
+}
+.mp-comments-imgs {
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0;
+    white-space: nowrap;
+}
+.mp-comments-img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.mp-comments-img:not(:first-child) {
+    margin-left: .2rem;
+}
+.mp-more {
+    height: .8rem;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .8rem;
+    text-align: center;
+}
+.mpg-linkarea {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

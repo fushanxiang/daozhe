@@ -42,7 +42,7 @@ export default {
 				paginationClickable :true,
 				observeParents:true
 			}
-
+			
     	}
 	},
 	props:["iconsInfo"],
@@ -101,7 +101,6 @@ export default {
 		text-overflow: ellipsis;
 		font-size: .28rem;
 		color:#212121;
-
 	}
 	.position-sale{
     	overflow: hidden;

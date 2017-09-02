@@ -20,7 +20,6 @@ Vue.use(BaiduMap, {
 	ak: 'BlFsjzbKOSRMfMVdX8mE9O07Mm80B8mC'
 })
 Vue.use(vueResource)
-Vue.use(IScrollView, IScroll)
 Vue.use(Alert)
 Vue.use(VueBus)
 Vue.use(AMap)

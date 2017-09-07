@@ -54,7 +54,7 @@
         <ul class="suggestbox" v-show="this.$store.state.suggestsearch">
          <h1 class="search-history-title">搜索建议<span class="suggestclose" @click="handelSuggestClose"> 关闭</span></h1>
          <router-link to="/">
-          <li v-for="(value,$index) in myData" class="suggestinfo"  @click="handleSuggestInfo">{{value}}</li>
+          <li v-for="(value,$index) in myData" class="suggestinfo"  @click="handleSuggestInfo(value)">{{value}}</li>
           </router-link>
         </ul>
     </div>
@@ -76,11 +76,11 @@ export default {
     },
     props:["dataScen", "dataArea"],
       created(){
-        if (localStorage.history == undefined) {
+        if (localStorage.landunphone100cn == undefined) {
               this.$store.commit("searchHistory",false);
           }else {
               this.$store.commit("searchHistory",true);
-              this.historyarr = JSON.parse(localStorage.history);
+              this.historyarr = JSON.parse(localStorage.landunphone100cn);
           } 
         },
       updated(){
@@ -99,16 +99,16 @@ export default {
           if (this.inputtext =="") {
               this.$store.commit("showNear",true);
           }
-          if (localStorage.history == undefined) {
+          if (localStorage.landunphone100cn == undefined) {
               this.$store.commit("searchHistory",false);
           }else {
               this.$store.commit("searchHistory",true);
-              this.historyarr = JSON.parse(localStorage.history);
+              this.historyarr = JSON.parse(localStorage.landunphone100cn);
           } 
       },
       handledel(){
           this.$store.commit("searchHistory",false);
-          localStorage.removeItem('history');
+          localStorage.removeItem('landunphone100cn');
           this.historyarr = [];
       },
       handleinput(){
@@ -144,18 +144,18 @@ export default {
           this.inputtext = "北京";
           var id = new Date().getTime();
           this.historyarr.unshift({id:id,historysearch:this.inputtext});
-          localStorage.history=JSON.stringify(this.historyarr);
+          localStorage.landunphone100cn=JSON.stringify(this.historyarr);
       }else {   
-      if (localStorage.history) {
+      if (localStorage.landunphone100cn) {
           var id = new Date().getTime();
-          this.historyarr=JSON.parse(localStorage.history);
+          this.historyarr=JSON.parse(localStorage.landunphone100cn);
           this.historyarr.unshift({id:id,historysearch:this.inputtext});
-          localStorage.history=JSON.stringify(this.historyarr);
+          localStorage.landunphone100cn=JSON.stringify(this.historyarr);
       }else {
           var id = new Date().getTime();
           this.historyarr = [];
           this.historyarr.unshift({id:id,historysearch:this.inputtext});
-          localStorage.history = JSON.stringify(this.historyarr);
+          localStorage.landunphone100cn = JSON.stringify(this.historyarr);
           }   
         } 
       },
@@ -186,7 +186,7 @@ export default {
           }
       }
           this.historyarr.unshift({id:e,historysearch:v});
-          localStorage.history = JSON.stringify(this.historyarr);
+          localStorage.landunphone100cn = JSON.stringify(this.historyarr);
           this.$store.commit("showNear",false)
       },
       handlehotArea(e,v){
@@ -198,7 +198,16 @@ export default {
       handelSuggestClose(){
         this.$store.commit("suggestsearch",false);
       },
-      handleSuggestInfo(){
+      handleSuggestInfo(value){
+        var id = new Date().getTime();
+        for (var i = 0; i < this.historyarr.length; i++) {
+          if (this.historyarr[i].historysearch == value) {
+              this.$store.commit("suggestsearch",false);
+              return this.historyarr.splice(0,1);
+          }
+      }
+        this.historyarr.unshift({id:id,historysearch:value});
+        localStorage.landunphone100cn = JSON.stringify(this.historyarr);
         this.$store.commit("suggestsearch",false);
       }
   }

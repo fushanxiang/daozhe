@@ -1,15 +1,16 @@
 <template>
 	<swiper :options="swiperOption" >
 	    <swiper-slide v-for="item in imgsInfo" :key="item.id">
-	    	<div class="img-container">
-	    		<img class="swiper-img" :src="item.imgUrl" />
-	    	</div>
+	        <router-link to="/seckill">
+		    	<div class="img-container">
+		    		<img class="swiper-img" :src="item.imgUrl" />
+		    	</div>
+	    	</router-link>
 	    </swiper-slide>
 	    <div class="swiper-pagination"  slot="pagination"></div>
 	</swiper>
 </template>
 <script>
-
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
@@ -18,9 +19,10 @@ export default {
 			swiperOption: {
 				direction : 'horizontal',
 				autoHeight: true,
-				pagination : '.swiper-pagination',
 				paginationClickable :true,
-				observeParents:true
+				observeParents:true,
+				
+				pagination : '.swiper-pagination',
 			}
 
     	}

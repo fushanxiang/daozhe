@@ -9,14 +9,15 @@
     </transition>
 </template>
 <script>
-export default {
-    props: ['imgSrc','imgTitle'],
-    methods: {
-        bigImg() {
-            this.$emit('clickit')
+    export default {
+        props: ['imgSrc','imgTitle'],
+        methods: {
+            bigImg() {
+                this.$emit('clickit')
+            }
         }
     }
-}
+
 </script>
 <style scoped>
 /*动画*/
@@ -54,6 +55,9 @@ export default {
 .content{
     width:60%;
     height:26%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-align: center;
     position: absolute;
     left: 20%;

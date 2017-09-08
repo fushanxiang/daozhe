@@ -6,8 +6,8 @@
 
 		<div class="container-comment border-top">
 			<div class="container-comment-stardate">
-				<span class="starlevel">
-					★★★★★
+				<span class="starlevel iconfont">
+					&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;
 				</span>
 				<span class="container-comment-date">
 					r*2&nbsp;&nbsp;2017-08-02
@@ -30,8 +30,8 @@
 
 		<div class="container-comment border-top">
 			<div class="container-comment-stardate">
-				<span class="starlevel">
-					★★★★★
+				<span class="starlevel iconfont">
+					&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;
 				</span>
 				<span class="container-comment-date">
 					能*兔&nbsp;&nbsp;2017-08-11

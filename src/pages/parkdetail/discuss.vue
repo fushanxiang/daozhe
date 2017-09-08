@@ -6,8 +6,8 @@
 		
 		<div class="container-comment border-top">
 			<div class="container-comment-stardate">
-				<span class="mpf-starlevel">
-					★★★★★
+				<span class="mpf-starlevel iconfont">
+					&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;
 				</span>
 				<span class="container-comment-date">
 					能*兔&nbsp;&nbsp;2017-08-11
@@ -34,7 +34,8 @@
 		
 		<div class="container-comment border-top">
 			<div class="container-comment-stardate">
-				<span class="mpf-starlevel">★★★★★
+				<span class="mpf-starlevel iconfont">
+					&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;
 				</span>
 				<span class="container-comment-date">
 					能*兔&nbsp;&nbsp;2017-08-11

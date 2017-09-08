@@ -14,8 +14,8 @@
 					<span class="container-comment-date">
 						{{recommendInfo.name}}
 					</span>
-					<span class="starlevel">
-						{{recommendInfo.level}}
+					<span class="starlevel iconfont">
+						&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;
 					</span>
 				</div>
 				<div class="">
@@ -143,7 +143,7 @@
 	
 	.starlevel {
 		color: red;
-		font-size: 20px;
+		font-size: 16px;
 	}
 	
 	.container-comment-date {
